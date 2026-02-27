@@ -1,0 +1,841 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<ISO15745Profile xmlns="http://www.profibus.com/GSDML/2003/11/DeviceProfile" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.profibus.com/GSDML/2003/11/DeviceProfile ..\xsd\GSDML-DeviceProfile-V2.3.xsd">
+<!-- GSDML für E84AYCER 8400, Firmware E84AFYER ab V02.00.00.00 -->
+	<ProfileHeader>
+		<ProfileIdentification>PROFINET Device Profile</ProfileIdentification>
+		<ProfileRevision>1.00</ProfileRevision>
+		<ProfileName>Device Profile for PROFINET Devices</ProfileName>
+		<ProfileSource>PROFIBUS Nutzerorganisation e. V. (PNO)</ProfileSource>
+		<ProfileClassID>Device</ProfileClassID>
+		<ISO15745Reference>
+			<ISO15745Part>4</ISO15745Part>
+			<ISO15745Edition>1</ISO15745Edition>
+			<ProfileTechnology>GSDML</ProfileTechnology>
+		</ISO15745Reference>
+	</ProfileHeader>
+	<ProfileBody>
+		<DeviceIdentity VendorID="0x0106" DeviceID="0x8400">
+			<InfoText TextId="IDT_FAMILY_DESCRIPTION" />
+			<VendorName Value="Lenze" />
+		</DeviceIdentity>
+		<DeviceFunction>
+			<Family MainFamily="Drives" ProductFamily="Lenze Lforce Drives 8400" />
+		</DeviceFunction>
+		<ApplicationProcess>
+			<DeviceAccessPointList>
+				<DeviceAccessPointItem ID="ID_DAP" PhysicalSlots="0..1" ModuleIdentNumber="0x00000500" MinDeviceInterval="64" ImplementationType="3C25/NIOS" DNS_CompatibleName="LENZE-8400-DRIVE" NameOfStationNotTransferable="true" ExtendedAddressAssignmentSupported="false" FixedInSlots="0" ObjectUUID_LocalIndex="1" RequiredSchemaVersion="V2.2" MultipleWriteSupported="false" IOXS_Required="true" RemoteApplicationTimeout="300" AddressAssignment="DCP" DeviceAccessSupported="true" PNIO_Version="V2.2">
+					<ModuleInfo>
+						<Name TextId="IDT_DAP5_NAME" />
+						<InfoText TextId="IDT_DAP5_INFO" />
+						<VendorName Value="Lenze" />
+						<OrderNumber Value="E84AYCER" />
+						<SoftwareRelease Value="V 2.8" />
+					</ModuleInfo>
+					<SubslotList>
+						<SubslotItem SubslotNumber="32768" TextId="IDT_DAP5_Interface" />
+						<SubslotItem SubslotNumber="32769" TextId="IDT_DAP5_Port1" />
+						<SubslotItem SubslotNumber="32770" TextId="IDT_DAP5_Port2" />
+					</SubslotList>
+					<IOConfigData MaxInputLength="1440" MaxOutputLength="1440" />
+					<UseableModules>
+						<ModuleItemRef ModuleItemTarget="IDM_MODULE_41" AllowedInSlots="1" />
+            <ModuleItemRef ModuleItemTarget="IDM_MODULE_42" AllowedInSlots="1" />
+            <ModuleItemRef ModuleItemTarget="IDM_MODULE_43" AllowedInSlots="1" />
+            <ModuleItemRef ModuleItemTarget="IDM_MODULE_44" AllowedInSlots="1" />
+            <ModuleItemRef ModuleItemTarget="IDM_MODULE_45" AllowedInSlots="1" />
+            <ModuleItemRef ModuleItemTarget="IDM_MODULE_46" AllowedInSlots="1" />
+            <ModuleItemRef ModuleItemTarget="IDM_MODULE_47" AllowedInSlots="1" />
+            <ModuleItemRef ModuleItemTarget="IDM_MODULE_48" AllowedInSlots="1" />
+            <ModuleItemRef ModuleItemTarget="IDM_MODULE_49" AllowedInSlots="1" />
+            <ModuleItemRef ModuleItemTarget="IDM_MODULE_50" AllowedInSlots="1" />
+            <ModuleItemRef ModuleItemTarget="IDM_MODULE_51" AllowedInSlots="1" />
+            <ModuleItemRef ModuleItemTarget="IDM_MODULE_52" AllowedInSlots="1" />
+            <ModuleItemRef ModuleItemTarget="IDM_MODULE_53" AllowedInSlots="1" />
+            <ModuleItemRef ModuleItemTarget="IDM_MODULE_54" AllowedInSlots="1" />
+            <ModuleItemRef ModuleItemTarget="IDM_MODULE_55" AllowedInSlots="1" />
+            <ModuleItemRef ModuleItemTarget="IDM_MODULE_56" AllowedInSlots="1" />
+            <!--Die Referenzen zeigen auf die Module der ModuleList -->
+					</UseableModules>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="IDS_SUBMODULE_PARAMDAP5" SubmoduleIdentNumber="0xA0000001" API="0" FixedInSubslots="1" PROFIsafeSupported="false" Writeable_IM_Records="1 2 3 4">
+							<IOData IOPS_Length="1" IOCS_Length="1" />
+              <ModuleInfo CategoryRef="Prozess Module">
+                <Name TextId="IDT_MODULE41_NAME" />
+                <InfoText TextId="IDT_MODULE41_INFO" />
+              </ModuleInfo>
+            </VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+					<SystemDefinedSubmoduleList>
+						<InterfaceSubmoduleItem ID="IDS_DAPI" SupportedRT_Classes="RT_CLASS_1" SupportedProtocols="SNMP;LLDP" SupportedMibs="MIB2" NetworkComponentDiagnosisSupported="true" DCP_HelloSupported="false" SubslotNumber="32768" TextId="IDT_DAP5_NAME" SubmoduleIdentNumber="0x00000001">
+              <ApplicationRelations>
+                <TimingProperties SendClock="32 64 128" />
+              </ApplicationRelations>
+              <MediaRedundancy SupportedRole="Client" />
+            </InterfaceSubmoduleItem>
+						<PortSubmoduleItem ID="IDS_DAPP1" SubslotNumber="32769" LinkStateDiagnosisCapability="Up+Down" TextId="IDT_ETHERNETINTERFACE_Port1" SubmoduleIdentNumber="0x00000002" SupportsRingportConfig="true" IsDefaultRingport="true" />
+            <PortSubmoduleItem ID="IDS_DAPP2" SubslotNumber="32770" LinkStateDiagnosisCapability="Up+Down" TextId="IDT_ETHERNETINTERFACE_Port2" SubmoduleIdentNumber="0x00000003" SupportsRingportConfig="true" IsDefaultRingport="true" />
+					</SystemDefinedSubmoduleList>
+					<Graphics>
+						<GraphicItemRef Type="DeviceSymbol" GraphicItemTarget="1" />
+						<!--<GraphicItemRef State="SF" GraphicItemTarget="2"/>-->
+					</Graphics>
+				</DeviceAccessPointItem>
+			</DeviceAccessPointList>
+			<ModuleList>
+        <!-- process modules -->
+        <ModuleItem ID="IDM_MODULE_41" ModuleIdentNumber="0x00000190">
+          <ModuleInfo CategoryRef="Prozess Module">
+            <Name TextId="IDT_MODULE41_NAME" />
+            <InfoText TextId="IDT_MODULE41_INFO" />
+          </ModuleInfo>
+          <VirtualSubmoduleList>
+            <VirtualSubmoduleItem ID="IDS_SUBMODULE_M41" SubmoduleIdentNumber="0x00000190" FixedInSubslots="1" PROFIsafeSupported="false">
+              <IOData IOPS_Length="1" IOCS_Length="1">
+                <Input Consistency="All items consistency">
+                  <DataItem DataType="OctetString" TextId="IDT_DATAITEM_M41I" Length="2" />
+                </Input>
+                <Output Consistency="All items consistency">
+                  <DataItem DataType="OctetString" TextId="IDT_DATAITEM_M41O" Length="2" />
+                </Output>
+              </IOData>
+              <ModuleInfo CategoryRef="Prozess Module">
+                <Name TextId="IDT_MODULE41_NAME" />
+                <InfoText TextId="IDT_MODULE41_INFO" />
+              </ModuleInfo>
+            </VirtualSubmoduleItem>
+          </VirtualSubmoduleList>
+        </ModuleItem>
+        <ModuleItem ID="IDM_MODULE_42" ModuleIdentNumber="0x00000191">
+          <ModuleInfo CategoryRef="Prozess Module">
+            <Name TextId="IDT_MODULE42_NAME" />
+            <InfoText TextId="IDT_MODULE42_INFO" />
+          </ModuleInfo>
+          <VirtualSubmoduleList>
+            <VirtualSubmoduleItem ID="IDS_SUBMODULE_M42" SubmoduleIdentNumber="0x00000191" FixedInSubslots="1" PROFIsafeSupported="false">
+              <IOData IOPS_Length="1" IOCS_Length="1">
+                <Input Consistency="All items consistency">
+                  <DataItem DataType="OctetString" TextId="IDT_DATAITEM_M42I" Length="4" />
+                </Input>
+                <Output Consistency="All items consistency">
+                  <DataItem DataType="OctetString" TextId="IDT_DATAITEM_M42O" Length="4" />
+                </Output>
+              </IOData>
+              <ModuleInfo CategoryRef="Prozess Module">
+                <Name TextId="IDT_MODULE42_NAME" />
+                <InfoText TextId="IDT_MODULE42_INFO" />
+              </ModuleInfo>
+            </VirtualSubmoduleItem>
+          </VirtualSubmoduleList>
+        </ModuleItem>
+        <ModuleItem ID="IDM_MODULE_43" ModuleIdentNumber="0x00000192">
+          <ModuleInfo CategoryRef="Prozess Module">
+            <Name TextId="IDT_MODULE43_NAME" />
+            <InfoText TextId="IDT_MODULE43_INFO" />
+          </ModuleInfo>
+          <VirtualSubmoduleList>
+            <VirtualSubmoduleItem ID="IDS_SUBMODULE_M43" SubmoduleIdentNumber="0x00000192" FixedInSubslots="1" PROFIsafeSupported="false">
+              <IOData IOPS_Length="1" IOCS_Length="1">
+                <Input Consistency="All items consistency">
+                  <DataItem DataType="OctetString" TextId="IDT_DATAITEM_M43I" Length="6" />
+                </Input>
+                <Output Consistency="All items consistency">
+                  <DataItem DataType="OctetString" TextId="IDT_DATAITEM_M43O" Length="6" />
+                </Output>
+              </IOData>
+              <ModuleInfo CategoryRef="Prozess Module">
+                <Name TextId="IDT_MODULE43_NAME" />
+                <InfoText TextId="IDT_MODULE43_INFO" />
+              </ModuleInfo>
+            </VirtualSubmoduleItem>
+          </VirtualSubmoduleList>
+        </ModuleItem>
+        <ModuleItem ID="IDM_MODULE_44" ModuleIdentNumber="0x00000193">
+          <ModuleInfo CategoryRef="Prozess Module">
+            <Name TextId="IDT_MODULE44_NAME" />
+            <InfoText TextId="IDT_MODULE44_INFO" />
+          </ModuleInfo>
+          <VirtualSubmoduleList>
+            <VirtualSubmoduleItem ID="IDS_SUBMODULE_M44" SubmoduleIdentNumber="0x00000193" FixedInSubslots="1" PROFIsafeSupported="false">
+              <IOData IOPS_Length="1" IOCS_Length="1">
+                <Input Consistency="All items consistency">
+                  <DataItem DataType="OctetString" TextId="IDT_DATAITEM_M44I" Length="8" />
+                </Input>
+                <Output Consistency="All items consistency">
+                  <DataItem DataType="OctetString" TextId="IDT_DATAITEM_M44O" Length="8" />
+                </Output>
+              </IOData>
+              <ModuleInfo CategoryRef="Prozess Module">
+                <Name TextId="IDT_MODULE44_NAME" />
+                <InfoText TextId="IDT_MODULE44_INFO" />
+              </ModuleInfo>
+            </VirtualSubmoduleItem>
+          </VirtualSubmoduleList>
+        </ModuleItem>
+        <ModuleItem ID="IDM_MODULE_45" ModuleIdentNumber="0x00000194">
+          <ModuleInfo CategoryRef="Prozess Module">
+            <Name TextId="IDT_MODULE45_NAME" />
+            <InfoText TextId="IDT_MODULE45_INFO" />
+          </ModuleInfo>
+          <VirtualSubmoduleList>
+            <VirtualSubmoduleItem ID="IDS_SUBMODULE_M45" SubmoduleIdentNumber="0x00000194" FixedInSubslots="1" PROFIsafeSupported="false">
+              <IOData IOPS_Length="1" IOCS_Length="1">
+                <Input Consistency="All items consistency">
+                  <DataItem DataType="OctetString" TextId="IDT_DATAITEM_M45I" Length="10" />
+                </Input>
+                <Output Consistency="All items consistency">
+                  <DataItem DataType="OctetString" TextId="IDT_DATAITEM_M45O" Length="10" />
+                </Output>
+              </IOData>
+              <ModuleInfo CategoryRef="Prozess Module">
+                <Name TextId="IDT_MODULE45_NAME" />
+                <InfoText TextId="IDT_MODULE45_INFO" />
+              </ModuleInfo>
+            </VirtualSubmoduleItem>
+          </VirtualSubmoduleList>
+        </ModuleItem>
+        <ModuleItem ID="IDM_MODULE_46" ModuleIdentNumber="0x00000195">
+          <ModuleInfo CategoryRef="Prozess Module">
+            <Name TextId="IDT_MODULE46_NAME" />
+            <InfoText TextId="IDT_MODULE46_INFO" />
+          </ModuleInfo>
+          <VirtualSubmoduleList>
+            <VirtualSubmoduleItem ID="IDS_SUBMODULE_M46" SubmoduleIdentNumber="0x00000195" FixedInSubslots="1" PROFIsafeSupported="false">
+              <IOData IOPS_Length="1" IOCS_Length="1">
+                <Input Consistency="All items consistency">
+                  <DataItem DataType="OctetString" TextId="IDT_DATAITEM_M46I" Length="12" />
+                </Input>
+                <Output Consistency="All items consistency">
+                  <DataItem DataType="OctetString" TextId="IDT_DATAITEM_M46O" Length="12" />
+                </Output>
+              </IOData>
+              <ModuleInfo CategoryRef="Prozess Module">
+                <Name TextId="IDT_MODULE46_NAME" />
+                <InfoText TextId="IDT_MODULE46_INFO" />
+              </ModuleInfo>
+            </VirtualSubmoduleItem>
+          </VirtualSubmoduleList>
+        </ModuleItem>
+        <ModuleItem ID="IDM_MODULE_47" ModuleIdentNumber="0x00000196">
+          <ModuleInfo CategoryRef="Prozess Module">
+            <Name TextId="IDT_MODULE47_NAME" />
+            <InfoText TextId="IDT_MODULE47_INFO" />
+          </ModuleInfo>
+          <VirtualSubmoduleList>
+            <VirtualSubmoduleItem ID="IDS_SUBMODULE_M47" SubmoduleIdentNumber="0x00000196" FixedInSubslots="1" PROFIsafeSupported="false">
+              <IOData IOPS_Length="1" IOCS_Length="1">
+                <Input Consistency="All items consistency">
+                  <DataItem DataType="OctetString" TextId="IDT_DATAITEM_M47I" Length="14" />
+                </Input>
+                <Output Consistency="All items consistency">
+                  <DataItem DataType="OctetString" TextId="IDT_DATAITEM_M47O" Length="14" />
+                </Output>
+              </IOData>
+              <ModuleInfo CategoryRef="Prozess Module">
+                <Name TextId="IDT_MODULE47_NAME" />
+                <InfoText TextId="IDT_MODULE47_INFO" />
+              </ModuleInfo>
+            </VirtualSubmoduleItem>
+          </VirtualSubmoduleList>
+        </ModuleItem>
+        <ModuleItem ID="IDM_MODULE_48" ModuleIdentNumber="0x00000197">
+          <ModuleInfo CategoryRef="Prozess Module">
+            <Name TextId="IDT_MODULE48_NAME" />
+            <InfoText TextId="IDT_MODULE48_INFO" />
+          </ModuleInfo>
+          <VirtualSubmoduleList>
+            <VirtualSubmoduleItem ID="IDS_SUBMODULE_M48" SubmoduleIdentNumber="0x00000197" FixedInSubslots="1" PROFIsafeSupported="false">
+              <IOData IOPS_Length="1" IOCS_Length="1">
+                <Input Consistency="All items consistency">
+                  <DataItem DataType="OctetString" TextId="IDT_DATAITEM_M48I" Length="16" />
+                </Input>
+                <Output Consistency="All items consistency">
+                  <DataItem DataType="OctetString" TextId="IDT_DATAITEM_M48O" Length="16" />
+                </Output>
+              </IOData>
+              <ModuleInfo CategoryRef="Prozess Module">
+                <Name TextId="IDT_MODULE48_NAME" />
+                <InfoText TextId="IDT_MODULE48_INFO" />
+              </ModuleInfo>
+            </VirtualSubmoduleItem>
+          </VirtualSubmoduleList>
+        </ModuleItem>
+        <ModuleItem ID="IDM_MODULE_49" ModuleIdentNumber="0x00000198">
+          <ModuleInfo CategoryRef="Prozess Module">
+            <Name TextId="IDT_MODULE49_NAME" />
+            <InfoText TextId="IDT_MODULE49_INFO" />
+          </ModuleInfo>
+          <VirtualSubmoduleList>
+            <VirtualSubmoduleItem ID="IDS_SUBMODULE_M49" SubmoduleIdentNumber="0x00000198" FixedInSubslots="1" PROFIsafeSupported="false">
+              <IOData IOPS_Length="1" IOCS_Length="1">
+                <Input Consistency="All items consistency">
+                  <DataItem DataType="OctetString" TextId="IDT_DATAITEM_M49I" Length="18" />
+                </Input>
+                <Output Consistency="All items consistency">
+                  <DataItem DataType="OctetString" TextId="IDT_DATAITEM_M49O" Length="18" />
+                </Output>
+              </IOData>
+              <ModuleInfo CategoryRef="Prozess Module">
+                <Name TextId="IDT_MODULE49_NAME" />
+                <InfoText TextId="IDT_MODULE49_INFO" />
+              </ModuleInfo>
+            </VirtualSubmoduleItem>
+          </VirtualSubmoduleList>
+        </ModuleItem>
+        <ModuleItem ID="IDM_MODULE_50" ModuleIdentNumber="0x00000199">
+          <ModuleInfo CategoryRef="Prozess Module">
+            <Name TextId="IDT_MODULE50_NAME" />
+            <InfoText TextId="IDT_MODULE50_INFO" />
+          </ModuleInfo>
+          <VirtualSubmoduleList>
+            <VirtualSubmoduleItem ID="IDS_SUBMODULE_M50" SubmoduleIdentNumber="0x00000199" FixedInSubslots="1" PROFIsafeSupported="false">
+              <IOData IOPS_Length="1" IOCS_Length="1">
+                <Input Consistency="All items consistency">
+                  <DataItem DataType="OctetString" TextId="IDT_DATAITEM_M50I" Length="20" />
+                </Input>
+                <Output Consistency="All items consistency">
+                  <DataItem DataType="OctetString" TextId="IDT_DATAITEM_M50O" Length="20" />
+                </Output>
+              </IOData>
+              <ModuleInfo CategoryRef="Prozess Module">
+                <Name TextId="IDT_MODULE50_NAME" />
+                <InfoText TextId="IDT_MODULE50_INFO" />
+              </ModuleInfo>
+            </VirtualSubmoduleItem>
+          </VirtualSubmoduleList>
+        </ModuleItem>
+        <ModuleItem ID="IDM_MODULE_51" ModuleIdentNumber="0x0000019A">
+          <ModuleInfo CategoryRef="Prozess Module">
+            <Name TextId="IDT_MODULE51_NAME" />
+            <InfoText TextId="IDT_MODULE51_INFO" />
+          </ModuleInfo>
+          <VirtualSubmoduleList>
+            <VirtualSubmoduleItem ID="IDS_SUBMODULE_M51" SubmoduleIdentNumber="0x0000019A" FixedInSubslots="1" PROFIsafeSupported="false">
+              <IOData IOPS_Length="1" IOCS_Length="1">
+                <Input Consistency="All items consistency">
+                  <DataItem DataType="OctetString" TextId="IDT_DATAITEM_M51I" Length="22" />
+                </Input>
+                <Output Consistency="All items consistency">
+                  <DataItem DataType="OctetString" TextId="IDT_DATAITEM_M51O" Length="22" />
+                </Output>
+              </IOData>
+              <ModuleInfo CategoryRef="Prozess Module">
+                <Name TextId="IDT_MODULE51_NAME" />
+                <InfoText TextId="IDT_MODULE51_INFO" />
+              </ModuleInfo>
+            </VirtualSubmoduleItem>
+          </VirtualSubmoduleList>
+        </ModuleItem>
+        <ModuleItem ID="IDM_MODULE_52" ModuleIdentNumber="0x0000019B">
+          <ModuleInfo CategoryRef="Prozess Module">
+            <Name TextId="IDT_MODULE52_NAME" />
+            <InfoText TextId="IDT_MODULE52_INFO" />
+          </ModuleInfo>
+          <VirtualSubmoduleList>
+            <VirtualSubmoduleItem ID="IDS_SUBMODULE_M52" SubmoduleIdentNumber="0x0000019B" FixedInSubslots="1" PROFIsafeSupported="false">
+              <IOData IOPS_Length="1" IOCS_Length="1">
+                <Input Consistency="All items consistency">
+                  <DataItem DataType="OctetString" TextId="IDT_DATAITEM_M52I" Length="24" />
+                </Input>
+                <Output Consistency="All items consistency">
+                  <DataItem DataType="OctetString" TextId="IDT_DATAITEM_M52O" Length="24" />
+                </Output>
+              </IOData>
+              <ModuleInfo CategoryRef="Prozess Module">
+                <Name TextId="IDT_MODULE52_NAME" />
+                <InfoText TextId="IDT_MODULE52_INFO" />
+              </ModuleInfo>
+            </VirtualSubmoduleItem>
+          </VirtualSubmoduleList>
+        </ModuleItem>
+        <ModuleItem ID="IDM_MODULE_53" ModuleIdentNumber="0x0000019C">
+          <ModuleInfo CategoryRef="Prozess Module">
+            <Name TextId="IDT_MODULE53_NAME" />
+            <InfoText TextId="IDT_MODULE53_INFO" />
+          </ModuleInfo>
+          <VirtualSubmoduleList>
+            <VirtualSubmoduleItem ID="IDS_SUBMODULE_M53" SubmoduleIdentNumber="0x0000019C" FixedInSubslots="1" PROFIsafeSupported="false">
+              <IOData IOPS_Length="1" IOCS_Length="1">
+                <Input Consistency="All items consistency">
+                  <DataItem DataType="OctetString" TextId="IDT_DATAITEM_M53I" Length="26" />
+                </Input>
+                <Output Consistency="All items consistency">
+                  <DataItem DataType="OctetString" TextId="IDT_DATAITEM_M53O" Length="26" />
+                </Output>
+              </IOData>
+              <ModuleInfo CategoryRef="Prozess Module">
+                <Name TextId="IDT_MODULE53_NAME" />
+                <InfoText TextId="IDT_MODULE53_INFO" />
+              </ModuleInfo>
+            </VirtualSubmoduleItem>
+          </VirtualSubmoduleList>
+        </ModuleItem>
+        <ModuleItem ID="IDM_MODULE_54" ModuleIdentNumber="0x0000019D">
+          <ModuleInfo CategoryRef="Prozess Module">
+            <Name TextId="IDT_MODULE54_NAME" />
+            <InfoText TextId="IDT_MODULE54_INFO" />
+          </ModuleInfo>
+          <VirtualSubmoduleList>
+            <VirtualSubmoduleItem ID="IDS_SUBMODULE_M54" SubmoduleIdentNumber="0x0000019D" FixedInSubslots="1" PROFIsafeSupported="false">
+              <IOData IOPS_Length="1" IOCS_Length="1">
+                <Input Consistency="All items consistency">
+                  <DataItem DataType="OctetString" TextId="IDT_DATAITEM_M54I" Length="28" />
+                </Input>
+                <Output Consistency="All items consistency">
+                  <DataItem DataType="OctetString" TextId="IDT_DATAITEM_M54O" Length="28" />
+                </Output>
+              </IOData>
+              <ModuleInfo CategoryRef="Prozess Module">
+                <Name TextId="IDT_MODULE54_NAME" />
+                <InfoText TextId="IDT_MODULE54_INFO" />
+              </ModuleInfo>
+            </VirtualSubmoduleItem>
+          </VirtualSubmoduleList>
+        </ModuleItem>
+        <ModuleItem ID="IDM_MODULE_55" ModuleIdentNumber="0x0000019E">
+          <ModuleInfo CategoryRef="Prozess Module">
+            <Name TextId="IDT_MODULE55_NAME" />
+            <InfoText TextId="IDT_MODULE55_INFO" />
+          </ModuleInfo>
+          <VirtualSubmoduleList>
+            <VirtualSubmoduleItem ID="IDS_SUBMODULE_M55" SubmoduleIdentNumber="0x0000019E" FixedInSubslots="1" PROFIsafeSupported="false">
+              <IOData IOPS_Length="1" IOCS_Length="1">
+                <Input Consistency="All items consistency">
+                  <DataItem DataType="OctetString" TextId="IDT_DATAITEM_M55I" Length="30" />
+                </Input>
+                <Output Consistency="All items consistency">
+                  <DataItem DataType="OctetString" TextId="IDT_DATAITEM_M55O" Length="30" />
+                </Output>
+              </IOData>
+              <ModuleInfo CategoryRef="Prozess Module">
+                <Name TextId="IDT_MODULE55_NAME" />
+                <InfoText TextId="IDT_MODULE55_INFO" />
+              </ModuleInfo>
+            </VirtualSubmoduleItem>
+          </VirtualSubmoduleList>
+        </ModuleItem>
+        <ModuleItem ID="IDM_MODULE_56" ModuleIdentNumber="0x0000019F">
+          <ModuleInfo CategoryRef="Prozess Module">
+            <Name TextId="IDT_MODULE56_NAME" />
+            <InfoText TextId="IDT_MODULE56_INFO" />
+          </ModuleInfo>
+          <VirtualSubmoduleList>
+            <VirtualSubmoduleItem ID="IDS_SUBMODULE_M56" SubmoduleIdentNumber="0x0000019F" FixedInSubslots="1" PROFIsafeSupported="false">
+              <IOData IOPS_Length="1" IOCS_Length="1">
+                <Input Consistency="All items consistency">
+                  <DataItem DataType="OctetString" TextId="IDT_DATAITEM_M56I" Length="32" />
+                </Input>
+                <Output Consistency="All items consistency">
+                  <DataItem DataType="OctetString" TextId="IDT_DATAITEM_M56O" Length="32" />
+                </Output>
+              </IOData>
+              <ModuleInfo CategoryRef="Prozess Module">
+                <Name TextId="IDT_MODULE56_NAME" />
+                <InfoText TextId="IDT_MODULE56_INFO" />
+              </ModuleInfo>
+            </VirtualSubmoduleItem>
+          </VirtualSubmoduleList>
+        </ModuleItem>
+        <!--< Safety Daten >-->
+        <!--<ModuleInfo>-->
+      </ModuleList>
+      <ValueList>
+        <ValueItem ID="IDT_ERROR_CODES">
+          <Assignments>
+            <Assign Content="0" TextId="PN_NO_ERR_0" />
+            <Assign Content="3259393" TextId="PN_29110528" />
+            <Assign Content="827702297" TextId="PN_29119793" />
+            <Assign Content="844479513" TextId="PN_29119794" />
+            <Assign Content="861256729" TextId="PN_29119795" />
+            <Assign Content="526695429" TextId="PN_29123615" />
+            <Assign Content="543472645" TextId="PN_29123616" />
+            <Assign Content="6405121" TextId="PN_29122816" />
+            <Assign Content="291552261" TextId="PN_29122577" />
+            <Assign Content="274775045" TextId="PN_29122576" />
+            <Assign Content="23182341" TextId="PN_29122817" />
+            <Assign Content="811908121" TextId="PN_29123632" />
+            <Assign Content="828750849" TextId="PN_29123889" />
+            <Assign Content="828750853" TextId="PN_96232753" />
+            <Assign Content="828750857" TextId="PN_163341617" />
+            <Assign Content="828750861" TextId="PN_230450481" />
+            <Assign Content="828750865" TextId="PN_297559345" />
+            <Assign Content="828750869" TextId="PN_364668209" />
+            <Assign Content="828750873" TextId="PN_431777073" />
+            <Assign Content="828750877" TextId="PN_498885937" />
+            <Assign Content="23444501" TextId="PN_29123841" />
+            <Assign Content="40221717" TextId="PN_29123842" />
+            <Assign Content="56998933" TextId="PN_29123843" />
+            <Assign Content="845516816" TextId="PN_277898546" />
+            <Assign Content="862294032" TextId="PN_277898547" />
+            <Assign Content="879071248" TextId="PN_277898548" />
+          </Assignments>
+				</ValueItem>
+        <ValueItem ID="IDT_PART_ERROR_TYPE_CODES">
+          <Assignments>
+            <Assign Content="0" TextId="PN_ETYPE_NO_REACTION" />
+            <Assign Content="1" TextId="PN_ETYPE_FAULT" />
+            <Assign Content="2" TextId="PN_ETYPE_TROUBLE" />
+            <Assign Content="3" TextId="PN_ETYPE_TROUBLE_QUICK_STOP" />
+            <Assign Content="4" TextId="PN_ETYPE_WARNING_LOCKED" />
+            <Assign Content="5" TextId="PN_ETYPE_WARNING" />
+            <Assign Content="6" TextId="PN_ETYPE_INFORMATION" />
+          </Assignments>
+        </ValueItem>
+        <ValueItem ID="IDT_PART_SUBJECT_ID_CODES">
+          <Assignments>
+            <Assign Content="0" TextId="PN_SUBJECT_ID_CODE_000" />
+            <Assign Content="111" TextId="PN_SUBJECT_ID_CODE_111" />
+            <Assign Content="119" TextId="PN_SUBJECT_ID_CODE_119" />
+            <Assign Content="123" TextId="PN_SUBJECT_ID_CODE_123" />
+            <Assign Content="125" TextId="PN_SUBJECT_ID_CODE_125" />
+            <Assign Content="127" TextId="PN_SUBJECT_ID_CODE_127" />
+            <Assign Content="131" TextId="PN_SUBJECT_ID_CODE_131" />
+            <Assign Content="135" TextId="PN_SUBJECT_ID_CODE_135" />
+            <Assign Content="140" TextId="PN_SUBJECT_ID_CODE_140" />
+            <Assign Content="144" TextId="PN_SUBJECT_ID_CODE_144" />
+            <Assign Content="145" TextId="PN_SUBJECT_ID_CODE_145" />
+            <Assign Content="400" TextId="PN_SUBJECT_ID_CODE_400" />
+            <Assign Content="444" TextId="PN_SUBJECT_ID_CODE_444" />
+            <Assign Content="980" TextId="PN_SUBJECT_ID_CODE_980" />
+            <Assign Content="981" TextId="PN_SUBJECT_ID_CODE_981" />
+            <Assign Content="982" TextId="PN_SUBJECT_ID_CODE_982" />
+            <Assign Content="983" TextId="PN_SUBJECT_ID_CODE_983" />
+          </Assignments>
+        </ValueItem>
+        <ValueItem ID="IDT_PART_ERROR_ID_CODES">
+          <Assignments>
+            <Assign Content="0" TextId="PN_NO_ERR_0" />
+          </Assignments>
+        </ValueItem>
+      </ValueList>
+			<!-- Ab hier beginnen die Diagnose-Texte -->
+			<UnitDiagTypeList>
+				<!-- Selektion des Fehlerwertes fuer Struktur 1-->
+        <UnitDiagTypeItem UserStructureIdentifier="1">
+          <Ref TextId="PN_ERROR_VAL32" ValueItemTarget="IDT_ERROR_CODES" DataType="Unsigned32" ByteOffset="0" BitOffset="0" DefaultValue="0" />
+          <Ref TextId="PN_ERROR_TYPE" ValueItemTarget="IDT_PART_ERROR_TYPE_CODES" DataType="BitArea" BitLength="4" ByteOffset="3" BitOffset="2" DefaultValue="0" />
+          <Ref TextId="PN_SUBJECT_ID" ValueItemTarget="IDT_PART_SUBJECT_ID_CODES" DataType="BitArea" BitLength="10" ByteOffset="2" BitOffset="0" DefaultValue="0" />
+          <Ref TextId="PN_ERROR_ID" ValueItemTarget="IDT_PART_ERROR_ID_CODES" DataType="BitArea" BitLength="15" ByteOffset="0" BitOffset="0" DefaultValue="0" />
+        </UnitDiagTypeItem>
+      </UnitDiagTypeList>
+			<GraphicsList>
+				<GraphicItem ID="1" GraphicFile="GSDML-0106-8400-LENZE8400" />
+				<GraphicItem ID="2" GraphicFile="GSDML-0106-8400-LENZE8400" />
+			</GraphicsList>
+			<CategoryList>
+        <CategoryItem ID="Prozess Module" TextId="T_PZD Module" />
+      </CategoryList>
+			<ExternalTextList>
+				<PrimaryLanguage>
+					<!-- Diagnosetexte PN -->
+					<Text TextId="PN_ERROR_VAL32" Value="Error: " />
+					<Text TextId="PN_NO_ERR_0" Value="0 (No Error)" />
+					<Text TextId="PN_ZERO_INSTANCE_0" Value="0" />
+					<Text TextId="PN_29110528" Value="Exist. connect. to 8400 lost   " />
+					<Text TextId="PN_29119793" Value="Memory: No access              " />
+					<Text TextId="PN_29119794" Value="Memory: Read error             " />
+					<Text TextId="PN_29119795" Value="Memory: Write error            " />
+					<Text TextId="PN_29123615" Value="Invalid parameter set          " />
+					<Text TextId="PN_29123616" Value="Error: Lenze setting loaded    " />
+					<Text TextId="PN_29122816" Value="Internal error                 " />
+					<Text TextId="PN_29122577" Value="Internal error                 " />
+					<Text TextId="PN_29122576" Value="Restart by Watchdogreset       " />
+					<Text TextId="PN_29122817" Value="Internal error                 " />
+					<Text TextId="PN_29123632" Value="Invalid modul configuration    " />
+          <Text TextId="PN_29123889" Value="Data_Exchange status quit      " />
+          <Text TextId="PN_96232753" Value="Data_Exchange status quit      " />
+          <Text TextId="PN_163341617" Value="Data_Exchange status quit      " />
+          <Text TextId="PN_230450481" Value="Data_Exchange status quit      " />
+          <Text TextId="PN_297559345" Value="Data_Exchange status quit      " />
+          <Text TextId="PN_364668209" Value="Data_Exchange status quit      " />
+          <Text TextId="PN_431777073" Value="Data_Exchange status quit      " />
+          <Text TextId="PN_498885937" Value="Data_Exchange status quit      " />
+          <Text TextId="PN_29123841" Value="Record Parameter: Invalid read " />
+					<Text TextId="PN_29123842" Value="Record Parameter: Invalid write" />
+					<Text TextId="PN_29123843" Value="Data output status bad         " />
+          <Text TextId="PN_277898546" Value="Station name error             " />
+          <Text TextId="PN_277898547" Value="IP address error               " />
+          <Text TextId="PN_277898548" Value="Stack init error               " />
+          <Text TextId="PN_SUBJECT_ID" Value="Subject ID: " />
+          <Text TextId="PN_SUBJECT_ID_CODE_000" Value="0" />
+          <Text TextId="PN_SUBJECT_ID_CODE_111" Value="111 (Supply Voltage)" />
+          <Text TextId="PN_SUBJECT_ID_CODE_119" Value="119 (Temperature)" />
+          <Text TextId="PN_SUBJECT_ID_CODE_123" Value="123 (Motor Management / Resolver)" />
+          <Text TextId="PN_SUBJECT_ID_CODE_125" Value="125 (Analog I/O internal)" />
+          <Text TextId="PN_SUBJECT_ID_CODE_127" Value="127 (Extension Module Slot1)" />
+          <Text TextId="PN_SUBJECT_ID_CODE_131" Value="131 (CAN internal, generally)" />
+          <Text TextId="PN_SUBJECT_ID_CODE_135" Value="135 (CAN Process Data Object (PDO))" />
+          <Text TextId="PN_SUBJECT_ID_CODE_140" Value="140 (Device Configuration)" />
+          <Text TextId="PN_SUBJECT_ID_CODE_144" Value="144 (Parameter Data Set)" />
+          <Text TextId="PN_SUBJECT_ID_CODE_145" Value="145 (Device Firmware (internal error))" />
+          <Text TextId="PN_SUBJECT_ID_CODE_400" Value="400 (Device Hardware defect)" />
+          <Text TextId="PN_SUBJECT_ID_CODE_444" Value="444 (Fieldbus PROFINET)" />
+          <Text TextId="PN_SUBJECT_ID_CODE_980" Value="980 (US01: User Application Error)" />
+          <Text TextId="PN_SUBJECT_ID_CODE_981" Value="981 (US02: User Application Error)" />
+          <Text TextId="PN_SUBJECT_ID_CODE_982" Value="982 (US03: User Application Error)" />
+          <Text TextId="PN_SUBJECT_ID_CODE_983" Value="983 (US04: User Application Error)" />
+          <Text TextId="PN_ERROR_TYPE" Value="Error Type: " />
+          <Text TextId="PN_ETYPE_NO_REACTION" Value="0 (No Reaction)" />
+          <Text TextId="PN_ETYPE_FAULT" Value="1 (Fault)" />
+          <Text TextId="PN_ETYPE_TROUBLE" Value="2 (Trouble)" />
+          <Text TextId="PN_ETYPE_TROUBLE_QUICK_STOP" Value="3 (TroubleQuickStop)" />
+          <Text TextId="PN_ETYPE_WARNING_LOCKED" Value="4 (WarningLocked)" />
+          <Text TextId="PN_ETYPE_WARNING" Value="5 (Warning)" />
+          <Text TextId="PN_ETYPE_INFORMATION" Value="6 (Information)" />
+					<Text TextId="PN_ERROR_ID" Value="Error ID: " />
+          <!--  -->
+					<Text TextId="IDT_FAMILY_DESCRIPTION" Value="Lenze PROFINET Frequency Inverter 8400" />
+					<!--Textstrings für DAP  -->
+					<Text TextId="IDT_DAP5_NAME" Value="E84AYCER 8400" />
+					<Text TextId="IDT_DAP5_INFO" Value="E84AYCER 8400 PROFINET IO Interface" />
+					<Text TextId="IDT_DAP5_Interface" Value="X1" />
+					<Text TextId="IDT_DAP5_Port1" Value="X256 P1" />
+					<Text TextId="IDT_DAP5_Port2" Value="X257 P2" />
+					<Text TextId="IDT_ETHERNETINTERFACE_Port1" Value="Port 1" />
+					<Text TextId="IDT_ETHERNETINTERFACE_Port2" Value="Port 2" />
+					<!--  -->
+					<!--module categories-->
+					<Text TextId="T_PZD Module" Value="Slot 1: Process Data" />
+					<!--process modules-->
+          <Text TextId="IDT_MODULE41_NAME" Value="PCD(  1W ) AR kons." />
+          <Text TextId="IDT_MODULE41_INFO" Value="Process Data Module, 1W AR" />
+          <Text TextId="IDT_DATAITEM_M41I" Value="INPUT( 1W )" />
+          <Text TextId="IDT_DATAITEM_M41O" Value="OUTPUT( 1W )" />
+
+          <Text TextId="IDT_MODULE42_NAME" Value="PCD(  2W ) AR kons." />
+          <Text TextId="IDT_MODULE42_INFO" Value="Process Data Module, 2W AR" />
+          <Text TextId="IDT_DATAITEM_M42I" Value="INPUT( 2W )" />
+          <Text TextId="IDT_DATAITEM_M42O" Value="OUTPUT( 2W )" />
+
+          <Text TextId="IDT_MODULE43_NAME" Value="PCD(  3W ) AR kons." />
+          <Text TextId="IDT_MODULE43_INFO" Value="Process Data Module, 3W AR" />
+          <Text TextId="IDT_DATAITEM_M43I" Value="INPUT( 3W )" />
+          <Text TextId="IDT_DATAITEM_M43O" Value="OUTPUT( 3W )" />
+
+          <Text TextId="IDT_MODULE44_NAME" Value="PCD(  4W ) AR kons." />
+          <Text TextId="IDT_MODULE44_INFO" Value="Process Data Module, 4W AR" />
+          <Text TextId="IDT_DATAITEM_M44I" Value="INPUT( 4W )" />
+          <Text TextId="IDT_DATAITEM_M44O" Value="OUTPUT( 4W )" />
+
+          <Text TextId="IDT_MODULE45_NAME" Value="PCD(  5W ) AR kons." />
+          <Text TextId="IDT_MODULE45_INFO" Value="Process Data Module, 5W AR" />
+          <Text TextId="IDT_DATAITEM_M45I" Value="INPUT( 5W )" />
+          <Text TextId="IDT_DATAITEM_M45O" Value="OUTPUT( 5W )" />
+
+          <Text TextId="IDT_MODULE46_NAME" Value="PCD(  6W ) AR kons." />
+          <Text TextId="IDT_MODULE46_INFO" Value="Process Data Module, 6W AR" />
+          <Text TextId="IDT_DATAITEM_M46I" Value="INPUT( 6W )" />
+          <Text TextId="IDT_DATAITEM_M46O" Value="OUTPUT( 6W )" />
+
+          <Text TextId="IDT_MODULE47_NAME" Value="PCD(  7W ) AR kons." />
+          <Text TextId="IDT_MODULE47_INFO" Value="Process Data Module, 7W AR" />
+          <Text TextId="IDT_DATAITEM_M47I" Value="INPUT( 7W )" />
+          <Text TextId="IDT_DATAITEM_M47O" Value="OUTPUT( 7W )" />
+
+          <Text TextId="IDT_MODULE48_NAME" Value="PCD(  8W ) AR kons." />
+          <Text TextId="IDT_MODULE48_INFO" Value="Process Data Module, 8W AR" />
+          <Text TextId="IDT_DATAITEM_M48I" Value="INPUT( 8W )" />
+          <Text TextId="IDT_DATAITEM_M48O" Value="OUTPUT( 8W )" />
+
+          <Text TextId="IDT_MODULE49_NAME" Value="PCD(  9W ) AR kons." />
+          <Text TextId="IDT_MODULE49_INFO" Value="Process Data Module, 9W AR" />
+          <Text TextId="IDT_DATAITEM_M49I" Value="INPUT( 9W )" />
+          <Text TextId="IDT_DATAITEM_M49O" Value="OUTPUT( 9W )" />
+
+          <Text TextId="IDT_MODULE50_NAME" Value="PCD( 10W ) AR kons." />
+          <Text TextId="IDT_MODULE50_INFO" Value="Process Data Module, 10W AR" />
+          <Text TextId="IDT_DATAITEM_M50I" Value="INPUT( 10W )" />
+          <Text TextId="IDT_DATAITEM_M50O" Value="OUTPUT( 10W )" />
+
+          <Text TextId="IDT_MODULE51_NAME" Value="PCD( 11W ) AR kons." />
+          <Text TextId="IDT_MODULE51_INFO" Value="Process Data Module, 11W AR" />
+          <Text TextId="IDT_DATAITEM_M51I" Value="INPUT( 11W )" />
+          <Text TextId="IDT_DATAITEM_M51O" Value="OUTPUT( 11W )" />
+
+          <Text TextId="IDT_MODULE52_NAME" Value="PCD( 12W ) AR kons." />
+          <Text TextId="IDT_MODULE52_INFO" Value="Process Data Module, 12W AR" />
+          <Text TextId="IDT_DATAITEM_M52I" Value="INPUT( 12W )" />
+          <Text TextId="IDT_DATAITEM_M52O" Value="OUTPUT( 12W )" />
+
+          <Text TextId="IDT_MODULE53_NAME" Value="PCD( 13W ) AR kons." />
+          <Text TextId="IDT_MODULE53_INFO" Value="Process Data Module, 13W AR" />
+          <Text TextId="IDT_DATAITEM_M53I" Value="INPUT( 13W )" />
+          <Text TextId="IDT_DATAITEM_M53O" Value="OUTPUT( 13W )" />
+
+          <Text TextId="IDT_MODULE54_NAME" Value="PCD( 14W ) AR kons." />
+          <Text TextId="IDT_MODULE54_INFO" Value="Process Data Module, 14W AR" />
+          <Text TextId="IDT_DATAITEM_M54I" Value="INPUT( 14W )" />
+          <Text TextId="IDT_DATAITEM_M54O" Value="OUTPUT( 14W )" />
+
+          <Text TextId="IDT_MODULE55_NAME" Value="PCD( 15W ) AR kons." />
+          <Text TextId="IDT_MODULE55_INFO" Value="Process Data Module, 15W AR" />
+          <Text TextId="IDT_DATAITEM_M55I" Value="INPUT( 15W )" />
+          <Text TextId="IDT_DATAITEM_M55O" Value="OUTPUT( 15W )" />
+
+          <Text TextId="IDT_MODULE56_NAME" Value="PCD( 16W ) AR kons." />
+          <Text TextId="IDT_MODULE56_INFO" Value="Process Data Module, 16W AR" />
+          <Text TextId="IDT_DATAITEM_M56I" Value="INPUT( 16W )" />
+          <Text TextId="IDT_DATAITEM_M56O" Value="OUTPUT( 16W )" />
+
+          <!--Safety Module-->
+
+          <!--restliche Bezeichner-->
+				</PrimaryLanguage>
+        <Language xml:lang="de">
+          <!-- Diagnosetexte PN -->
+          <Text TextId="PN_ERROR_VAL32" Value="Fehler: " />
+          <Text TextId="PN_NO_ERR_0" Value="0 (Kein Fehler)" />
+          <Text TextId="PN_ZERO_INSTANCE_0" Value="0" />
+          <Text TextId="PN_29110528" Value="Verbindung zu 8400 verloren    " />
+          <Text TextId="PN_29119793" Value="Speicher: kein Zugriff         " />
+          <Text TextId="PN_29119794" Value="Speicher: Fehler beim Lesen    " />
+          <Text TextId="PN_29119795" Value="Speicher: Fehler beim Schreiben" />
+          <Text TextId="PN_29123615" Value="Parametersatz ungültig         " />
+          <Text TextId="PN_29123616" Value="Fehler: Lenze-Einstell. geladen" />
+          <Text TextId="PN_29122816" Value="Interner Fehler                " />
+          <Text TextId="PN_29122577" Value="Interner Fehler                " />
+          <Text TextId="PN_29122576" Value="Neustart d. Watchdogreset      " />
+          <Text TextId="PN_29122817" Value="Interner Fehler                " />
+          <Text TextId="PN_29123632" Value="Ungültige Modulkonfiguration   " />
+          <Text TextId="PN_29123889" Value="Zustand Data_Exchange verlassen" />
+          <Text TextId="PN_96232753" Value="Zustand Data_Exchange verlassen" />
+          <Text TextId="PN_163341617" Value="Zustand Data_Exchange verlassen" />
+          <Text TextId="PN_230450481" Value="Zustand Data_Exchange verlassen" />
+          <Text TextId="PN_297559345" Value="Zustand Data_Exchange verlassen" />
+          <Text TextId="PN_364668209" Value="Zustand Data_Exchange verlassen" />
+          <Text TextId="PN_431777073" Value="Zustand Data_Exchange verlassen" />
+          <Text TextId="PN_498885937" Value="Zustand Data_Exchange verlassen" />
+          <Text TextId="PN_29123841" Value="Ungültiger Prm-Lesezugriff     " />
+          <Text TextId="PN_29123842" Value="Ungültiger Prm-Schreibzugriff  " />
+          <Text TextId="PN_29123843" Value="Ausgangsdaten ungültig         " />
+          <Text TextId="PN_277898546" Value="Stationsname fehlerhaft        " />
+          <Text TextId="PN_277898547" Value="IP Adresse fehlerhaft          " />
+          <Text TextId="PN_277898548" Value="Stack Initialisierungsfehler   " />
+          <Text TextId="PN_SUBJECT_ID" Value="Sachgebiet: " />
+          <Text TextId="PN_SUBJECT_ID_CODE_000" Value="0" />
+          <Text TextId="PN_SUBJECT_ID_CODE_111" Value="111 (Versorgungsspannung)" />
+          <Text TextId="PN_SUBJECT_ID_CODE_119" Value="119 (Temperatur)" />
+          <Text TextId="PN_SUBJECT_ID_CODE_123" Value="123 (Motormanagement / Geber)" />
+          <Text TextId="PN_SUBJECT_ID_CODE_125" Value="125 (Analog E/A integriert)" />
+          <Text TextId="PN_SUBJECT_ID_CODE_127" Value="127 (Erweiterungsmodul Slot1)" />
+          <Text TextId="PN_SUBJECT_ID_CODE_131" Value="131 (CAN integriert allgemein)" />
+          <Text TextId="PN_SUBJECT_ID_CODE_135" Value="135 (CAN Prozessdatenobjekt (PDO))" />
+          <Text TextId="PN_SUBJECT_ID_CODE_140" Value="140 (Gerätekonfiguration)" />
+          <Text TextId="PN_SUBJECT_ID_CODE_144" Value="144 (Parametersatz)" />
+          <Text TextId="PN_SUBJECT_ID_CODE_145" Value="145 (Gerätefirmware (interner Fehler))" />
+          <Text TextId="PN_SUBJECT_ID_CODE_400" Value="400 (Gerätehardware defekt)" />
+          <Text TextId="PN_SUBJECT_ID_CODE_444" Value="444 (Feldbus PROFINET)" />
+          <Text TextId="PN_SUBJECT_ID_CODE_980" Value="980 (US01: Anwenderfehler)" />
+          <Text TextId="PN_SUBJECT_ID_CODE_981" Value="981 (US02: Anwenderfehler)" />
+          <Text TextId="PN_SUBJECT_ID_CODE_982" Value="982 (US03: Anwenderfehler)" />
+          <Text TextId="PN_SUBJECT_ID_CODE_983" Value="983 (US04: Anwenderfehler)" />
+          <Text TextId="PN_ERROR_TYPE" Value="Fehlertyp: " />
+          <Text TextId="PN_ETYPE_NO_REACTION" Value="0 (Keine Reaktion)" />
+          <Text TextId="PN_ETYPE_FAULT" Value="1 (Fehler Impulssperre)" />
+          <Text TextId="PN_ETYPE_TROUBLE" Value="2 (Störung)" />
+          <Text TextId="PN_ETYPE_TROUBLE_QUICK_STOP" Value="3 (Fehler Schnellhalt)" />
+          <Text TextId="PN_ETYPE_WARNING_LOCKED" Value="4 (Arretierte Warnung)" />
+          <Text TextId="PN_ETYPE_WARNING" Value="5 (Warnung)" />
+          <Text TextId="PN_ETYPE_INFORMATION" Value="6 (Information)" />
+          <Text TextId="PN_ERROR_ID" Value="Fehler-ID: " />
+          <!--  -->
+          <Text TextId="IDT_FAMILY_DESCRIPTION" Value="Lenze PROFINET Frequency Inverter 8400" />
+          <!--Textstrings für DAP  -->
+          <Text TextId="IDT_DAP5_NAME" Value="E84AYCER 8400" />
+          <Text TextId="IDT_DAP5_INFO" Value="E84AYCER 8400 PROFINET IO Interface" />
+          <Text TextId="IDT_DAP5_Interface" Value="X1" />
+          <Text TextId="IDT_DAP5_Port1" Value="X256 P1" />
+          <Text TextId="IDT_DAP5_Port2" Value="X257 P2" />
+          <Text TextId="IDT_ETHERNETINTERFACE_Port1" Value="Port 1" />
+          <Text TextId="IDT_ETHERNETINTERFACE_Port2" Value="Port 2" />
+          <!--  -->
+          <!--module categories-->
+          <Text TextId="T_PZD Module" Value="Slot 1: Prozessdaten" />
+          <!--process modules-->
+          <Text TextId="IDT_MODULE41_NAME" Value="PZD(  1W ) AR kons." />
+          <Text TextId="IDT_MODULE41_INFO" Value="Prozessdatenmodul, 1W AR" />
+          <Text TextId="IDT_DATAITEM_M41I" Value="INPUT( 1W )" />
+          <Text TextId="IDT_DATAITEM_M41O" Value="OUTPUT( 1W )" />
+
+          <Text TextId="IDT_MODULE42_NAME" Value="PZD(  2W ) AR kons." />
+          <Text TextId="IDT_MODULE42_INFO" Value="Prozessdatenmodul, 2W AR" />
+          <Text TextId="IDT_DATAITEM_M42I" Value="INPUT( 2W )" />
+          <Text TextId="IDT_DATAITEM_M42O" Value="OUTPUT( 2W )" />
+
+          <Text TextId="IDT_MODULE43_NAME" Value="PZD(  3W ) AR kons." />
+          <Text TextId="IDT_MODULE43_INFO" Value="Prozessdatenmodul, 3W AR" />
+          <Text TextId="IDT_DATAITEM_M43I" Value="INPUT( 3W )" />
+          <Text TextId="IDT_DATAITEM_M43O" Value="OUTPUT( 3W )" />
+
+          <Text TextId="IDT_MODULE44_NAME" Value="PZD(  4W ) AR kons." />
+          <Text TextId="IDT_MODULE44_INFO" Value="Prozessdatenmodul, 4W AR" />
+          <Text TextId="IDT_DATAITEM_M44I" Value="INPUT( 4W )" />
+          <Text TextId="IDT_DATAITEM_M44O" Value="OUTPUT( 4W )" />
+
+          <Text TextId="IDT_MODULE45_NAME" Value="PZD(  5W ) AR kons." />
+          <Text TextId="IDT_MODULE45_INFO" Value="Prozessdatenmodul, 5W AR" />
+          <Text TextId="IDT_DATAITEM_M45I" Value="INPUT( 5W )" />
+          <Text TextId="IDT_DATAITEM_M45O" Value="OUTPUT( 5W )" />
+
+          <Text TextId="IDT_MODULE46_NAME" Value="PZD(  6W ) AR kons." />
+          <Text TextId="IDT_MODULE46_INFO" Value="Prozessdatenmodul, 6W AR" />
+          <Text TextId="IDT_DATAITEM_M46I" Value="INPUT( 6W )" />
+          <Text TextId="IDT_DATAITEM_M46O" Value="OUTPUT( 6W )" />
+
+          <Text TextId="IDT_MODULE47_NAME" Value="PZD(  7W ) AR kons." />
+          <Text TextId="IDT_MODULE47_INFO" Value="Prozessdatenmodul, 7W AR" />
+          <Text TextId="IDT_DATAITEM_M47I" Value="INPUT( 7W )" />
+          <Text TextId="IDT_DATAITEM_M47O" Value="OUTPUT( 7W )" />
+
+          <Text TextId="IDT_MODULE48_NAME" Value="PZD(  8W ) AR kons." />
+          <Text TextId="IDT_MODULE48_INFO" Value="Prozessdatenmodul, 8W AR" />
+          <Text TextId="IDT_DATAITEM_M48I" Value="INPUT( 8W )" />
+          <Text TextId="IDT_DATAITEM_M48O" Value="OUTPUT( 8W )" />
+
+          <Text TextId="IDT_MODULE49_NAME" Value="PZD(  9W ) AR kons." />
+          <Text TextId="IDT_MODULE49_INFO" Value="Prozessdatenmodul, 9W AR" />
+          <Text TextId="IDT_DATAITEM_M49I" Value="INPUT( 9W )" />
+          <Text TextId="IDT_DATAITEM_M49O" Value="OUTPUT( 9W )" />
+
+          <Text TextId="IDT_MODULE50_NAME" Value="PZD( 10W ) AR kons." />
+          <Text TextId="IDT_MODULE50_INFO" Value="Prozessdatenmodul, 10W AR" />
+          <Text TextId="IDT_DATAITEM_M50I" Value="INPUT( 10W )" />
+          <Text TextId="IDT_DATAITEM_M50O" Value="OUTPUT( 10W )" />
+
+          <Text TextId="IDT_MODULE51_NAME" Value="PZD( 11W ) AR kons." />
+          <Text TextId="IDT_MODULE51_INFO" Value="Prozessdatenmodul, 11W AR" />
+          <Text TextId="IDT_DATAITEM_M51I" Value="INPUT( 11W )" />
+          <Text TextId="IDT_DATAITEM_M51O" Value="OUTPUT( 11W )" />
+
+          <Text TextId="IDT_MODULE52_NAME" Value="PZD( 12W ) AR kons." />
+          <Text TextId="IDT_MODULE52_INFO" Value="Prozessdatenmodul, 12W AR" />
+          <Text TextId="IDT_DATAITEM_M52I" Value="INPUT( 12W )" />
+          <Text TextId="IDT_DATAITEM_M52O" Value="OUTPUT( 12W )" />
+
+          <Text TextId="IDT_MODULE53_NAME" Value="PZD( 13W ) AR kons." />
+          <Text TextId="IDT_MODULE53_INFO" Value="Prozessdatenmodul, 13W AR" />
+          <Text TextId="IDT_DATAITEM_M53I" Value="INPUT( 13W )" />
+          <Text TextId="IDT_DATAITEM_M53O" Value="OUTPUT( 13W )" />
+
+          <Text TextId="IDT_MODULE54_NAME" Value="PZD( 14W ) AR kons." />
+          <Text TextId="IDT_MODULE54_INFO" Value="Prozessdatenmodul, 14W AR" />
+          <Text TextId="IDT_DATAITEM_M54I" Value="INPUT( 14W )" />
+          <Text TextId="IDT_DATAITEM_M54O" Value="OUTPUT( 14W )" />
+
+          <Text TextId="IDT_MODULE55_NAME" Value="PZD( 15W ) AR kons." />
+          <Text TextId="IDT_MODULE55_INFO" Value="Prozessdatenmodul, 15W AR" />
+          <Text TextId="IDT_DATAITEM_M55I" Value="INPUT( 15W )" />
+          <Text TextId="IDT_DATAITEM_M55O" Value="OUTPUT( 15W )" />
+
+          <Text TextId="IDT_MODULE56_NAME" Value="PZD( 16W ) AR kons." />
+          <Text TextId="IDT_MODULE56_INFO" Value="Prozessdatenmodul, 16W AR" />
+          <Text TextId="IDT_DATAITEM_M56I" Value="INPUT( 16W )" />
+          <Text TextId="IDT_DATAITEM_M56O" Value="OUTPUT( 16W )" />
+
+          <!--Safety Module-->
+
+          <!--restliche Bezeichner-->
+        </Language>
+        </ExternalTextList>
+		</ApplicationProcess>
+	</ProfileBody>
+</ISO15745Profile>

@@ -1,0 +1,1830 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<ISO15745Profile xmlns="http://www.profibus.com/GSDML/2003/11/DeviceProfile" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.profibus.com/GSDML/2003/11/DeviceProfile ..\xsd\GSDML-DeviceProfile-V2.3.xsd">
+	<ProfileHeader>
+		<ProfileIdentification>PROFINET Device Profile</ProfileIdentification>
+		<ProfileRevision>1.00</ProfileRevision>
+		<ProfileName>Device Profile for PROFINET Devices</ProfileName>
+		<ProfileSource>PROFIBUS Nutzerorganisation e. V. (PNO)</ProfileSource>
+		<ProfileClassID>Device</ProfileClassID>
+		<ISO15745Reference>
+			<ISO15745Part>4</ISO15745Part>
+			<ISO15745Edition>1</ISO15745Edition>
+			<ProfileTechnology>GSDML</ProfileTechnology>
+		</ISO15745Reference>
+	</ProfileHeader>
+	<ProfileBody>
+		<DeviceIdentity VendorID="0x0106" DeviceID="0x9400">
+			<InfoText TextId="PROFINET_ IO_DEV_DESCRIPTION"/>
+			<VendorName Value="Lenze"/>
+		</DeviceIdentity>
+		<DeviceFunction>
+			<Family MainFamily="Drives" ProductFamily="Lenze Lforce Drives 9400"/>
+		</DeviceFunction>
+		<ApplicationProcess>
+			<DeviceAccessPointList>
+				<DeviceAccessPointItem ID="DIM 1" PhysicalSlots="0..2" ModuleIdentNumber="0x00000300" MinDeviceInterval="64" ImplementationType="netX" DNS_CompatibleName="Lenze9400" FixedInSlots="0" ObjectUUID_LocalIndex="1" SharedDeviceSupported="true" DeviceAccessSupported="true" PNIO_Version="V2.2" NameOfStationNotTransferable="true">
+					<ModuleInfo>
+						<Name TextId="Highline E94ASHE"/>
+						<InfoText TextId="PROFINET_ IO_DEV_DESCRIPTION"/>
+						<VendorName Value="Lenze"/>
+						<OrderNumber Value="E94AFHB"/>
+					</ModuleInfo>
+					<SubslotList>
+						<SubslotItem SubslotNumber="32768" TextId="IDT_SS_Interface"/>
+						<SubslotItem SubslotNumber="32769" TextId="IDT_SS_Port1"/>
+						<SubslotItem SubslotNumber="32770" TextId="IDT_SS_Port2"/>
+					</SubslotList>
+					<IOConfigData MaxInputLength="80" MaxOutputLength="80"/>
+					<UseableModules>
+						<ModuleItemRef ModuleItemTarget="1" AllowedInSlots="1"/>
+						<ModuleItemRef ModuleItemTarget="2" AllowedInSlots="1"/>
+						<ModuleItemRef ModuleItemTarget="3" AllowedInSlots="1"/>
+						<ModuleItemRef ModuleItemTarget="4" AllowedInSlots="1"/>
+						<ModuleItemRef ModuleItemTarget="5" AllowedInSlots="1"/>
+						<ModuleItemRef ModuleItemTarget="6" AllowedInSlots="1"/>
+						<ModuleItemRef ModuleItemTarget="7" AllowedInSlots="1"/>
+						<ModuleItemRef ModuleItemTarget="8" AllowedInSlots="1"/>
+						<ModuleItemRef ModuleItemTarget="9" AllowedInSlots="1"/>
+						<ModuleItemRef ModuleItemTarget="10" AllowedInSlots="1"/>
+						<ModuleItemRef ModuleItemTarget="11" AllowedInSlots="1"/>
+						<ModuleItemRef ModuleItemTarget="12" AllowedInSlots="1"/>
+						<ModuleItemRef ModuleItemTarget="13" AllowedInSlots="1"/>
+						<ModuleItemRef ModuleItemTarget="14" AllowedInSlots="1"/>
+						<ModuleItemRef ModuleItemTarget="15" AllowedInSlots="1"/>
+						<ModuleItemRef ModuleItemTarget="16" AllowedInSlots="1"/>
+						<ModuleItemRef ModuleItemTarget="17" AllowedInSlots="1"/>
+						<ModuleItemRef ModuleItemTarget="18" AllowedInSlots="1"/>
+						<ModuleItemRef ModuleItemTarget="19" AllowedInSlots="1"/>
+						<ModuleItemRef ModuleItemTarget="20" AllowedInSlots="1"/>
+						<ModuleItemRef ModuleItemTarget="21" AllowedInSlots="1"/>
+						<ModuleItemRef ModuleItemTarget="22" AllowedInSlots="1"/>
+						<ModuleItemRef ModuleItemTarget="23" AllowedInSlots="1"/>
+						<ModuleItemRef ModuleItemTarget="24" AllowedInSlots="1"/>
+						<ModuleItemRef ModuleItemTarget="25" AllowedInSlots="1"/>
+						<ModuleItemRef ModuleItemTarget="26" AllowedInSlots="1"/>
+						<ModuleItemRef ModuleItemTarget="27" AllowedInSlots="1"/>
+						<ModuleItemRef ModuleItemTarget="28" AllowedInSlots="1"/>
+						<ModuleItemRef ModuleItemTarget="29" AllowedInSlots="1"/>
+						<ModuleItemRef ModuleItemTarget="30" AllowedInSlots="1"/>
+						<ModuleItemRef ModuleItemTarget="31" AllowedInSlots="1"/>
+						<ModuleItemRef ModuleItemTarget="32" AllowedInSlots="1"/>
+						<ModuleItemRef ModuleItemTarget="33" AllowedInSlots="2"/>
+						<!--Die Referenzen zeigen auf die Module der ModuleList -->
+					</UseableModules>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="DIM 1" SubmoduleIdentNumber="0xA0000001" FixedInSubslots="1" Writeable_IM_Records="1 2 3 4">
+							<IOData IOPS_Length="1" IOCS_Length="1"/>
+							<ModuleInfo CategoryRef="PZD">
+								<Name TextId="PZD 1W AR"/>
+								<InfoText TextId="Prozessdaten Modul 1W AR"/>
+							</ModuleInfo>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+					<SystemDefinedSubmoduleList>
+						<InterfaceSubmoduleItem ID="DIM 1 IF 1" SupportedRT_Classes="RT_CLASS_1" SupportedProtocols="SNMP;LLDP" SupportedMibs="MIB2" NetworkComponentDiagnosisSupported="true" SubslotNumber="32768" TextId="Lenze9400" SubmoduleIdentNumber="0x1244">
+							<ApplicationRelations NumberOfAR="2">
+								<TimingProperties SendClock="32 64 128"/>
+							</ApplicationRelations>
+							<MediaRedundancy SupportedRole="Client"/>
+						</InterfaceSubmoduleItem>
+						<PortSubmoduleItem ID="DIM 1 P 1" SubslotNumber="32769" LinkStateDiagnosisCapability="Up+Down" PortDeactivationSupported="false" TextId="IDT_Port1" SubmoduleIdentNumber="0x1245" SupportsRingportConfig="true" IsDefaultRingport="true" MAUTypes= "16"/>
+						<PortSubmoduleItem ID="DIM 1 P 2" SubslotNumber="32770" LinkStateDiagnosisCapability="Up+Down" PortDeactivationSupported="false" TextId="IDT_Port2" SubmoduleIdentNumber="0x1246" SupportsRingportConfig="true" IsDefaultRingport="true" MAUTypes= "16"/>
+					</SystemDefinedSubmoduleList>
+					<Graphics>
+						<GraphicItemRef Type="DeviceSymbol" GraphicItemTarget="ID_Graphic_1"/>
+						<!--<GraphicItemRef State="SF" GraphicItemTarget="2"/>-->
+					</Graphics>
+				</DeviceAccessPointItem>
+				<DeviceAccessPointItem ID="DIM 2" PhysicalSlots="0..2" ModuleIdentNumber="0x00000300" MinDeviceInterval="128" ImplementationType="netX" DNS_CompatibleName="Lenze9400" FixedInSlots="0" ObjectUUID_LocalIndex="1" SharedDeviceSupported="true" DeviceAccessSupported="true" PNIO_Version="V2.2" NameOfStationNotTransferable="true">
+					<ModuleInfo>
+						<Name TextId="Highline E94ASHE-OEM"/>
+						<InfoText TextId="PROFINET_ IO_DEV_DESCRIPTION"/>
+						<VendorName Value="Lenze"/>
+						<OrderNumber Value="E94AFHB-001"/>
+					</ModuleInfo>
+					<SubslotList>
+						<SubslotItem SubslotNumber="32768" TextId="IDT_SS_Interface"/>
+						<SubslotItem SubslotNumber="32769" TextId="IDT_SS_Port1"/>
+						<SubslotItem SubslotNumber="32770" TextId="IDT_SS_Port2"/>
+					</SubslotList>
+					<IOConfigData MaxInputLength="80" MaxOutputLength="80"/>
+					<UseableModules>
+						<ModuleItemRef ModuleItemTarget="1" AllowedInSlots="1"/>
+						<ModuleItemRef ModuleItemTarget="2" AllowedInSlots="1"/>
+						<ModuleItemRef ModuleItemTarget="3" AllowedInSlots="1"/>
+						<ModuleItemRef ModuleItemTarget="4" AllowedInSlots="1"/>
+						<ModuleItemRef ModuleItemTarget="5" AllowedInSlots="1"/>
+						<ModuleItemRef ModuleItemTarget="6" AllowedInSlots="1"/>
+						<ModuleItemRef ModuleItemTarget="7" AllowedInSlots="1"/>
+						<ModuleItemRef ModuleItemTarget="8" AllowedInSlots="1"/>
+						<ModuleItemRef ModuleItemTarget="9" AllowedInSlots="1"/>
+						<ModuleItemRef ModuleItemTarget="10" AllowedInSlots="1"/>
+						<ModuleItemRef ModuleItemTarget="11" AllowedInSlots="1"/>
+						<ModuleItemRef ModuleItemTarget="12" AllowedInSlots="1"/>
+						<ModuleItemRef ModuleItemTarget="13" AllowedInSlots="1"/>
+						<ModuleItemRef ModuleItemTarget="14" AllowedInSlots="1"/>
+						<ModuleItemRef ModuleItemTarget="15" AllowedInSlots="1"/>
+						<ModuleItemRef ModuleItemTarget="16" AllowedInSlots="1"/>
+						<ModuleItemRef ModuleItemTarget="17" AllowedInSlots="1"/>
+						<ModuleItemRef ModuleItemTarget="18" AllowedInSlots="1"/>
+						<ModuleItemRef ModuleItemTarget="19" AllowedInSlots="1"/>
+						<ModuleItemRef ModuleItemTarget="20" AllowedInSlots="1"/>
+						<ModuleItemRef ModuleItemTarget="21" AllowedInSlots="1"/>
+						<ModuleItemRef ModuleItemTarget="22" AllowedInSlots="1"/>
+						<ModuleItemRef ModuleItemTarget="23" AllowedInSlots="1"/>
+						<ModuleItemRef ModuleItemTarget="24" AllowedInSlots="1"/>
+						<ModuleItemRef ModuleItemTarget="25" AllowedInSlots="1"/>
+						<ModuleItemRef ModuleItemTarget="26" AllowedInSlots="1"/>
+						<ModuleItemRef ModuleItemTarget="27" AllowedInSlots="1"/>
+						<ModuleItemRef ModuleItemTarget="28" AllowedInSlots="1"/>
+						<ModuleItemRef ModuleItemTarget="29" AllowedInSlots="1"/>
+						<ModuleItemRef ModuleItemTarget="30" AllowedInSlots="1"/>
+						<ModuleItemRef ModuleItemTarget="31" AllowedInSlots="1"/>
+						<ModuleItemRef ModuleItemTarget="32" AllowedInSlots="1"/>
+						<ModuleItemRef ModuleItemTarget="33" AllowedInSlots="2"/>
+						<!--Die Referenzen zeigen auf die Module der ModuleList -->
+					</UseableModules>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="DIM 2" SubmoduleIdentNumber="0xA0000001" FixedInSubslots="1" Writeable_IM_Records="1 2 3 4">
+							<IOData IOPS_Length="1" IOCS_Length="1"/>
+							<ModuleInfo CategoryRef="PZD">
+								<Name TextId="PZD 1W AR"/>
+								<InfoText TextId="Prozessdaten Modul 1W AR"/>
+							</ModuleInfo>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+					<SystemDefinedSubmoduleList>
+						<InterfaceSubmoduleItem ID="DIM 2 IF 1" SupportedRT_Classes="RT_CLASS_1" SupportedProtocols="SNMP;LLDP" SupportedMibs="MIB2" NetworkComponentDiagnosisSupported="true" SubslotNumber="32768" TextId="Lenze9400" SubmoduleIdentNumber="0x1244">
+							<ApplicationRelations NumberOfAR="2">
+								<TimingProperties SendClock="32 64 128"/>
+							</ApplicationRelations>
+							<MediaRedundancy SupportedRole="Client"/>
+						</InterfaceSubmoduleItem>
+						<PortSubmoduleItem ID="DIM 2 P 1" SubslotNumber="32769" LinkStateDiagnosisCapability="Up+Down" PortDeactivationSupported="false" TextId="IDT_Port1" SubmoduleIdentNumber="0x1245" SupportsRingportConfig="true" IsDefaultRingport="true" MAUTypes= "16"/>
+						<PortSubmoduleItem ID="DIM 2 P 2" SubslotNumber="32770" LinkStateDiagnosisCapability="Up+Down" PortDeactivationSupported="false" TextId="IDT_Port2" SubmoduleIdentNumber="0x1246" SupportsRingportConfig="true" IsDefaultRingport="true" MAUTypes= "16"/>
+					</SystemDefinedSubmoduleList>
+					<Graphics>
+						<GraphicItemRef Type="DeviceSymbol" GraphicItemTarget="ID_Graphic_1"/>
+						<!--<GraphicItemRef State="SF" GraphicItemTarget="2"/>-->
+					</Graphics>
+				</DeviceAccessPointItem>
+				<DeviceAccessPointItem ID="DIM 3" PhysicalSlots="0..2" ModuleIdentNumber="0x00000300" MinDeviceInterval="128" ImplementationType="netX" DNS_CompatibleName="Lenze9400" FixedInSlots="0" ObjectUUID_LocalIndex="1" SharedDeviceSupported="true" DeviceAccessSupported="true" PNIO_Version="V2.2" NameOfStationNotTransferable="true">
+					<ModuleInfo>
+						<Name TextId="ServoPLC"/>
+						<InfoText TextId="PROFINET_ IO_DEV_DESCRIPTION"/>
+						<VendorName Value="Lenze"/>
+						<OrderNumber Value="E94AFPB"/>
+					</ModuleInfo>
+					<SubslotList>
+						<SubslotItem SubslotNumber="32768" TextId="IDT_SS_Interface"/>
+						<SubslotItem SubslotNumber="32769" TextId="IDT_SS_Port1"/>
+						<SubslotItem SubslotNumber="32770" TextId="IDT_SS_Port2"/>
+					</SubslotList>
+					<IOConfigData MaxInputLength="80" MaxOutputLength="80"/>
+					<UseableModules>
+						<ModuleItemRef ModuleItemTarget="1" AllowedInSlots="1"/>
+						<ModuleItemRef ModuleItemTarget="2" AllowedInSlots="1"/>
+						<ModuleItemRef ModuleItemTarget="3" AllowedInSlots="1"/>
+						<ModuleItemRef ModuleItemTarget="4" AllowedInSlots="1"/>
+						<ModuleItemRef ModuleItemTarget="5" AllowedInSlots="1"/>
+						<ModuleItemRef ModuleItemTarget="6" AllowedInSlots="1"/>
+						<ModuleItemRef ModuleItemTarget="7" AllowedInSlots="1"/>
+						<ModuleItemRef ModuleItemTarget="8" AllowedInSlots="1"/>
+						<ModuleItemRef ModuleItemTarget="9" AllowedInSlots="1"/>
+						<ModuleItemRef ModuleItemTarget="10" AllowedInSlots="1"/>
+						<ModuleItemRef ModuleItemTarget="11" AllowedInSlots="1"/>
+						<ModuleItemRef ModuleItemTarget="12" AllowedInSlots="1"/>
+						<ModuleItemRef ModuleItemTarget="13" AllowedInSlots="1"/>
+						<ModuleItemRef ModuleItemTarget="14" AllowedInSlots="1"/>
+						<ModuleItemRef ModuleItemTarget="15" AllowedInSlots="1"/>
+						<ModuleItemRef ModuleItemTarget="16" AllowedInSlots="1"/>
+						<ModuleItemRef ModuleItemTarget="17" AllowedInSlots="1"/>
+						<ModuleItemRef ModuleItemTarget="18" AllowedInSlots="1"/>
+						<ModuleItemRef ModuleItemTarget="19" AllowedInSlots="1"/>
+						<ModuleItemRef ModuleItemTarget="20" AllowedInSlots="1"/>
+						<ModuleItemRef ModuleItemTarget="21" AllowedInSlots="1"/>
+						<ModuleItemRef ModuleItemTarget="22" AllowedInSlots="1"/>
+						<ModuleItemRef ModuleItemTarget="23" AllowedInSlots="1"/>
+						<ModuleItemRef ModuleItemTarget="24" AllowedInSlots="1"/>
+						<ModuleItemRef ModuleItemTarget="25" AllowedInSlots="1"/>
+						<ModuleItemRef ModuleItemTarget="26" AllowedInSlots="1"/>
+						<ModuleItemRef ModuleItemTarget="27" AllowedInSlots="1"/>
+						<ModuleItemRef ModuleItemTarget="28" AllowedInSlots="1"/>
+						<ModuleItemRef ModuleItemTarget="29" AllowedInSlots="1"/>
+						<ModuleItemRef ModuleItemTarget="30" AllowedInSlots="1"/>
+						<ModuleItemRef ModuleItemTarget="31" AllowedInSlots="1"/>
+						<ModuleItemRef ModuleItemTarget="32" AllowedInSlots="1"/>
+						<ModuleItemRef ModuleItemTarget="33" AllowedInSlots="2"/>
+						<!--Die Referenzen zeigen auf die Module der ModuleList -->
+					</UseableModules>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="DIM 3" SubmoduleIdentNumber="0xA0000001" FixedInSubslots="1" Writeable_IM_Records="1 2 3 4">
+							<IOData IOPS_Length="1" IOCS_Length="1"/>
+							<ModuleInfo CategoryRef="PZD">
+								<Name TextId="PZD 1W AR"/>
+								<InfoText TextId="Prozessdaten Modul 1W AR"/>
+							</ModuleInfo>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+					<SystemDefinedSubmoduleList>
+						<InterfaceSubmoduleItem ID="DIM 3 IF 1" SupportedRT_Classes="RT_CLASS_1" SupportedProtocols="SNMP;LLDP" SupportedMibs="MIB2" NetworkComponentDiagnosisSupported="true" SubslotNumber="32768" TextId="Lenze9400" SubmoduleIdentNumber="0x1244">
+							<ApplicationRelations NumberOfAR="2">
+								<TimingProperties SendClock="32 64 128"/>
+							</ApplicationRelations>
+							<MediaRedundancy SupportedRole="Client"/>
+						</InterfaceSubmoduleItem>
+						<PortSubmoduleItem ID="DIM 3 P 1" SubslotNumber="32769" LinkStateDiagnosisCapability="Up+Down" PortDeactivationSupported="false" TextId="IDT_Port1" SubmoduleIdentNumber="0x1245" SupportsRingportConfig="true" IsDefaultRingport="true" MAUTypes= "16"/>
+						<PortSubmoduleItem ID="DIM 3 P 2" SubslotNumber="32770" LinkStateDiagnosisCapability="Up+Down" PortDeactivationSupported="false" TextId="IDT_Port2" SubmoduleIdentNumber="0x1246" SupportsRingportConfig="true" IsDefaultRingport="true" MAUTypes= "16"/>
+					</SystemDefinedSubmoduleList>
+					<Graphics>
+						<GraphicItemRef Type="DeviceSymbol" GraphicItemTarget="ID_Graphic_1"/>
+						<!--<GraphicItemRef State="SF" GraphicItemTarget="2"/>-->
+					</Graphics>
+				</DeviceAccessPointItem>
+			</DeviceAccessPointList>
+			<ModuleList>
+				<!-- Nur Prozessdaten -->
+				<ModuleItem ID="1" ModuleIdentNumber="0x00000001">
+					<ModuleInfo CategoryRef="PZD">
+						<Name TextId="PZD 1W AR"/>
+						<InfoText TextId="Prozessdaten Modul 1W AR"/>
+					</ModuleInfo>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="1" SubmoduleIdentNumber="0x00000001">
+							<IOData IOPS_Length="1" IOCS_Length="1">
+								<Input>
+									<DataItem DataType="OctetString" Length="2" TextId="Eingänge"/>
+								</Input>
+								<Output>
+									<DataItem DataType="OctetString" Length="2" TextId="Ausgänge"/>
+								</Output>
+							</IOData>
+							<ModuleInfo CategoryRef="PZD">
+								<Name TextId="PZD 1W AR"/>
+								<InfoText TextId="Prozessdaten Modul 1W AR"/>
+							</ModuleInfo>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+				</ModuleItem>
+				<ModuleItem ID="2" ModuleIdentNumber="0x00000002">
+					<ModuleInfo CategoryRef="PZD">
+						<Name TextId="PZD 2W AR"/>
+						<InfoText TextId="Prozessdaten Modul 2W AR"/>
+					</ModuleInfo>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="2" SubmoduleIdentNumber="0x00000002">
+							<IOData IOPS_Length="1" IOCS_Length="1">
+								<Input>
+									<DataItem DataType="OctetString" Length="4" TextId="Eingänge"/>
+								</Input>
+								<Output>
+									<DataItem DataType="OctetString" Length="4" TextId="Ausgänge"/>
+								</Output>
+							</IOData>
+							<ModuleInfo CategoryRef="PZD">
+								<Name TextId="PZD 2W AR"/>
+								<InfoText TextId="Prozessdaten Modul 2W AR"/>
+							</ModuleInfo>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+				</ModuleItem>
+				<ModuleItem ID="3" ModuleIdentNumber="0x00000003">
+					<ModuleInfo CategoryRef="PZD">
+						<Name TextId="PZD 3W AR"/>
+						<InfoText TextId="Prozessdaten Modul 3W AR"/>
+					</ModuleInfo>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="3" SubmoduleIdentNumber="0x00000003">
+							<IOData IOPS_Length="1" IOCS_Length="1">
+								<Input>
+									<DataItem DataType="OctetString" Length="6" TextId="Eingänge"/>
+								</Input>
+								<Output>
+									<DataItem DataType="OctetString" Length="6" TextId="Ausgänge"/>
+								</Output>
+							</IOData>
+							<ModuleInfo CategoryRef="PZD">
+								<Name TextId="PZD 3W AR"/>
+								<InfoText TextId="Prozessdaten Modul 3W AR"/>
+							</ModuleInfo>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+				</ModuleItem>
+				<ModuleItem ID="4" ModuleIdentNumber="0x00000004">
+					<ModuleInfo CategoryRef="PZD">
+						<Name TextId="PZD 4W AR"/>
+						<InfoText TextId="Prozessdaten Modul 4W AR"/>
+					</ModuleInfo>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="4" SubmoduleIdentNumber="0x00000004">
+							<IOData IOPS_Length="1" IOCS_Length="1">
+								<Input>
+									<DataItem DataType="OctetString" Length="8" TextId="Eingänge"/>
+								</Input>
+								<Output>
+									<DataItem DataType="OctetString" Length="8" TextId="Ausgänge"/>
+								</Output>
+							</IOData>
+							<ModuleInfo CategoryRef="PZD">
+								<Name TextId="PZD 4W AR"/>
+								<InfoText TextId="Prozessdaten Modul 4W AR"/>
+							</ModuleInfo>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+				</ModuleItem>
+				<ModuleItem ID="5" ModuleIdentNumber="0x00000005">
+					<ModuleInfo CategoryRef="PZD">
+						<Name TextId="PZD 5W AR"/>
+						<InfoText TextId="Prozessdaten Modul 5W AR"/>
+					</ModuleInfo>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="5" SubmoduleIdentNumber="0x00000005">
+							<IOData IOPS_Length="1" IOCS_Length="1">
+								<Input>
+									<DataItem DataType="OctetString" Length="10" TextId="Eingänge"/>
+								</Input>
+								<Output>
+									<DataItem DataType="OctetString" Length="10" TextId="Ausgänge"/>
+								</Output>
+							</IOData>
+							<ModuleInfo CategoryRef="PZD">
+								<Name TextId="PZD 5W AR"/>
+								<InfoText TextId="Prozessdaten Modul 5W AR"/>
+							</ModuleInfo>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+				</ModuleItem>
+				<ModuleItem ID="6" ModuleIdentNumber="0x00000006">
+					<ModuleInfo CategoryRef="PZD">
+						<Name TextId="PZD 6W AR"/>
+						<InfoText TextId="Prozessdaten Modul 6W AR"/>
+					</ModuleInfo>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="6" SubmoduleIdentNumber="0x00000006">
+							<IOData IOPS_Length="1" IOCS_Length="1">
+								<Input>
+									<DataItem DataType="OctetString" Length="12" TextId="Eingänge"/>
+								</Input>
+								<Output>
+									<DataItem DataType="OctetString" Length="12" TextId="Ausgänge"/>
+								</Output>
+							</IOData>
+							<ModuleInfo CategoryRef="PZD">
+								<Name TextId="PZD 6W AR"/>
+								<InfoText TextId="Prozessdaten Modul 6W AR"/>
+							</ModuleInfo>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+				</ModuleItem>
+				<ModuleItem ID="7" ModuleIdentNumber="0x00000007">
+					<ModuleInfo CategoryRef="PZD">
+						<Name TextId="PZD 7W AR"/>
+						<InfoText TextId="Prozessdaten Modul 7W AR"/>
+					</ModuleInfo>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="7" SubmoduleIdentNumber="0x00000007">
+							<IOData IOPS_Length="1" IOCS_Length="1">
+								<Input>
+									<DataItem DataType="OctetString" Length="14" TextId="Eingänge"/>
+								</Input>
+								<Output>
+									<DataItem DataType="OctetString" Length="14" TextId="Ausgänge"/>
+								</Output>
+							</IOData>
+							<ModuleInfo CategoryRef="PZD">
+								<Name TextId="PZD 7W AR"/>
+								<InfoText TextId="Prozessdaten Modul 7W AR"/>
+							</ModuleInfo>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+				</ModuleItem>
+				<ModuleItem ID="8" ModuleIdentNumber="0x00000008">
+					<ModuleInfo CategoryRef="PZD">
+						<Name TextId="PZD 8W AR"/>
+						<InfoText TextId="Prozessdaten Modul 8W AR"/>
+					</ModuleInfo>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="8" SubmoduleIdentNumber="0x00000008">
+							<IOData IOPS_Length="1" IOCS_Length="1">
+								<Input>
+									<DataItem DataType="OctetString" Length="16" TextId="Eingänge"/>
+								</Input>
+								<Output>
+									<DataItem DataType="OctetString" Length="16" TextId="Ausgänge"/>
+								</Output>
+							</IOData>
+							<ModuleInfo CategoryRef="PZD">
+								<Name TextId="PZD 8W AR"/>
+								<InfoText TextId="Prozessdaten Modul 8W AR"/>
+							</ModuleInfo>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+				</ModuleItem>
+				<ModuleItem ID="9" ModuleIdentNumber="0x00000009">
+					<ModuleInfo CategoryRef="PZD">
+						<Name TextId="PZD 9W AR"/>
+						<InfoText TextId="Prozessdaten Modul 9W AR"/>
+					</ModuleInfo>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="9" SubmoduleIdentNumber="0x00000009">
+							<IOData IOPS_Length="1" IOCS_Length="1">
+								<Input>
+									<DataItem DataType="OctetString" Length="18" TextId="Eingänge"/>
+								</Input>
+								<Output>
+									<DataItem DataType="OctetString" Length="18" TextId="Ausgänge"/>
+								</Output>
+							</IOData>
+							<ModuleInfo CategoryRef="PZD">
+								<Name TextId="PZD 9W AR"/>
+								<InfoText TextId="Prozessdaten Modul 9W AR"/>
+							</ModuleInfo>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+				</ModuleItem>
+				<ModuleItem ID="10" ModuleIdentNumber="0x0000000a">
+					<ModuleInfo CategoryRef="PZD">
+						<Name TextId="PZD 10W AR"/>
+						<InfoText TextId="Prozessdaten Modul 10W AR"/>
+					</ModuleInfo>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="10" SubmoduleIdentNumber="0x0000000a">
+							<IOData IOPS_Length="1" IOCS_Length="1">
+								<Input>
+									<DataItem DataType="OctetString" Length="20" TextId="Eingänge"/>
+								</Input>
+								<Output>
+									<DataItem DataType="OctetString" Length="20" TextId="Ausgänge"/>
+								</Output>
+							</IOData>
+							<ModuleInfo CategoryRef="PZD">
+								<Name TextId="PZD 10W AR"/>
+								<InfoText TextId="Prozessdaten Modul 10W AR"/>
+							</ModuleInfo>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+				</ModuleItem>
+				<ModuleItem ID="11" ModuleIdentNumber="0x0000000b">
+					<ModuleInfo CategoryRef="PZD">
+						<Name TextId="PZD 11W AR"/>
+						<InfoText TextId="Prozessdaten Modul 11W AR"/>
+					</ModuleInfo>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="11" SubmoduleIdentNumber="0x0000000b">
+							<IOData IOPS_Length="1" IOCS_Length="1">
+								<Input>
+									<DataItem DataType="OctetString" Length="22" TextId="Eingänge"/>
+								</Input>
+								<Output>
+									<DataItem DataType="OctetString" Length="22" TextId="Ausgänge"/>
+								</Output>
+							</IOData>
+							<ModuleInfo CategoryRef="PZD">
+								<Name TextId="PZD 11W AR"/>
+								<InfoText TextId="Prozessdaten Modul 11W AR"/>
+							</ModuleInfo>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+				</ModuleItem>
+				<ModuleItem ID="12" ModuleIdentNumber="0x0000000c">
+					<ModuleInfo CategoryRef="PZD">
+						<Name TextId="PZD 12W AR"/>
+						<InfoText TextId="Prozessdaten Modul 12W AR"/>
+					</ModuleInfo>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="12" SubmoduleIdentNumber="0x0000000c">
+							<IOData IOPS_Length="1" IOCS_Length="1">
+								<Input>
+									<DataItem DataType="OctetString" Length="24" TextId="Eingänge"/>
+								</Input>
+								<Output>
+									<DataItem DataType="OctetString" Length="24" TextId="Ausgänge"/>
+								</Output>
+							</IOData>
+							<ModuleInfo CategoryRef="PZD">
+								<Name TextId="PZD 12W AR"/>
+								<InfoText TextId="Prozessdaten Modul 12W AR"/>
+							</ModuleInfo>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+				</ModuleItem>
+				<ModuleItem ID="13" ModuleIdentNumber="0x0000000d">
+					<ModuleInfo CategoryRef="PZD">
+						<Name TextId="PZD 13W AR"/>
+						<InfoText TextId="Prozessdaten Modul 13W AR"/>
+					</ModuleInfo>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="13" SubmoduleIdentNumber="0x0000000d">
+							<IOData IOPS_Length="1" IOCS_Length="1">
+								<Input>
+									<DataItem DataType="OctetString" Length="26" TextId="Eingänge"/>
+								</Input>
+								<Output>
+									<DataItem DataType="OctetString" Length="26" TextId="Ausgänge"/>
+								</Output>
+							</IOData>
+							<ModuleInfo CategoryRef="PZD">
+								<Name TextId="PZD 13W AR"/>
+								<InfoText TextId="Prozessdaten Modul 13W AR"/>
+							</ModuleInfo>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+				</ModuleItem>
+				<ModuleItem ID="14" ModuleIdentNumber="0x0000000e">
+					<ModuleInfo CategoryRef="PZD">
+						<Name TextId="PZD 14W AR"/>
+						<InfoText TextId="Prozessdaten Modul 14W AR"/>
+					</ModuleInfo>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="14" SubmoduleIdentNumber="0x0000000e">
+							<IOData IOPS_Length="1" IOCS_Length="1">
+								<Input>
+									<DataItem DataType="OctetString" Length="28" TextId="Eingänge"/>
+								</Input>
+								<Output>
+									<DataItem DataType="OctetString" Length="28" TextId="Ausgänge"/>
+								</Output>
+							</IOData>
+							<ModuleInfo CategoryRef="PZD">
+								<Name TextId="PZD 14W AR"/>
+								<InfoText TextId="Prozessdaten Modul 14W AR"/>
+							</ModuleInfo>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+				</ModuleItem>
+				<ModuleItem ID="15" ModuleIdentNumber="0x0000000f">
+					<ModuleInfo CategoryRef="PZD">
+						<Name TextId="PZD 15W AR"/>
+						<InfoText TextId="Prozessdaten Modul 15W AR"/>
+					</ModuleInfo>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="15" SubmoduleIdentNumber="0x0000000f">
+							<IOData IOPS_Length="1" IOCS_Length="1">
+								<Input>
+									<DataItem DataType="OctetString" Length="30" TextId="Eingänge"/>
+								</Input>
+								<Output>
+									<DataItem DataType="OctetString" Length="30" TextId="Ausgänge"/>
+								</Output>
+							</IOData>
+							<ModuleInfo CategoryRef="PZD">
+								<Name TextId="PZD 15W AR"/>
+								<InfoText TextId="Prozessdaten Modul 15W AR"/>
+							</ModuleInfo>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+				</ModuleItem>
+				<ModuleItem ID="16" ModuleIdentNumber="0x00000010">
+					<ModuleInfo CategoryRef="PZD">
+						<Name TextId="PZD 16W AR"/>
+						<InfoText TextId="Prozessdaten Modul 16W AR"/>
+					</ModuleInfo>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="16" SubmoduleIdentNumber="0x00000010">
+							<IOData IOPS_Length="1" IOCS_Length="1">
+								<Input>
+									<DataItem DataType="OctetString" Length="32" TextId="Eingänge"/>
+								</Input>
+								<Output>
+									<DataItem DataType="OctetString" Length="32" TextId="Ausgänge"/>
+								</Output>
+							</IOData>
+							<ModuleInfo CategoryRef="PZD">
+								<Name TextId="PZD 16W AR"/>
+								<InfoText TextId="Prozessdaten Modul 16W AR"/>
+							</ModuleInfo>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+				</ModuleItem>
+				<ModuleItem ID="17" ModuleIdentNumber="0x00000011">
+					<ModuleInfo CategoryRef="PZD">
+						<Name TextId="PZD 17W AR"/>
+						<InfoText TextId="Prozessdaten Modul 17W AR"/>
+					</ModuleInfo>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="17" SubmoduleIdentNumber="0x00000011">
+							<IOData IOPS_Length="1" IOCS_Length="1">
+								<Input>
+									<DataItem DataType="OctetString" Length="34" TextId="Eingänge"/>
+								</Input>
+								<Output>
+									<DataItem DataType="OctetString" Length="34" TextId="Ausgänge"/>
+								</Output>
+							</IOData>
+							<ModuleInfo CategoryRef="PZD">
+								<Name TextId="PZD 17W AR"/>
+								<InfoText TextId="Prozessdaten Modul 17W AR"/>
+							</ModuleInfo>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+				</ModuleItem>
+				<ModuleItem ID="18" ModuleIdentNumber="0x00000012">
+					<ModuleInfo CategoryRef="PZD">
+						<Name TextId="PZD 18W AR"/>
+						<InfoText TextId="Prozessdaten Modul 18W AR"/>
+					</ModuleInfo>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="18" SubmoduleIdentNumber="0x00000012">
+							<IOData IOPS_Length="1" IOCS_Length="1">
+								<Input>
+									<DataItem DataType="OctetString" Length="36" TextId="Eingänge"/>
+								</Input>
+								<Output>
+									<DataItem DataType="OctetString" Length="36" TextId="Ausgänge"/>
+								</Output>
+							</IOData>
+							<ModuleInfo CategoryRef="PZD">
+								<Name TextId="PZD 18W AR"/>
+								<InfoText TextId="Prozessdaten Modul 18W AR"/>
+							</ModuleInfo>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+				</ModuleItem>
+				<ModuleItem ID="19" ModuleIdentNumber="0x00000013">
+					<ModuleInfo CategoryRef="PZD">
+						<Name TextId="PZD 19W AR"/>
+						<InfoText TextId="Prozessdaten Modul 19W AR"/>
+					</ModuleInfo>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="19" SubmoduleIdentNumber="0x00000013">
+							<IOData IOPS_Length="1" IOCS_Length="1">
+								<Input>
+									<DataItem DataType="OctetString" Length="38" TextId="Eingänge"/>
+								</Input>
+								<Output>
+									<DataItem DataType="OctetString" Length="38" TextId="Ausgänge"/>
+								</Output>
+							</IOData>
+							<ModuleInfo CategoryRef="PZD">
+								<Name TextId="PZD 19W AR"/>
+								<InfoText TextId="Prozessdaten Modul 19W AR"/>
+							</ModuleInfo>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+				</ModuleItem>
+				<ModuleItem ID="20" ModuleIdentNumber="0x00000014">
+					<ModuleInfo CategoryRef="PZD">
+						<Name TextId="PZD 20W AR"/>
+						<InfoText TextId="Prozessdaten Modul 20W AR"/>
+					</ModuleInfo>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="20" SubmoduleIdentNumber="0x00000014">
+							<IOData IOPS_Length="1" IOCS_Length="1">
+								<Input>
+									<DataItem DataType="OctetString" Length="40" TextId="Eingänge"/>
+								</Input>
+								<Output>
+									<DataItem DataType="OctetString" Length="40" TextId="Ausgänge"/>
+								</Output>
+							</IOData>
+							<ModuleInfo CategoryRef="PZD">
+								<Name TextId="PZD 20W AR"/>
+								<InfoText TextId="Prozessdaten Modul 20W AR"/>
+							</ModuleInfo>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+				</ModuleItem>
+				<ModuleItem ID="21" ModuleIdentNumber="0x00000015">
+					<ModuleInfo CategoryRef="PZD">
+						<Name TextId="PZD 21W AR"/>
+						<InfoText TextId="Prozessdaten Modul 21W AR"/>
+					</ModuleInfo>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="21" SubmoduleIdentNumber="0x00000015">
+							<IOData IOPS_Length="1" IOCS_Length="1">
+								<Input>
+									<DataItem DataType="OctetString" Length="42" TextId="Eingänge"/>
+								</Input>
+								<Output>
+									<DataItem DataType="OctetString" Length="42" TextId="Ausgänge"/>
+								</Output>
+							</IOData>
+							<ModuleInfo CategoryRef="PZD">
+								<Name TextId="PZD 21W AR"/>
+								<InfoText TextId="Prozessdaten Modul 21W AR"/>
+							</ModuleInfo>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+				</ModuleItem>
+				<ModuleItem ID="22" ModuleIdentNumber="0x00000016">
+					<ModuleInfo CategoryRef="PZD">
+						<Name TextId="PZD 22W AR"/>
+						<InfoText TextId="Prozessdaten Modul 22W AR"/>
+					</ModuleInfo>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="22" SubmoduleIdentNumber="0x00000016">
+							<IOData IOPS_Length="1" IOCS_Length="1">
+								<Input>
+									<DataItem DataType="OctetString" Length="44" TextId="Eingänge"/>
+								</Input>
+								<Output>
+									<DataItem DataType="OctetString" Length="44" TextId="Ausgänge"/>
+								</Output>
+							</IOData>
+							<ModuleInfo CategoryRef="PZD">
+								<Name TextId="PZD 22W AR"/>
+								<InfoText TextId="Prozessdaten Modul 22W AR"/>
+							</ModuleInfo>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+				</ModuleItem>
+				<ModuleItem ID="23" ModuleIdentNumber="0x00000017">
+					<ModuleInfo CategoryRef="PZD">
+						<Name TextId="PZD 23W AR"/>
+						<InfoText TextId="Prozessdaten Modul 23W AR"/>
+					</ModuleInfo>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="23" SubmoduleIdentNumber="0x00000017">
+							<IOData IOPS_Length="1" IOCS_Length="1">
+								<Input>
+									<DataItem DataType="OctetString" Length="46" TextId="Eingänge"/>
+								</Input>
+								<Output>
+									<DataItem DataType="OctetString" Length="46" TextId="Ausgänge"/>
+								</Output>
+							</IOData>
+							<ModuleInfo CategoryRef="PZD">
+								<Name TextId="PZD 23W AR"/>
+								<InfoText TextId="Prozessdaten Modul 23W AR"/>
+							</ModuleInfo>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+				</ModuleItem>
+				<ModuleItem ID="24" ModuleIdentNumber="0x00000018">
+					<ModuleInfo CategoryRef="PZD">
+						<Name TextId="PZD 24W AR"/>
+						<InfoText TextId="Prozessdaten Modul 24W AR"/>
+					</ModuleInfo>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="24" SubmoduleIdentNumber="0x00000018">
+							<IOData IOPS_Length="1" IOCS_Length="1">
+								<Input>
+									<DataItem DataType="OctetString" Length="48" TextId="Eingänge"/>
+								</Input>
+								<Output>
+									<DataItem DataType="OctetString" Length="48" TextId="Ausgänge"/>
+								</Output>
+							</IOData>
+							<ModuleInfo CategoryRef="PZD">
+								<Name TextId="PZD 24W AR"/>
+								<InfoText TextId="Prozessdaten Modul 24W AR"/>
+							</ModuleInfo>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+				</ModuleItem>
+				<ModuleItem ID="25" ModuleIdentNumber="0x00000019">
+					<ModuleInfo CategoryRef="PZD">
+						<Name TextId="PZD 25W AR"/>
+						<InfoText TextId="Prozessdaten Modul 25W AR"/>
+					</ModuleInfo>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="25" SubmoduleIdentNumber="0x00000019">
+							<IOData IOPS_Length="1" IOCS_Length="1">
+								<Input>
+									<DataItem DataType="OctetString" Length="50" TextId="Eingänge"/>
+								</Input>
+								<Output>
+									<DataItem DataType="OctetString" Length="50" TextId="Ausgänge"/>
+								</Output>
+							</IOData>
+							<ModuleInfo CategoryRef="PZD">
+								<Name TextId="PZD 25W AR"/>
+								<InfoText TextId="Prozessdaten Modul 25W AR"/>
+							</ModuleInfo>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+				</ModuleItem>
+				<ModuleItem ID="26" ModuleIdentNumber="0x0000001a">
+					<ModuleInfo CategoryRef="PZD">
+						<Name TextId="PZD 26W AR"/>
+						<InfoText TextId="Prozessdaten Modul 26W AR"/>
+					</ModuleInfo>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="26" SubmoduleIdentNumber="0x0000001a">
+							<IOData IOPS_Length="1" IOCS_Length="1">
+								<Input>
+									<DataItem DataType="OctetString" Length="52" TextId="Eingänge"/>
+								</Input>
+								<Output>
+									<DataItem DataType="OctetString" Length="52" TextId="Ausgänge"/>
+								</Output>
+							</IOData>
+							<ModuleInfo CategoryRef="PZD">
+								<Name TextId="PZD 26W AR"/>
+								<InfoText TextId="Prozessdaten Modul 26W AR"/>
+							</ModuleInfo>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+				</ModuleItem>
+				<ModuleItem ID="27" ModuleIdentNumber="0x0000001b">
+					<ModuleInfo CategoryRef="PZD">
+						<Name TextId="PZD 27W AR"/>
+						<InfoText TextId="Prozessdaten Modul 27W AR"/>
+					</ModuleInfo>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="27" SubmoduleIdentNumber="0x0000001b">
+							<IOData IOPS_Length="1" IOCS_Length="1">
+								<Input>
+									<DataItem DataType="OctetString" Length="54" TextId="Eingänge"/>
+								</Input>
+								<Output>
+									<DataItem DataType="OctetString" Length="54" TextId="Ausgänge"/>
+								</Output>
+							</IOData>
+							<ModuleInfo CategoryRef="PZD">
+								<Name TextId="PZD 27W AR"/>
+								<InfoText TextId="Prozessdaten Modul 27W AR"/>
+							</ModuleInfo>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+				</ModuleItem>
+				<ModuleItem ID="28" ModuleIdentNumber="0x0000001c">
+					<ModuleInfo CategoryRef="PZD">
+						<Name TextId="PZD 28W AR"/>
+						<InfoText TextId="Prozessdaten Modul 28W AR"/>
+					</ModuleInfo>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="28" SubmoduleIdentNumber="0x0000001c">
+							<IOData IOPS_Length="1" IOCS_Length="1">
+								<Input>
+									<DataItem DataType="OctetString" Length="56" TextId="Eingänge"/>
+								</Input>
+								<Output>
+									<DataItem DataType="OctetString" Length="56" TextId="Ausgänge"/>
+								</Output>
+							</IOData>
+							<ModuleInfo CategoryRef="PZD">
+								<Name TextId="PZD 28W AR"/>
+								<InfoText TextId="Prozessdaten Modul 28W AR"/>
+							</ModuleInfo>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+				</ModuleItem>
+				<ModuleItem ID="29" ModuleIdentNumber="0x0000001d">
+					<ModuleInfo CategoryRef="PZD">
+						<Name TextId="PZD 29W AR"/>
+						<InfoText TextId="Prozessdaten Modul 29W AR"/>
+					</ModuleInfo>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="29" SubmoduleIdentNumber="0x0000001d">
+							<IOData IOPS_Length="1" IOCS_Length="1">
+								<Input>
+									<DataItem DataType="OctetString" Length="58" TextId="Eingänge"/>
+								</Input>
+								<Output>
+									<DataItem DataType="OctetString" Length="58" TextId="Ausgänge"/>
+								</Output>
+							</IOData>
+							<ModuleInfo CategoryRef="PZD">
+								<Name TextId="PZD 29W AR"/>
+								<InfoText TextId="Prozessdaten Modul 29W AR"/>
+							</ModuleInfo>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+				</ModuleItem>
+				<ModuleItem ID="30" ModuleIdentNumber="0x0000001e">
+					<ModuleInfo CategoryRef="PZD">
+						<Name TextId="PZD 30W AR"/>
+						<InfoText TextId="Prozessdaten Modul 30W AR"/>
+					</ModuleInfo>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="30" SubmoduleIdentNumber="0x0000001e">
+							<IOData IOPS_Length="1" IOCS_Length="1">
+								<Input>
+									<DataItem DataType="OctetString" Length="60" TextId="Eingänge"/>
+								</Input>
+								<Output>
+									<DataItem DataType="OctetString" Length="60" TextId="Ausgänge"/>
+								</Output>
+							</IOData>
+							<ModuleInfo CategoryRef="PZD">
+								<Name TextId="PZD 30W AR"/>
+								<InfoText TextId="Prozessdaten Modul 30W AR"/>
+							</ModuleInfo>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+				</ModuleItem>
+				<ModuleItem ID="31" ModuleIdentNumber="0x0000001f">
+					<ModuleInfo CategoryRef="PZD">
+						<Name TextId="PZD 31W AR"/>
+						<InfoText TextId="Prozessdaten Modul 31W AR"/>
+					</ModuleInfo>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="31" SubmoduleIdentNumber="0x0000001f">
+							<IOData IOPS_Length="1" IOCS_Length="1">
+								<Input>
+									<DataItem DataType="OctetString" Length="62" TextId="Eingänge"/>
+								</Input>
+								<Output>
+									<DataItem DataType="OctetString" Length="62" TextId="Ausgänge"/>
+								</Output>
+							</IOData>
+							<ModuleInfo CategoryRef="PZD">
+								<Name TextId="PZD 31W AR"/>
+								<InfoText TextId="Prozessdaten Modul 31W AR"/>
+							</ModuleInfo>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+				</ModuleItem>
+				<ModuleItem ID="32" ModuleIdentNumber="0x00000020">
+					<ModuleInfo CategoryRef="PZD">
+						<Name TextId="PZD 32W AR"/>
+						<InfoText TextId="Prozessdaten Modul 32W AR"/>
+					</ModuleInfo>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="32" SubmoduleIdentNumber="0x00000020">
+							<IOData IOPS_Length="1" IOCS_Length="1">
+								<Input>
+									<DataItem DataType="OctetString" Length="64" TextId="Eingänge"/>
+								</Input>
+								<Output>
+									<DataItem DataType="OctetString" Length="64" TextId="Ausgänge"/>
+								</Output>
+							</IOData>
+							<ModuleInfo CategoryRef="PZD">
+								<Name TextId="PZD 32W AR"/>
+								<InfoText TextId="Prozessdaten Modul 32W AR"/>
+							</ModuleInfo>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+				</ModuleItem>
+				<!--< Safety Daten >-->
+				<ModuleItem ID="33" ModuleIdentNumber="0x00000021">
+					<!--<ModuleInfo>-->
+					<ModuleInfo CategoryRef="PZD">
+						<Name TextId="Safety 4W AR"/>
+						<InfoText TextId="Safety Modul 4W AR"/>
+					</ModuleInfo>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="33safe" SubmoduleIdentNumber="0x00000021" PROFIsafeSupported="true">
+							<IOData IOPS_Length="1" IOCS_Length="1" F_IO_StructureDescCRC="47899">
+								<Input Consistency="All items consistency">
+									<DataItem DataType="Unsigned16" UseAsBits="true" TextId="safety_Int_input1"/>
+									<DataItem DataType="Unsigned16" UseAsBits="true" TextId="safety_Int_input2"/>
+									<DataItem DataType="F_MessageTrailer4Byte" TextId="IDT_DATAITEM_Safety"/>
+								</Input>
+								<Output Consistency="All items consistency">
+									<DataItem DataType="Unsigned16" UseAsBits="true" TextId="safety_Int_output1"/>
+									<DataItem DataType="Unsigned16" UseAsBits="true" TextId="safety_Int_output2"/>
+									<DataItem DataType="F_MessageTrailer4Byte" TextId="IDT_DATAITEM_Safety"/>
+								</Output>
+							</IOData>
+							<RecordDataList>
+								<F_ParameterRecordDataItem Index="1" F_ParamDescCRC="22045">
+									<F_Check_iPar/>
+									<F_SIL DefaultValue="SIL3" AllowedValues="SIL2 SIL3" Changeable="true" Visible="true"/>
+									<F_CRC_Length DefaultValue="3-Byte-CRC" AllowedValues="3-Byte-CRC"/>
+									<F_Block_ID DefaultValue="0"/>
+									<F_Par_Version/>
+									<F_Source_Add AllowedValues="1..65534"/>
+									<F_Dest_Add AllowedValues="1..65534"/>
+									<F_WD_Time DefaultValue="1500" AllowedValues="1..10000"/>
+									<F_Par_CRC DefaultValue="7533"/>
+								</F_ParameterRecordDataItem>
+							</RecordDataList>
+							<ModuleInfo CategoryRef="PZD">
+								<Name TextId="Safety 4W AR"/>
+								<InfoText TextId="Safety Modul 4W AR"/>
+							</ModuleInfo>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+				</ModuleItem>
+			</ModuleList>
+			<!-- Ab hier beginnen die Diagnose-Text-Zuweisungen -->
+			<ValueList>
+				<ValueItem ID="IDT_ERROR_CODES">
+				</ValueItem>
+				<ValueItem ID="IDT_PART_REAKTION_ID_CODES">
+					<Assignments>
+						<Assign Content="0" TextId="PN_REAKTION_CODE_000"/>
+						<Assign Content="1" TextId="PN_REAKTION_CODE_001"/>
+						<Assign Content="2" TextId="PN_REAKTION_CODE_002"/>
+						<Assign Content="3" TextId="PN_REAKTION_CODE_003"/>
+						<Assign Content="4" TextId="PN_REAKTION_CODE_004"/>
+						<Assign Content="5" TextId="PN_REAKTION_CODE_005"/>
+						<Assign Content="6" TextId="PN_REAKTION_CODE_006"/>
+						<Assign Content="7" TextId="PN_REAKTION_CODE_007"/>
+					</Assignments>
+				</ValueItem>
+				<ValueItem ID="IDT_PART_MODULE_ID_CODES">
+					<Assignments>
+						<Assign Content="0" TextId="PN_MODUL_CODE_000"/>
+						<Assign Content="101" TextId="PN_MODUL_CODE_101"/>
+						<Assign Content="104" TextId="PN_MODUL_CODE_104"/>
+						<Assign Content="105" TextId="PN_MODUL_CODE_105"/>
+						<Assign Content="106" TextId="PN_MODUL_CODE_106"/>
+						<Assign Content="110" TextId="PN_MODUL_CODE_110"/>
+						<Assign Content="111" TextId="PN_MODUL_CODE_111"/>
+						<Assign Content="114" TextId="PN_MODUL_CODE_114"/>
+						<Assign Content="117" TextId="PN_MODUL_CODE_117"/>
+						<Assign Content="119" TextId="PN_MODUL_CODE_119"/>
+						<Assign Content="120" TextId="PN_MODUL_CODE_120"/>
+						<Assign Content="121" TextId="PN_MODUL_CODE_121"/>
+						<Assign Content="122" TextId="PN_MODUL_CODE_122"/>
+						<Assign Content="123" TextId="PN_MODUL_CODE_123"/>
+						<Assign Content="124" TextId="PN_MODUL_CODE_124"/>
+						<Assign Content="125" TextId="PN_MODUL_CODE_125"/>
+						<Assign Content="127" TextId="PN_MODUL_CODE_127"/>
+						<Assign Content="131" TextId="PN_MODUL_CODE_131"/>
+						<Assign Content="132" TextId="PN_MODUL_CODE_132"/>
+						<Assign Content="133" TextId="PN_MODUL_CODE_133"/>
+						<Assign Content="134" TextId="PN_MODUL_CODE_134"/>
+						<Assign Content="135" TextId="PN_MODUL_CODE_135"/>
+						<Assign Content="136" TextId="PN_MODUL_CODE_136"/>
+						<Assign Content="137" TextId="PN_MODUL_CODE_137"/>
+						<Assign Content="140" TextId="PN_MODUL_CODE_140"/>
+						<Assign Content="142" TextId="PN_MODUL_CODE_142"/>
+						<Assign Content="144" TextId="PN_MODUL_CODE_144"/>
+						<Assign Content="145" TextId="PN_MODUL_CODE_145"/>
+						<Assign Content="146" TextId="PN_MODUL_CODE_146"/>
+						<Assign Content="147" TextId="PN_MODUL_CODE_147"/>
+						<Assign Content="153" TextId="PN_MODUL_CODE_153"/>
+						<Assign Content="157" TextId="PN_MODUL_CODE_157"/>
+						<Assign Content="158" TextId="PN_MODUL_CODE_158"/>
+						<Assign Content="159" TextId="PN_MODUL_CODE_159"/>
+						<Assign Content="160" TextId="PN_MODUL_CODE_160"/>
+						<Assign Content="161" TextId="PN_MODUL_CODE_161"/>
+						<Assign Content="162" TextId="PN_MODUL_CODE_162"/>
+						<Assign Content="163" TextId="PN_MODUL_CODE_163"/>
+						<Assign Content="170" TextId="PN_MODUL_CODE_170"/>
+						<Assign Content="172" TextId="PN_MODUL_CODE_172"/>
+						<Assign Content="173" TextId="PN_MODUL_CODE_173"/>
+						<Assign Content="174" TextId="PN_MODUL_CODE_174"/>
+						<Assign Content="175" TextId="PN_MODUL_CODE_175"/>
+						<Assign Content="176" TextId="PN_MODUL_CODE_176"/>
+						<Assign Content="177" TextId="PN_MODUL_CODE_177"/>
+						<Assign Content="178" TextId="PN_MODUL_CODE_178"/>
+						<Assign Content="184" TextId="PN_MODUL_CODE_184"/>
+						<Assign Content="200" TextId="PN_MODUL_CODE_200"/>
+						<Assign Content="303" TextId="PN_MODUL_CODE_303"/>
+					</Assignments>
+				</ValueItem>
+				<ValueItem ID="IDT_PART_ERROR_TEXT">
+					<Assignments>
+						<Assign Content="0" TextId="PN_No_Err"/>
+						<Assign Content="49" TextId="PN_Err_0x3100"/>
+						<Assign Content="12629" TextId="PN_Err_0x5531"/>
+						<Assign Content="12885" TextId="PN_Err_0x5532"/>
+						<Assign Content="13141" TextId="PN_Err_0x5533"/>
+						<Assign Content="4192" TextId="PN_Err_0x6010"/>
+						<Assign Content="4448" TextId="PN_Err_0x6011"/>
+						<Assign Content="97" TextId="PN_Err_0x6100"/>
+						<Assign Content="353" TextId="PN_Err_0x6101"/>
+						<Assign Content="4193" TextId="PN_Err_0x6110"/>
+						<Assign Content="8292" TextId="PN_Err_0x6420"/>
+						<Assign Content="12388" TextId="PN_Err_0x6430"/>
+						<Assign Content="8036" TextId="PN_Err_0x641f"/>
+						<Assign Content="357" TextId="PN_Err_0x6501"/>
+						<Assign Content="613" TextId="PN_Err_0x6502"/>
+						<Assign Content="869" TextId="PN_Err_0x6503"/>
+						<Assign Content="12901" TextId="PN_Err_0x6532"/>
+						<Assign Content="13157" TextId="PN_Err_0x6533"/>
+						<Assign Content="4198" TextId="PN_Err_0x6610"/>
+						<Assign Content="4455" TextId="PN_Err_0x6611"/>
+						<Assign Content="4710" TextId="PN_Err_0x6612"/>
+						<Assign Content="4966" TextId="PN_Err_0x6613"/>
+						<Assign Content="20582" TextId="PN_Err_0x6650"/>
+						<Assign Content="12673" TextId="PN_Err_0x8131"/>
+						<Assign Content="8448" TextId="SM_Err_0021"/>
+						<Assign Content="8704" TextId="SM_Err_0022"/>
+						<Assign Content="8960" TextId="SM_Err_0023"/>
+						<Assign Content="9216" TextId="SM_Err_0024"/>
+						<Assign Content="9472" TextId="SM_Err_0025"/>
+						<Assign Content="9728" TextId="SM_Err_0026"/>
+						<Assign Content="9984" TextId="SM_Err_0027"/>
+						<Assign Content="10240" TextId="SM_Err_0028"/>
+						<Assign Content="12544" TextId="SM_Err_0031"/>
+						<Assign Content="12800" TextId="SM_Err_0032"/>
+						<Assign Content="13056" TextId="SM_Err_0033"/>
+						<Assign Content="13312" TextId="SM_Err_0034"/>
+						<Assign Content="13568" TextId="SM_Err_0035"/>
+						<Assign Content="13824" TextId="SM_Err_0036"/>
+						<Assign Content="14080" TextId="SM_Err_0037"/>
+						<Assign Content="14592" TextId="SM_Err_0039"/>
+						<Assign Content="14848" TextId="SM_Err_003A"/>
+						<Assign Content="15104" TextId="SM_Err_003B"/>
+						<Assign Content="15360" TextId="SM_Err_003C"/>
+						<Assign Content="16384" TextId="SM_Err_0040"/>
+						<Assign Content="16640" TextId="SM_Err_0041"/>
+						<Assign Content="16896" TextId="SM_Err_0042"/>
+						<Assign Content="17152" TextId="SM_Err_0043"/>
+						<Assign Content="17408" TextId="SM_Err_0044"/>
+						<Assign Content="17664" TextId="SM_Err_0045"/>
+						<Assign Content="17920" TextId="SM_Err_0046"/>
+						<Assign Content="18176" TextId="SM_Err_0047"/>
+						<Assign Content="18432" TextId="SM_Err_0048"/>
+						<Assign Content="18688" TextId="SM_Err_0049"/>
+						<Assign Content="18944" TextId="SM_Err_004A"/>
+						<Assign Content="20736" TextId="SM_Err_0051"/>
+						<Assign Content="20992" TextId="SM_Err_0052"/>
+						<Assign Content="22784" TextId="SM_Err_0059"/>
+						<Assign Content="23808" TextId="SM_Err_005D"/>
+						<Assign Content="24064" TextId="SM_Err_005E"/>
+						<Assign Content="24832" TextId="SM_Err_0061"/>
+						<Assign Content="25088" TextId="SM_Err_0062"/>
+						<Assign Content="25344" TextId="SM_Err_0063"/>
+						<Assign Content="25600" TextId="SM_Err_0064"/>
+						<Assign Content="25856" TextId="SM_Err_0065"/>
+						<Assign Content="26112" TextId="SM_Err_0066"/>
+						<Assign Content="26368" TextId="SM_Err_0067"/>
+						<Assign Content="26624" TextId="SM_Err_0068"/>
+						<Assign Content="26880" TextId="SM_Err_0069"/>
+						<Assign Content="27136" TextId="SM_Err_006A"/>
+						<Assign Content="27392" TextId="SM_Err_006B"/>
+						<Assign Content="27648" TextId="SM_Err_006C"/>
+						<Assign Content="27904" TextId="SM_Err_006D"/>
+						<Assign Content="28160" TextId="SM_Err_006E"/>
+						<Assign Content="28416" TextId="SM_Err_006F"/>
+						<Assign Content="32768" TextId="SM_Err_0080"/>
+						<Assign Content="33024" TextId="SM_Err_0081"/>
+						<Assign Content="33280" TextId="SM_Err_0082"/>
+						<Assign Content="33536" TextId="SM_Err_0083"/>
+						<Assign Content="36864" TextId="SM_Err_0090"/>
+						<Assign Content="37120" TextId="SM_Err_0091"/>
+						<Assign Content="37376" TextId="SM_Err_0092"/>
+						<Assign Content="37632" TextId="SM_Err_0093"/>
+						<Assign Content="37888" TextId="SM_Err_0094"/>
+						<Assign Content="38144" TextId="SM_Err_0095"/>
+						<Assign Content="38400" TextId="SM_Err_0096"/>
+						<Assign Content="38656" TextId="SM_Err_0097"/>
+						<Assign Content="39424" TextId="SM_Err_009A"/>
+						<Assign Content="40960" TextId="SM_Err_00A0"/>
+						<Assign Content="41216" TextId="SM_Err_00A1"/>
+						<Assign Content="41472" TextId="SM_Err_00A2"/>
+						<Assign Content="41728" TextId="SM_Err_00A3"/>
+						<Assign Content="41984" TextId="SM_Err_00A4"/>
+						<Assign Content="42240" TextId="SM_Err_00A5"/>
+						<Assign Content="42496" TextId="SM_Err_00A6"/>
+						<Assign Content="42752" TextId="SM_Err_00A7"/>
+						<Assign Content="43008" TextId="SM_Err_00A8"/>
+						<Assign Content="43264" TextId="SM_Err_00A9"/>
+						<Assign Content="49152" TextId="SM_Err_00C0"/>
+						<Assign Content="49408" TextId="SM_Err_00C1"/>
+						<Assign Content="49664" TextId="SM_Err_00C2"/>
+						<Assign Content="49920" TextId="SM_Err_00C3"/>
+						<Assign Content="53248" TextId="SM_Err_00D0"/>
+						<Assign Content="53504" TextId="SM_Err_00D1"/>
+						<Assign Content="53760" TextId="SM_Err_00D2"/>
+						<Assign Content="54016" TextId="SM_Err_00D3"/>
+						<Assign Content="54272" TextId="SM_Err_00D4"/>
+						<Assign Content="54528" TextId="SM_Err_00D5"/>
+						<Assign Content="54784" TextId="SM_Err_00D6"/>
+						<Assign Content="256" TextId="DEV_Err_0x0001"/>
+						<Assign Content="512" TextId="DEV_Err_0x0002"/>
+						<Assign Content="768" TextId="DEV_Err_0x0003"/>
+						<Assign Content="1024" TextId="DEV_Err_0x0004"/>
+						<Assign Content="1280" TextId="DEV_Err_0x0005"/>
+						<Assign Content="1536" TextId="DEV_Err_0x0006"/>
+						<Assign Content="1792" TextId="DEV_Err_0x0007"/>
+						<Assign Content="2048" TextId="DEV_Err_0x0008"/>
+						<Assign Content="2304" TextId="DEV_Err_0x0009"/>
+						<Assign Content="2560" TextId="DEV_Err_0x000a"/>
+						<Assign Content="2816" TextId="DEV_Err_0x000b"/>
+						<Assign Content="3072" TextId="DEV_Err_0x000c"/>
+						<Assign Content="3328" TextId="DEV_Err_0x000d"/>
+						<Assign Content="3584" TextId="DEV_Err_0x000e"/>
+						<Assign Content="3840" TextId="DEV_Err_0x000f"/>
+						<Assign Content="4096" TextId="DEV_Err_0x0010"/>
+						<Assign Content="4352" TextId="DEV_Err_0x0011"/>
+						<Assign Content="4608" TextId="DEV_Err_0x0012"/>
+						<Assign Content="4864" TextId="DEV_Err_0x0013"/>
+						<Assign Content="5120" TextId="DEV_Err_0x0014"/>
+						<Assign Content="5376" TextId="DEV_Err_0x0015"/>
+						<Assign Content="5632" TextId="DEV_Err_0x0016"/>
+						<Assign Content="5888" TextId="DEV_Err_0x0017"/>
+						<Assign Content="6144" TextId="DEV_Err_0x0018"/>
+						<Assign Content="6400" TextId="DEV_Err_0x0019"/>
+						<Assign Content="6656" TextId="DEV_Err_0x001a"/>
+						<Assign Content="6912" TextId="DEV_Err_0x001b"/>
+						<Assign Content="7168" TextId="DEV_Err_0x001c"/>
+						<Assign Content="7424" TextId="DEV_Err_0x001d"/>
+						<Assign Content="7680" TextId="DEV_Err_0x001e"/>
+						<Assign Content="7936" TextId="DEV_Err_0x001f"/>
+					</Assignments>
+				</ValueItem>
+			</ValueList>
+			<UnitDiagTypeList>
+				<!-- Selektion des Fehlerwertes fuer Struktur 1-->
+				<UnitDiagTypeItem UserStructureIdentifier="1">
+					<Ref TextId="PN_REAKTION" ValueItemTarget="IDT_PART_REAKTION_ID_CODES" DataType="BitArea" BitLength="3" ByteOffset="3" BitOffset="5" DefaultValue="0"/>
+					<Ref TextId="PN_MODULE" ValueItemTarget="IDT_PART_MODULE_ID_CODES" DataType="BitArea" BitLength="10" ByteOffset="2" BitOffset="0" DefaultValue="0"/>
+					<Ref TextId="PN_ERROR_TEXT" ValueItemTarget="IDT_PART_ERROR_TEXT" DataType="Unsigned16" ByteOffset="0" DefaultValue="0"/>
+				</UnitDiagTypeItem>
+			</UnitDiagTypeList>
+			<GraphicsList>
+				<GraphicItem ID="ID_Graphic_1" GraphicFile="GSDML-0106-9400-E94AFHB"/>
+			</GraphicsList>
+			<CategoryList>
+				<CategoryItem ID="PZD" TextId="Process Data Module"/>
+			</CategoryList>
+			<ExternalTextList>
+				<PrimaryLanguage>
+					<!-- Allgemein -->
+					<Text TextId="Highline E94ASHE" Value="Highline E94ASHE"/>
+					<Text TextId="Highline E94ASHE-OEM" Value="Highline E94ASHE-OEM"/>
+					<Text TextId="ServoPLC" Value="ServoPLC"/>
+					<Text TextId="Lenze9400" Value="Lenze9400"/>
+					<Text TextId="PROFINET_ IO_DEV_DESCRIPTION" Value="V9400 PROFINET IO Interface"/>
+					<Text TextId="Process Data Module" Value="Process Data Module"/>
+					<!--PZD Module-->
+					<Text TextId="Safety 4W AR" Value="Safety( 4W ) AR"/>
+					<Text TextId="Safety Modul 4W AR" Value="Safety Data Module, 4W AR"/>
+					<Text TextId="IDT_DATAITEM_Safety" Value="Safety"/>
+					<Text TextId="safety_Int_output1" Value="Out_00"/>
+					<Text TextId="safety_Int_output2" Value="Out_01"/>
+					<Text TextId="safety_Int_output3" Value="Out_02"/>
+					<Text TextId="safety_Int_output4" Value="Out_03"/>
+					<Text TextId="safety_Int_input1" Value="In_00"/>
+					<Text TextId="safety_Int_input2" Value="In_01"/>
+					<Text TextId="safety_Int_input3" Value="In_02"/>
+					<Text TextId="safety_Int_input4" Value="In_03"/>
+					<Text TextId="PZD 1W AR" Value="PZD(  1W ) AR cons."/>
+					<Text TextId="Prozessdaten Modul 1W AR" Value="Process Data Module, 1W AR"/>
+					<Text TextId="PZD 2W AR" Value="PZD(  2W ) AR cons."/>
+					<Text TextId="Prozessdaten Modul 2W AR" Value="Process Data Module, 2W AR"/>
+					<Text TextId="PZD 3W AR" Value="PZD(  3W ) AR cons."/>
+					<Text TextId="Prozessdaten Modul 3W AR" Value="Process Data Module, 3W AR"/>
+					<Text TextId="PZD 4W AR" Value="PZD(  4W ) AR cons."/>
+					<Text TextId="Prozessdaten Modul 4W AR" Value="Process Data Module, 4W AR"/>
+					<Text TextId="PZD 5W AR" Value="PZD(  5W ) AR cons."/>
+					<Text TextId="Prozessdaten Modul 5W AR" Value="Process Data Module, 5W AR"/>
+					<Text TextId="PZD 6W AR" Value="PZD(  6W ) AR cons."/>
+					<Text TextId="Prozessdaten Modul 6W AR" Value="Process Data Module, 6W AR"/>
+					<Text TextId="PZD 7W AR" Value="PZD(  7W ) AR cons."/>
+					<Text TextId="Prozessdaten Modul 7W AR" Value="Process Data Module, 7W AR"/>
+					<Text TextId="PZD 8W AR" Value="PZD(  8W ) AR cons."/>
+					<Text TextId="Prozessdaten Modul 8W AR" Value="Process Data Module, 8W AR"/>
+					<Text TextId="PZD 9W AR" Value="PZD(  9W ) AR cons."/>
+					<Text TextId="Prozessdaten Modul 9W AR" Value="Process Data Module, 9W AR"/>
+					<Text TextId="PZD 10W AR" Value="PZD( 10W ) AR cons."/>
+					<Text TextId="Prozessdaten Modul 10W AR" Value="Process Data Module, 10W AR"/>
+					<Text TextId="PZD 11W AR" Value="PZD( 11W ) AR cons."/>
+					<Text TextId="Prozessdaten Modul 11W AR" Value="Process Data Module, 11W AR"/>
+					<Text TextId="PZD 12W AR" Value="PZD( 12W ) AR cons."/>
+					<Text TextId="Prozessdaten Modul 12W AR" Value="Process Data Module, 12W AR"/>
+					<Text TextId="PZD 13W AR" Value="PZD( 13W ) AR cons."/>
+					<Text TextId="Prozessdaten Modul 13W AR" Value="Process Data Module, 13W AR"/>
+					<Text TextId="PZD 14W AR" Value="PZD( 14W ) AR cons."/>
+					<Text TextId="Prozessdaten Modul 14W AR" Value="Process Data Module, 14W AR"/>
+					<Text TextId="PZD 15W AR" Value="PZD( 15W ) AR cons."/>
+					<Text TextId="Prozessdaten Modul 15W AR" Value="Process Data Module, 15W AR"/>
+					<Text TextId="PZD 16W AR" Value="PZD( 16W ) AR cons."/>
+					<Text TextId="Prozessdaten Modul 16W AR" Value="Process Data Module, 16W AR"/>
+					<Text TextId="PZD 17W AR" Value="PZD( 17W ) AR cons."/>
+					<Text TextId="Prozessdaten Modul 17W AR" Value="Process Data Module, 17W AR"/>
+					<Text TextId="PZD 18W AR" Value="PZD( 18W ) AR cons."/>
+					<Text TextId="Prozessdaten Modul 18W AR" Value="Process Data Module, 18W AR"/>
+					<Text TextId="PZD 19W AR" Value="PZD( 19W ) AR cons."/>
+					<Text TextId="Prozessdaten Modul 19W AR" Value="Process Data Module, 19W AR"/>
+					<Text TextId="PZD 20W AR" Value="PZD( 20W ) AR cons."/>
+					<Text TextId="Prozessdaten Modul 20W AR" Value="Process Data Module, 20W AR"/>
+					<Text TextId="PZD 21W AR" Value="PZD( 21W ) AR cons."/>
+					<Text TextId="Prozessdaten Modul 21W AR" Value="Process Data Module, 21W AR"/>
+					<Text TextId="PZD 22W AR" Value="PZD( 22W ) AR cons."/>
+					<Text TextId="Prozessdaten Modul 22W AR" Value="Process Data Module, 22W AR"/>
+					<Text TextId="PZD 23W AR" Value="PZD( 23W ) AR cons."/>
+					<Text TextId="Prozessdaten Modul 23W AR" Value="Process Data Module, 23W AR"/>
+					<Text TextId="PZD 24W AR" Value="PZD( 24W ) AR cons."/>
+					<Text TextId="Prozessdaten Modul 24W AR" Value="Process Data Module, 24W AR"/>
+					<Text TextId="PZD 25W AR" Value="PZD( 25W ) AR cons."/>
+					<Text TextId="Prozessdaten Modul 25W AR" Value="Process Data Module, 25W AR"/>
+					<Text TextId="PZD 26W AR" Value="PZD( 26W ) AR cons."/>
+					<Text TextId="Prozessdaten Modul 26W AR" Value="Process Data Module, 26W AR"/>
+					<Text TextId="PZD 27W AR" Value="PZD( 27W ) AR cons."/>
+					<Text TextId="Prozessdaten Modul 27W AR" Value="Process Data Module, 27W AR"/>
+					<Text TextId="PZD 28W AR" Value="PZD( 28W ) AR cons."/>
+					<Text TextId="Prozessdaten Modul 28W AR" Value="Process Data Module, 28W AR"/>
+					<Text TextId="PZD 29W AR" Value="PZD( 29W ) AR cons."/>
+					<Text TextId="Prozessdaten Modul 29W AR" Value="Process Data Module, 29W AR"/>
+					<Text TextId="PZD 30W AR" Value="PZD( 30W ) AR cons."/>
+					<Text TextId="Prozessdaten Modul 30W AR" Value="Process Data Module, 30W AR"/>
+					<Text TextId="PZD 31W AR" Value="PZD( 31W ) AR cons."/>
+					<Text TextId="Prozessdaten Modul 31W AR" Value="Process Data Module, 31W AR"/>
+					<Text TextId="PZD 32W AR" Value="PZD( 32W ) AR cons."/>
+					<Text TextId="Prozessdaten Modul 32W AR" Value="Process Data Module, 32W AR"/>
+					<!--restliche Bezeichner-->
+					<Text TextId="Eingänge" Value="Input"/>
+					<Text TextId="Ausgänge" Value="Output"/>
+					<Text TextId="Allgemeine Parameter" Value="general parameter"/>
+					<Text TextId="IDT_SS_Interface" Value="X24x"/>
+					<Text TextId="IDT_SS_Port1" Value="X241 P1"/>
+					<Text TextId="IDT_SS_Port2" Value="X242 P2"/>
+					<Text TextId="IDT_Port1" Value="Port 1"/>
+					<Text TextId="IDT_Port2" Value="Port 2"/>
+					<!-- Diagnosetexte Allgemein -->
+					<Text TextId="PN_REAKTION" Value="Response :  "/>
+					<Text TextId="PN_MODULE" Value="Module ID :  "/>
+					<Text TextId="PN_ERROR_TEXT" Value="Error Text  :  "/>
+					<Text TextId="PN_REAKTION_CODE_000" Value="No response"/>
+					<Text TextId="PN_REAKTION_CODE_001" Value="Fault"/>
+					<Text TextId="PN_REAKTION_CODE_002" Value="Trouble"/>
+					<Text TextId="PN_REAKTION_CODE_003" Value="Quick stop by trouble"/>
+					<Text TextId="PN_REAKTION_CODE_004" Value="Warning locked"/>
+					<Text TextId="PN_REAKTION_CODE_005" Value="Warning"/>
+					<Text TextId="PN_REAKTION_CODE_006" Value="Information"/>
+					<Text TextId="PN_REAKTION_CODE_007" Value="System fault"/>
+					<Text TextId="PN_MODUL_CODE_000" Value=" "/>
+					<Text TextId="PN_MODUL_CODE_101" Value="Logbook module"/>
+					<Text TextId="PN_MODUL_CODE_104" Value="Module identification"/>
+					<Text TextId="PN_MODUL_CODE_105" Value="Error check of the program memory during runtime"/>
+					<Text TextId="PN_MODUL_CODE_106" Value="Runtime environment for IEC 61131-3 programs"/>
+					<Text TextId="PN_MODUL_CODE_110" Value="Supply voltage monitoring"/>
+					<Text TextId="PN_MODUL_CODE_111" Value="24-V supply voltage monitoring"/>
+					<Text TextId="PN_MODUL_CODE_114" Value="Service register"/>
+					<Text TextId="PN_MODUL_CODE_117" Value="Device control"/>
+					<Text TextId="PN_MODUL_CODE_119" Value="Temperature monitoring"/>
+					<Text TextId="PN_MODUL_CODE_120" Value="Analog signal monitoring"/>
+					<Text TextId="PN_MODUL_CODE_121" Value="Motor data interface"/>
+					<Text TextId="PN_MODUL_CODE_122" Value="Processing of digital inputs/outputs"/>
+					<Text TextId="PN_MODUL_CODE_123" Value="Motor control"/>
+					<Text TextId="PN_MODUL_CODE_124" Value="Device command module (C00002)"/>
+					<Text TextId="PN_MODUL_CODE_125" Value="Processing of analog inputs/outputs"/>
+					<Text TextId="PN_MODUL_CODE_127" Value="Interface to the intelligent communication module"/>
+					<Text TextId="PN_MODUL_CODE_131" Value="CAN on board: CAN-Dispatcher"/>
+					<Text TextId="PN_MODUL_CODE_132" Value="CAN on board: CAN-NMT-Handler"/>
+					<Text TextId="PN_MODUL_CODE_133" Value="CAN on board: CAN-Emergency-Handler"/>
+					<Text TextId="PN_MODUL_CODE_134" Value="CAN on board: CAN-NMT-Master"/>
+					<Text TextId="PN_MODUL_CODE_135" Value="CAN on board: CAN-PDO-Handler"/>
+					<Text TextId="PN_MODUL_CODE_136" Value="CAN on board: CAN-SDO-Server"/>
+					<Text TextId="PN_MODUL_CODE_137" Value="CAN on board: CAN-SDO-Client"/>
+					<Text TextId="PN_MODUL_CODE_140" Value="Application project manager"/>
+					<Text TextId="PN_MODUL_CODE_142" Value="Communication interface for internal communication"/>
+					<Text TextId="PN_MODUL_CODE_144" Value="Parameter manager"/>
+					<Text TextId="PN_MODUL_CODE_145" Value="Lenze runtime system"/>
+					<Text TextId="PN_MODUL_CODE_146" Value="Interface for safety module"/>
+					<Text TextId="PN_MODUL_CODE_147" Value="Sync signal generation"/>
+					<Text TextId="PN_MODUL_CODE_153" Value="Extension module - digital frequency in MXI1"/>
+					<Text TextId="PN_MODUL_CODE_157" Value="CAN module in MXI1: CAN-Dispatcher"/>
+					<Text TextId="PN_MODUL_CODE_158" Value="CAN module in MXI1: CAN-NMT-Handler"/>
+					<Text TextId="PN_MODUL_CODE_159" Value="CAN module in MXI1: CAN-Emergency-Handler"/>
+					<Text TextId="PN_MODUL_CODE_160" Value="CAN module in MXI1: CAN-NMT-Master "/>
+					<Text TextId="PN_MODUL_CODE_161" Value="CAN module in MXI1: CAN-PDO-Handler"/>
+					<Text TextId="PN_MODUL_CODE_162" Value="CAN module in MXI1: CAN-SDO-Server"/>
+					<Text TextId="PN_MODUL_CODE_163" Value="CAN module in MXI1: CAN-SDO-Client"/>
+					<Text TextId="PN_MODUL_CODE_170" Value="Extension module - digital frequency in MXI2"/>
+					<Text TextId="PN_MODUL_CODE_172" Value="CAN module in MXI2: CAN-Dispatcher"/>
+					<Text TextId="PN_MODUL_CODE_173" Value="CAN module in MXI2: CAN-NMT-Handler"/>
+					<Text TextId="PN_MODUL_CODE_174" Value="CAN module in MXI2: CAN-Emergency-Handler"/>
+					<Text TextId="PN_MODUL_CODE_175" Value="CAN module in MXI2: CAN-NMT-Master"/>
+					<Text TextId="PN_MODUL_CODE_176" Value="CAN module in MXI2: CAN-PDO-Handler"/>
+					<Text TextId="PN_MODUL_CODE_177" Value="CAN module in MXI2: CAN-SDO-Server"/>
+					<Text TextId="PN_MODUL_CODE_178" Value="CAN module in MXI2: CAN-SDO-Client"/>
+					<Text TextId="PN_MODUL_CODE_184" Value="Basic drive functions"/>
+					<Text TextId="PN_MODUL_CODE_200" Value="Intelligent communication module"/>
+					<Text TextId="PN_MODUL_CODE_303" Value="Safety module SM300/SM301"/>
+					<!--Meldungen PROFINETmodul-->
+					<Text TextId="PN_No_Err" Value=""/>
+					<Text TextId="PN_Err_0x3100" Value="Internal error                 "/>
+					<Text TextId="PN_Err_0x5531" Value="Memory: No access              "/>
+					<Text TextId="PN_Err_0x5532" Value="Memory: Read error             "/>
+					<Text TextId="PN_Err_0x5533" Value="Memory: Write error            "/>
+					<Text TextId="PN_Err_0x6010" Value="Restart by Watchdogreset       "/>
+					<Text TextId="PN_Err_0x6011" Value="Internal error                 "/>
+					<Text TextId="PN_Err_0x6100" Value="Internal error                 "/>
+					<Text TextId="PN_Err_0x6101" Value="Internal error                 "/>
+					<Text TextId="PN_Err_0x6110" Value="Internal mapping error         "/>
+					<Text TextId="PN_Err_0x641f" Value="Invalid parameter set          "/>
+					<Text TextId="PN_Err_0x6420" Value="Error:Lenze setting loaded     "/>
+					<Text TextId="PN_Err_0x6430" Value="Invalid modul configuration    "/>
+					<Text TextId="PN_Err_0x6501" Value="Record Parameter: Invalid read "/>
+					<Text TextId="PN_Err_0x6502" Value="Record Parameter: Invalid write"/>
+					<Text TextId="PN_Err_0x6503" Value="Data output status bad         "/>
+					<Text TextId="PN_Err_0x6532" Value="Invalid station name"/>
+					<Text TextId="PN_Err_0x6533" Value="Invalid IP parameter"/>
+					<Text TextId="PN_Err_0x6610" Value="Safety Communication timeout   "/>
+					<Text TextId="PN_Err_0x6611" Value="Safety Parameter timeout       "/>
+					<Text TextId="PN_Err_0x6612" Value="Safety init error              "/>
+					<Text TextId="PN_Err_0x6613" Value="Safety connect error           "/>
+					<Text TextId="PN_Err_0x6650" Value="Internal error                 "/>
+					<Text TextId="PN_Err_0x8131" Value="Data_Exchange status quit      "/>
+					<!--Meldungen Sicherheitsmodul-->
+					<Text TextId="SM_Err_0001" Value="Internal error, STO activated"/>
+					<Text TextId="SM_Err_0002" Value="Internal error, SS1 activated"/>
+					<Text TextId="SM_Err_0003" Value="Internal error, SS2 activated"/>
+					<Text TextId="SM_Err_0010" Value="Communication error - basic device"/>
+					<Text TextId="SM_Err_0011" Value="Synchronization fault - basic device"/>
+					<Text TextId="SM_Err_0021" Value="Safety address invalid (0 or FFFFhex)"/>
+					<Text TextId="SM_Err_0022" Value="PROFIsafe - Communication error"/>
+					<Text TextId="SM_Err_0023" Value="F_WD_Time exceeded"/>
+					<Text TextId="SM_Err_0024" Value="PROFIsafe passivated"/>
+					<Text TextId="SM_Err_0025" Value="PROFIsafe has left data exchange"/>
+					<Text TextId="SM_Err_0026" Value="PROFIsafe - invalid data"/>
+					<Text TextId="SM_Err_0027" Value="F-parameter error"/>
+					<Text TextId="SM_Err_0028" Value="Communication error during parameter phase"/>
+					<Text TextId="SM_Err_0031" Value="Error discrepancy / function check - SD-In1"/>
+					<Text TextId="SM_Err_0032" Value="Error discrepancy / function check - SD-In2"/>
+					<Text TextId="SM_Err_0033" Value="Error discrepancy / function check - SD-In3"/>
+					<Text TextId="SM_Err_0034" Value="Error discrepancy / function check - SD-In4"/>
+					<Text TextId="SM_Err_0035" Value="Internal error - AIS"/>
+					<Text TextId="SM_Err_0036" Value="Internal error - AIE"/>
+					<Text TextId="SM_Err_0037" Value="Internal error - module button"/>
+					<Text TextId="SM_Err_0039" Value="Deactivated SD-In1 = high"/>
+					<Text TextId="SM_Err_003A" Value="Deactivated SD-In2 = high"/>
+					<Text TextId="SM_Err_003B" Value="Deactivated SD-In3 = high"/>
+					<Text TextId="SM_Err_003C" Value="Deactivated SD-In4 = high"/>
+					<Text TextId="SM_Err_0040" Value="F_Dest_Add unequal F-address"/>
+					<Text TextId="SM_Err_0041" Value="F_Dest_Add = 0 or FFFFhex"/>
+					<Text TextId="SM_Err_0042" Value="F_Source_Add = 0 or FFFFhex"/>
+					<Text TextId="SM_Err_0043" Value="F_WD_Time = 0msec"/>
+					<Text TextId="SM_Err_0044" Value="F_SIL exceeds technical SIL"/>
+					<Text TextId="SM_Err_0045" Value="F_CRC_Length error"/>
+					<Text TextId="SM_Err_0046" Value="Incorrect F-parameter version"/>
+					<Text TextId="SM_Err_0047" Value="PROFIsafe CRC1 error"/>
+					<Text TextId="SM_Err_0048" Value="Reserved (PROFIsafe standard)"/>
+					<Text TextId="SM_Err_0049" Value="Reserved (PROFIsafe standard)"/>
+					<Text TextId="SM_Err_004A" Value="Reserved (PROFIsafe standard)"/>
+					<Text TextId="SM_Err_0051" Value="Error - SD-Inx / CLx"/>
+					<Text TextId="SM_Err_0052" Value="Error - SD-Inx / CLx"/>
+					<Text TextId="SM_Err_0059" Value="Short / cross circuit - SD-Out"/>
+					<Text TextId="SM_Err_005D" Value="Error - internal switch-off path"/>
+					<Text TextId="SM_Err_005E" Value="Test pulse error - internal switch-off path"/>
+					<Text TextId="SM_Err_0061" Value="SS1/SS2: Stop time exceeded"/>
+					<Text TextId="SM_Err_0062" Value="SLS1: Nlim1 exceeded"/>
+					<Text TextId="SM_Err_0063" Value="SLS2: Nlim2 exceeded"/>
+					<Text TextId="SM_Err_0064" Value="SLS3: Nlim3 exceeded"/>
+					<Text TextId="SM_Err_0065" Value="SLS4: Nlim4 exceeded"/>
+					<Text TextId="SM_Err_0066" Value="SLS/SMS: Error stop not executed"/>
+					<Text TextId="SM_Err_0067" Value="SDIpos: Wrong direction"/>
+					<Text TextId="SM_Err_0068" Value="SDIneg: Wrong direction"/>
+					<Text TextId="SM_Err_0069" Value="SMS: Nmax exceeded"/>
+					<Text TextId="SM_Err_006A" Value="SOS: Tolerance limit exceeded"/>
+					<Text TextId="SM_Err_006B" Value="No feedback system configured"/>
+					<Text TextId="SM_Err_006C" Value="CAS: round trip time exceeded"/>
+					<Text TextId="SM_Err_006D" Value="CAS: Hardware or discrepancy error"/>
+					<Text TextId="SM_Err_006E" Value="SS1/SS2: Speed ramp exceeded"/>
+					<Text TextId="SM_Err_006F" Value="SLI: Safely limited increment exceeded"/>
+					<Text TextId="SM_Err_0080" Value="Stuck at High SD-Out1, channel A"/>
+					<Text TextId="SM_Err_0081" Value="Stuck at Low SD-Out1, channel A"/>
+					<Text TextId="SM_Err_0082" Value="Stuck at High SD-Out1, channel B"/>
+					<Text TextId="SM_Err_0083" Value="Stuck at Low SD-Out1, channel B"/>
+					<Text TextId="SM_Err_0090" Value="Stuck at High at SD-In1, channel A"/>
+					<Text TextId="SM_Err_0091" Value="Stuck at High at SD-In1, channel B"/>
+					<Text TextId="SM_Err_0092" Value="Stuck at High at SD-In2, channel A"/>
+					<Text TextId="SM_Err_0093" Value="Stuck at High at SD-In2, channel B"/>
+					<Text TextId="SM_Err_0094" Value="Stuck at High at SD-In3, channel A"/>
+					<Text TextId="SM_Err_0095" Value="Stuck at High at SD-In3, channel B"/>
+					<Text TextId="SM_Err_0096" Value="Stuck at High at SD-In4, channel A"/>
+					<Text TextId="SM_Err_0097" Value="Stuck at High at SD-In4, channel B"/>
+					<Text TextId="SM_Err_009A" Value="Short circuit - CLA/CLB"/>
+					<Text TextId="SM_Err_00A0" Value="New safety parameter set deleted"/>
+					<Text TextId="SM_Err_00A1" Value="New safety parameter set loaded"/>
+					<Text TextId="SM_Err_00A2" Value="Memory module access error"/>
+					<Text TextId="SM_Err_00A3" Value="Different safety parameter sets"/>
+					<Text TextId="SM_Err_00A4" Value="No safety parameter set"/>
+					<Text TextId="SM_Err_00A5" Value="Safety parameter set defect"/>
+					<Text TextId="SM_Err_00A6" Value="Memory module safety parameter set format error"/>
+					<Text TextId="SM_Err_00A7" Value="Safety parameter set plausibility error"/>
+					<Text TextId="SM_Err_00A8" Value="Safety parameter set communicaton error"/>
+					<Text TextId="SM_Err_00A9" Value="Module-ID unequal effective safety address"/>
+					<Text TextId="SM_Err_00C0" Value="Error reference voltage"/>
+					<Text TextId="SM_Err_00C1" Value="Error 6V  voltage"/>
+					<Text TextId="SM_Err_00C2" Value="Error 5V voltage"/>
+					<Text TextId="SM_Err_00C3" Value="Error 2,6V voltage"/>
+					<Text TextId="SM_Err_00D0" Value="Safe speed invalid"/>
+					<Text TextId="SM_Err_00D1" Value="SSM: encoder fault"/>
+					<Text TextId="SM_Err_00D2" Value="SSM: Resolver fault"/>
+					<Text TextId="SM_Err_00D3" Value="SSM: error data from basic device"/>
+					<Text TextId="SM_Err_00D4" Value="SSM: error speed comparison"/>
+					<Text TextId="SM_Err_00D5" Value="SSM: error synchronization"/>
+					<Text TextId="SM_Err_00D6" Value="SSM: Incorrect PDO version"/>
+					<!--Meldungen Grundgerät-->
+					<Text TextId="DEV_Err_0x0001" Value="Device error (see C00166)"/>
+					<Text TextId="DEV_Err_0x0002" Value="Device error (see C00166)"/>
+					<Text TextId="DEV_Err_0x0003" Value="Device error (see C00166)"/>
+					<Text TextId="DEV_Err_0x0004" Value="Device error (see C00166)"/>
+					<Text TextId="DEV_Err_0x0005" Value="Device error (see C00166)"/>
+					<Text TextId="DEV_Err_0x0006" Value="Device error (see C00166)"/>
+					<Text TextId="DEV_Err_0x0007" Value="Device error (see C00166)"/>
+					<Text TextId="DEV_Err_0x0008" Value="Device error (see C00166)"/>
+					<Text TextId="DEV_Err_0x0009" Value="Device error (see C00166)"/>
+					<Text TextId="DEV_Err_0x000a" Value="Device error (see C00166)"/>
+					<Text TextId="DEV_Err_0x000b" Value="Device error (see C00166)"/>
+					<Text TextId="DEV_Err_0x000c" Value="Device error (see C00166)"/>
+					<Text TextId="DEV_Err_0x000d" Value="Device error (see C00166)"/>
+					<Text TextId="DEV_Err_0x000e" Value="Device error (see C00166)"/>
+					<Text TextId="DEV_Err_0x000f" Value="DC-bus undervoltage"/>
+					<Text TextId="DEV_Err_0x0010" Value="Device error (see C00166)"/>
+					<Text TextId="DEV_Err_0x0011" Value="Device error (see C00166)"/>
+					<Text TextId="DEV_Err_0x0012" Value="Device error (see C00166)"/>
+					<Text TextId="DEV_Err_0x0013" Value="Device error (see C00166)"/>
+					<Text TextId="DEV_Err_0x0014" Value="Device error (see C00166)"/>
+					<Text TextId="DEV_Err_0x0015" Value="Device error (see C00166)"/>
+					<Text TextId="DEV_Err_0x0016" Value="Device error (see C00166)"/>
+					<Text TextId="DEV_Err_0x0017" Value="Device error (see C00166)"/>
+					<Text TextId="DEV_Err_0x0018" Value="Device error (see C00166)"/>
+					<Text TextId="DEV_Err_0x0019" Value="Device error (see C00166)"/>
+					<Text TextId="DEV_Err_0x001a" Value="Device error (see C00166)"/>
+					<Text TextId="DEV_Err_0x001b" Value="Device error (see C00166)"/>
+					<Text TextId="DEV_Err_0x001c" Value="Device error (see C00166)"/>
+					<Text TextId="DEV_Err_0x001d" Value="Device error (see C00166)"/>
+					<Text TextId="DEV_Err_0x001e" Value="Device error (see C00166)"/>
+					<Text TextId="DEV_Err_0x001f" Value="Device error (see C00166)"/>
+				</PrimaryLanguage>
+				<Language xml:lang="de">
+					<!-- Allgemein -->
+					<Text TextId="Highline E94ASHE" Value="Highline E94ASHE"/>
+					<Text TextId="Highline E94ASHE-OEM" Value="Highline E94ASHE-OEM"/>
+					<Text TextId="ServoPLC" Value="ServoPLC"/>
+					<Text TextId="Lenze9400" Value="Lenze9400"/>
+					<Text TextId="PROFINET_ IO_DEV_DESCRIPTION" Value="V9400 PROFINET IO Interface"/>
+					<!--Baugruppeneinteilung-->
+					<Text TextId="Process Data Module" Value="Prozessdaten Modul"/>
+					<!--PZD Module-->
+					<Text TextId="Safety 4W AR" Value="Safety( 4W ) AR"/>
+					<Text TextId="Safety Modul 4W AR" Value="Sicherheitsdatenmodul, 4W AR"/>
+					<Text TextId="IDT_DATAITEM_Safety" Value="Safety"/>
+					<Text TextId="safety_Int_output1" Value="Out_00"/>
+					<Text TextId="safety_Int_output2" Value="Out_01"/>
+					<Text TextId="safety_Int_output3" Value="Out_02"/>
+					<Text TextId="safety_Int_output4" Value="Out_03"/>
+					<Text TextId="safety_Int_input1" Value="In_00"/>
+					<Text TextId="safety_Int_input2" Value="In_01"/>
+					<Text TextId="safety_Int_input3" Value="In_02"/>
+					<Text TextId="safety_Int_input4" Value="In_03"/>
+					<Text TextId="PZD 1W AR" Value="PZD(  1W ) AR kons."/>
+					<Text TextId="Prozessdaten Modul 1W AR" Value="Prozessdatenmodul, 1W AR"/>
+					<Text TextId="PZD 2W AR" Value="PZD(  2W ) AR kons."/>
+					<Text TextId="Prozessdaten Modul 2W AR" Value="Prozessdatenmodul, 2W AR"/>
+					<Text TextId="PZD 3W AR" Value="PZD(  3W ) AR kons."/>
+					<Text TextId="Prozessdaten Modul 3W AR" Value="Prozessdatenmodul, 3W AR"/>
+					<Text TextId="PZD 4W AR" Value="PZD(  4W ) AR kons."/>
+					<Text TextId="Prozessdaten Modul 4W AR" Value="Prozessdatenmodul, 4W AR"/>
+					<Text TextId="PZD 5W AR" Value="PZD(  5W ) AR kons."/>
+					<Text TextId="Prozessdaten Modul 5W AR" Value="Prozessdatenmodul, 5W AR"/>
+					<Text TextId="PZD 6W AR" Value="PZD(  6W ) AR kons."/>
+					<Text TextId="Prozessdaten Modul 6W AR" Value="Prozessdatenmodul, 6W AR"/>
+					<Text TextId="PZD 7W AR" Value="PZD(  7W ) AR kons."/>
+					<Text TextId="Prozessdaten Modul 7W AR" Value="Prozessdatenmodul, 7W AR"/>
+					<Text TextId="PZD 8W AR" Value="PZD(  8W ) AR kons."/>
+					<Text TextId="Prozessdaten Modul 8W AR" Value="Prozessdatenmodul, 8W AR"/>
+					<Text TextId="PZD 9W AR" Value="PZD(  9W ) AR kons."/>
+					<Text TextId="Prozessdaten Modul 9W AR" Value="Prozessdatenmodul, 9W AR"/>
+					<Text TextId="PZD 10W AR" Value="PZD( 10W ) AR kons."/>
+					<Text TextId="Prozessdaten Modul 10W AR" Value="Prozessdatenmodul, 10W AR"/>
+					<Text TextId="PZD 11W AR" Value="PZD( 11W ) AR kons."/>
+					<Text TextId="Prozessdaten Modul 11W AR" Value="Prozessdatenmodul, 11W AR"/>
+					<Text TextId="PZD 12W AR" Value="PZD( 12W ) AR kons."/>
+					<Text TextId="Prozessdaten Modul 12W AR" Value="Prozessdatenmodul, 12W AR"/>
+					<Text TextId="PZD 13W AR" Value="PZD( 13W ) AR kons."/>
+					<Text TextId="Prozessdaten Modul 13W AR" Value="Prozessdatenmodul, 13W AR"/>
+					<Text TextId="PZD 14W AR" Value="PZD( 14W ) AR kons."/>
+					<Text TextId="Prozessdaten Modul 14W AR" Value="Prozessdatenmodul, 14W AR"/>
+					<Text TextId="PZD 15W AR" Value="PZD( 15W ) AR kons."/>
+					<Text TextId="Prozessdaten Modul 15W AR" Value="Prozessdatenmodul, 15W AR"/>
+					<Text TextId="PZD 16W AR" Value="PZD( 16W ) AR kons."/>
+					<Text TextId="Prozessdaten Modul 16W AR" Value="Prozessdatenmodul, 16W AR"/>
+					<Text TextId="PZD 17W AR" Value="PZD( 17W ) AR kons."/>
+					<Text TextId="Prozessdaten Modul 17W AR" Value="Prozessdatenmodul, 17W AR"/>
+					<Text TextId="PZD 18W AR" Value="PZD( 18W ) AR kons."/>
+					<Text TextId="Prozessdaten Modul 18W AR" Value="Prozessdatenmodul, 18W AR"/>
+					<Text TextId="PZD 19W AR" Value="PZD( 19W ) AR kons."/>
+					<Text TextId="Prozessdaten Modul 19W AR" Value="Prozessdatenmodul, 19W AR"/>
+					<Text TextId="PZD 20W AR" Value="PZD( 20W ) AR kons."/>
+					<Text TextId="Prozessdaten Modul 20W AR" Value="Prozessdatenmodul, 20W AR"/>
+					<Text TextId="PZD 21W AR" Value="PZD( 21W ) AR kons."/>
+					<Text TextId="Prozessdaten Modul 21W AR" Value="Prozessdatenmodul, 21W AR"/>
+					<Text TextId="PZD 22W AR" Value="PZD( 22W ) AR kons."/>
+					<Text TextId="Prozessdaten Modul 22W AR" Value="Prozessdatenmodul, 22W AR"/>
+					<Text TextId="PZD 23W AR" Value="PZD( 23W ) AR kons."/>
+					<Text TextId="Prozessdaten Modul 23W AR" Value="Prozessdatenmodul, 23W AR"/>
+					<Text TextId="PZD 24W AR" Value="PZD( 24W ) AR kons."/>
+					<Text TextId="Prozessdaten Modul 24W AR" Value="Prozessdatenmodul, 24W AR"/>
+					<Text TextId="PZD 25W AR" Value="PZD( 25W ) AR kons."/>
+					<Text TextId="Prozessdaten Modul 25W AR" Value="Prozessdatenmodul, 25W AR"/>
+					<Text TextId="PZD 26W AR" Value="PZD( 26W ) AR kons."/>
+					<Text TextId="Prozessdaten Modul 26W AR" Value="Prozessdatenmodul, 26W AR"/>
+					<Text TextId="PZD 27W AR" Value="PZD( 27W ) AR kons."/>
+					<Text TextId="Prozessdaten Modul 27W AR" Value="Prozessdatenmodul, 27W AR"/>
+					<Text TextId="PZD 28W AR" Value="PZD( 28W ) AR kons."/>
+					<Text TextId="Prozessdaten Modul 28W AR" Value="Prozessdatenmodul, 28W AR"/>
+					<Text TextId="PZD 29W AR" Value="PZD( 29W ) AR kons."/>
+					<Text TextId="Prozessdaten Modul 29W AR" Value="Prozessdatenmodul, 29W AR"/>
+					<Text TextId="PZD 30W AR" Value="PZD( 30W ) AR kons."/>
+					<Text TextId="Prozessdaten Modul 30W AR" Value="Prozessdatenmodul, 30W AR"/>
+					<Text TextId="PZD 31W AR" Value="PZD( 31W ) AR kons."/>
+					<Text TextId="Prozessdaten Modul 31W AR" Value="Prozessdatenmodul, 31W AR"/>
+					<Text TextId="PZD 32W AR" Value="PZD( 32W ) AR kons."/>
+					<Text TextId="Prozessdaten Modul 32W AR" Value="Prozessdatenmodul, 32W AR"/>
+					<!--restliche Bezeichner-->
+					<Text TextId="Eingänge" Value="Eingänge"/>
+					<Text TextId="Ausgänge" Value="Ausgänge"/>
+					<Text TextId="Allgemeine Parameter" Value="general parameter"/>
+					<Text TextId="IDT_SS_Interface" Value="X24x"/>
+					<Text TextId="IDT_SS_Port1" Value="X241 P1"/>
+					<Text TextId="IDT_SS_Port2" Value="X242 P2"/>
+					<Text TextId="IDT_Port1" Value="Port 1"/>
+					<Text TextId="IDT_Port2" Value="Port 2"/>
+					<!-- Diagnosetexte PN -->
+					<Text TextId="PN_REAKTION" Value="Reaktion      :  "/>
+					<Text TextId="PN_MODULE" Value="Modul ID      :  "/>
+					<Text TextId="PN_ERROR_TEXT" Value="Fehler Text   :  "/>
+					<Text TextId="PN_REAKTION_CODE_000" Value="Keine Reaktion"/>
+					<Text TextId="PN_REAKTION_CODE_001" Value="Fehler"/>
+					<Text TextId="PN_REAKTION_CODE_002" Value="Störung"/>
+					<Text TextId="PN_REAKTION_CODE_003" Value="Schnellhalt durch Störung"/>
+					<Text TextId="PN_REAKTION_CODE_004" Value="Arretierte Warnung"/>
+					<Text TextId="PN_REAKTION_CODE_005" Value="Warnung"/>
+					<Text TextId="PN_REAKTION_CODE_006" Value="Information"/>
+					<Text TextId="PN_REAKTION_CODE_007" Value="Systemfehler"/>
+					<Text TextId="PN_MODUL_CODE_000" Value=""/>
+					<Text TextId="PN_MODUL_CODE_101" Value="Logbuch-Modul"/>
+					<Text TextId="PN_MODUL_CODE_104" Value="Modul-Erkennung"/>
+					<Text TextId="PN_MODUL_CODE_105" Value="Fehlerprüfung des Programmspeichers zur Laufzeit"/>
+					<Text TextId="PN_MODUL_CODE_106" Value="Laufzeitumgebung für IEC 61131-3-Programme"/>
+					<Text TextId="PN_MODUL_CODE_110" Value="Überwachung der Versorgungsspannung"/>
+					<Text TextId="PN_MODUL_CODE_111" Value="Überwachung der 24-V-Versorgungsspannung"/>
+					<Text TextId="PN_MODUL_CODE_114" Value="Serviceregister"/>
+					<Text TextId="PN_MODUL_CODE_117" Value="Gerätesteuerung"/>
+					<Text TextId="PN_MODUL_CODE_119" Value="Temperaturüberwachung"/>
+					<Text TextId="PN_MODUL_CODE_120" Value="Überwachung analoger Signale"/>
+					<Text TextId="PN_MODUL_CODE_121" Value="Motordaten-Interface"/>
+					<Text TextId="PN_MODUL_CODE_122" Value="Verarbeitung der digitalen Ein-/Ausgänge"/>
+					<Text TextId="PN_MODUL_CODE_123" Value="Motorregelung"/>
+					<Text TextId="PN_MODUL_CODE_124" Value="Gerätekommando-Modul (C00002)"/>
+					<Text TextId="PN_MODUL_CODE_125" Value="Verarbeitung der analogen Ein-/Ausgänge"/>
+					<Text TextId="PN_MODUL_CODE_127" Value="Interface zum intelligenten Kommunikationsmodul"/>
+					<Text TextId="PN_MODUL_CODE_131" Value="CAN on board: CAN-Dispatcher"/>
+					<Text TextId="PN_MODUL_CODE_132" Value="CAN on board: CAN-NMT-Handler"/>
+					<Text TextId="PN_MODUL_CODE_133" Value="CAN on board: CAN-Emergency-Handler"/>
+					<Text TextId="PN_MODUL_CODE_134" Value="CAN on board: CAN-NMT-Master"/>
+					<Text TextId="PN_MODUL_CODE_135" Value="CAN on board: CAN-PDO-Handler"/>
+					<Text TextId="PN_MODUL_CODE_136" Value="CAN on board: CAN-SDO-Server"/>
+					<Text TextId="PN_MODUL_CODE_137" Value="CAN on board: CAN-SDO-Client"/>
+					<Text TextId="PN_MODUL_CODE_140" Value="Application Project Manager"/>
+					<Text TextId="PN_MODUL_CODE_142" Value="Kommunikationsinterface interne Kommunikation"/>
+					<Text TextId="PN_MODUL_CODE_144" Value="Parameter-Manager"/>
+					<Text TextId="PN_MODUL_CODE_145" Value="Lenze-Laufzeitsystem"/>
+					<Text TextId="PN_MODUL_CODE_146" Value="Interface zum Sicherheitsmodul"/>
+					<Text TextId="PN_MODUL_CODE_147" Value="Sync-Signal-Erzeugung"/>
+					<Text TextId="PN_MODUL_CODE_153" Value="Erweiterungsmodul Leitfrequenz in MXI1"/>
+					<Text TextId="PN_MODUL_CODE_157" Value="CAN-Modul in MXI1: CAN-Dispatcher"/>
+					<Text TextId="PN_MODUL_CODE_158" Value="CAN-Modul in MXI1: CAN-NMT-Handler"/>
+					<Text TextId="PN_MODUL_CODE_159" Value="CAN-Modul in MXI1: CAN-Emergency-Handler"/>
+					<Text TextId="PN_MODUL_CODE_160" Value="CAN-Modul in MXI1: CAN-NMT-Master "/>
+					<Text TextId="PN_MODUL_CODE_161" Value="CAN-Modul in MXI1: CAN-PDO-Handler"/>
+					<Text TextId="PN_MODUL_CODE_162" Value="CAN-Modul in MXI1: CAN-SDO-Server"/>
+					<Text TextId="PN_MODUL_CODE_163" Value="CAN-Modul in MXI1: CAN-SDO-Client"/>
+					<Text TextId="PN_MODUL_CODE_170" Value="Erweiterungsmodul Leitfrequenz in MXI2"/>
+					<Text TextId="PN_MODUL_CODE_172" Value="CAN-Modul in MXI2: CAN-Dispatcher"/>
+					<Text TextId="PN_MODUL_CODE_173" Value="CAN-Modul in MXI2: CAN-NMT-Handler"/>
+					<Text TextId="PN_MODUL_CODE_174" Value="CAN-Modul in MXI2: CAN-Emergency-Handler"/>
+					<Text TextId="PN_MODUL_CODE_175" Value="CAN-Modul in MXI2: CAN-NMT-Master "/>
+					<Text TextId="PN_MODUL_CODE_176" Value="CAN-Modul in MXI2: CAN-PDO-Handler"/>
+					<Text TextId="PN_MODUL_CODE_177" Value="CAN-Modul in MXI2: CAN-SDO-Server"/>
+					<Text TextId="PN_MODUL_CODE_178" Value="CAN-Modul in MXI2: CAN-SDO-Client"/>
+					<Text TextId="PN_MODUL_CODE_184" Value="Antriebsgrundfunktionen"/>
+					<Text TextId="PN_MODUL_CODE_200" Value="Intelligentes Kommunikationsmodul"/>
+					<Text TextId="PN_MODUL_CODE_303" Value="Sicherheitsmodul SM300/SM301"/>
+					<!--Meldungen PROFINETmodul-->
+					<Text TextId="PN_No_Err" Value=""/>
+					<Text TextId="PN_Err_0x3100" Value="Interner Fehler"/>
+					<Text TextId="PN_Err_0x5531" Value="Speicher: kein Zugriff"/>
+					<Text TextId="PN_Err_0x5532" Value="Speicher: Fehler beim Lesen"/>
+					<Text TextId="PN_Err_0x5533" Value="Speicher: Fehler beim Schreiben"/>
+					<Text TextId="PN_Err_0x6010" Value="Neustart durch Watchdog-Reset"/>
+					<Text TextId="PN_Err_0x6011" Value="Interner Fehler"/>
+					<Text TextId="PN_Err_0x6100" Value="Interner Fehler"/>
+					<Text TextId="PN_Err_0x6101" Value="Interner Fehler"/>
+					<Text TextId="PN_Err_0x6110" Value="Interner Mappingfehler"/>
+					<Text TextId="PN_Err_0x6501" Value="Ungültiger Parameter-Lesezugriff"/>
+					<Text TextId="PN_Err_0x6502" Value="Ungültiger Parameter-Schreibzugriff"/>
+					<Text TextId="PN_Err_0x6503" Value="Ausgangsdaten ungültig"/>
+					<Text TextId="PN_Err_0x6532" Value="Ungültiger Stationsname"/>
+					<Text TextId="PN_Err_0x6533" Value="Ungültige IP-Parameter"/>
+					<Text TextId="PN_Err_0x641f" Value="Parametersatz ungültig"/>
+					<Text TextId="PN_Err_0x6420" Value="Fehler: Lenze-Einstellung geladen"/>
+					<Text TextId="PN_Err_0x6430" Value="Ungültige Modulkonfiguration"/>
+					<Text TextId="PN_Err_0x6610" Value="Kommunikations-Timeout mit Sicherheitsmodul"/>
+					<Text TextId="PN_Err_0x6611" Value="Parameter-Timeout vom Sicherheitsmodul"/>
+					<Text TextId="PN_Err_0x6612" Value="Initialisierungsfehler vom Sicherheitsmodul"/>
+					<Text TextId="PN_Err_0x6613" Value="Verbindungsfehler zum Sicherheitsmodul"/>
+					<Text TextId="PN_Err_0x6650" Value="Interner Fehler"/>
+					<Text TextId="PN_Err_0x8131" Value="Zustand Data_Exchange verlassen"/>
+					<!--Meldungen Sicherheitsmodul-->
+					<Text TextId="No_Err" Value=""/>
+					<Text TextId="SM_Err_0001" Value="Interner Fehler, STO ausgelöst"/>
+					<Text TextId="SM_Err_0002" Value="Interner Fehler, SS1 ausgelöst"/>
+					<Text TextId="SM_Err_0003" Value="Interner Fehler, SS2 ausgelöst"/>
+					<Text TextId="SM_Err_0010" Value="Kommunikationsfehler Grundgerät"/>
+					<Text TextId="SM_Err_0011" Value="Synchronisierungsfehler Grundgerät"/>
+					<Text TextId="SM_Err_0021" Value="Safety-Adresse ungültig (0 oder 0xFFFF)"/>
+					<Text TextId="SM_Err_0022" Value="PROFIsafe Kommunikationsfehler"/>
+					<Text TextId="SM_Err_0023" Value="F_WD_Time überschritten"/>
+					<Text TextId="SM_Err_0024" Value="PROFIsafe passiviert"/>
+					<Text TextId="SM_Err_0025" Value="PROFIsafe hat Data Exchange verlassen"/>
+					<Text TextId="SM_Err_0026" Value="PROFIsafe ungültige Daten"/>
+					<Text TextId="SM_Err_0027" Value="Fehler F-Parameter"/>
+					<Text TextId="SM_Err_0028" Value="Kommunikationsfehler in Parameterphase"/>
+					<Text TextId="SM_Err_0031" Value="Fehler Diskrepanz- oder Funktionstest SD-In1"/>
+					<Text TextId="SM_Err_0032" Value="Fehler Diskrepanz- oder Funktionstest SD-In2"/>
+					<Text TextId="SM_Err_0033" Value="Fehler Diskrepanz- oder Funktionstest SD-In3"/>
+					<Text TextId="SM_Err_0034" Value="Fehler Diskrepanz- oder Funktionstest SD-In4"/>
+					<Text TextId="SM_Err_0035" Value="Interner Fehler AIS"/>
+					<Text TextId="SM_Err_0036" Value="Interner Fehler AIE"/>
+					<Text TextId="SM_Err_0037" Value="Interner Fehler Modultaster"/>
+					<Text TextId="SM_Err_0039" Value="Deaktivierter SD-In1 = high"/>
+					<Text TextId="SM_Err_003A" Value="Deaktivierter SD-In2 = high"/>
+					<Text TextId="SM_Err_003B" Value="Deaktivierter SD-In3 = high"/>
+					<Text TextId="SM_Err_003C" Value="Deaktivierter SD-In4 = high"/>
+					<Text TextId="SM_Err_0040" Value="F_Dest_Add ungleich F-Adresse"/>
+					<Text TextId="SM_Err_0041" Value="F_Dest_Add = 0 oder FFFFhex"/>
+					<Text TextId="SM_Err_0042" Value="F_Source_Add = 0 oder FFFFhex"/>
+					<Text TextId="SM_Err_0043" Value="F_WD_Time ist 0msec"/>
+					<Text TextId="SM_Err_0044" Value="F_SIL übersteigt technischen SIL"/>
+					<Text TextId="SM_Err_0045" Value="F_CRC_Length Fehler"/>
+					<Text TextId="SM_Err_0046" Value="F-Parameter-Version inkorrekt"/>
+					<Text TextId="SM_Err_0047" Value="PROFIsafe CRC1-Fehler"/>
+					<Text TextId="SM_Err_0048" Value="Reserviert (PROFIsafe-Standard)"/>
+					<Text TextId="SM_Err_0049" Value="Reserviert (PROFIsafe-Standard)"/>
+					<Text TextId="SM_Err_004A" Value="Reserviert (PROFIsafe-Standard)"/>
+					<Text TextId="SM_Err_0051" Value="Fehler SD-Inx / CLx"/>
+					<Text TextId="SM_Err_0052" Value="Fehler SD-Inx / CLx"/>
+					<Text TextId="SM_Err_0059" Value="Kurz-/Querschluss SD-Out"/>
+					<Text TextId="SM_Err_005D" Value="Fehler interner Abschaltpfad"/>
+					<Text TextId="SM_Err_005E" Value="Testpulsfehler interner Abschaltpfad"/>
+					<Text TextId="SM_Err_0061" Value="SS1/SS2: Stoppzeit überschritten"/>
+					<Text TextId="SM_Err_0062" Value="SLS1: Nlim1 überschritten"/>
+					<Text TextId="SM_Err_0063" Value="SLS2: Nlim2 überschritten"/>
+					<Text TextId="SM_Err_0064" Value="SLS3: Nlim3 überschritten"/>
+					<Text TextId="SM_Err_0065" Value="SLS4: Nlim4 überschritten"/>
+					<Text TextId="SM_Err_0066" Value="SLS/SMS: Fehlerstopp nicht ausgeführt"/>
+					<Text TextId="SM_Err_0067" Value="SDIpos: Falsche Bewegungsrichtung"/>
+					<Text TextId="SM_Err_0068" Value="SDIneg: Falsche Bewegungsrichtung"/>
+					<Text TextId="SM_Err_0069" Value="SMS: Nmax überschritten"/>
+					<Text TextId="SM_Err_006A" Value="SOS: Toleranzgrenze überschritten"/>
+					<Text TextId="SM_Err_006B" Value="Kein Gebersystem parametriert"/>
+					<Text TextId="SM_Err_006C" Value="CAS: Umlaufzeit überschritten"/>
+					<Text TextId="SM_Err_006D" Value="CAS: Hardware- oder Diskrepanzfehler"/>
+					<Text TextId="SM_Err_006E" Value="SS1/SS2: Geschwindigkeitsrampe überschritten"/>
+					<Text TextId="SM_Err_006F" Value="SLI: Sicher begrenztes Schrittmaß überschritten"/>
+					<Text TextId="SM_Err_0080" Value="Stuck at High SD-Out1, Kanal A"/>
+					<Text TextId="SM_Err_0081" Value="Stuck at Low SD-Out1, Kanal A"/>
+					<Text TextId="SM_Err_0082" Value="Stuck at High SD-Out1, Kanal B"/>
+					<Text TextId="SM_Err_0083" Value="Stuck at Low SD-Out1, Kanal B"/>
+					<Text TextId="SM_Err_0090" Value="Stuck at High an SD-In1, Kanal A"/>
+					<Text TextId="SM_Err_0091" Value="Stuck at High an SD-In1, Kanal B"/>
+					<Text TextId="SM_Err_0092" Value="Stuck at High an SD-In2, Kanal A"/>
+					<Text TextId="SM_Err_0093" Value="Stuck at High an SD-In2, Kanal B"/>
+					<Text TextId="SM_Err_0094" Value="Stuck at High an SD-In3, Kanal A"/>
+					<Text TextId="SM_Err_0095" Value="Stuck at High an SD-In3, Kanal B"/>
+					<Text TextId="SM_Err_0096" Value="Stuck at High an SD-In4, Kanal A"/>
+					<Text TextId="SM_Err_0097" Value="Stuck at High an SD-In4, Kanal B"/>
+					<Text TextId="SM_Err_009A" Value="Querschluss CLA/CLB"/>
+					<Text TextId="SM_Err_00A0" Value="Neuer Parametersatz gelöscht"/>
+					<Text TextId="SM_Err_00A1" Value="Neuer sicherer Parametersatz geladen"/>
+					<Text TextId="SM_Err_00A2" Value="Speichermodul Parametersatz Zugriffsfehler"/>
+					<Text TextId="SM_Err_00A3" Value="Verschiedene Parmetersätze"/>
+					<Text TextId="SM_Err_00A4" Value="Kein sicherer Parametersatz Sicherheitsmodul"/>
+					<Text TextId="SM_Err_00A5" Value="Defekter Parametersatz Sicherheitsmodul"/>
+					<Text TextId="SM_Err_00A6" Value="Parametersatz Speichermodul Formatfehler"/>
+					<Text TextId="SM_Err_00A7" Value="Parametersatz Plausibilitätsfehler"/>
+					<Text TextId="SM_Err_00A8" Value="Parametersatz Kommunikationsfehler"/>
+					<Text TextId="SM_Err_00A9" Value="Modul-ID ungleich effektive Safety-Adresse"/>
+					<Text TextId="SM_Err_00C0" Value="Referenzspannungsfehler"/>
+					<Text TextId="SM_Err_00C1" Value="6V Spannungsfehler"/>
+					<Text TextId="SM_Err_00C2" Value="5V Spannungsfehler"/>
+					<Text TextId="SM_Err_00C3" Value="2.6V Spannungsfehler"/>
+					<Text TextId="SM_Err_00D0" Value="Sichere Drehzahl ungültig"/>
+					<Text TextId="SM_Err_00D1" Value="SSM: Fehler Encoder"/>
+					<Text TextId="SM_Err_00D2" Value="SSM: Fehler Resolver"/>
+					<Text TextId="SM_Err_00D3" Value="SSM: Fehler Grundgerätedaten"/>
+					<Text TextId="SM_Err_00D4" Value="SSM: Fehler Geschwindigkeitsvergleich"/>
+					<Text TextId="SM_Err_00D5" Value="SSM: Fehler Synchronisierung"/>
+					<Text TextId="SM_Err_00D6" Value="SSM: Falsche PDO-Version"/>
+					<!--Meldungen Grundgerät-->
+					<Text TextId="DEV_Err_0x0001" Value="Gerätefehler (siehe C00166)"/>
+					<Text TextId="DEV_Err_0x0002" Value="Gerätefehler (siehe C00166)"/>
+					<Text TextId="DEV_Err_0x0003" Value="Gerätefehler (siehe C00166)"/>
+					<Text TextId="DEV_Err_0x0004" Value="Gerätefehler (siehe C00166)"/>
+					<Text TextId="DEV_Err_0x0005" Value="Gerätefehler (siehe C00166)"/>
+					<Text TextId="DEV_Err_0x0006" Value="Gerätefehler (siehe C00166)"/>
+					<Text TextId="DEV_Err_0x0007" Value="Gerätefehler (siehe C00166)"/>
+					<Text TextId="DEV_Err_0x0008" Value="Gerätefehler (siehe C00166)"/>
+					<Text TextId="DEV_Err_0x0009" Value="Gerätefehler (siehe C00166)"/>
+					<Text TextId="DEV_Err_0x000a" Value="Gerätefehler (siehe C00166)"/>
+					<Text TextId="DEV_Err_0x000b" Value="Gerätefehler (siehe C00166)"/>
+					<Text TextId="DEV_Err_0x000c" Value="Gerätefehler (siehe C00166)"/>
+					<Text TextId="DEV_Err_0x000d" Value="Gerätefehler (siehe C00166)"/>
+					<Text TextId="DEV_Err_0x000e" Value="Gerätefehler (siehe C00166)"/>
+					<Text TextId="DEV_Err_0x000f" Value="Zwischenkreis-Unterspannung"/>
+					<Text TextId="DEV_Err_0x0010" Value="Gerätefehler (siehe C00166)"/>
+					<Text TextId="DEV_Err_0x0011" Value="Gerätefehler (siehe C00166)"/>
+					<Text TextId="DEV_Err_0x0012" Value="Gerätefehler (siehe C00166)"/>
+					<Text TextId="DEV_Err_0x0013" Value="Gerätefehler (siehe C00166)"/>
+					<Text TextId="DEV_Err_0x0014" Value="Gerätefehler (siehe C00166)"/>
+					<Text TextId="DEV_Err_0x0015" Value="Gerätefehler (siehe C00166)"/>
+					<Text TextId="DEV_Err_0x0016" Value="Gerätefehler (siehe C00166)"/>
+					<Text TextId="DEV_Err_0x0017" Value="Gerätefehler (siehe C00166)"/>
+					<Text TextId="DEV_Err_0x0018" Value="Gerätefehler (siehe C00166)"/>
+					<Text TextId="DEV_Err_0x0019" Value="Gerätefehler (siehe C00166)"/>
+					<Text TextId="DEV_Err_0x001a" Value="Gerätefehler (siehe C00166)"/>
+					<Text TextId="DEV_Err_0x001b" Value="Gerätefehler (siehe C00166)"/>
+					<Text TextId="DEV_Err_0x001c" Value="Gerätefehler (siehe C00166)"/>
+					<Text TextId="DEV_Err_0x001d" Value="Gerätefehler (siehe C00166)"/>
+					<Text TextId="DEV_Err_0x001e" Value="Gerätefehler (siehe C00166)"/>
+					<Text TextId="DEV_Err_0x001f" Value="Gerätefehler (siehe C00166)"/>
+				</Language>
+			</ExternalTextList>
+		</ApplicationProcess>
+	</ProfileBody>
+</ISO15745Profile>

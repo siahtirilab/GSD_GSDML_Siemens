@@ -1,0 +1,1039 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<ISO15745Profile xmlns="http://www.profibus.com/GSDML/2003/11/DeviceProfile" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.profibus.com/GSDML/2003/11/DeviceProfile ..\XSD\GSDML-DeviceProfile-v1.0.xsd">
+	<ProfileHeader>
+		<ProfileIdentification>PROFINET Device Profile</ProfileIdentification>
+		<ProfileRevision>1.00</ProfileRevision>
+		<ProfileName>Device Profile for PROFINET Devices</ProfileName>
+		<ProfileSource>PROFIBUS Nutzerorganisation e. V. (PNO)</ProfileSource>
+		<ProfileClassID>Device</ProfileClassID>
+		<ISO15745Reference>
+			<ISO15745Part>4</ISO15745Part>
+			<ISO15745Edition>1</ISO15745Edition>
+			<ProfileTechnology>GSDML</ProfileTechnology>
+		</ISO15745Reference>
+	</ProfileHeader>
+	<ProfileBody>
+		<DeviceIdentity VendorID="0x0106" DeviceID="0x9400">
+			<InfoText TextId="PROFINET_ IO_DEV_DESCRIPTION"/>
+			<VendorName Value="Lenze"/>
+		</DeviceIdentity>
+		<DeviceFunction>
+			<Family MainFamily="Drives" ProductFamily="V9400"/>
+		</DeviceFunction>
+		<ApplicationProcess>
+			<DeviceAccessPointList>
+				<DeviceAccessPointItem ID="DIM 1" PhysicalSlots="0..1" ModuleIdentNumber="0x00000300" MinDeviceInterval="128" ImplementationType="LARS" DNS_CompatibleName="Lenze9400" FixedInSlots="0" ObjectUUID_LocalIndex="1">
+					<ModuleInfo>
+						<Name TextId="Lenze9400"/>
+						<InfoText TextId="PROFINET_ IO_DEV_DESCRIPTION"/>
+						<VendorName Value="Lenze"/>						
+						<HardwareRelease Value="VA"/>
+						<SoftwareRelease Value="V0.50"/>
+					</ModuleInfo>
+					<IOConfigData MaxInputLength="64" MaxOutputLength="64"/>
+					<UseableModules>
+						<ModuleItemRef ModuleItemTarget="1" AllowedInSlots="1"/>
+						<ModuleItemRef ModuleItemTarget="2" AllowedInSlots="1"/>
+						<ModuleItemRef ModuleItemTarget="3" AllowedInSlots="1"/>
+						<ModuleItemRef ModuleItemTarget="4" AllowedInSlots="1"/>
+						<ModuleItemRef ModuleItemTarget="5" AllowedInSlots="1"/>
+						<ModuleItemRef ModuleItemTarget="6" AllowedInSlots="1"/>
+						<ModuleItemRef ModuleItemTarget="7" AllowedInSlots="1"/>
+						<ModuleItemRef ModuleItemTarget="8" AllowedInSlots="1"/>
+						<ModuleItemRef ModuleItemTarget="9" AllowedInSlots="1"/>
+						<ModuleItemRef ModuleItemTarget="10" AllowedInSlots="1"/>
+						<ModuleItemRef ModuleItemTarget="11" AllowedInSlots="1"/>
+						<ModuleItemRef ModuleItemTarget="12" AllowedInSlots="1"/>
+						<ModuleItemRef ModuleItemTarget="13" AllowedInSlots="1"/>
+						<ModuleItemRef ModuleItemTarget="14" AllowedInSlots="1"/>
+						<ModuleItemRef ModuleItemTarget="15" AllowedInSlots="1"/>
+						<ModuleItemRef ModuleItemTarget="16" AllowedInSlots="1"/>
+						<ModuleItemRef ModuleItemTarget="17" AllowedInSlots="1"/>
+						<ModuleItemRef ModuleItemTarget="18" AllowedInSlots="1"/>
+						<ModuleItemRef ModuleItemTarget="19" AllowedInSlots="1"/>
+						<ModuleItemRef ModuleItemTarget="20" AllowedInSlots="1"/>
+						<ModuleItemRef ModuleItemTarget="21" AllowedInSlots="1"/>
+						<ModuleItemRef ModuleItemTarget="22" AllowedInSlots="1"/>
+						<ModuleItemRef ModuleItemTarget="23" AllowedInSlots="1"/>
+						<ModuleItemRef ModuleItemTarget="24" AllowedInSlots="1"/>
+						<ModuleItemRef ModuleItemTarget="25" AllowedInSlots="1"/>
+						<ModuleItemRef ModuleItemTarget="26" AllowedInSlots="1"/>
+						<ModuleItemRef ModuleItemTarget="27" AllowedInSlots="1"/>
+						<ModuleItemRef ModuleItemTarget="28" AllowedInSlots="1"/>
+						<ModuleItemRef ModuleItemTarget="29" AllowedInSlots="1"/>
+						<ModuleItemRef ModuleItemTarget="30" AllowedInSlots="1"/>
+						<ModuleItemRef ModuleItemTarget="31" AllowedInSlots="1"/>
+						<ModuleItemRef ModuleItemTarget="32" AllowedInSlots="1"/>
+						<!--Die Referenzen zeigen auf die Module der ModuleList -->
+					</UseableModules>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="DIM 1" SubmoduleIdentNumber="0xA0000001">
+							<IOData IOPS_Length="1" IOCS_Length="1"/>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+					<Graphics>
+						<GraphicItemRef Type="DeviceSymbol" GraphicItemTarget="ID_Graphic_1"/>
+						<!--<GraphicItemRef State="SF" GraphicItemTarget="2"/>-->
+					</Graphics>
+				</DeviceAccessPointItem>
+			</DeviceAccessPointList>
+			<ModuleList>
+				<!-- Nur Prozessdaten -->
+				<ModuleItem ID="1" ModuleIdentNumber="0x00000001">
+					<ModuleInfo CategoryRef="PZD">
+						<Name TextId="PZD 1W AR"/>
+						<InfoText TextId="Prozessdaten Modul 1W AR"/>
+					</ModuleInfo>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="1" SubmoduleIdentNumber="0x00000001">
+							<IOData IOPS_Length="1" IOCS_Length="1">
+								<Input>
+									<DataItem DataType="OctetString" UseAsBits="false" Length="2" TextId="Eingänge"/>
+								</Input>
+								<Output>
+									<DataItem DataType="OctetString" UseAsBits="false" Length="2" TextId="Ausgänge"/>
+								</Output>
+							</IOData>
+							<RecordDataList>
+								<ParameterRecordDataItem Index="1" Length="6" TransferSequence="0">
+									<Name TextId="Allgemeine Parameter"/>
+									<Const Data="0x01,0x00,0x00,0x00,0x00,0x00" ByteOffset="0"/>
+								</ParameterRecordDataItem>
+							</RecordDataList>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+				</ModuleItem>
+				<ModuleItem ID="2" ModuleIdentNumber="0x00000002">
+					<ModuleInfo CategoryRef="PZD">
+						<Name TextId="PZD 2W AR"/>
+						<InfoText TextId="Prozessdaten Modul 2W AR"/>
+					</ModuleInfo>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="2" SubmoduleIdentNumber="0x00000002">
+							<IOData IOPS_Length="1" IOCS_Length="1">
+								<Input>
+									<DataItem DataType="OctetString" UseAsBits="false" Length="4" TextId="Eingänge"/>
+								</Input>
+								<Output>
+									<DataItem DataType="OctetString" UseAsBits="false" Length="4" TextId="Ausgänge"/>
+								</Output>
+							</IOData>
+							<RecordDataList>
+								<ParameterRecordDataItem Index="1" Length="6" TransferSequence="0">
+									<Name TextId="Allgemeine Parameter"/>
+									<Const Data="0x01,0x00,0x00,0x00,0x00,0x00" ByteOffset="0"/>
+								</ParameterRecordDataItem>
+							</RecordDataList>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+				</ModuleItem>
+				<ModuleItem ID="3" ModuleIdentNumber="0x00000003">
+					<ModuleInfo CategoryRef="PZD">
+						<Name TextId="PZD 3W AR"/>
+						<InfoText TextId="Prozessdaten Modul 3W AR"/>
+					</ModuleInfo>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="3" SubmoduleIdentNumber="0x00000003">
+							<IOData IOPS_Length="1" IOCS_Length="1">
+								<Input>
+									<DataItem DataType="OctetString" UseAsBits="false" Length="6" TextId="Eingänge"/>
+								</Input>
+								<Output>
+									<DataItem DataType="OctetString" UseAsBits="false" Length="6" TextId="Ausgänge"/>
+								</Output>
+							</IOData>
+							<RecordDataList>
+								<ParameterRecordDataItem Index="1" Length="6" TransferSequence="0">
+									<Name TextId="Allgemeine Parameter"/>
+									<Const Data="0x01,0x00,0x00,0x00,0x00,0x00" ByteOffset="0"/>
+								</ParameterRecordDataItem>
+							</RecordDataList>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+				</ModuleItem>
+				<ModuleItem ID="4" ModuleIdentNumber="0x00000004">
+					<ModuleInfo CategoryRef="PZD">
+						<Name TextId="PZD 4W AR"/>
+						<InfoText TextId="Prozessdaten Modul 4W AR"/>
+					</ModuleInfo>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="4" SubmoduleIdentNumber="0x00000004">
+							<IOData IOPS_Length="1" IOCS_Length="1">
+								<Input>
+									<DataItem DataType="OctetString" UseAsBits="false" Length="8" TextId="Eingänge"/>
+								</Input>
+								<Output>
+									<DataItem DataType="OctetString" UseAsBits="false" Length="8" TextId="Ausgänge"/>
+								</Output>
+							</IOData>
+							<RecordDataList>
+								<ParameterRecordDataItem Index="1" Length="6" TransferSequence="0">
+									<Name TextId="Allgemeine Parameter"/>
+									<Const Data="0x01,0x00,0x00,0x00,0x00,0x00" ByteOffset="0"/>
+								</ParameterRecordDataItem>
+							</RecordDataList>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+				</ModuleItem>
+				<ModuleItem ID="5" ModuleIdentNumber="0x00000005">
+					<ModuleInfo CategoryRef="PZD">
+						<Name TextId="PZD 5W AR"/>
+						<InfoText TextId="Prozessdaten Modul 5W AR"/>
+					</ModuleInfo>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="5" SubmoduleIdentNumber="0x00000005">
+							<IOData IOPS_Length="1" IOCS_Length="1">
+								<Input>
+									<DataItem DataType="OctetString" UseAsBits="false" Length="10" TextId="Eingänge"/>
+								</Input>
+								<Output>
+									<DataItem DataType="OctetString" UseAsBits="false" Length="10" TextId="Ausgänge"/>
+								</Output>
+							</IOData>
+							<RecordDataList>
+								<ParameterRecordDataItem Index="1" Length="6" TransferSequence="0">
+									<Name TextId="Allgemeine Parameter"/>
+									<Const Data="0x01,0x00,0x00,0x00,0x00,0x00" ByteOffset="0"/>
+								</ParameterRecordDataItem>
+							</RecordDataList>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+				</ModuleItem>
+				<ModuleItem ID="6" ModuleIdentNumber="0x00000006">
+					<ModuleInfo CategoryRef="PZD">
+						<Name TextId="PZD 6W AR"/>
+						<InfoText TextId="Prozessdaten Modul 6W AR"/>
+					</ModuleInfo>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="6" SubmoduleIdentNumber="0x00000006">
+							<IOData IOPS_Length="1" IOCS_Length="1">
+								<Input>
+									<DataItem DataType="OctetString" UseAsBits="false" Length="12" TextId="Eingänge"/>
+								</Input>
+								<Output>
+									<DataItem DataType="OctetString" UseAsBits="false" Length="12" TextId="Ausgänge"/>
+								</Output>
+							</IOData>
+							<RecordDataList>
+								<ParameterRecordDataItem Index="1" Length="6" TransferSequence="0">
+									<Name TextId="Allgemeine Parameter"/>
+									<Const Data="0x01,0x00,0x00,0x00,0x00,0x00" ByteOffset="0"/>
+								</ParameterRecordDataItem>
+							</RecordDataList>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+				</ModuleItem>
+				<ModuleItem ID="7" ModuleIdentNumber="0x00000007">
+					<ModuleInfo CategoryRef="PZD">
+						<Name TextId="PZD 7W AR"/>
+						<InfoText TextId="Prozessdaten Modul 7W AR"/>
+					</ModuleInfo>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="7" SubmoduleIdentNumber="0x00000007">
+							<IOData IOPS_Length="1" IOCS_Length="1">
+								<Input>
+									<DataItem DataType="OctetString" UseAsBits="false" Length="14" TextId="Eingänge"/>
+								</Input>
+								<Output>
+									<DataItem DataType="OctetString" UseAsBits="false" Length="14" TextId="Ausgänge"/>
+								</Output>
+							</IOData>
+							<RecordDataList>
+								<ParameterRecordDataItem Index="1" Length="6" TransferSequence="0">
+									<Name TextId="Allgemeine Parameter"/>
+									<Const Data="0x01,0x00,0x00,0x00,0x00,0x00" ByteOffset="0"/>
+								</ParameterRecordDataItem>
+							</RecordDataList>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+				</ModuleItem>
+				<ModuleItem ID="8" ModuleIdentNumber="0x00000008">
+					<ModuleInfo CategoryRef="PZD">
+						<Name TextId="PZD 8W AR"/>
+						<InfoText TextId="Prozessdaten Modul 8W AR"/>
+					</ModuleInfo>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="8" SubmoduleIdentNumber="0x00000008">
+							<IOData IOPS_Length="1" IOCS_Length="1">
+								<Input>
+									<DataItem DataType="OctetString" UseAsBits="false" Length="16" TextId="Eingänge"/>
+								</Input>
+								<Output>
+									<DataItem DataType="OctetString" UseAsBits="false" Length="16" TextId="Ausgänge"/>
+								</Output>
+							</IOData>
+							<RecordDataList>
+								<ParameterRecordDataItem Index="1" Length="6" TransferSequence="0">
+									<Name TextId="Allgemeine Parameter"/>
+									<Const Data="0x01,0x00,0x00,0x00,0x00,0x00" ByteOffset="0"/>
+								</ParameterRecordDataItem>
+							</RecordDataList>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+				</ModuleItem>
+				<ModuleItem ID="9" ModuleIdentNumber="0x00000009">
+					<ModuleInfo CategoryRef="PZD">
+						<Name TextId="PZD 9W AR"/>
+						<InfoText TextId="Prozessdaten Modul 9W AR"/>
+					</ModuleInfo>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="9" SubmoduleIdentNumber="0x00000009">
+							<IOData IOPS_Length="1" IOCS_Length="1">
+								<Input>
+									<DataItem DataType="OctetString" UseAsBits="false" Length="18" TextId="Eingänge"/>
+								</Input>
+								<Output>
+									<DataItem DataType="OctetString" UseAsBits="false" Length="18" TextId="Ausgänge"/>
+								</Output>
+							</IOData>
+							<RecordDataList>
+								<ParameterRecordDataItem Index="1" Length="6" TransferSequence="0">
+									<Name TextId="Allgemeine Parameter"/>
+									<Const Data="0x01,0x00,0x00,0x00,0x00,0x00" ByteOffset="0"/>
+								</ParameterRecordDataItem>
+							</RecordDataList>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+				</ModuleItem>
+				<ModuleItem ID="10" ModuleIdentNumber="0x0000000a">
+					<ModuleInfo CategoryRef="PZD">
+						<Name TextId="PZD 10W AR"/>
+						<InfoText TextId="Prozessdaten Modul 10W AR"/>
+					</ModuleInfo>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="10" SubmoduleIdentNumber="0x0000000a">
+							<IOData IOPS_Length="1" IOCS_Length="1">
+								<Input>
+									<DataItem DataType="OctetString" UseAsBits="false" Length="20" TextId="Eingänge"/>
+								</Input>
+								<Output>
+									<DataItem DataType="OctetString" UseAsBits="false" Length="20" TextId="Ausgänge"/>
+								</Output>
+							</IOData>
+							<RecordDataList>
+								<ParameterRecordDataItem Index="1" Length="6" TransferSequence="0">
+									<Name TextId="Allgemeine Parameter"/>
+									<Const Data="0x01,0x00,0x00,0x00,0x00,0x00" ByteOffset="0"/>
+								</ParameterRecordDataItem>
+							</RecordDataList>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+				</ModuleItem>
+				<ModuleItem ID="11" ModuleIdentNumber="0x0000000b">
+					<ModuleInfo CategoryRef="PZD">
+						<Name TextId="PZD 11W AR"/>
+						<InfoText TextId="Prozessdaten Modul 11W AR"/>
+					</ModuleInfo>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="11" SubmoduleIdentNumber="0x0000000b">
+							<IOData IOPS_Length="1" IOCS_Length="1">
+								<Input>
+									<DataItem DataType="OctetString" UseAsBits="false" Length="22" TextId="Eingänge"/>
+								</Input>
+								<Output>
+									<DataItem DataType="OctetString" UseAsBits="false" Length="22" TextId="Ausgänge"/>
+								</Output>
+							</IOData>
+							<RecordDataList>
+								<ParameterRecordDataItem Index="1" Length="6" TransferSequence="0">
+									<Name TextId="Allgemeine Parameter"/>
+									<Const Data="0x01,0x00,0x00,0x00,0x00,0x00" ByteOffset="0"/>
+								</ParameterRecordDataItem>
+							</RecordDataList>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+				</ModuleItem>
+				<ModuleItem ID="12" ModuleIdentNumber="0x0000000c">
+					<ModuleInfo CategoryRef="PZD">
+						<Name TextId="PZD 12W AR"/>
+						<InfoText TextId="Prozessdaten Modul 12W AR"/>
+					</ModuleInfo>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="12" SubmoduleIdentNumber="0x0000000c">
+							<IOData IOPS_Length="1" IOCS_Length="1">
+								<Input>
+									<DataItem DataType="OctetString" UseAsBits="false" Length="24" TextId="Eingänge"/>
+								</Input>
+								<Output>
+									<DataItem DataType="OctetString" UseAsBits="false" Length="24" TextId="Ausgänge"/>
+								</Output>
+							</IOData>
+							<RecordDataList>
+								<ParameterRecordDataItem Index="1" Length="6" TransferSequence="0">
+									<Name TextId="Allgemeine Parameter"/>
+									<Const Data="0x01,0x00,0x00,0x00,0x00,0x00" ByteOffset="0"/>
+								</ParameterRecordDataItem>
+							</RecordDataList>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+				</ModuleItem>
+				<ModuleItem ID="13" ModuleIdentNumber="0x0000000d">
+					<ModuleInfo CategoryRef="PZD">
+						<Name TextId="PZD 13W AR"/>
+						<InfoText TextId="Prozessdaten Modul 13W AR"/>
+					</ModuleInfo>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="13" SubmoduleIdentNumber="0x0000000d">
+							<IOData IOPS_Length="1" IOCS_Length="1">
+								<Input>
+									<DataItem DataType="OctetString" UseAsBits="false" Length="26" TextId="Eingänge"/>
+								</Input>
+								<Output>
+									<DataItem DataType="OctetString" UseAsBits="false" Length="26" TextId="Ausgänge"/>
+								</Output>
+							</IOData>
+							<RecordDataList>
+								<ParameterRecordDataItem Index="1" Length="6" TransferSequence="0">
+									<Name TextId="Allgemeine Parameter"/>
+									<Const Data="0x01,0x00,0x00,0x00,0x00,0x00" ByteOffset="0"/>
+								</ParameterRecordDataItem>
+							</RecordDataList>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+				</ModuleItem>
+				<ModuleItem ID="14" ModuleIdentNumber="0x0000000e">
+					<ModuleInfo CategoryRef="PZD">
+						<Name TextId="PZD 14W AR"/>
+						<InfoText TextId="Prozessdaten Modul 14W AR"/>
+					</ModuleInfo>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="14" SubmoduleIdentNumber="0x0000000e">
+							<IOData IOPS_Length="1" IOCS_Length="1">
+								<Input>
+									<DataItem DataType="OctetString" UseAsBits="false" Length="28" TextId="Eingänge"/>
+								</Input>
+								<Output>
+									<DataItem DataType="OctetString" UseAsBits="false" Length="28" TextId="Ausgänge"/>
+								</Output>
+							</IOData>
+							<RecordDataList>
+								<ParameterRecordDataItem Index="1" Length="6" TransferSequence="0">
+									<Name TextId="Allgemeine Parameter"/>
+									<Const Data="0x01,0x00,0x00,0x00,0x00,0x00" ByteOffset="0"/>
+								</ParameterRecordDataItem>
+							</RecordDataList>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+				</ModuleItem>
+				<ModuleItem ID="15" ModuleIdentNumber="0x0000000f">
+					<ModuleInfo CategoryRef="PZD">
+						<Name TextId="PZD 15W AR"/>
+						<InfoText TextId="Prozessdaten Modul 15W AR"/>
+					</ModuleInfo>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="15" SubmoduleIdentNumber="0x0000000f">
+							<IOData IOPS_Length="1" IOCS_Length="1">
+								<Input>
+									<DataItem DataType="OctetString" UseAsBits="false" Length="30" TextId="Eingänge"/>
+								</Input>
+								<Output>
+									<DataItem DataType="OctetString" UseAsBits="false" Length="30" TextId="Ausgänge"/>
+								</Output>
+							</IOData>
+							<RecordDataList>
+								<ParameterRecordDataItem Index="1" Length="6" TransferSequence="0">
+									<Name TextId="Allgemeine Parameter"/>
+									<Const Data="0x01,0x00,0x00,0x00,0x00,0x00" ByteOffset="0"/>
+								</ParameterRecordDataItem>
+							</RecordDataList>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+				</ModuleItem>
+				<ModuleItem ID="16" ModuleIdentNumber="0x00000010">
+					<ModuleInfo CategoryRef="PZD">
+						<Name TextId="PZD 16W AR"/>
+						<InfoText TextId="Prozessdaten Modul 16W AR"/>
+					</ModuleInfo>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="16" SubmoduleIdentNumber="0x00000010">
+							<IOData IOPS_Length="1" IOCS_Length="1">
+								<Input>
+									<DataItem DataType="OctetString" UseAsBits="false" Length="32" TextId="Eingänge"/>
+								</Input>
+								<Output>
+									<DataItem DataType="OctetString" UseAsBits="false" Length="32" TextId="Ausgänge"/>
+								</Output>
+							</IOData>
+							<RecordDataList>
+								<ParameterRecordDataItem Index="1" Length="6" TransferSequence="0">
+									<Name TextId="Allgemeine Parameter"/>
+									<Const Data="0x01,0x00,0x00,0x00,0x00,0x00" ByteOffset="0"/>
+								</ParameterRecordDataItem>
+							</RecordDataList>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+				</ModuleItem>
+				<ModuleItem ID="17" ModuleIdentNumber="0x00000011">
+					<ModuleInfo CategoryRef="PZD">
+						<Name TextId="PZD 17W AR"/>
+						<InfoText TextId="Prozessdaten Modul 17W AR"/>
+					</ModuleInfo>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="17" SubmoduleIdentNumber="0x00000011">
+							<IOData IOPS_Length="1" IOCS_Length="1">
+								<Input>
+									<DataItem DataType="OctetString" UseAsBits="false" Length="34" TextId="Eingänge"/>
+								</Input>
+								<Output>
+									<DataItem DataType="OctetString" UseAsBits="false" Length="34" TextId="Ausgänge"/>
+								</Output>
+							</IOData>
+							<RecordDataList>
+								<ParameterRecordDataItem Index="1" Length="6" TransferSequence="0">
+									<Name TextId="Allgemeine Parameter"/>
+									<Const Data="0x01,0x00,0x00,0x00,0x00,0x00" ByteOffset="0"/>
+								</ParameterRecordDataItem>
+							</RecordDataList>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+				</ModuleItem>
+				<ModuleItem ID="18" ModuleIdentNumber="0x00000012">
+					<ModuleInfo CategoryRef="PZD">
+						<Name TextId="PZD 18W AR"/>
+						<InfoText TextId="Prozessdaten Modul 18W AR"/>
+					</ModuleInfo>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="18" SubmoduleIdentNumber="0x00000012">
+							<IOData IOPS_Length="1" IOCS_Length="1">
+								<Input>
+									<DataItem DataType="OctetString" UseAsBits="false" Length="36" TextId="Eingänge"/>
+								</Input>
+								<Output>
+									<DataItem DataType="OctetString" UseAsBits="false" Length="36" TextId="Ausgänge"/>
+								</Output>
+							</IOData>
+							<RecordDataList>
+								<ParameterRecordDataItem Index="1" Length="6" TransferSequence="0">
+									<Name TextId="Allgemeine Parameter"/>
+									<Const Data="0x01,0x00,0x00,0x00,0x00,0x00" ByteOffset="0"/>
+								</ParameterRecordDataItem>
+							</RecordDataList>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+				</ModuleItem>
+				<ModuleItem ID="19" ModuleIdentNumber="0x00000013">
+					<ModuleInfo CategoryRef="PZD">
+						<Name TextId="PZD 19W AR"/>
+						<InfoText TextId="Prozessdaten Modul 19W AR"/>
+					</ModuleInfo>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="19" SubmoduleIdentNumber="0x00000013">
+							<IOData IOPS_Length="1" IOCS_Length="1">
+								<Input>
+									<DataItem DataType="OctetString" UseAsBits="false" Length="38" TextId="Eingänge"/>
+								</Input>
+								<Output>
+									<DataItem DataType="OctetString" UseAsBits="false" Length="38" TextId="Ausgänge"/>
+								</Output>
+							</IOData>
+							<RecordDataList>
+								<ParameterRecordDataItem Index="1" Length="6" TransferSequence="0">
+									<Name TextId="Allgemeine Parameter"/>
+									<Const Data="0x01,0x00,0x00,0x00,0x00,0x00" ByteOffset="0"/>
+								</ParameterRecordDataItem>
+							</RecordDataList>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+				</ModuleItem>
+				  <ModuleItem ID="20" ModuleIdentNumber="0x00000014">
+					<ModuleInfo CategoryRef="PZD">
+						<Name TextId="PZD 20W AR"/>
+						<InfoText TextId="Prozessdaten Modul 20W AR"/>
+					</ModuleInfo>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="20" SubmoduleIdentNumber="0x00000014">
+							<IOData IOPS_Length="1" IOCS_Length="1">
+								<Input>
+									<DataItem DataType="OctetString" UseAsBits="false" Length="40" TextId="Eingänge"/>
+								</Input>
+								<Output>
+									<DataItem DataType="OctetString" UseAsBits="false" Length="40" TextId="Ausgänge"/>
+								</Output>
+							</IOData>
+							<RecordDataList>
+								<ParameterRecordDataItem Index="1" Length="6" TransferSequence="0">
+									<Name TextId="Allgemeine Parameter"/>
+									<Const Data="0x01,0x00,0x00,0x00,0x00,0x00" ByteOffset="0"/>
+								</ParameterRecordDataItem>
+							</RecordDataList>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+				</ModuleItem>
+				<ModuleItem ID="21" ModuleIdentNumber="0x00000015">
+					<ModuleInfo CategoryRef="PZD">
+						<Name TextId="PZD 21W AR"/>
+						<InfoText TextId="Prozessdaten Modul 21W AR"/>
+					</ModuleInfo>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="21" SubmoduleIdentNumber="0x00000015">
+							<IOData IOPS_Length="1" IOCS_Length="1">
+								<Input>
+									<DataItem DataType="OctetString" UseAsBits="false" Length="42" TextId="Eingänge"/>
+								</Input>
+								<Output>
+									<DataItem DataType="OctetString" UseAsBits="false" Length="42" TextId="Ausgänge"/>
+								</Output>
+							</IOData>
+							<RecordDataList>
+								<ParameterRecordDataItem Index="1" Length="6" TransferSequence="0">
+									<Name TextId="Allgemeine Parameter"/>
+									<Const Data="0x01,0x00,0x00,0x00,0x00,0x00" ByteOffset="0"/>
+								</ParameterRecordDataItem>
+							</RecordDataList>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+				</ModuleItem>				
+				<ModuleItem ID="22" ModuleIdentNumber="0x00000016">
+					<ModuleInfo CategoryRef="PZD">
+						<Name TextId="PZD 22W AR"/>
+						<InfoText TextId="Prozessdaten Modul 22W AR"/>
+					</ModuleInfo>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="22" SubmoduleIdentNumber="0x00000016">
+							<IOData IOPS_Length="1" IOCS_Length="1">
+								<Input>
+									<DataItem DataType="OctetString" UseAsBits="false" Length="44" TextId="Eingänge"/>
+								</Input>
+								<Output>
+									<DataItem DataType="OctetString" UseAsBits="false" Length="44" TextId="Ausgänge"/>
+								</Output>
+							</IOData>
+							<RecordDataList>
+								<ParameterRecordDataItem Index="1" Length="6" TransferSequence="0">
+									<Name TextId="Allgemeine Parameter"/>
+									<Const Data="0x01,0x00,0x00,0x00,0x00,0x00" ByteOffset="0"/>
+								</ParameterRecordDataItem>
+							</RecordDataList>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+				</ModuleItem>
+				<ModuleItem ID="23" ModuleIdentNumber="0x00000017">
+					<ModuleInfo CategoryRef="PZD">
+						<Name TextId="PZD 23W AR"/>
+						<InfoText TextId="Prozessdaten Modul 23W AR"/>
+					</ModuleInfo>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="23" SubmoduleIdentNumber="0x00000017">
+							<IOData IOPS_Length="1" IOCS_Length="1">
+								<Input>
+									<DataItem DataType="OctetString" UseAsBits="false" Length="46" TextId="Eingänge"/>
+								</Input>
+								<Output>
+									<DataItem DataType="OctetString" UseAsBits="false" Length="46" TextId="Ausgänge"/>
+								</Output>
+							</IOData>
+							<RecordDataList>
+								<ParameterRecordDataItem Index="1" Length="6" TransferSequence="0">
+									<Name TextId="Allgemeine Parameter"/>
+									<Const Data="0x01,0x00,0x00,0x00,0x00,0x00" ByteOffset="0"/>
+								</ParameterRecordDataItem>
+							</RecordDataList>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+				</ModuleItem>
+				<ModuleItem ID="24" ModuleIdentNumber="0x00000018">
+					<ModuleInfo CategoryRef="PZD">
+						<Name TextId="PZD 24W AR"/>
+						<InfoText TextId="Prozessdaten Modul 24W AR"/>
+					</ModuleInfo>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="24" SubmoduleIdentNumber="0x00000018">
+							<IOData IOPS_Length="1" IOCS_Length="1">
+								<Input>
+									<DataItem DataType="OctetString" UseAsBits="false" Length="48" TextId="Eingänge"/>
+								</Input>
+								<Output>
+									<DataItem DataType="OctetString" UseAsBits="false" Length="48" TextId="Ausgänge"/>
+								</Output>
+							</IOData>
+							<RecordDataList>
+								<ParameterRecordDataItem Index="1" Length="6" TransferSequence="0">
+									<Name TextId="Allgemeine Parameter"/>
+									<Const Data="0x01,0x00,0x00,0x00,0x00,0x00" ByteOffset="0"/>
+								</ParameterRecordDataItem>
+							</RecordDataList>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+				</ModuleItem>
+				<ModuleItem ID="25" ModuleIdentNumber="0x00000019">
+					<ModuleInfo CategoryRef="PZD">
+						<Name TextId="PZD 25W AR"/>
+						<InfoText TextId="Prozessdaten Modul 25W AR"/>
+					</ModuleInfo>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="25" SubmoduleIdentNumber="0x00000019">
+							<IOData IOPS_Length="1" IOCS_Length="1">
+								<Input>
+									<DataItem DataType="OctetString" UseAsBits="false" Length="50" TextId="Eingänge"/>
+								</Input>
+								<Output>
+									<DataItem DataType="OctetString" UseAsBits="false" Length="50" TextId="Ausgänge"/>
+								</Output>
+							</IOData>
+							<RecordDataList>
+								<ParameterRecordDataItem Index="1" Length="6" TransferSequence="0">
+									<Name TextId="Allgemeine Parameter"/>
+									<Const Data="0x01,0x00,0x00,0x00,0x00,0x00" ByteOffset="0"/>
+								</ParameterRecordDataItem>
+							</RecordDataList>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+				</ModuleItem>
+				<ModuleItem ID="26" ModuleIdentNumber="0x0000001a">
+					<ModuleInfo CategoryRef="PZD">
+						<Name TextId="PZD 26W AR"/>
+						<InfoText TextId="Prozessdaten Modul 26W AR"/>
+					</ModuleInfo>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="26" SubmoduleIdentNumber="0x0000001a">
+							<IOData IOPS_Length="1" IOCS_Length="1">
+								<Input>
+									<DataItem DataType="OctetString" UseAsBits="false" Length="52" TextId="Eingänge"/>
+								</Input>
+								<Output>
+									<DataItem DataType="OctetString" UseAsBits="false" Length="52" TextId="Ausgänge"/>
+								</Output>
+							</IOData>
+							<RecordDataList>
+								<ParameterRecordDataItem Index="1" Length="6" TransferSequence="0">
+									<Name TextId="Allgemeine Parameter"/>
+									<Const Data="0x01,0x00,0x00,0x00,0x00,0x00" ByteOffset="0"/>
+								</ParameterRecordDataItem>
+							</RecordDataList>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+				</ModuleItem>
+				<ModuleItem ID="27" ModuleIdentNumber="0x0000001b">
+					<ModuleInfo CategoryRef="PZD">
+						<Name TextId="PZD 27W AR"/>
+						<InfoText TextId="Prozessdaten Modul 27W AR"/>
+					</ModuleInfo>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="27" SubmoduleIdentNumber="0x0000001b">
+							<IOData IOPS_Length="1" IOCS_Length="1">
+								<Input>
+									<DataItem DataType="OctetString" UseAsBits="false" Length="54" TextId="Eingänge"/>
+								</Input>
+								<Output>
+									<DataItem DataType="OctetString" UseAsBits="false" Length="54" TextId="Ausgänge"/>
+								</Output>
+							</IOData>
+							<RecordDataList>
+								<ParameterRecordDataItem Index="1" Length="6" TransferSequence="0">
+									<Name TextId="Allgemeine Parameter"/>
+									<Const Data="0x01,0x00,0x00,0x00,0x00,0x00" ByteOffset="0"/>
+								</ParameterRecordDataItem>
+							</RecordDataList>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+				</ModuleItem>
+				<ModuleItem ID="28" ModuleIdentNumber="0x0000001c">
+					<ModuleInfo CategoryRef="PZD">
+						<Name TextId="PZD 28W AR"/>
+						<InfoText TextId="Prozessdaten Modul 28W AR"/>
+					</ModuleInfo>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="28" SubmoduleIdentNumber="0x0000001c">
+							<IOData IOPS_Length="1" IOCS_Length="1">
+								<Input>
+									<DataItem DataType="OctetString" UseAsBits="false" Length="56" TextId="Eingänge"/>
+								</Input>
+								<Output>
+									<DataItem DataType="OctetString" UseAsBits="false" Length="56" TextId="Ausgänge"/>
+								</Output>
+							</IOData>
+							<RecordDataList>
+								<ParameterRecordDataItem Index="1" Length="6" TransferSequence="0">
+									<Name TextId="Allgemeine Parameter"/>
+									<Const Data="0x01,0x00,0x00,0x00,0x00,0x00" ByteOffset="0"/>
+								</ParameterRecordDataItem>
+							</RecordDataList>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+				</ModuleItem>
+				<ModuleItem ID="29" ModuleIdentNumber="0x0000001d">
+					<ModuleInfo CategoryRef="PZD">
+						<Name TextId="PZD 29W AR"/>
+						<InfoText TextId="Prozessdaten Modul 29W AR"/>
+					</ModuleInfo>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="29" SubmoduleIdentNumber="0x0000001d">
+							<IOData IOPS_Length="1" IOCS_Length="1">
+								<Input>
+									<DataItem DataType="OctetString" UseAsBits="false" Length="58" TextId="Eingänge"/>
+								</Input>
+								<Output>
+									<DataItem DataType="OctetString" UseAsBits="false" Length="58" TextId="Ausgänge"/>
+								</Output>
+							</IOData>
+							<RecordDataList>
+								<ParameterRecordDataItem Index="1" Length="6" TransferSequence="0">
+									<Name TextId="Allgemeine Parameter"/>
+									<Const Data="0x01,0x00,0x00,0x00,0x00,0x00" ByteOffset="0"/>
+								</ParameterRecordDataItem>
+							</RecordDataList>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+				</ModuleItem>
+				<ModuleItem ID="30" ModuleIdentNumber="0x0000001e">
+					<ModuleInfo CategoryRef="PZD">
+						<Name TextId="PZD 30W AR"/>
+						<InfoText TextId="Prozessdaten Modul 30W AR"/>
+					</ModuleInfo>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="30" SubmoduleIdentNumber="0x0000001e">
+							<IOData IOPS_Length="1" IOCS_Length="1">
+								<Input>
+									<DataItem DataType="OctetString" UseAsBits="false" Length="60" TextId="Eingänge"/>
+								</Input>
+								<Output>
+									<DataItem DataType="OctetString" UseAsBits="false" Length="60" TextId="Ausgänge"/>
+								</Output>
+							</IOData>
+							<RecordDataList>
+								<ParameterRecordDataItem Index="1" Length="6" TransferSequence="0">
+									<Name TextId="Allgemeine Parameter"/>
+									<Const Data="0x01,0x00,0x00,0x00,0x00,0x00" ByteOffset="0"/>
+								</ParameterRecordDataItem>
+							</RecordDataList>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+				</ModuleItem>
+				<ModuleItem ID="31" ModuleIdentNumber="0x0000001f">
+					<ModuleInfo CategoryRef="PZD">
+						<Name TextId="PZD 31W AR"/>
+						<InfoText TextId="Prozessdaten Modul 31W AR"/>
+					</ModuleInfo>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="31" SubmoduleIdentNumber="0x0000001f">
+							<IOData IOPS_Length="1" IOCS_Length="1">
+								<Input>
+									<DataItem DataType="OctetString" UseAsBits="false" Length="62" TextId="Eingänge"/>
+								</Input>
+								<Output>
+									<DataItem DataType="OctetString" UseAsBits="false" Length="62" TextId="Ausgänge"/>
+								</Output>
+							</IOData>
+							<RecordDataList>
+								<ParameterRecordDataItem Index="1" Length="6" TransferSequence="0">
+									<Name TextId="Allgemeine Parameter"/>
+									<Const Data="0x01,0x00,0x00,0x00,0x00,0x00" ByteOffset="0"/>
+								</ParameterRecordDataItem>
+							</RecordDataList>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+				</ModuleItem>
+				<ModuleItem ID="32" ModuleIdentNumber="0x00000020">
+					<ModuleInfo CategoryRef="PZD">
+						<Name TextId="PZD 32W AR"/>
+						<InfoText TextId="Prozessdaten Modul 32W AR"/>
+					</ModuleInfo>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="32" SubmoduleIdentNumber="0x00000020">
+							<IOData IOPS_Length="1" IOCS_Length="1">
+								<Input>
+									<DataItem DataType="OctetString" UseAsBits="false" Length="64" TextId="Eingänge"/>
+								</Input>
+								<Output>
+									<DataItem DataType="OctetString" UseAsBits="false" Length="64" TextId="Ausgänge"/>
+								</Output>
+							</IOData>
+							<RecordDataList>
+								<ParameterRecordDataItem Index="1" Length="6" TransferSequence="0">
+									<Name TextId="Allgemeine Parameter"/>
+									<Const Data="0x01,0x00,0x00,0x00,0x00,0x00" ByteOffset="0"/>
+								</ParameterRecordDataItem>
+							</RecordDataList>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+				</ModuleItem>													
+			</ModuleList>
+			<ValueList>
+				<ValueItem ID="Sammeldiagnose">
+					<Assignments>
+						<Assign Content="0" TextId="sperren"/>
+						<Assign Content="1" TextId="freigeben"/>
+					</Assignments>
+				</ValueItem>
+			</ValueList>
+			<!-- Ab hier beginnen die Diagnose-Texte -->
+			<ChannelDiagList>
+				<ChannelDiagItem ErrorType="16">
+					<Name TextId="Parametrierfehler"/>
+				</ChannelDiagItem>
+			</ChannelDiagList>
+			<GraphicsList>
+				<GraphicItem ID="ID_Graphic_1" GraphicFile="GSDML_0106_9400"/>
+			</GraphicsList>
+			<CategoryList>
+				<CategoryItem ID="PZD" TextId="Process Data Module"/>
+			</CategoryList>
+			<ExternalTextList>
+				<PrimaryLanguage>
+					<!-- Diagnosetexte -->
+					<Text TextId="Sammeldiagnose" Value="complete diagnosis"/>
+					<Text TextId="freigeben" Value="enable"/>
+					<Text TextId="sperren" Value="disable"/>
+					<!-- Kanalfehler -->
+					<Text TextId="Parametrierfehler" Value="Parameter assignment error"/>
+					<!-- Diagnosetexte - Ende -->
+					<Text TextId="Lenze9400" Value="Lenze9400"/>
+					<Text TextId="PROFINET_ IO_DEV_DESCRIPTION" Value="V9400 PROFINET IO Interface"/>
+					<!--Baugruppeneinteilung-->
+					<Text TextId="Process Data Module" Value="Process Data Module"/>
+					<!--PZD Module-->
+					<Text TextId="PZD 1W AR" Value="PZD( 1W) AR"/>
+					<Text TextId="Prozessdaten Modul 1W AR" Value="Process Data Module, 1W AR"/>
+					<Text TextId="PZD 2W AR" Value="PZD( 2W) AR"/>
+					<Text TextId="Prozessdaten Modul 2W AR" Value="Process Data Module, 2W AR"/>
+					<Text TextId="PZD 3W AR" Value="PZD( 3W) AR"/>
+					<Text TextId="Prozessdaten Modul 3W AR" Value="Process Data Module, 3W AR"/>
+					<Text TextId="PZD 4W AR" Value="PZD( 4W) AR"/>
+					<Text TextId="Prozessdaten Modul 4W AR" Value="Process Data Module, 4W AR"/>
+					<Text TextId="PZD 5W AR" Value="PZD( 5W) AR"/>
+					<Text TextId="Prozessdaten Modul 5W AR" Value="Process Data Module, 5W AR"/>
+					<Text TextId="PZD 6W AR" Value="PZD( 6W) AR"/>
+					<Text TextId="Prozessdaten Modul 6W AR" Value="Process Data Module, 6W AR"/>
+					<Text TextId="PZD 7W AR" Value="PZD( 7W) AR"/>
+					<Text TextId="Prozessdaten Modul 7W AR" Value="Process Data Module, 7W AR"/>
+					<Text TextId="PZD 8W AR" Value="PZD( 8W) AR"/>
+					<Text TextId="Prozessdaten Modul 8W AR" Value="Process Data Module, 8W AR"/>
+					<Text TextId="PZD 9W AR" Value="PZD( 9W) AR"/>
+					<Text TextId="Prozessdaten Modul 9W AR" Value="Process Data Module, 9W AR"/>
+					<Text TextId="PZD 10W AR" Value="PZD(10W) AR"/>
+					<Text TextId="Prozessdaten Modul 10W AR" Value="Process Data Module, 10W AR"/>
+					<Text TextId="PZD 11W AR" Value="PZD(11W) AR"/>
+					<Text TextId="Prozessdaten Modul 11W AR" Value="Process Data Module, 11W AR"/>
+					<Text TextId="PZD 12W AR" Value="PZD(12W) AR"/>
+					<Text TextId="Prozessdaten Modul 12W AR" Value="Process Data Module, 12W AR"/>
+					<Text TextId="PZD 13W AR" Value="PZD(13W) AR"/>
+					<Text TextId="Prozessdaten Modul 13W AR" Value="Process Data Module, 13W AR"/>
+					<Text TextId="PZD 14W AR" Value="PZD(14W) AR"/>
+					<Text TextId="Prozessdaten Modul 14W AR" Value="Process Data Module, 14W AR"/>
+					<Text TextId="PZD 15W AR" Value="PZD(15W) AR"/>
+					<Text TextId="Prozessdaten Modul 15W AR" Value="Process Data Module, 15W AR"/>
+					<Text TextId="PZD 16W AR" Value="PZD(16W) AR"/>
+					<Text TextId="Prozessdaten Modul 16W AR" Value="Process Data Module, 16W AR"/>
+					<Text TextId="PZD 17W AR" Value="PZD(17W) AR"/>
+					<Text TextId="Prozessdaten Modul 17W AR" Value="Process Data Module, 17W AR"/>
+					<Text TextId="PZD 18W AR" Value="PZD(18W) AR"/>
+					<Text TextId="Prozessdaten Modul 18W AR" Value="Process Data Module, 18W AR"/>
+					<Text TextId="PZD 19W AR" Value="PZD(19W) AR"/>
+					<Text TextId="Prozessdaten Modul 19W AR" Value="Process Data Module, 19W AR"/>
+					<Text TextId="PZD 20W AR" Value="PZD(20W) AR"/>
+					<Text TextId="Prozessdaten Modul 20W AR" Value="Process Data Module, 20W AR"/>
+					<Text TextId="PZD 21W AR" Value="PZD(21W) AR"/>
+					<Text TextId="Prozessdaten Modul 21W AR" Value="Process Data Module, 21W AR"/>
+					<Text TextId="PZD 22W AR" Value="PZD(22W) AR"/>
+					<Text TextId="Prozessdaten Modul 22W AR" Value="Process Data Module, 22W AR"/>	
+					<Text TextId="PZD 23W AR" Value="PZD(23W) AR"/>
+					<Text TextId="Prozessdaten Modul 23W AR" Value="Process Data Module, 23W AR"/>
+					<Text TextId="PZD 24W AR" Value="PZD(24W) AR"/>
+					<Text TextId="Prozessdaten Modul 24W AR" Value="Process Data Module, 24W AR"/>
+					<Text TextId="PZD 25W AR" Value="PZD(25W) AR"/>
+					<Text TextId="Prozessdaten Modul 25W AR" Value="Process Data Module, 25W AR"/>
+					<Text TextId="PZD 26W AR" Value="PZD(26W) AR"/>
+					<Text TextId="Prozessdaten Modul 26W AR" Value="Process Data Module, 26W AR"/>
+					<Text TextId="PZD 27W AR" Value="PZD(27W) AR"/>
+					<Text TextId="Prozessdaten Modul 27W AR" Value="Process Data Module, 27W AR"/>
+					<Text TextId="PZD 28W AR" Value="PZD(28W) AR"/>
+					<Text TextId="Prozessdaten Modul 28W AR" Value="Process Data Module, 28W AR"/>
+					<Text TextId="PZD 29W AR" Value="PZD(29W) AR"/>
+					<Text TextId="Prozessdaten Modul 29W AR" Value="Process Data Module, 29W AR"/>
+					<Text TextId="PZD 30W AR" Value="PZD(30W) AR"/>
+					<Text TextId="Prozessdaten Modul 30W AR" Value="Process Data Module, 30W AR"/>
+					<Text TextId="PZD 31W AR" Value="PZD(31W) AR"/>
+					<Text TextId="Prozessdaten Modul 31W AR" Value="Process Data Module, 31W AR"/>
+					<Text TextId="PZD 32W AR" Value="PZD(32W) AR"/>
+					<Text TextId="Prozessdaten Modul 32W AR" Value="Process Data Module, 32W AR"/>										
+					<!--restliche Bezeichner-->
+					<Text TextId="Eingänge" Value="Input"/>
+					<Text TextId="Ausgänge" Value="Output"/>
+					<Text TextId="Allgemeine Parameter" Value="general parameter"/>
+				</PrimaryLanguage>
+				<Language xml:lang="de">
+					<!-- Diagnosetexte -->
+					<Text TextId="Sammeldiagnose" Value="complete diagnosis"/>
+					<Text TextId="freigeben" Value="enable"/>
+					<Text TextId="sperren" Value="disable"/>
+					<!-- Kanalfehler -->
+					<Text TextId="Parametrierfehler" Value="Parameter assignment error"/>
+					<!-- Schon übersetzt - Ende -->
+					<Text TextId="Lenze9400" Value="Lenze9400"/>
+					<Text TextId="PROFINET_ IO_DEV_DESCRIPTION" Value="V9400 PROFINET IO Interface"/>
+					<!--Baugruppeneinteilung-->
+					<Text TextId="Process Data Module" Value="Prozessdaten Modul"/>
+					<!--PZD Module-->
+					<Text TextId="PZD 1W AR" Value="PZD( 1W) AR"/>
+					<Text TextId="Prozessdaten Modul 1W AR" Value="Prozessdatenmodul, 1W AR"/>
+					<Text TextId="PZD 2W AR" Value="PZD( 2W) AR"/>
+					<Text TextId="Prozessdaten Modul 2W AR" Value="Prozessdatenmodul, 2W AR"/>
+					<Text TextId="PZD 3W AR" Value="PZD( 3W) AR"/>
+					<Text TextId="Prozessdaten Modul 3W AR" Value="Prozessdatenmodul, 3W AR"/>
+					<Text TextId="PZD 4W AR" Value="PZD( 4W) AR"/>
+					<Text TextId="Prozessdaten Modul 4W AR" Value="Prozessdatenmodul, 4W AR"/>
+					<Text TextId="PZD 5W AR" Value="PZD( 5W) AR"/>
+					<Text TextId="Prozessdaten Modul 5W AR" Value="Prozessdatenmodul, 5W AR"/>
+					<Text TextId="PZD 6W AR" Value="PZD( 6W) AR"/>
+					<Text TextId="Prozessdaten Modul 6W AR" Value="Prozessdatenmodul, 6W AR"/>
+					<Text TextId="PZD 7W AR" Value="PZD( 7W) AR"/>
+					<Text TextId="Prozessdaten Modul 7W AR" Value="Prozessdatenmodul, 7W AR"/>
+					<Text TextId="PZD 8W AR" Value="PZD( 8W) AR"/>
+					<Text TextId="Prozessdaten Modul 8W AR" Value="Prozessdatenmodul, 8W AR"/>
+					<Text TextId="PZD 9W AR" Value="PZD( 9W) AR"/>
+					<Text TextId="Prozessdaten Modul 9W AR" Value="Prozessdatenmodul, 9W AR"/>
+					<Text TextId="PZD 10W AR" Value="PZD(10W) AR"/>
+					<Text TextId="Prozessdaten Modul 10W AR" Value="Prozessdatenmodul, 10W AR"/>
+					<Text TextId="PZD 11W AR" Value="PZD(11W) AR"/>
+					<Text TextId="Prozessdaten Modul 11W AR" Value="Prozessdatenmodul, 11W AR"/>
+					<Text TextId="PZD 12W AR" Value="PZD(12W) AR"/>
+					<Text TextId="Prozessdaten Modul 12W AR" Value="Prozessdatenmodul, 12W AR"/>
+					<Text TextId="PZD 13W AR" Value="PZD(13W) AR"/>
+					<Text TextId="Prozessdaten Modul 13W AR" Value="Prozessdatenmodul, 13W AR"/>
+					<Text TextId="PZD 14W AR" Value="PZD(14W) AR"/>
+					<Text TextId="Prozessdaten Modul 14W AR" Value="Prozessdatenmodul, 14W AR"/>
+					<Text TextId="PZD 15W AR" Value="PZD(15W) AR"/>
+					<Text TextId="Prozessdaten Modul 15W AR" Value="Prozessdatenmodul, 15W AR"/>
+					<Text TextId="PZD 16W AR" Value="PZD(16W) AR"/>
+					<Text TextId="Prozessdaten Modul 16W AR" Value="Prozessdatenmodul, 16W AR"/>
+					<Text TextId="PZD 17W AR" Value="PZD(17W) AR"/>
+					<Text TextId="Prozessdaten Modul 17W AR" Value="Prozessdatenmodul, 17W AR"/>
+					<Text TextId="PZD 18W AR" Value="PZD(18W) AR"/>
+					<Text TextId="Prozessdaten Modul 18W AR" Value="Prozessdatenmodul, 18W AR"/>
+					<Text TextId="PZD 19W AR" Value="PZD(19W) AR"/>
+					<Text TextId="Prozessdaten Modul 19W AR" Value="Prozessdatenmodul, 19W AR"/>
+					<Text TextId="PZD 20W AR" Value="PZD(20W) AR"/>
+					<Text TextId="Prozessdaten Modul 20W AR" Value="Prozessdatenmodul, 20W AR"/>
+					<Text TextId="PZD 21W AR" Value="PZD(21W) AR"/>
+					<Text TextId="Prozessdaten Modul 21W AR" Value="Prozessdatenmodul, 21W AR"/>
+					<Text TextId="PZD 22W AR" Value="PZD(22W) AR"/>
+					<Text TextId="Prozessdaten Modul 22W AR" Value="Prozessdatenmodul, 22W AR"/>	
+					<Text TextId="PZD 23W AR" Value="PZD(23W) AR"/>
+					<Text TextId="Prozessdaten Modul 23W AR" Value="Prozessdatenmodul, 23W AR"/>
+					<Text TextId="PZD 24W AR" Value="PZD(24W) AR"/>
+					<Text TextId="Prozessdaten Modul 24W AR" Value="Prozessdatenmodul, 24W AR"/>
+					<Text TextId="PZD 25W AR" Value="PZD(25W) AR"/>
+					<Text TextId="Prozessdaten Modul 25W AR" Value="Prozessdatenmodul, 25W AR"/>
+					<Text TextId="PZD 26W AR" Value="PZD(26W) AR"/>
+					<Text TextId="Prozessdaten Modul 26W AR" Value="Prozessdatenmodul, 26W AR"/>
+					<Text TextId="PZD 27W AR" Value="PZD(27W) AR"/>
+					<Text TextId="Prozessdaten Modul 27W AR" Value="Prozessdatenmodul, 27W AR"/>
+					<Text TextId="PZD 28W AR" Value="PZD(28W) AR"/>
+					<Text TextId="Prozessdaten Modul 28W AR" Value="Prozessdatenmodul, 28W AR"/>
+					<Text TextId="PZD 29W AR" Value="PZD(29W) AR"/>
+					<Text TextId="Prozessdaten Modul 29W AR" Value="Prozessdatenmodul, 29W AR"/>
+					<Text TextId="PZD 30W AR" Value="PZD(30W) AR"/>
+					<Text TextId="Prozessdaten Modul 30W AR" Value="Prozessdatenmodul, 30W AR"/>
+					<Text TextId="PZD 31W AR" Value="PZD(31W) AR"/>
+					<Text TextId="Prozessdaten Modul 31W AR" Value="Prozessdatenmodul, 31W AR"/>
+					<Text TextId="PZD 32W AR" Value="PZD(32W) AR"/>
+					<Text TextId="Prozessdaten Modul 32W AR" Value="Prozessdatenmodul, 32W AR"/>									
+					<!--restliche Bezeichner-->
+					<Text TextId="Eingänge" Value="Eingänge"/>
+					<Text TextId="Ausgänge" Value="Ausgänge"/>
+					<Text TextId="Allgemeine Parameter" Value="general parameter"/>
+				</Language>
+			</ExternalTextList>
+		</ApplicationProcess>
+	</ProfileBody>
+</ISO15745Profile>

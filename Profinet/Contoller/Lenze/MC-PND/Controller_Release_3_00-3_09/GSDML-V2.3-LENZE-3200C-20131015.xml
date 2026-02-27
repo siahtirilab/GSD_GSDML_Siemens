@@ -1,0 +1,1113 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!-- author: Christian.Genz@Lenze.com / Lenze Automation GmbH / 2013.10.15                   -->
+<!-- info  : GSDML description of Lenze MC-PND card (PROFINET device), to be used with:      -->
+<!--         1. Lenze L-force 3200C                                                          -->
+<!--         2. Lenze L-force p500                                                           -->
+<ISO15745Profile xmlns="http://www.profibus.com/GSDML/2003/11/DeviceProfile" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.profibus.com/GSDML/2003/11/DeviceProfile ..\xsd\GSDML-DeviceProfile-V2.3.xsd">
+	<ProfileHeader>
+		<ProfileIdentification>PROFINET Device Profile</ProfileIdentification>
+		<ProfileRevision>1.00</ProfileRevision>
+		<ProfileName>Device Profile for PROFINET Devices</ProfileName>
+		<ProfileSource>PROFIBUS Nutzerorganisation e. V. (PNO)</ProfileSource>
+		<ProfileClassID>Device</ProfileClassID>
+		<ISO15745Reference>
+			<ISO15745Part>4</ISO15745Part>
+			<ISO15745Edition>1</ISO15745Edition>
+			<ProfileTechnology>GSDML</ProfileTechnology>
+		</ISO15745Reference>
+	</ProfileHeader>
+	<ProfileBody>
+		<DeviceIdentity VendorID="0x0106" DeviceID="0x3200">
+			<InfoText TextId="ID_3200C_INFO" />
+			<VendorName Value="Lenze Automation GmbH" />
+		</DeviceIdentity>
+		<DeviceFunction>
+			<Family MainFamily="PLCs" ProductFamily="Lenze PLC" />
+		</DeviceFunction>
+		<ApplicationProcess>
+			<DeviceAccessPointList>
+				<DeviceAccessPointItem ID="ID_DevAccPnt1" ModuleIdentNumber="0x000003E8" PNIO_Version="V2.3" PhysicalSlots="0..22" MinDeviceInterval="64" ImplementationType="ASIC" DNS_CompatibleName="Lenze-PND" FixedInSlots="0" ObjectUUID_LocalIndex="1" DeviceAccessSupported="true" MaxSupportedRecordSize="5000">
+					<ModuleInfo>
+						<Name TextId="ID_Module" />
+						<InfoText TextId="ID_Module_INFO" />
+						<VendorName Value="Lenze" />
+						<OrderNumber Value="MPC 1200" />
+						<HardwareRelease Value="0.0.0.3" />
+						<SoftwareRelease Value="3.4.36" />
+					</ModuleInfo>
+					<IOConfigData MaxInputLength="1024" MaxOutputLength="1024" />
+					<UseableModules>
+						<!-- ################ PN Master Byte output decl. ################## -->
+						<ModuleItemRef ModuleItemTarget="MasterOutByte1" AllowedInSlots="1..22" />
+						<ModuleItemRef ModuleItemTarget="MasterOutByte2" AllowedInSlots="1..22" />
+						<ModuleItemRef ModuleItemTarget="MasterOutByte4" AllowedInSlots="1..22" />
+						<ModuleItemRef ModuleItemTarget="MasterOutByte8" AllowedInSlots="1..22" />
+						<ModuleItemRef ModuleItemTarget="MasterOutByte12" AllowedInSlots="1..22" />
+						<ModuleItemRef ModuleItemTarget="MasterOutByte16" AllowedInSlots="1..22" />
+						<ModuleItemRef ModuleItemTarget="MasterOutByte32" AllowedInSlots="1..22" />
+						<ModuleItemRef ModuleItemTarget="MasterOutByte64" AllowedInSlots="1..22" />
+						<!-- ################ PN Master Word output decl. ################## -->
+						<ModuleItemRef ModuleItemTarget="MasterOutWord1" AllowedInSlots="1..22" />
+						<ModuleItemRef ModuleItemTarget="MasterOutWord2" AllowedInSlots="1..22" />
+						<ModuleItemRef ModuleItemTarget="MasterOutWord4" AllowedInSlots="1..22" />
+						<ModuleItemRef ModuleItemTarget="MasterOutWord8" AllowedInSlots="1..22" />
+						<ModuleItemRef ModuleItemTarget="MasterOutWord12" AllowedInSlots="1..22" />
+						<ModuleItemRef ModuleItemTarget="MasterOutWord16" AllowedInSlots="1..22" />
+						<ModuleItemRef ModuleItemTarget="MasterOutWord32" AllowedInSlots="1..22" />
+						<ModuleItemRef ModuleItemTarget="MasterOutWord64" AllowedInSlots="1..22" />
+						<!-- ################ PN Master Byte input decl. ################### -->
+						<ModuleItemRef ModuleItemTarget="MasterInByte1" AllowedInSlots="1..22" />
+						<ModuleItemRef ModuleItemTarget="MasterInByte2" AllowedInSlots="1..22" />
+						<ModuleItemRef ModuleItemTarget="MasterInByte4" AllowedInSlots="1..22" />
+						<ModuleItemRef ModuleItemTarget="MasterInByte8" AllowedInSlots="1..22" />
+						<ModuleItemRef ModuleItemTarget="MasterInByte12" AllowedInSlots="1..22" />
+						<ModuleItemRef ModuleItemTarget="MasterInByte16" AllowedInSlots="1..22" />
+						<ModuleItemRef ModuleItemTarget="MasterInByte32" AllowedInSlots="1..22" />
+						<ModuleItemRef ModuleItemTarget="MasterInByte64" AllowedInSlots="1..22" />
+						<!-- ################ PN Master Word input decl. ################### -->
+						<ModuleItemRef ModuleItemTarget="MasterInWord1" AllowedInSlots="1..22" />
+						<ModuleItemRef ModuleItemTarget="MasterInWord2" AllowedInSlots="1..22" />
+						<ModuleItemRef ModuleItemTarget="MasterInWord4" AllowedInSlots="1..22" />
+						<ModuleItemRef ModuleItemTarget="MasterInWord8" AllowedInSlots="1..22" />
+						<ModuleItemRef ModuleItemTarget="MasterInWord12" AllowedInSlots="1..22" />
+						<ModuleItemRef ModuleItemTarget="MasterInWord16" AllowedInSlots="1..22" />
+						<ModuleItemRef ModuleItemTarget="MasterInWord32" AllowedInSlots="1..22" />
+						<ModuleItemRef ModuleItemTarget="MasterInWord64" AllowedInSlots="1..22" />
+					</UseableModules>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="ID_DevAccPnt1" SubmoduleIdentNumber="0x000003E8">
+							<IOData />
+							<ModuleInfo>
+								<Name TextId="ID_Module" />
+								<InfoText TextId="ID_Module_INFO" />
+							</ModuleInfo>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+					<Graphics>
+						<GraphicItemRef Type="DeviceSymbol" GraphicItemTarget="ID_DEVICE_ICON" />
+					</Graphics>
+				</DeviceAccessPointItem>
+			</DeviceAccessPointList>
+			<ModuleList>
+				<!-- ############################################################### -->
+				<!-- ################ PN Master Byte output module ################# -->
+				<!-- ############################################################### -->
+				<ModuleItem ID="MasterOutByte1" ModuleIdentNumber="0x00000A1C">
+					<ModuleInfo>
+						<Name TextId="MasterOutByte1_NAME" />
+						<InfoText TextId="MasterOutByte_INFO" />
+					</ModuleInfo>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="MasterOutByte1_SUB" SubmoduleIdentNumber="0x00000A1C">
+							<IOData>
+								<Output Consistency="All items consistency">
+									<DataItem DataType="OctetString" Length="1" UseAsBits="false" TextId="ID_IO_Outputs"/>
+								</Output>
+							</IOData>
+							<ModuleInfo>
+								<Name TextId="MasterOutByte1_NAME" />
+								<InfoText TextId="MasterOutByte_INFO" />
+							</ModuleInfo>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+				</ModuleItem>
+				<ModuleItem ID="MasterOutByte2" ModuleIdentNumber="0x00000A80">
+					<ModuleInfo>
+						<Name TextId="MasterOutByte2_NAME" />
+						<InfoText TextId="MasterOutByte_INFO" />
+					</ModuleInfo>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="MasterOutByte2_SUB" SubmoduleIdentNumber="0x00000A80">
+							<IOData>
+								<Output Consistency="All items consistency">
+									<DataItem DataType="OctetString" Length="2" UseAsBits="false" TextId="ID_IO_Outputs"/>
+								</Output>
+							</IOData>
+							<ModuleInfo>
+								<Name TextId="MasterOutByte2_NAME" />
+								<InfoText TextId="MasterOutByte_INFO" />
+							</ModuleInfo>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+				</ModuleItem>
+				<ModuleItem ID="MasterOutByte4" ModuleIdentNumber="0x00000A81">
+					<ModuleInfo>
+						<Name TextId="MasterOutByte4_NAME" />
+						<InfoText TextId="MasterOutByte_INFO" />
+					</ModuleInfo>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="MasterOutByte4_SUB" SubmoduleIdentNumber="0x00000A81">
+							<IOData>
+								<Output Consistency="All items consistency">
+									<DataItem DataType="OctetString" Length="4" UseAsBits="false" TextId="ID_IO_Outputs"/>
+								</Output>
+							</IOData>
+							<ModuleInfo>
+								<Name TextId="MasterOutByte4_NAME" />
+								<InfoText TextId="MasterOutByte_INFO" />
+							</ModuleInfo>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+				</ModuleItem>
+				<ModuleItem ID="MasterOutByte8" ModuleIdentNumber="0x00000A82">
+					<ModuleInfo>
+						<Name TextId="MasterOutByte8_NAME" />
+						<InfoText TextId="MasterOutByte_INFO" />
+					</ModuleInfo>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="MasterOutByte8_SUB" SubmoduleIdentNumber="0x00000A82">
+							<IOData>
+								<Output Consistency="All items consistency">
+									<DataItem DataType="OctetString" Length="8" UseAsBits="false" TextId="ID_IO_Outputs"/>
+								</Output>
+							</IOData>
+							<ModuleInfo>
+								<Name TextId="MasterOutByte8_NAME" />
+								<InfoText TextId="MasterOutByte_INFO" />
+							</ModuleInfo>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+				</ModuleItem>
+				<ModuleItem ID="MasterOutByte12" ModuleIdentNumber="0x00000A83">
+					<ModuleInfo>
+						<Name TextId="MasterOutByte12_NAME" />
+						<InfoText TextId="MasterOutByte_INFO" />
+					</ModuleInfo>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="MasterOutByte12_SUB" SubmoduleIdentNumber="0x00000A83">
+							<IOData>
+								<Output Consistency="All items consistency">
+									<DataItem DataType="OctetString" Length="12" UseAsBits="false" TextId="ID_IO_Outputs"/>
+								</Output>
+							</IOData>
+							<ModuleInfo>
+								<Name TextId="MasterOutByte12_NAME" />
+								<InfoText TextId="MasterOutByte_INFO" />
+							</ModuleInfo>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+				</ModuleItem>
+				<ModuleItem ID="MasterOutByte16" ModuleIdentNumber="0x00000A84">
+					<ModuleInfo>
+						<Name TextId="MasterOutByte16_NAME" />
+						<InfoText TextId="MasterOutByte_INFO" />
+					</ModuleInfo>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="MasterOutByte16_SUB" SubmoduleIdentNumber="0x00000A84">
+							<IOData>
+								<Output Consistency="All items consistency">
+									<DataItem DataType="OctetString" Length="16" UseAsBits="false" TextId="ID_IO_Outputs"/>
+								</Output>
+							</IOData>
+							<ModuleInfo>
+								<Name TextId="MasterOutByte16_NAME" />
+								<InfoText TextId="MasterOutByte_INFO" />
+							</ModuleInfo>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+				</ModuleItem>
+				<ModuleItem ID="MasterOutByte32" ModuleIdentNumber="0x00000A85">
+					<ModuleInfo>
+						<Name TextId="MasterOutByte32_NAME" />
+						<InfoText TextId="MasterOutByte_INFO" />
+					</ModuleInfo>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="MasterOutByte32_SUB" SubmoduleIdentNumber="0x00000A85">
+							<IOData>
+								<Output Consistency="All items consistency">
+									<DataItem DataType="OctetString" Length="32" UseAsBits="false" TextId="ID_IO_Outputs"/>
+								</Output>
+							</IOData>
+							<ModuleInfo>
+								<Name TextId="MasterOutByte32_NAME" />
+								<InfoText TextId="MasterOutByte_INFO" />
+							</ModuleInfo>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+				</ModuleItem>
+				<ModuleItem ID="MasterOutByte64" ModuleIdentNumber="0x00000A86">
+					<ModuleInfo>
+						<Name TextId="MasterOutByte64_NAME" />
+						<InfoText TextId="MasterOutByte_INFO" />
+					</ModuleInfo>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="MasterOutByte64_SUB" SubmoduleIdentNumber="0x00000A86">
+							<IOData>
+								<Output Consistency="All items consistency">
+									<DataItem DataType="OctetString" Length="64" UseAsBits="false" TextId="ID_IO_Outputs"/>
+								</Output>
+							</IOData>
+							<ModuleInfo>
+								<Name TextId="MasterOutByte64_NAME" />
+								<InfoText TextId="MasterOutByte_INFO" />
+							</ModuleInfo>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+				</ModuleItem>
+				<!-- ############################################################### -->
+				<!-- ################ PN Master Word output module ################# -->
+				<!-- ############################################################### -->
+				<ModuleItem ID="MasterOutWord1" ModuleIdentNumber="0x00000B1C">
+					<ModuleInfo>
+						<Name TextId="MasterOutWord1_NAME" />
+						<InfoText TextId="MasterOutWord_INFO" />
+					</ModuleInfo>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="MasterOutWord1_SUB" SubmoduleIdentNumber="0x00000B1C">
+							<IOData>
+								<Output Consistency="All items consistency">
+									<DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Outputs" />
+								</Output>
+							</IOData>
+							<ModuleInfo>
+								<Name TextId="MasterOutWord1_NAME" />
+								<InfoText TextId="MasterOutWord_INFO" />
+							</ModuleInfo>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+				</ModuleItem>
+				<ModuleItem ID="MasterOutWord2" ModuleIdentNumber="0x00000B80">
+					<ModuleInfo>
+						<Name TextId="MasterOutWord2_NAME" />
+						<InfoText TextId="MasterOutWord_INFO" />
+					</ModuleInfo>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="MasterOutWord2_SUB" SubmoduleIdentNumber="0x00000B80">
+							<IOData>
+								<Output Consistency="All items consistency">
+									<DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Outputs" />
+									<DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Outputs" />
+								</Output>
+							</IOData>
+							<ModuleInfo>
+								<Name TextId="MasterOutWord2_NAME" />
+								<InfoText TextId="MasterOutWord_INFO" />
+							</ModuleInfo>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+				</ModuleItem>
+				<ModuleItem ID="MasterOutWord4" ModuleIdentNumber="0x00000B81">
+					<ModuleInfo>
+						<Name TextId="MasterOutWord4_NAME" />
+						<InfoText TextId="MasterOutWord_INFO" />
+					</ModuleInfo>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="MasterOutWord4_SUB" SubmoduleIdentNumber="0x00000B81">
+							<IOData>
+								<Output Consistency="All items consistency">
+									<DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Outputs" />
+									<DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Outputs" />
+									<DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Outputs" />
+									<DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Outputs" />
+								</Output>
+							</IOData>
+							<ModuleInfo>
+								<Name TextId="MasterOutWord4_NAME" />
+								<InfoText TextId="MasterOutWord_INFO" />
+							</ModuleInfo>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+				</ModuleItem>
+				<ModuleItem ID="MasterOutWord8" ModuleIdentNumber="0x00000B82">
+					<ModuleInfo>
+						<Name TextId="MasterOutWord8_NAME" />
+						<InfoText TextId="MasterOutWord_INFO" />
+					</ModuleInfo>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="MasterOutWord8_SUB" SubmoduleIdentNumber="0x00000B82">
+							<IOData>
+								<Output Consistency="All items consistency">
+									<DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Outputs" />
+									<DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Outputs" />
+									<DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Outputs" />
+									<DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Outputs" />
+									<DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Outputs" />
+									<DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Outputs" />
+									<DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Outputs" />
+									<DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Outputs" />
+								</Output>
+							</IOData>
+							<ModuleInfo>
+								<Name TextId="MasterOutWord8_NAME" />
+								<InfoText TextId="MasterOutWord_INFO" />
+							</ModuleInfo>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+				</ModuleItem>
+				<ModuleItem ID="MasterOutWord12" ModuleIdentNumber="0x00000B83">
+					<ModuleInfo>
+						<Name TextId="MasterOutWord12_NAME" />
+						<InfoText TextId="MasterOutWord_INFO" />
+					</ModuleInfo>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="MasterOutWord12_SUB" SubmoduleIdentNumber="0x00000B83">
+							<IOData>
+								<Output Consistency="All items consistency">
+									<DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Outputs" />
+									<DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Outputs" />
+									<DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Outputs" />
+									<DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Outputs" />
+									<DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Outputs" />
+									<DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Outputs" />
+									<DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Outputs" />
+									<DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Outputs" />
+									<DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Outputs" />
+									<DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Outputs" />
+									<DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Outputs" />
+									<DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Outputs" />
+								</Output>
+							</IOData>
+							<ModuleInfo>
+								<Name TextId="MasterOutWord12_NAME" />
+								<InfoText TextId="MasterOutWord_INFO" />
+							</ModuleInfo>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+				</ModuleItem>
+				<ModuleItem ID="MasterOutWord16" ModuleIdentNumber="0x00000B84">
+					<ModuleInfo>
+						<Name TextId="MasterOutWord16_NAME" />
+						<InfoText TextId="MasterOutWord_INFO" />
+					</ModuleInfo>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="MasterOutWord16_SUB" SubmoduleIdentNumber="0x00000B84">
+							<IOData>
+								<Output Consistency="All items consistency">
+									<DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Outputs" />
+									<DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Outputs" />
+									<DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Outputs" />
+									<DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Outputs" />
+									<DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Outputs" />
+									<DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Outputs" />
+									<DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Outputs" />
+									<DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Outputs" />
+									<DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Outputs" />
+									<DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Outputs" />
+									<DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Outputs" />
+									<DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Outputs" />
+									<DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Outputs" />
+									<DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Outputs" />
+									<DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Outputs" />
+									<DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Outputs" />
+								</Output>
+							</IOData>
+							<ModuleInfo>
+								<Name TextId="MasterOutWord16_NAME" />
+								<InfoText TextId="MasterOutWord_INFO" />
+							</ModuleInfo>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+				</ModuleItem>
+				<ModuleItem ID="MasterOutWord32" ModuleIdentNumber="0x00000B85">
+					<ModuleInfo>
+						<Name TextId="MasterOutWord32_NAME" />
+						<InfoText TextId="MasterOutWord_INFO" />
+					</ModuleInfo>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="MasterOutWord32_SUB" SubmoduleIdentNumber="0x00000B85">
+							<IOData>
+								<Output Consistency="All items consistency">
+									<DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Outputs" />
+									<DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Outputs" />
+									<DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Outputs" />
+									<DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Outputs" />
+									<DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Outputs" />
+									<DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Outputs" />
+									<DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Outputs" />
+									<DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Outputs" />
+									<DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Outputs" />
+									<DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Outputs" />
+									<DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Outputs" />
+									<DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Outputs" />
+									<DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Outputs" />
+									<DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Outputs" />
+									<DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Outputs" />
+									<DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Outputs" />
+									<DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Outputs" />
+									<DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Outputs" />
+									<DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Outputs" />
+									<DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Outputs" />
+									<DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Outputs" />
+									<DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Outputs" />
+									<DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Outputs" />
+									<DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Outputs" />
+									<DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Outputs" />
+									<DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Outputs" />
+									<DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Outputs" />
+									<DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Outputs" />
+									<DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Outputs" />
+									<DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Outputs" />
+									<DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Outputs" />
+									<DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Outputs" />
+								</Output>
+							</IOData>
+							<ModuleInfo>
+								<Name TextId="MasterOutWord32_NAME" />
+								<InfoText TextId="MasterOutWord_INFO" />
+							</ModuleInfo>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+				</ModuleItem>
+				<ModuleItem ID="MasterOutWord64" ModuleIdentNumber="0x00000B86">
+					<ModuleInfo>
+						<Name TextId="MasterOutWord64_NAME" />
+						<InfoText TextId="MasterOutWord_INFO" />
+					</ModuleInfo>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="MasterOutWord64_SUB" SubmoduleIdentNumber="0x00000B86">
+							<IOData>
+								<Output Consistency="All items consistency">
+                                    <DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Outputs" />
+									<DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Outputs" />
+									<DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Outputs" />
+									<DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Outputs" />
+									<DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Outputs" />
+									<DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Outputs" />
+									<DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Outputs" />
+									<DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Outputs" />
+									<DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Outputs" />
+									<DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Outputs" />
+									<DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Outputs" />
+									<DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Outputs" />
+									<DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Outputs" />
+									<DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Outputs" />
+									<DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Outputs" />
+									<DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Outputs" />
+									<DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Outputs" />
+									<DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Outputs" />
+									<DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Outputs" />
+									<DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Outputs" />
+									<DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Outputs" />
+									<DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Outputs" />
+									<DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Outputs" />
+									<DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Outputs" />
+									<DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Outputs" />
+									<DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Outputs" />
+									<DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Outputs" />
+									<DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Outputs" />
+									<DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Outputs" />
+									<DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Outputs" />
+									<DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Outputs" />
+									<DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Outputs" />
+                                    <DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Outputs" />
+									<DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Outputs" />
+									<DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Outputs" />
+									<DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Outputs" />
+									<DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Outputs" />
+									<DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Outputs" />
+									<DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Outputs" />
+									<DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Outputs" />
+									<DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Outputs" />
+									<DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Outputs" />
+									<DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Outputs" />
+									<DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Outputs" />
+									<DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Outputs" />
+									<DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Outputs" />
+									<DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Outputs" />
+									<DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Outputs" />
+									<DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Outputs" />
+									<DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Outputs" />
+									<DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Outputs" />
+									<DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Outputs" />
+									<DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Outputs" />
+									<DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Outputs" />
+									<DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Outputs" />
+									<DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Outputs" />
+									<DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Outputs" />
+									<DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Outputs" />
+									<DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Outputs" />
+									<DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Outputs" />
+									<DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Outputs" />
+									<DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Outputs" />
+									<DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Outputs" />
+									<DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Outputs" />
+								</Output>
+							</IOData>
+							<ModuleInfo>
+								<Name TextId="MasterOutWord64_NAME" />
+								<InfoText TextId="MasterOutWord_INFO" />
+							</ModuleInfo>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+				</ModuleItem>
+				<!-- ############################################################### -->
+				<!-- ################ PN Master Byte input module ################## -->
+				<!-- ############################################################### -->
+				<ModuleItem ID="MasterInByte1" ModuleIdentNumber="0x00000C1C">
+					<ModuleInfo>
+						<Name TextId="MasterInByte1_NAME" />
+						<InfoText TextId="MasterInByte_INFO" />
+					</ModuleInfo>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="MasterInByte1_SUB" SubmoduleIdentNumber="0x00000C1C">
+							<IOData>
+								<Input Consistency="All items consistency">
+									<DataItem DataType="OctetString" Length="1" UseAsBits="false" TextId="ID_IO_Inputs"/>
+								</Input>
+							</IOData>
+							<ModuleInfo>
+								<Name TextId="MasterInByte1_NAME" />
+								<InfoText TextId="MasterInByte_INFO" />
+							</ModuleInfo>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+				</ModuleItem>
+				<ModuleItem ID="MasterInByte2" ModuleIdentNumber="0x00000C80">
+					<ModuleInfo>
+						<Name TextId="MasterInByte2_NAME" />
+						<InfoText TextId="MasterInByte_INFO" />
+					</ModuleInfo>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="MasterInByte2_SUB" SubmoduleIdentNumber="0x00000C80">
+							<IOData>
+								<Input Consistency="All items consistency">
+									<DataItem DataType="OctetString" Length="2" UseAsBits="false" TextId="ID_IO_Inputs"/>
+								</Input>
+							</IOData>
+							<ModuleInfo>
+								<Name TextId="MasterInByte2_NAME" />
+								<InfoText TextId="MasterInByte_INFO" />
+							</ModuleInfo>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+				</ModuleItem>
+				<ModuleItem ID="MasterInByte4" ModuleIdentNumber="0x00000C81">
+					<ModuleInfo>
+						<Name TextId="MasterInByte4_NAME" />
+						<InfoText TextId="MasterInByte_INFO" />
+					</ModuleInfo>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="MasterInByte4_SUB" SubmoduleIdentNumber="0x00000C81">
+							<IOData>
+								<Input Consistency="All items consistency">
+									<DataItem DataType="OctetString" Length="4" UseAsBits="false" TextId="ID_IO_Inputs"/>
+								</Input>
+							</IOData>
+							<ModuleInfo>
+								<Name TextId="MasterInByte4_NAME" />
+								<InfoText TextId="MasterInByte_INFO" />
+							</ModuleInfo>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+				</ModuleItem>
+				<ModuleItem ID="MasterInByte8" ModuleIdentNumber="0x00000C82">
+					<ModuleInfo>
+						<Name TextId="MasterInByte8_NAME" />
+						<InfoText TextId="MasterInByte_INFO" />
+					</ModuleInfo>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="MasterInByte8_SUB" SubmoduleIdentNumber="0x00000C82">
+							<IOData>
+								<Input Consistency="All items consistency">
+									<DataItem DataType="OctetString" Length="8" UseAsBits="false" TextId="ID_IO_Inputs"/>
+								</Input>
+							</IOData>
+							<ModuleInfo>
+								<Name TextId="MasterInByte8_NAME" />
+								<InfoText TextId="MasterInByte_INFO" />
+							</ModuleInfo>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+				</ModuleItem>
+				<ModuleItem ID="MasterInByte12" ModuleIdentNumber="0x00000C83">
+					<ModuleInfo>
+						<Name TextId="MasterInByte12_NAME" />
+						<InfoText TextId="MasterInByte_INFO" />
+					</ModuleInfo>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="MasterInByte12_SUB" SubmoduleIdentNumber="0x00000C83">
+							<IOData>
+								<Input Consistency="All items consistency">
+									<DataItem DataType="OctetString" Length="12" UseAsBits="false" TextId="ID_IO_Inputs"/>
+								</Input>
+							</IOData>
+							<ModuleInfo>
+								<Name TextId="MasterInByte12_NAME" />
+								<InfoText TextId="MasterInByte_INFO" />
+							</ModuleInfo>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+				</ModuleItem>
+				<ModuleItem ID="MasterInByte16" ModuleIdentNumber="0x00000C84">
+					<ModuleInfo>
+						<Name TextId="MasterInByte16_NAME" />
+						<InfoText TextId="MasterInByte_INFO" />
+					</ModuleInfo>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="MasterInByte16_SUB" SubmoduleIdentNumber="0x00000C84">
+							<IOData>
+								<Input Consistency="All items consistency">
+									<DataItem DataType="OctetString" Length="16" UseAsBits="false" TextId="ID_IO_Inputs"/>
+								</Input>
+							</IOData>
+							<ModuleInfo>
+								<Name TextId="MasterInByte16_NAME" />
+								<InfoText TextId="MasterInByte_INFO" />
+							</ModuleInfo>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+				</ModuleItem>
+				<ModuleItem ID="MasterInByte32" ModuleIdentNumber="0x00000C85">
+					<ModuleInfo>
+						<Name TextId="MasterInByte32_NAME" />
+						<InfoText TextId="MasterInByte_INFO" />
+					</ModuleInfo>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="MasterInByte32_SUB" SubmoduleIdentNumber="0x00000C85">
+							<IOData>
+								<Input Consistency="All items consistency">
+									<DataItem DataType="OctetString" Length="32" UseAsBits="false" TextId="ID_IO_Inputs"/>
+								</Input>
+							</IOData>
+							<ModuleInfo>
+								<Name TextId="MasterInByte32_NAME" />
+								<InfoText TextId="MasterInByte_INFO" />
+							</ModuleInfo>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+				</ModuleItem>
+				<ModuleItem ID="MasterInByte64" ModuleIdentNumber="0x00000C86">
+					<ModuleInfo>
+						<Name TextId="MasterInByte64_NAME" />
+						<InfoText TextId="MasterInByte_INFO" />
+					</ModuleInfo>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="MasterInByte64_SUB" SubmoduleIdentNumber="0x00000C86">
+							<IOData>
+								<Input Consistency="All items consistency">
+									<DataItem DataType="OctetString" Length="64" UseAsBits="false" TextId="ID_IO_Inputs"/>
+								</Input>
+							</IOData>
+							<ModuleInfo>
+								<Name TextId="MasterInByte64_NAME" />
+								<InfoText TextId="MasterInByte_INFO" />
+							</ModuleInfo>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+				</ModuleItem>
+				<!-- ############################################################### -->
+				<!-- ################ PN Master Word input module ################## -->
+				<!-- ############################################################### -->
+				<ModuleItem ID="MasterInWord1" ModuleIdentNumber="0x00000D1C">
+					<ModuleInfo>
+						<Name TextId="MasterInWord1_NAME" />
+						<InfoText TextId="MasterInWord_INFO" />
+					</ModuleInfo>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="MasterInWord1_SUB" SubmoduleIdentNumber="0x00000D1C">
+							<IOData>
+								<Input Consistency="All items consistency">
+									<DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Inputs" />
+								</Input>
+							</IOData>
+							<ModuleInfo>
+								<Name TextId="MasterInWord1_NAME" />
+								<InfoText TextId="MasterInWord_INFO" />
+							</ModuleInfo>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+				</ModuleItem>
+				<ModuleItem ID="MasterInWord2" ModuleIdentNumber="0x00000D80">
+					<ModuleInfo>
+						<Name TextId="MasterInWord2_NAME" />
+						<InfoText TextId="MasterInWord_INFO" />
+					</ModuleInfo>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="MasterInWord2_SUB" SubmoduleIdentNumber="0x00000D80">
+							<IOData>
+								<Input Consistency="All items consistency">
+                                    <DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Inputs" />
+									<DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Inputs" />
+								</Input>
+							</IOData>
+							<ModuleInfo>
+								<Name TextId="MasterInWord2_NAME" />
+								<InfoText TextId="MasterInWord_INFO" />
+							</ModuleInfo>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+				</ModuleItem>
+				<ModuleItem ID="MasterInWord4" ModuleIdentNumber="0x00000D81">
+					<ModuleInfo>
+						<Name TextId="MasterInWord4_NAME" />
+						<InfoText TextId="MasterInWord_INFO" />
+					</ModuleInfo>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="MasterInWord4_SUB" SubmoduleIdentNumber="0x00000D81">
+							<IOData>
+								<Input Consistency="All items consistency">
+                                    <DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Inputs" />
+									<DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Inputs" />
+                                    <DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Inputs" />
+									<DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Inputs" />
+								</Input>
+							</IOData>
+							<ModuleInfo>
+								<Name TextId="MasterInWord4_NAME" />
+								<InfoText TextId="MasterInWord_INFO" />
+							</ModuleInfo>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+				</ModuleItem>
+				<ModuleItem ID="MasterInWord8" ModuleIdentNumber="0x00000D82">
+					<ModuleInfo>
+						<Name TextId="MasterInWord8_NAME" />
+						<InfoText TextId="MasterInWord_INFO" />
+					</ModuleInfo>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="MasterInWord8_SUB" SubmoduleIdentNumber="0x00000D82">
+							<IOData>
+								<Input Consistency="All items consistency">
+                                    <DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Inputs" />
+									<DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Inputs" />
+                                    <DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Inputs" />
+									<DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Inputs" />
+                                    <DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Inputs" />
+									<DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Inputs" />
+                                    <DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Inputs" />
+									<DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Inputs" />
+								</Input>
+							</IOData>
+							<ModuleInfo>
+								<Name TextId="MasterInWord8_NAME" />
+								<InfoText TextId="MasterInWord_INFO" />
+							</ModuleInfo>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+				</ModuleItem>
+				<ModuleItem ID="MasterInWord12" ModuleIdentNumber="0x00000D83">
+					<ModuleInfo>
+						<Name TextId="MasterInWord12_NAME" />
+						<InfoText TextId="MasterInWord_INFO" />
+					</ModuleInfo>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="MasterInWord12_SUB" SubmoduleIdentNumber="0x00000D83">
+							<IOData>
+								<Input Consistency="All items consistency">
+                                    <DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Inputs" />
+									<DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Inputs" />
+                                    <DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Inputs" />
+									<DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Inputs" />
+                                    <DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Inputs" />
+									<DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Inputs" />
+                                    <DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Inputs" />
+									<DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Inputs" />
+                                    <DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Inputs" />
+									<DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Inputs" />
+                                    <DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Inputs" />
+									<DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Inputs" />
+								</Input>
+							</IOData>
+							<ModuleInfo>
+								<Name TextId="MasterInWord12_NAME" />
+								<InfoText TextId="MasterInWord_INFO" />
+							</ModuleInfo>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+				</ModuleItem>
+				<ModuleItem ID="MasterInWord16" ModuleIdentNumber="0x00000D84">
+					<ModuleInfo>
+						<Name TextId="MasterInWord16_NAME" />
+						<InfoText TextId="MasterInWord_INFO" />
+					</ModuleInfo>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="MasterInWord16_SUB" SubmoduleIdentNumber="0x00000D84">
+							<IOData>
+								<Input Consistency="All items consistency">
+                                    <DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Inputs" />
+									<DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Inputs" />
+                                    <DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Inputs" />
+									<DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Inputs" />
+                                    <DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Inputs" />
+									<DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Inputs" />
+                                    <DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Inputs" />
+									<DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Inputs" />
+                                    <DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Inputs" />
+									<DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Inputs" />
+                                    <DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Inputs" />
+									<DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Inputs" />
+                                    <DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Inputs" />
+									<DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Inputs" />
+                                    <DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Inputs" />
+									<DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Inputs" />
+								</Input>
+							</IOData>
+							<ModuleInfo>
+								<Name TextId="MasterInWord16_NAME" />
+								<InfoText TextId="MasterInWord_INFO" />
+							</ModuleInfo>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+				</ModuleItem>
+				<ModuleItem ID="MasterInWord32" ModuleIdentNumber="0x00000D85">
+					<ModuleInfo>
+						<Name TextId="MasterInWord32_NAME" />
+						<InfoText TextId="MasterInWord_INFO" />
+					</ModuleInfo>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="MasterInWord32_SUB" SubmoduleIdentNumber="0x00000D85">
+							<IOData>
+								<Input Consistency="All items consistency">
+                                    <DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Inputs" />
+									<DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Inputs" />
+                                    <DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Inputs" />
+									<DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Inputs" />
+                                    <DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Inputs" />
+									<DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Inputs" />
+                                    <DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Inputs" />
+									<DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Inputs" />
+                                    <DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Inputs" />
+									<DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Inputs" />
+                                    <DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Inputs" />
+									<DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Inputs" />
+                                    <DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Inputs" />
+									<DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Inputs" />
+                                    <DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Inputs" />
+									<DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Inputs" />
+                                    <DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Inputs" />
+									<DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Inputs" />
+                                    <DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Inputs" />
+									<DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Inputs" />
+                                    <DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Inputs" />
+									<DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Inputs" />
+                                    <DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Inputs" />
+									<DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Inputs" />
+                                    <DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Inputs" />
+									<DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Inputs" />
+                                    <DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Inputs" />
+									<DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Inputs" />
+                                    <DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Inputs" />
+									<DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Inputs" />
+                                    <DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Inputs" />
+									<DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Inputs" />
+								</Input>
+							</IOData>
+							<ModuleInfo>
+								<Name TextId="MasterInWord32_NAME" />
+								<InfoText TextId="MasterInWord_INFO" />
+							</ModuleInfo>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+				</ModuleItem>
+				<ModuleItem ID="MasterInWord64" ModuleIdentNumber="0x00000D86">
+					<ModuleInfo>
+						<Name TextId="MasterInWord64_NAME" />
+						<InfoText TextId="MasterInWord_INFO" />
+					</ModuleInfo>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="MasterInWord64_SUB" SubmoduleIdentNumber="0x00000D86">
+							<IOData>
+								<Input>
+                                    <DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Inputs" />
+									<DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Inputs" />
+                                    <DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Inputs" />
+									<DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Inputs" />
+                                    <DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Inputs" />
+									<DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Inputs" />
+                                    <DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Inputs" />
+									<DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Inputs" />
+                                    <DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Inputs" />
+									<DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Inputs" />
+                                    <DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Inputs" />
+									<DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Inputs" />
+                                    <DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Inputs" />
+									<DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Inputs" />
+                                    <DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Inputs" />
+									<DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Inputs" />
+                                    <DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Inputs" />
+									<DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Inputs" />
+                                    <DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Inputs" />
+									<DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Inputs" />
+                                    <DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Inputs" />
+									<DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Inputs" />
+                                    <DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Inputs" />
+									<DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Inputs" />
+                                    <DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Inputs" />
+									<DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Inputs" />
+                                    <DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Inputs" />
+									<DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Inputs" />
+                                    <DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Inputs" />
+									<DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Inputs" />
+                                    <DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Inputs" />
+									<DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Inputs" />
+                                    <DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Inputs" />
+									<DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Inputs" />
+                                    <DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Inputs" />
+									<DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Inputs" />
+                                    <DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Inputs" />
+									<DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Inputs" />
+                                    <DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Inputs" />
+									<DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Inputs" />
+                                    <DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Inputs" />
+									<DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Inputs" />
+                                    <DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Inputs" />
+									<DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Inputs" />
+                                    <DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Inputs" />
+									<DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Inputs" />
+                                    <DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Inputs" />
+									<DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Inputs" />
+                                    <DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Inputs" />
+									<DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Inputs" />
+                                    <DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Inputs" />
+									<DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Inputs" />
+                                    <DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Inputs" />
+									<DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Inputs" />
+                                    <DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Inputs" />
+									<DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Inputs" />
+                                    <DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Inputs" />
+									<DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Inputs" />
+                                    <DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Inputs" />
+									<DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Inputs" />
+                                    <DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Inputs" />
+									<DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Inputs" />
+                                    <DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Inputs" />
+									<DataItem DataType="Unsigned16" UseAsBits="false" TextId="ID_IO_Inputs" />
+								</Input>
+							</IOData>
+							<ModuleInfo>
+								<Name TextId="MasterInWord64_NAME" />
+								<InfoText TextId="MasterInWord_INFO" />
+							</ModuleInfo>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+				</ModuleItem>
+			</ModuleList>
+
+			<!-- Genz: set image file  -->
+			<GraphicsList>
+				<GraphicItem ID="ID_DEVICE_ICON" GraphicFile="GSDML-0106-3200-LENZE3200C" />
+			</GraphicsList>
+
+			<ExternalTextList>
+				<PrimaryLanguage>
+					<!-- Diagnosetexte Allgemein -->
+					<Text TextId="ID_3200C_INFO" Value="Lenze PROFINET IO device" />
+					<Text TextId="ID_Module" Value="3200C" />
+					<Text TextId="ID_Module_INFO" Value="3200C PROFINET IO interface" />
+
+					<!-- Diagnosetexte PN Slot 1-->
+					<!-- Diagnosetexte PN Port 2 -->
+					<!-- Kanalfehler -->
+					<!-- Allgemein -->
+					<!--PZD Module-->
+					<!--restliche Bezeichner-->
+					<!--Meldungen Sicherheitsmodul-->
+
+					<!-- output names -->
+					<Text TextId="MasterOutByte1_NAME" Value="Slave-In / Master-Out Byte 01" />
+					<Text TextId="MasterOutByte2_NAME" Value="Slave-In / Master-Out Byte 02" />
+					<Text TextId="MasterOutByte4_NAME" Value="Slave-In / Master-Out Byte 04" />
+					<Text TextId="MasterOutByte8_NAME" Value="Slave-In / Master-Out Byte 08" />
+					<Text TextId="MasterOutByte12_NAME" Value="Slave-In / Master-Out Byte 12" />
+					<Text TextId="MasterOutByte16_NAME" Value="Slave-In / Master-Out Byte 16" />
+					<Text TextId="MasterOutByte32_NAME" Value="Slave-In / Master-Out Byte 32" />
+					<Text TextId="MasterOutByte64_NAME" Value="Slave-In / Master-Out Byte 64" />
+
+					<Text TextId="MasterOutWord1_NAME" Value="Slave-In / Master-Out Word 01" />
+					<Text TextId="MasterOutWord2_NAME" Value="Slave-In / Master-Out Word 02" />
+					<Text TextId="MasterOutWord4_NAME" Value="Slave-In / Master-Out Word 04" />
+					<Text TextId="MasterOutWord8_NAME" Value="Slave-In / Master-Out Word 08" />
+					<Text TextId="MasterOutWord12_NAME" Value="Slave-In / Master-Out Word 12" />
+					<Text TextId="MasterOutWord16_NAME" Value="Slave-In / Master-Out Word 16" />
+					<Text TextId="MasterOutWord32_NAME" Value="Slave-In / Master-Out Word 32" />
+					<Text TextId="MasterOutWord64_NAME" Value="Slave-In / Master-Out Word 64" />
+
+					<Text TextId="MasterOutByte_INFO" Value="consistent Byte output of Master / input for Slave" />
+					<Text TextId="MasterOutWord_INFO" Value="consistent Word output of Master / input for Slave" />
+
+					<!-- input names -->
+					<Text TextId="MasterInByte1_NAME" Value="Slave-Out / Master-In Byte 01" />
+					<Text TextId="MasterInByte2_NAME" Value="Slave-Out / Master-In Byte 02" />
+					<Text TextId="MasterInByte4_NAME" Value="Slave-Out / Master-In Byte 04" />
+					<Text TextId="MasterInByte8_NAME" Value="Slave-Out / Master-In Byte 08" />
+					<Text TextId="MasterInByte12_NAME" Value="Slave-Out / Master-In Byte 12" />
+					<Text TextId="MasterInByte16_NAME" Value="Slave-Out / Master-In Byte 16" />
+					<Text TextId="MasterInByte32_NAME" Value="Slave-Out / Master-In Byte 32" />
+					<Text TextId="MasterInByte64_NAME" Value="Slave-Out / Master-In Byte 64" />
+
+					<Text TextId="MasterInWord1_NAME" Value="Slave-Out / Master-In Word 01" />
+					<Text TextId="MasterInWord2_NAME" Value="Slave-Out / Master-In Word 02" />
+					<Text TextId="MasterInWord4_NAME" Value="Slave-Out / Master-In Word 04" />
+					<Text TextId="MasterInWord8_NAME" Value="Slave-Out / Master-In Word 08" />
+					<Text TextId="MasterInWord12_NAME" Value="Slave-Out / Master-In Word 12" />
+					<Text TextId="MasterInWord16_NAME" Value="Slave-Out / Master-In Word 16" />
+					<Text TextId="MasterInWord32_NAME" Value="Slave-Out / Master-In Word 32" />
+					<Text TextId="MasterInWord64_NAME" Value="Slave-Out / Master-In Word 64" />
+
+					<Text TextId="MasterInByte_INFO" Value="consistent Byte input for Master / output of Slave" />
+					<Text TextId="MasterInWord_INFO" Value="consistent Word input for Master / output of Slave" />
+
+					<!-- I/O classes -->
+					<Text TextId="ID_IO_Outputs" Value="Outputs" />
+					<Text TextId="ID_IO_Inputs" Value="Inputs" />
+
+					<Text TextId="IDT_REF_WIREBREAK" Value="Wire break" />
+				</PrimaryLanguage>
+				<Language xml:lang="de">
+					<Text TextId="IDT_REF_WIREBREAK" Value="Drahtbruch" />
+
+					<!-- Diagnosetexte Allgemein -->
+					<Text TextId="ID_3200C_INFO" Value="Lenze PROFINET IO-Gerät" />
+					<Text TextId="ID_Module" Value="3200C" />
+					<Text TextId="ID_Module_INFO" Value="3200C PROFINET IO-Schnittstelle" />
+
+					<!-- Diagnosetexte PN Slot 1-->
+					<!-- Diagnosetexte PN Port 2 -->
+					<!-- Kanalfehler -->
+					<!-- Allgemein -->
+					<!--PZD Module-->
+					<!--restliche Bezeichner-->
+					<!--Meldungen Sicherheitsmodul-->
+
+					<!-- output names -->
+					<Text TextId="MasterOutByte1_NAME" Value="Slave-In / Master-Out Byte 01" />
+					<Text TextId="MasterOutByte2_NAME" Value="Slave-In / Master-Out Byte 02" />
+					<Text TextId="MasterOutByte4_NAME" Value="Slave-In / Master-Out Byte 04" />
+					<Text TextId="MasterOutByte8_NAME" Value="Slave-In / Master-Out Byte 08" />
+					<Text TextId="MasterOutByte12_NAME" Value="Slave-In / Master-Out Byte 12" />
+					<Text TextId="MasterOutByte16_NAME" Value="Slave-In / Master-Out Byte 16" />
+					<Text TextId="MasterOutByte32_NAME" Value="Slave-In / Master-Out Byte 32" />
+					<Text TextId="MasterOutByte64_NAME" Value="Slave-In / Master-Out Byte 64" />
+
+					<Text TextId="MasterOutWord1_NAME" Value="Slave-In / Master-Out Word 01" />
+					<Text TextId="MasterOutWord2_NAME" Value="Slave-In / Master-Out Word 02" />
+					<Text TextId="MasterOutWord4_NAME" Value="Slave-In / Master-Out Word 04" />
+					<Text TextId="MasterOutWord8_NAME" Value="Slave-In / Master-Out Word 08" />
+					<Text TextId="MasterOutWord12_NAME" Value="Slave-In / Master-Out Word 12" />
+					<Text TextId="MasterOutWord16_NAME" Value="Slave-In / Master-Out Word 16" />
+					<Text TextId="MasterOutWord32_NAME" Value="Slave-In / Master-Out Word 32" />
+					<Text TextId="MasterOutWord64_NAME" Value="Slave-In / Master-Out Word 64" />
+
+					<Text TextId="MasterOutByte_INFO" Value="konsistenter Byte output des Master / input des Slave" />
+					<Text TextId="MasterOutWord_INFO" Value="konsistenter Word output des Master / input des Slave" />
+
+					<!-- input names -->
+					<Text TextId="MasterInByte1_NAME" Value="Slave-Out / Master-In Byte 01" />
+					<Text TextId="MasterInByte2_NAME" Value="Slave-Out / Master-In Byte 02" />
+					<Text TextId="MasterInByte4_NAME" Value="Slave-Out / Master-In Byte 04" />
+					<Text TextId="MasterInByte8_NAME" Value="Slave-Out / Master-In Byte 08" />
+					<Text TextId="MasterInByte12_NAME" Value="Slave-Out / Master-In Byte 12" />
+					<Text TextId="MasterInByte16_NAME" Value="Slave-Out / Master-In Byte 16" />
+					<Text TextId="MasterInByte32_NAME" Value="Slave-Out / Master-In Byte 32" />
+					<Text TextId="MasterInByte64_NAME" Value="Slave-Out / Master-In Byte 64" />
+
+					<Text TextId="MasterInWord1_NAME" Value="Slave-Out / Master-In Word 01" />
+					<Text TextId="MasterInWord2_NAME" Value="Slave-Out / Master-In Word 02" />
+					<Text TextId="MasterInWord4_NAME" Value="Slave-Out / Master-In Word 04" />
+					<Text TextId="MasterInWord8_NAME" Value="Slave-Out / Master-In Word 08" />
+					<Text TextId="MasterInWord12_NAME" Value="Slave-Out / Master-In Word 12" />
+					<Text TextId="MasterInWord16_NAME" Value="Slave-Out / Master-In Word 16" />
+					<Text TextId="MasterInWord32_NAME" Value="Slave-Out / Master-In Word 32" />
+					<Text TextId="MasterInWord64_NAME" Value="Slave-Out / Master-In Word 64" />
+
+					<Text TextId="MasterInByte_INFO" Value="konsistenter Byte input des Master / output des Slave" />
+					<Text TextId="MasterInWord_INFO" Value="konsistenter Word input des Master / output des Slave" />
+
+					<!-- I/O classes -->
+					<Text TextId="ID_IO_Outputs" Value="Ausgänge" />
+					<Text TextId="ID_IO_Inputs" Value="Eingänge" />
+				</Language>
+			</ExternalTextList>
+		</ApplicationProcess>
+	</ProfileBody>
+</ISO15745Profile>

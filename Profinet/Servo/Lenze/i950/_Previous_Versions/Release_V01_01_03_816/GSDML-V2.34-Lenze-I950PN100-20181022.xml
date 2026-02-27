@@ -1,0 +1,1918 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<ISO15745Profile xmlns="http://www.profibus.com/GSDML/2003/11/DeviceProfile" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.profibus.com/GSDML/2003/11/DeviceProfile ..\xsd\GSDML-DeviceProfile-V2.34.xsd">
+	<!-- GSDML fuer i950, Firmware ab V01.00.00.00 -->
+	<ProfileHeader>
+		<ProfileIdentification>PROFINET Device Profile</ProfileIdentification>
+		<ProfileRevision>1.00</ProfileRevision>
+		<ProfileName>Device Profile for PROFINET Devices</ProfileName>
+		<ProfileSource>PROFIBUS Nutzerorganisation e. V. (PNO)</ProfileSource>
+		<ProfileClassID>Device</ProfileClassID>
+		<ISO15745Reference>
+			<ISO15745Part>4</ISO15745Part>
+			<ISO15745Edition>1</ISO15745Edition>
+			<ProfileTechnology>GSDML</ProfileTechnology>
+		</ISO15745Reference>
+	</ProfileHeader>
+	<ProfileBody>
+		<DeviceIdentity VendorID="0x0106" DeviceID="0x0900">
+			<InfoText TextId="IDT_FAMILY_DESCRIPTION"/>
+			<VendorName Value="Lenze"/>
+		</DeviceIdentity>
+		<DeviceFunction>
+			<Family MainFamily="Drives" ProductFamily="Lenze Lforce Drives i900"/>
+		</DeviceFunction>
+		<ApplicationProcess>
+			<DeviceAccessPointList>
+				<DeviceAccessPointItem ID="ID_DAP" PhysicalSlots="0..2" ModuleIdentNumber="0x00000900" MinDeviceInterval="32" ImplementationType="FPGA" DNS_CompatibleName="LENZE-I950-SERVO" NameOfStationNotTransferable="true" ResetToFactoryModes="1 2 3 4 8" LLDP_NoD_Supported="true" PROFIenergyASE_Supported="true" SharedDeviceSupported="true" FixedInSlots="0" ObjectUUID_LocalIndex="1" RequiredSchemaVersion="V2.2" MultipleWriteSupported="true" IOXS_Required="true" RemoteApplicationTimeout="300" AddressAssignment="DCP" DeviceAccessSupported="true" NumberOfDeviceAccessAR="1" PNIO_Version="V2.34" CheckDeviceID_Allowed="true">
+					<ModuleInfo>
+						<Name TextId="IDT_DAP_NAME"/>
+						<InfoText TextId="IDT_DAP_INFO"/>
+						<VendorName Value="Lenze"/>
+						<OrderNumber Value="IOFW91ARXX"/>
+						<SoftwareRelease Value="V 3.0.0"/>
+					</ModuleInfo>
+					<CertificationInfo ConformanceClass="B" ApplicationClass="FunctionalSafety;EnergySaving" NetloadClass="III"/>
+					<SubslotList>
+						<SubslotItem SubslotNumber="32768" TextId="IDT_DAP_Interface"/>
+						<SubslotItem SubslotNumber="32769" TextId="IDT_DAP_Port1"/>
+						<SubslotItem SubslotNumber="32770" TextId="IDT_DAP_Port2"/>
+					</SubslotList>
+					<IOConfigData MaxInputLength="128" MaxOutputLength="128"/>
+					<UseableModules>
+						<ModuleItemRef ModuleItemTarget="IDM_MODULE_50" AllowedInSlots="1"/>
+						<ModuleItemRef ModuleItemTarget="IDM_MODULE_51" AllowedInSlots="1"/>
+						<ModuleItemRef ModuleItemTarget="IDM_MODULE_52" AllowedInSlots="1"/>
+						<ModuleItemRef ModuleItemTarget="IDM_MODULE_53" AllowedInSlots="1"/>
+						<ModuleItemRef ModuleItemTarget="IDM_MODULE_54" AllowedInSlots="1"/>
+						<ModuleItemRef ModuleItemTarget="IDM_MODULE_55" AllowedInSlots="1" UsedInSlots="1"/>
+						<ModuleItemRef ModuleItemTarget="IDM_MODULE_56" AllowedInSlots="1"/>
+						<ModuleItemRef ModuleItemTarget="IDM_MODULE_57" AllowedInSlots="1"/>
+						<ModuleItemRef ModuleItemTarget="IDM_MODULE_58" AllowedInSlots="1"/>
+						<ModuleItemRef ModuleItemTarget="IDM_MODULE_59" AllowedInSlots="1"/>
+						<ModuleItemRef ModuleItemTarget="IDM_MODULE_60" AllowedInSlots="1"/>
+						<ModuleItemRef ModuleItemTarget="IDM_MODULE_61" AllowedInSlots="1"/>
+						<ModuleItemRef ModuleItemTarget="IDM_MODULE_62" AllowedInSlots="1"/>
+						<ModuleItemRef ModuleItemTarget="IDM_MODULE_63" AllowedInSlots="1"/>
+						<ModuleItemRef ModuleItemTarget="IDM_MODULE_64" AllowedInSlots="1"/>
+						<ModuleItemRef ModuleItemTarget="IDM_MODULE_65" AllowedInSlots="1"/>
+						<ModuleItemRef ModuleItemTarget="IDM_MODULE_84" AllowedInSlots="2"/>
+					</UseableModules>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="IDS_SUBMODULE_PARAMDAP" SubmoduleIdentNumber="0xA0000001" FixedInSubslots="1" PROFIsafeSupported="false" Writeable_IM_Records="1 2 3 4" MayIssueProcessAlarm="true">
+							<IOData/>
+							<ModuleInfo>
+								<Name TextId="IDT_MODULE_0_NAME"/>
+								<InfoText TextId="IDT_MODULE_0_INFO"/>
+							</ModuleInfo>
+							<PROFIenergy PESAP_uses_PROFIenergyASE="true" ProfileVersion="V1.2" EntityClass="Class3" EntitySubclass="Subclass2">
+								<EnergySavingModeList>
+									<EnergySavingModeItem ID="1" TimeToPause="0" RTTO="0" TimeMinLengthOfStay="0"/>
+								</EnergySavingModeList>
+								<MeasurementList>
+									<MeasurementItem Number="1">
+										<MeasurementValue ID="34" AccuracyDomain="2" AccuracyClass="15"/>
+										<MeasurementValue ID="205" AccuracyDomain="2" AccuracyClass="15"/>
+									</MeasurementItem>
+								</MeasurementList>
+							</PROFIenergy>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+					<SystemDefinedSubmoduleList>
+						<InterfaceSubmoduleItem ID="IDS_DAPI" SupportedRT_Classes="RT_CLASS_1" SupportedProtocols="SNMP;LLDP" NetworkComponentDiagnosisSupported="true" DCP_HelloSupported="false" DCP_BoundarySupported="true" PTP_BoundarySupported="true" SubslotNumber="32768" TextId="IDT_DAP_NAME" SubmoduleIdentNumber="0x00000001" DelayMeasurementSupported="true">
+							<ApplicationRelations StartupMode="Legacy;Advanced" NumberOfAR="2">
+								<TimingProperties SendClock="32" ReductionRatio="1 2 4 8 16 32 64 128 256 512"/>
+							</ApplicationRelations>
+							<MediaRedundancy SupportedRole="Client" AdditionalProtocolsSupported="false"/>
+						</InterfaceSubmoduleItem>
+						<PortSubmoduleItem ID="IDS_DAPP1" SubslotNumber="32769" MAUTypes="16 15 11 10" PortDeactivationSupported="true" LinkStateDiagnosisCapability="Up+Down" CheckMAUTypeSupported="true" CheckMAUTypeDifferenceSupported="true" TextId="IDT_ETHERNETINTERFACE_Port1" SubmoduleIdentNumber="0x00000002" SupportsRingportConfig="true" IsDefaultRingport="true">
+							<MAUTypeList>
+								<MAUTypeItem Value="16" AdjustSupported="true"/>
+								<MAUTypeItem Value="15" AdjustSupported="true"/>
+								<MAUTypeItem Value="11" AdjustSupported="true"/>
+								<MAUTypeItem Value="10" AdjustSupported="true"/>
+							</MAUTypeList>
+						</PortSubmoduleItem>
+						<PortSubmoduleItem ID="IDS_DAPP2" SubslotNumber="32770" MAUTypes="16 15 11 10" PortDeactivationSupported="true" LinkStateDiagnosisCapability="Up+Down" CheckMAUTypeSupported="true" CheckMAUTypeDifferenceSupported="true" TextId="IDT_ETHERNETINTERFACE_Port2" SubmoduleIdentNumber="0x00000003" SupportsRingportConfig="true" IsDefaultRingport="true">
+							<MAUTypeList>
+								<MAUTypeItem Value="16" AdjustSupported="true"/>
+								<MAUTypeItem Value="15" AdjustSupported="true"/>
+								<MAUTypeItem Value="11" AdjustSupported="true"/>
+								<MAUTypeItem Value="10" AdjustSupported="true"/>
+							</MAUTypeList>
+						</PortSubmoduleItem>
+					</SystemDefinedSubmoduleList>
+					<Graphics>
+						<GraphicItemRef Type="DeviceSymbol" GraphicItemTarget="1"/>
+					</Graphics>
+				</DeviceAccessPointItem>
+			</DeviceAccessPointList>
+			<ModuleList>
+				<!-- process modules -->
+				<!--< IEC Daten >-->
+				<ModuleItem ID="IDM_MODULE_50" ModuleIdentNumber="0x01EC0404">
+					<ModuleInfo CategoryRef="IEC">
+						<Name TextId="IDT_MODULE_50_NAME"/>
+						<InfoText TextId="IDT_MODULE_50_INFO"/>
+					</ModuleInfo>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="IDS_SUBMODULE_50" SubmoduleIdentNumber="0x01EC0404" MayIssueProcessAlarm="true">
+							<IOData>
+								<Input Consistency="All items consistency">
+									<DataItem DataType="OctetString" UseAsBits="true" TextId="IDT_DATAITEM_50I" Length="4"/>
+								</Input>
+								<Output Consistency="All items consistency">
+									<DataItem DataType="OctetString" UseAsBits="true" TextId="IDT_DATAITEM_50O" Length="4"/>
+								</Output>
+							</IOData>
+							<ModuleInfo CategoryRef="IEC">
+								<Name TextId="IDT_MODULE_50_NAME"/>
+								<InfoText TextId="IDT_MODULE_50_INFO"/>
+							</ModuleInfo>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+				</ModuleItem>
+				<ModuleItem ID="IDM_MODULE_51" ModuleIdentNumber="0x01EC0808">
+					<ModuleInfo CategoryRef="IEC">
+						<Name TextId="IDT_MODULE_51_NAME"/>
+						<InfoText TextId="IDT_MODULE_51_INFO"/>
+					</ModuleInfo>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="IDS_SUBMODULE_51" SubmoduleIdentNumber="0x01EC0808" MayIssueProcessAlarm="true">
+							<IOData>
+								<Input Consistency="All items consistency">
+									<DataItem DataType="OctetString" UseAsBits="true" TextId="IDT_DATAITEM_51I" Length="8"/>
+								</Input>
+								<Output Consistency="All items consistency">
+									<DataItem DataType="OctetString" UseAsBits="true" TextId="IDT_DATAITEM_51O" Length="8"/>
+								</Output>
+							</IOData>
+							<ModuleInfo CategoryRef="IEC">
+								<Name TextId="IDT_MODULE_51_NAME"/>
+								<InfoText TextId="IDT_MODULE_51_INFO"/>
+							</ModuleInfo>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+				</ModuleItem>
+				<ModuleItem ID="IDM_MODULE_56" ModuleIdentNumber="0x01EC0C0C">
+					<ModuleInfo CategoryRef="IEC">
+						<Name TextId="IDT_MODULE_56_NAME"/>
+						<InfoText TextId="IDT_MODULE_56_INFO"/>
+					</ModuleInfo>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="IDS_SUBMODULE_56" SubmoduleIdentNumber="0x01EC0C0C" MayIssueProcessAlarm="true">
+							<IOData>
+								<Input Consistency="All items consistency">
+									<DataItem DataType="OctetString" UseAsBits="true" TextId="IDT_DATAITEM_56I" Length="12"/>
+								</Input>
+								<Output Consistency="All items consistency">
+									<DataItem DataType="OctetString" UseAsBits="true" TextId="IDT_DATAITEM_56O" Length="12"/>
+								</Output>
+							</IOData>
+							<ModuleInfo CategoryRef="IEC">
+								<Name TextId="IDT_MODULE_56_NAME"/>
+								<InfoText TextId="IDT_MODULE_56_INFO"/>
+							</ModuleInfo>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+				</ModuleItem>
+				<ModuleItem ID="IDM_MODULE_52" ModuleIdentNumber="0x01EC1010">
+					<ModuleInfo CategoryRef="IEC">
+						<Name TextId="IDT_MODULE_52_NAME"/>
+						<InfoText TextId="IDT_MODULE_52_INFO"/>
+					</ModuleInfo>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="IDS_SUBMODULE_52" SubmoduleIdentNumber="0x01EC1010" MayIssueProcessAlarm="true">
+							<IOData>
+								<Input Consistency="All items consistency">
+									<DataItem DataType="OctetString" UseAsBits="true" TextId="IDT_DATAITEM_52I" Length="16"/>
+								</Input>
+								<Output Consistency="All items consistency">
+									<DataItem DataType="OctetString" UseAsBits="true" TextId="IDT_DATAITEM_52O" Length="16"/>
+								</Output>
+							</IOData>
+							<ModuleInfo CategoryRef="IEC">
+								<Name TextId="IDT_MODULE_52_NAME"/>
+								<InfoText TextId="IDT_MODULE_52_INFO"/>
+							</ModuleInfo>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+				</ModuleItem>
+				<ModuleItem ID="IDM_MODULE_57" ModuleIdentNumber="0x01EC1414">
+					<ModuleInfo CategoryRef="IEC">
+						<Name TextId="IDT_MODULE_57_NAME"/>
+						<InfoText TextId="IDT_MODULE_57_INFO"/>
+					</ModuleInfo>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="IDS_SUBMODULE_57" SubmoduleIdentNumber="0x01EC1414" MayIssueProcessAlarm="true">
+							<IOData>
+								<Input Consistency="All items consistency">
+									<DataItem DataType="OctetString" UseAsBits="true" TextId="IDT_DATAITEM_57I" Length="20"/>
+								</Input>
+								<Output Consistency="All items consistency">
+									<DataItem DataType="OctetString" UseAsBits="true" TextId="IDT_DATAITEM_57O" Length="20"/>
+								</Output>
+							</IOData>
+							<ModuleInfo CategoryRef="IEC">
+								<Name TextId="IDT_MODULE_57_NAME"/>
+								<InfoText TextId="IDT_MODULE_57_INFO"/>
+							</ModuleInfo>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+				</ModuleItem>
+				<ModuleItem ID="IDM_MODULE_58" ModuleIdentNumber="0x01EC1818">
+					<ModuleInfo CategoryRef="IEC">
+						<Name TextId="IDT_MODULE_58_NAME"/>
+						<InfoText TextId="IDT_MODULE_58_INFO"/>
+					</ModuleInfo>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="IDS_SUBMODULE_58" SubmoduleIdentNumber="0x01EC1818" MayIssueProcessAlarm="true">
+							<IOData>
+								<Input Consistency="All items consistency">
+									<DataItem DataType="OctetString" UseAsBits="true" TextId="IDT_DATAITEM_58I" Length="24"/>
+								</Input>
+								<Output Consistency="All items consistency">
+									<DataItem DataType="OctetString" UseAsBits="true" TextId="IDT_DATAITEM_58O" Length="24"/>
+								</Output>
+							</IOData>
+							<ModuleInfo CategoryRef="IEC">
+								<Name TextId="IDT_MODULE_58_NAME"/>
+								<InfoText TextId="IDT_MODULE_58_INFO"/>
+							</ModuleInfo>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+				</ModuleItem>
+				<ModuleItem ID="IDM_MODULE_59" ModuleIdentNumber="0x01EC1C1C">
+					<ModuleInfo CategoryRef="IEC">
+						<Name TextId="IDT_MODULE_59_NAME"/>
+						<InfoText TextId="IDT_MODULE_59_INFO"/>
+					</ModuleInfo>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="IDS_SUBMODULE_59" SubmoduleIdentNumber="0x01EC1C1C" MayIssueProcessAlarm="true">
+							<IOData>
+								<Input Consistency="All items consistency">
+									<DataItem DataType="OctetString" UseAsBits="true" TextId="IDT_DATAITEM_59I" Length="28"/>
+								</Input>
+								<Output Consistency="All items consistency">
+									<DataItem DataType="OctetString" UseAsBits="true" TextId="IDT_DATAITEM_59O" Length="28"/>
+								</Output>
+							</IOData>
+							<ModuleInfo CategoryRef="IEC">
+								<Name TextId="IDT_MODULE_59_NAME"/>
+								<InfoText TextId="IDT_MODULE_59_INFO"/>
+							</ModuleInfo>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+				</ModuleItem>
+				<ModuleItem ID="IDM_MODULE_53" ModuleIdentNumber="0x01EC2020">
+					<ModuleInfo CategoryRef="IEC">
+						<Name TextId="IDT_MODULE_53_NAME"/>
+						<InfoText TextId="IDT_MODULE_53_INFO"/>
+					</ModuleInfo>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="IDS_SUBMODULE_53" SubmoduleIdentNumber="0x01EC2020" MayIssueProcessAlarm="true">
+							<IOData>
+								<Input Consistency="All items consistency">
+									<DataItem DataType="OctetString" UseAsBits="true" TextId="IDT_DATAITEM_53I" Length="32"/>
+								</Input>
+								<Output Consistency="All items consistency">
+									<DataItem DataType="OctetString" UseAsBits="true" TextId="IDT_DATAITEM_53O" Length="32"/>
+								</Output>
+							</IOData>
+							<ModuleInfo CategoryRef="IEC">
+								<Name TextId="IDT_MODULE_53_NAME"/>
+								<InfoText TextId="IDT_MODULE_53_INFO"/>
+							</ModuleInfo>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+				</ModuleItem>
+				<ModuleItem ID="IDM_MODULE_60" ModuleIdentNumber="0x01EC2424">
+					<ModuleInfo CategoryRef="IEC">
+						<Name TextId="IDT_MODULE_60_NAME"/>
+						<InfoText TextId="IDT_MODULE_60_INFO"/>
+					</ModuleInfo>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="IDS_SUBMODULE_60" SubmoduleIdentNumber="0x01EC2424" MayIssueProcessAlarm="true">
+							<IOData>
+								<Input Consistency="All items consistency">
+									<DataItem DataType="OctetString" UseAsBits="true" TextId="IDT_DATAITEM_60I" Length="36"/>
+								</Input>
+								<Output Consistency="All items consistency">
+									<DataItem DataType="OctetString" UseAsBits="true" TextId="IDT_DATAITEM_60O" Length="36"/>
+								</Output>
+							</IOData>
+							<ModuleInfo CategoryRef="IEC">
+								<Name TextId="IDT_MODULE_60_NAME"/>
+								<InfoText TextId="IDT_MODULE_60_INFO"/>
+							</ModuleInfo>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+				</ModuleItem>
+				<ModuleItem ID="IDM_MODULE_61" ModuleIdentNumber="0x01EC2828">
+					<ModuleInfo CategoryRef="IEC">
+						<Name TextId="IDT_MODULE_61_NAME"/>
+						<InfoText TextId="IDT_MODULE_61_INFO"/>
+					</ModuleInfo>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="IDS_SUBMODULE_61" SubmoduleIdentNumber="0x01EC2828" MayIssueProcessAlarm="true">
+							<IOData>
+								<Input Consistency="All items consistency">
+									<DataItem DataType="OctetString" UseAsBits="true" TextId="IDT_DATAITEM_61I" Length="40"/>
+								</Input>
+								<Output Consistency="All items consistency">
+									<DataItem DataType="OctetString" UseAsBits="true" TextId="IDT_DATAITEM_61O" Length="40"/>
+								</Output>
+							</IOData>
+							<ModuleInfo CategoryRef="IEC">
+								<Name TextId="IDT_MODULE_61_NAME"/>
+								<InfoText TextId="IDT_MODULE_61_INFO"/>
+							</ModuleInfo>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+				</ModuleItem>
+				<ModuleItem ID="IDM_MODULE_62" ModuleIdentNumber="0x01EC2C2C">
+					<ModuleInfo CategoryRef="IEC">
+						<Name TextId="IDT_MODULE_62_NAME"/>
+						<InfoText TextId="IDT_MODULE_62_INFO"/>
+					</ModuleInfo>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="IDS_SUBMODULE_62" SubmoduleIdentNumber="0x01EC2C2C" MayIssueProcessAlarm="true">
+							<IOData>
+								<Input Consistency="All items consistency">
+									<DataItem DataType="OctetString" UseAsBits="true" TextId="IDT_DATAITEM_62I" Length="44"/>
+								</Input>
+								<Output Consistency="All items consistency">
+									<DataItem DataType="OctetString" UseAsBits="true" TextId="IDT_DATAITEM_62O" Length="44"/>
+								</Output>
+							</IOData>
+							<ModuleInfo CategoryRef="IEC">
+								<Name TextId="IDT_MODULE_62_NAME"/>
+								<InfoText TextId="IDT_MODULE_62_INFO"/>
+							</ModuleInfo>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+				</ModuleItem>
+				<ModuleItem ID="IDM_MODULE_54" ModuleIdentNumber="0x01EC3030">
+					<ModuleInfo CategoryRef="IEC">
+						<Name TextId="IDT_MODULE_54_NAME"/>
+						<InfoText TextId="IDT_MODULE_54_INFO"/>
+					</ModuleInfo>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="IDS_SUBMODULE_54" SubmoduleIdentNumber="0x01EC3030" MayIssueProcessAlarm="true">
+							<IOData>
+								<Input Consistency="All items consistency">
+									<DataItem DataType="OctetString" UseAsBits="true" TextId="IDT_DATAITEM_54I" Length="48"/>
+								</Input>
+								<Output Consistency="All items consistency">
+									<DataItem DataType="OctetString" UseAsBits="true" TextId="IDT_DATAITEM_54O" Length="48"/>
+								</Output>
+							</IOData>
+							<ModuleInfo CategoryRef="IEC">
+								<Name TextId="IDT_MODULE_54_NAME"/>
+								<InfoText TextId="IDT_MODULE_54_INFO"/>
+							</ModuleInfo>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+				</ModuleItem>
+				<ModuleItem ID="IDM_MODULE_63" ModuleIdentNumber="0x01EC3434">
+					<ModuleInfo CategoryRef="IEC">
+						<Name TextId="IDT_MODULE_63_NAME"/>
+						<InfoText TextId="IDT_MODULE_63_INFO"/>
+					</ModuleInfo>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="IDS_SUBMODULE_63" SubmoduleIdentNumber="0x01EC3434" MayIssueProcessAlarm="true">
+							<IOData>
+								<Input Consistency="All items consistency">
+									<DataItem DataType="OctetString" UseAsBits="true" TextId="IDT_DATAITEM_63I" Length="52"/>
+								</Input>
+								<Output Consistency="All items consistency">
+									<DataItem DataType="OctetString" UseAsBits="true" TextId="IDT_DATAITEM_63O" Length="52"/>
+								</Output>
+							</IOData>
+							<ModuleInfo CategoryRef="IEC">
+								<Name TextId="IDT_MODULE_63_NAME"/>
+								<InfoText TextId="IDT_MODULE_63_INFO"/>
+							</ModuleInfo>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+				</ModuleItem>
+				<ModuleItem ID="IDM_MODULE_64" ModuleIdentNumber="0x01EC3838">
+					<ModuleInfo CategoryRef="IEC">
+						<Name TextId="IDT_MODULE_64_NAME"/>
+						<InfoText TextId="IDT_MODULE_64_INFO"/>
+					</ModuleInfo>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="IDS_SUBMODULE_64" SubmoduleIdentNumber="0x01EC3838" MayIssueProcessAlarm="true">
+							<IOData>
+								<Input Consistency="All items consistency">
+									<DataItem DataType="OctetString" UseAsBits="true" TextId="IDT_DATAITEM_64I" Length="56"/>
+								</Input>
+								<Output Consistency="All items consistency">
+									<DataItem DataType="OctetString" UseAsBits="true" TextId="IDT_DATAITEM_64O" Length="56"/>
+								</Output>
+							</IOData>
+							<ModuleInfo CategoryRef="IEC">
+								<Name TextId="IDT_MODULE_64_NAME"/>
+								<InfoText TextId="IDT_MODULE_64_INFO"/>
+							</ModuleInfo>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+				</ModuleItem>
+				<ModuleItem ID="IDM_MODULE_65" ModuleIdentNumber="0x01EC3C3C">
+					<ModuleInfo CategoryRef="IEC">
+						<Name TextId="IDT_MODULE_65_NAME"/>
+						<InfoText TextId="IDT_MODULE_65_INFO"/>
+					</ModuleInfo>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="IDS_SUBMODULE_65" SubmoduleIdentNumber="0x01EC3C3C" MayIssueProcessAlarm="true">
+							<IOData>
+								<Input Consistency="All items consistency">
+									<DataItem DataType="OctetString" UseAsBits="true" TextId="IDT_DATAITEM_65I" Length="60"/>
+								</Input>
+								<Output Consistency="All items consistency">
+									<DataItem DataType="OctetString" UseAsBits="true" TextId="IDT_DATAITEM_65O" Length="60"/>
+								</Output>
+							</IOData>
+							<ModuleInfo CategoryRef="IEC">
+								<Name TextId="IDT_MODULE_65_NAME"/>
+								<InfoText TextId="IDT_MODULE_65_INFO"/>
+							</ModuleInfo>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+				</ModuleItem>
+				<ModuleItem ID="IDM_MODULE_55" ModuleIdentNumber="0x01EC4040">
+					<ModuleInfo CategoryRef="IEC">
+						<Name TextId="IDT_MODULE_55_NAME"/>
+						<InfoText TextId="IDT_MODULE_55_INFO"/>
+					</ModuleInfo>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="IDS_SUBMODULE_55" SubmoduleIdentNumber="0x01EC4040" MayIssueProcessAlarm="true">
+							<IOData>
+								<Input Consistency="All items consistency">
+									<DataItem DataType="OctetString" UseAsBits="true" TextId="IDT_DATAITEM_55I" Length="64"/>
+								</Input>
+								<Output Consistency="All items consistency">
+									<DataItem DataType="OctetString" UseAsBits="true" TextId="IDT_DATAITEM_55O" Length="64"/>
+								</Output>
+							</IOData>
+							<ModuleInfo CategoryRef="IEC">
+								<Name TextId="IDT_MODULE_55_NAME"/>
+								<InfoText TextId="IDT_MODULE_55_INFO"/>
+							</ModuleInfo>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+				</ModuleItem>
+				<!--< Safety Daten >-->
+				<ModuleItem ID="IDM_MODULE_84" ModuleIdentNumber="0x5AFE50C1">
+					<!--<ModuleInfo>-->
+					<ModuleInfo CategoryRef="Safety Module">
+						<Name TextId="IDT_MODULE84_NAME"/>
+						<InfoText TextId="IDT_MODULE84_INFO"/>
+						<VendorName Value="Lenze"/>
+						<OrderNumber Value="I9MASC00000000"/>
+						<SoftwareRelease Value="V 0.14.31"/>
+						<!--< HW-Version >-->
+					</ModuleInfo>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="IDS_SUBMODULE_M84" SubmoduleIdentNumber="0x5AFE50C1" PROFIsafeSupported="true" MayIssueProcessAlarm="true">
+							<IOData F_IO_StructureDescCRC="1034923578" F_IO_StructureDescVersion="2">
+								<Input Consistency="All items consistency">
+									<DataItem DataType="Unsigned16" UseAsBits="true" TextId="IDT_DataItem_PS_Digital_Input0">
+										<BitDataItem BitOffset="0" TextId="IDT_DataItem_PS_Digital_Input0_Bit00"/>
+										<BitDataItem BitOffset="1" TextId="IDT_DataItem_PS_Digital_Input0_Bit01"/>
+										<BitDataItem BitOffset="2" TextId="IDT_DataItem_PS_Digital_Input0_Bit02"/>
+										<BitDataItem BitOffset="3" TextId="IDT_DataItem_PS_Digital_Input0_Bit03"/>
+										<BitDataItem BitOffset="4" TextId="IDT_DataItem_PS_Digital_Input0_Bit04"/>
+										<BitDataItem BitOffset="5" TextId="IDT_DataItem_PS_Digital_Input0_Bit05"/>
+										<BitDataItem BitOffset="6" TextId="IDT_DataItem_PS_Digital_Input0_Bit06"/>
+										<BitDataItem BitOffset="7" TextId="IDT_DataItem_PS_Digital_Input0_Bit07"/>
+										<BitDataItem BitOffset="8" TextId="IDT_DataItem_PS_Digital_Input0_Bit08"/>
+										<BitDataItem BitOffset="9" TextId="IDT_DataItem_PS_Digital_Input0_Bit09"/>
+										<BitDataItem BitOffset="10" TextId="IDT_DataItem_PS_Digital_Input0_Bit10"/>
+										<BitDataItem BitOffset="11" TextId="IDT_DataItem_PS_Digital_Input0_Bit11"/>
+										<BitDataItem BitOffset="12" TextId="IDT_DataItem_PS_Digital_Input0_Bit12"/>
+										<BitDataItem BitOffset="13" TextId="IDT_DataItem_PS_Digital_Input0_Bit13"/>
+										<BitDataItem BitOffset="14" TextId="IDT_DataItem_PS_Digital_Input0_Bit14"/>
+										<BitDataItem BitOffset="15" TextId="IDT_DataItem_PS_Digital_Input0_Bit15"/>
+									</DataItem>
+									<DataItem DataType="Unsigned16" UseAsBits="true" TextId="IDT_DataItem_PS_Digital_Input1">
+										<BitDataItem BitOffset="0" TextId="IDT_DataItem_PS_Digital_Input1_Bit00"/>
+										<BitDataItem BitOffset="1" TextId="IDT_DataItem_PS_Digital_Input1_Bit01"/>
+										<BitDataItem BitOffset="2" TextId="IDT_DataItem_PS_Digital_Input1_Bit02"/>
+										<BitDataItem BitOffset="3" TextId="IDT_DataItem_PS_Digital_Input1_Bit03"/>
+										<BitDataItem BitOffset="4" TextId="IDT_DataItem_PS_Digital_Input1_Bit04"/>
+										<BitDataItem BitOffset="5" TextId="IDT_DataItem_PS_Digital_Input1_Bit05"/>
+										<BitDataItem BitOffset="6" TextId="IDT_DataItem_PS_Digital_Input1_Bit06"/>
+										<BitDataItem BitOffset="7" TextId="IDT_DataItem_PS_Digital_Input1_Bit07"/>
+										<BitDataItem BitOffset="8" TextId="IDT_DataItem_PS_Digital_Input1_Bit08"/>
+										<BitDataItem BitOffset="9" TextId="IDT_DataItem_PS_Digital_Input1_Bit09"/>
+										<BitDataItem BitOffset="10" TextId="IDT_DataItem_PS_Digital_Input1_Bit10"/>
+										<BitDataItem BitOffset="11" TextId="IDT_DataItem_PS_Digital_Input1_Bit11"/>
+										<BitDataItem BitOffset="12" TextId="IDT_DataItem_PS_Digital_Input1_Bit12"/>
+										<BitDataItem BitOffset="13" TextId="IDT_DataItem_PS_Digital_Input1_Bit13"/>
+										<BitDataItem BitOffset="14" TextId="IDT_DataItem_PS_Digital_Input1_Bit14"/>
+										<BitDataItem BitOffset="15" TextId="IDT_DataItem_PS_Digital_Input1_Bit15"/>
+									</DataItem>
+									<DataItem DataType="Unsigned16" UseAsBits="true" TextId="IDT_DataItem_PS_Digital_Input2">
+										<BitDataItem BitOffset="0" TextId="IDT_DataItem_PS_Digital_Input2_Bit00"/>
+										<BitDataItem BitOffset="1" TextId="IDT_DataItem_PS_Digital_Input2_Bit01"/>
+										<BitDataItem BitOffset="2" TextId="IDT_DataItem_PS_Digital_Input2_Bit02"/>
+										<BitDataItem BitOffset="3" TextId="IDT_DataItem_PS_Digital_Input2_Bit03"/>
+										<BitDataItem BitOffset="4" TextId="IDT_DataItem_PS_Digital_Input2_Bit04"/>
+										<BitDataItem BitOffset="5" TextId="IDT_DataItem_PS_Digital_Input2_Bit05"/>
+										<BitDataItem BitOffset="6" TextId="IDT_DataItem_PS_Digital_Input2_Bit06"/>
+										<BitDataItem BitOffset="7" TextId="IDT_DataItem_PS_Digital_Input2_Bit07"/>
+										<BitDataItem BitOffset="8" TextId="IDT_DataItem_PS_Digital_Input2_Bit08"/>
+										<BitDataItem BitOffset="9" TextId="IDT_DataItem_PS_Digital_Input2_Bit09"/>
+										<BitDataItem BitOffset="10" TextId="IDT_DataItem_PS_Digital_Input2_Bit10"/>
+										<BitDataItem BitOffset="11" TextId="IDT_DataItem_PS_Digital_Input2_Bit11"/>
+										<BitDataItem BitOffset="12" TextId="IDT_DataItem_PS_Digital_Input2_Bit12"/>
+										<BitDataItem BitOffset="13" TextId="IDT_DataItem_PS_Digital_Input2_Bit13"/>
+										<BitDataItem BitOffset="14" TextId="IDT_DataItem_PS_Digital_Input2_Bit14"/>
+										<BitDataItem BitOffset="15" TextId="IDT_DataItem_PS_Digital_Reserved"/>
+									</DataItem>
+									<DataItem DataType="Integer16" TextId="IDT_DataItem_PS_Analog_Input0"/>
+									<DataItem DataType="Integer16" TextId="IDT_DataItem_PS_Analog_Input1"/>
+									<DataItem DataType="Integer16" TextId="IDT_DataItem_PS_Analog_Input2"/>
+									<DataItem DataType="F_MessageTrailer4Byte" TextId="IDT_DataItem_PS_Trailer"/>
+								</Input>
+								<Output Consistency="All items consistency">
+									<DataItem DataType="Unsigned16" UseAsBits="true" TextId="IDT_DataItem_PS_Digital_Output0">
+										<BitDataItem BitOffset="0" TextId="IDT_DataItem_PS_Digital_Output0_Bit00"/>
+										<BitDataItem BitOffset="1" TextId="IDT_DataItem_PS_Digital_Output0_Bit01"/>
+										<BitDataItem BitOffset="2" TextId="IDT_DataItem_PS_Digital_Output0_Bit02"/>
+										<BitDataItem BitOffset="3" TextId="IDT_DataItem_PS_Digital_Output0_Bit03"/>
+										<BitDataItem BitOffset="4" TextId="IDT_DataItem_PS_Digital_Output0_Bit04"/>
+										<BitDataItem BitOffset="5" TextId="IDT_DataItem_PS_Digital_Output0_Bit05"/>
+										<BitDataItem BitOffset="6" TextId="IDT_DataItem_PS_Digital_Output0_Bit06"/>
+										<BitDataItem BitOffset="7" TextId="IDT_DataItem_PS_Digital_Output0_Bit07"/>
+										<BitDataItem BitOffset="8" TextId="IDT_DataItem_PS_Digital_Output0_Bit08"/>
+										<BitDataItem BitOffset="9" TextId="IDT_DataItem_PS_Digital_Output0_Bit09"/>
+										<BitDataItem BitOffset="10" TextId="IDT_DataItem_PS_Digital_Output0_Bit10"/>
+										<BitDataItem BitOffset="11" TextId="IDT_DataItem_PS_Digital_Output0_Bit11"/>
+										<BitDataItem BitOffset="12" TextId="IDT_DataItem_PS_Digital_Output0_Bit12"/>
+										<BitDataItem BitOffset="13" TextId="IDT_DataItem_PS_Digital_Output0_Bit13"/>
+										<BitDataItem BitOffset="14" TextId="IDT_DataItem_PS_Digital_Output0_Bit14"/>
+										<BitDataItem BitOffset="15" TextId="IDT_DataItem_PS_Digital_Output0_Bit15"/>
+									</DataItem>
+									<DataItem DataType="Unsigned16" UseAsBits="true" TextId="IDT_DataItem_PS_Digital_Output1">
+										<BitDataItem BitOffset="0" TextId="IDT_DataItem_PS_Digital_Output1_Bit00"/>
+										<BitDataItem BitOffset="1" TextId="IDT_DataItem_PS_Digital_Output1_Bit01"/>
+										<BitDataItem BitOffset="2" TextId="IDT_DataItem_PS_Digital_Output1_Bit02"/>
+										<BitDataItem BitOffset="3" TextId="IDT_DataItem_PS_Digital_Output1_Bit03"/>
+										<BitDataItem BitOffset="4" TextId="IDT_DataItem_PS_Digital_Output1_Bit04"/>
+										<BitDataItem BitOffset="5" TextId="IDT_DataItem_PS_Digital_Output1_Bit05"/>
+										<BitDataItem BitOffset="6" TextId="IDT_DataItem_PS_Digital_Output1_Bit06"/>
+										<BitDataItem BitOffset="7" TextId="IDT_DataItem_PS_Digital_Output1_Bit07"/>
+										<BitDataItem BitOffset="8" TextId="IDT_DataItem_PS_Digital_Output1_Bit08"/>
+										<BitDataItem BitOffset="9" TextId="IDT_DataItem_PS_Digital_Output1_Bit09"/>
+										<BitDataItem BitOffset="10" TextId="IDT_DataItem_PS_Digital_Reserved"/>
+										<BitDataItem BitOffset="11" TextId="IDT_DataItem_PS_Digital_Reserved"/>
+										<BitDataItem BitOffset="12" TextId="IDT_DataItem_PS_Digital_Reserved"/>
+										<BitDataItem BitOffset="13" TextId="IDT_DataItem_PS_Digital_Reserved"/>
+										<BitDataItem BitOffset="14" TextId="IDT_DataItem_PS_Digital_Reserved"/>
+										<BitDataItem BitOffset="15" TextId="IDT_DataItem_PS_Digital_Reserved"/>
+									</DataItem>
+									<DataItem DataType="Integer16" TextId="IDT_DataItem_PS_Analog_Reserved"/>
+									<DataItem DataType="Integer16" TextId="IDT_DataItem_PS_Analog_Reserved"/>
+									<DataItem DataType="Integer16" TextId="IDT_DataItem_PS_Analog_Reserved"/>
+									<DataItem DataType="Integer16" TextId="IDT_DataItem_PS_Analog_Reserved"/>
+									<DataItem DataType="F_MessageTrailer4Byte" TextId="IDT_DataItem_PS_Trailer"/>
+								</Output>
+							</IOData>
+							<RecordDataList>
+								<F_ParameterRecordDataItem Index="1" F_ParamDescCRC="560">
+									<F_Check_iPar/>
+									<F_SIL DefaultValue="SIL3" AllowedValues="SIL2 SIL3" Changeable="true" Visible="true"/>
+									<F_CRC_Length DefaultValue="3-Byte-CRC" AllowedValues="3-Byte-CRC"/>
+									<F_Block_ID DefaultValue="0"/>
+									<F_Par_Version/>
+									<F_Source_Add DefaultValue="1" AllowedValues="1..65534"/>
+									<F_Dest_Add DefaultValue="1" AllowedValues="1..65534"/>
+									<F_WD_Time DefaultValue="1500" AllowedValues="150..10000"/>
+									<F_Par_CRC DefaultValue="7533"/>
+								</F_ParameterRecordDataItem>
+							</RecordDataList>
+							<ModuleInfo CategoryRef="Safety Module">
+								<Name TextId="IDT_MODULE84_NAME"/>
+								<InfoText TextId="IDT_MODULE84_INFO"/>
+							</ModuleInfo>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+				</ModuleItem>
+			</ModuleList>
+			<ValueList>
+				<ValueItem ID="IDT_PART_ERROR_ID_CODES">
+					<Assignments>
+						<Assign Content="0" TextId="PN_NO_ERR_0"/>
+						<Assign Content="8992" TextId="PN_2320"/>
+						<Assign Content="9024" TextId="PN_2340"/>
+						<Assign Content="9040" TextId="PN_2350"/>
+						<Assign Content="9041" TextId="PN_2351"/>
+						<Assign Content="9088" TextId="PN_2380"/>
+						<Assign Content="9089" TextId="PN_2381"/>
+						<Assign Content="9090" TextId="PN_2382"/>
+						<Assign Content="9091" TextId="PN_2383"/>
+						<Assign Content="9092" TextId="PN_2384"/>
+						<Assign Content="9093" TextId="PN_2385"/>
+						<Assign Content="9094" TextId="PN_2386"/>
+						<Assign Content="9095" TextId="PN_2387"/>
+						<Assign Content="9096" TextId="PN_2388"/>
+						<Assign Content="9097" TextId="PN_2389"/>
+						<Assign Content="12576" TextId="PN_3120"/>
+						<Assign Content="12672" TextId="PN_3180"/>
+						<Assign Content="12816" TextId="PN_3210"/>
+						<Assign Content="12817" TextId="PN_3211"/>
+						<Assign Content="12832" TextId="PN_3220"/>
+						<Assign Content="12833" TextId="PN_3221"/>
+						<Assign Content="12834" TextId="PN_3222"/>
+						<Assign Content="16912" TextId="PN_4210"/>
+						<Assign Content="17024" TextId="PN_4280"/>
+						<Assign Content="17025" TextId="PN_4281"/>
+						<Assign Content="17026" TextId="PN_4282"/>
+						<Assign Content="17029" TextId="PN_4285"/>
+						<Assign Content="17168" TextId="PN_4310"/>
+						<Assign Content="17280" TextId="PN_4380"/>
+						<Assign Content="17281" TextId="PN_4381"/>
+						<Assign Content="20754" TextId="PN_5112"/>
+						<Assign Content="20864" TextId="PN_5180"/>
+						<Assign Content="21376" TextId="PN_5380"/>
+						<Assign Content="24592" TextId="PN_6010"/>
+						<Assign Content="24961" TextId="PN_6181"/>
+						<Assign Content="24962" TextId="PN_6182"/>
+						<Assign Content="24963" TextId="PN_6183"/>
+						<Assign Content="24964" TextId="PN_6184"/>
+						<Assign Content="24968" TextId="PN_6188"/>
+						<Assign Content="24969" TextId="PN_6189"/>
+						<Assign Content="24970" TextId="PN_618A"/>
+						<Assign Content="24976" TextId="PN_6190"/>
+						<Assign Content="24977" TextId="PN_6191"/>
+						<Assign Content="24978" TextId="PN_6192"/>
+						<Assign Content="24979" TextId="PN_6193"/>
+						<Assign Content="24980" TextId="PN_6194"/>
+						<Assign Content="24981" TextId="PN_6195"/>
+						<Assign Content="24982" TextId="PN_6196"/>
+						<Assign Content="25008" TextId="PN_61B0"/>
+						<Assign Content="25009" TextId="PN_61B1"/>
+						<Assign Content="25216" TextId="PN_6280"/>
+						<Assign Content="25217" TextId="PN_6281"/>
+						<Assign Content="25218" TextId="PN_6282"/>
+						<Assign Content="25232" TextId="PN_6290"/>
+						<Assign Content="25233" TextId="PN_6291"/>
+						<Assign Content="25248" TextId="PN_62A0"/>
+						<Assign Content="25249" TextId="PN_62A1"/>
+						<Assign Content="25250" TextId="PN_62A2"/>
+						<Assign Content="25265" TextId="PN_62B1"/>
+						<Assign Content="25360" TextId="PN_6310"/>
+						<Assign Content="25376" TextId="PN_6320"/>
+						<Assign Content="25504" TextId="PN_63A0"/>
+						<Assign Content="25505" TextId="PN_63A1"/>
+						<Assign Content="25506" TextId="PN_63A2"/>
+						<Assign Content="25507" TextId="PN_63A3"/>
+						<Assign Content="25508" TextId="PN_63A4"/>
+						<Assign Content="28800" TextId="PN_7080"/>
+						<Assign Content="28801" TextId="PN_7081"/>
+						<Assign Content="28802" TextId="PN_7082"/>
+						<Assign Content="28803" TextId="PN_7083"/>
+						<Assign Content="28833" TextId="PN_70A1"/>
+						<Assign Content="28834" TextId="PN_70A2"/>
+						<Assign Content="28961" TextId="PN_7121"/>
+						<Assign Content="29056" TextId="PN_7180"/>
+						<Assign Content="29443" TextId="PN_7303"/>
+						<Assign Content="29444" TextId="PN_7304"/>
+						<Assign Content="29445" TextId="PN_7305"/>
+						<Assign Content="29568" TextId="PN_7380"/>
+						<Assign Content="29569" TextId="PN_7381"/>
+						<Assign Content="29570" TextId="PN_7382"/>
+						<Assign Content="29571" TextId="PN_7383"/>
+						<Assign Content="29573" TextId="PN_7385"/>
+						<Assign Content="30080" TextId="PN_7580"/>
+						<Assign Content="30081" TextId="PN_7581"/>
+						<Assign Content="30336" TextId="PN_7680"/>
+						<Assign Content="30337" TextId="PN_7681"/>
+						<Assign Content="30338" TextId="PN_7682"/>
+						<Assign Content="30340" TextId="PN_7684"/>
+						<Assign Content="30342" TextId="PN_7686"/>
+						<Assign Content="30343" TextId="PN_7687"/>
+						<Assign Content="30345" TextId="PN_7689"/>
+						<Assign Content="30346" TextId="PN_768A"/>
+						<Assign Content="30352" TextId="PN_7690"/>
+						<Assign Content="30353" TextId="PN_7691"/>
+						<Assign Content="30354" TextId="PN_7692"/>
+						<Assign Content="30355" TextId="PN_7693"/>
+						<Assign Content="30356" TextId="PN_7694"/>
+						<Assign Content="30357" TextId="PN_7695"/>
+						<Assign Content="30358" TextId="PN_7696"/>
+						<Assign Content="30359" TextId="PN_7697"/>
+						<Assign Content="33042" TextId="PN_8112"/>
+						<Assign Content="33044" TextId="PN_8114"/>
+						<Assign Content="33045" TextId="PN_8115"/>
+						<Assign Content="33046" TextId="PN_8116"/>
+						<Assign Content="33047" TextId="PN_8117"/>
+						<Assign Content="33152" TextId="PN_8180"/>
+						<Assign Content="33153" TextId="PN_8181"/>
+						<Assign Content="33154" TextId="PN_8182"/>
+						<Assign Content="33155" TextId="PN_8183"/>
+						<Assign Content="33156" TextId="PN_8184"/>
+						<Assign Content="33157" TextId="PN_8185"/>
+						<Assign Content="33158" TextId="PN_8186"/>
+						<Assign Content="33159" TextId="PN_8187"/>
+						<Assign Content="33168" TextId="PN_8190"/>
+						<Assign Content="33169" TextId="PN_8191"/>
+						<Assign Content="33170" TextId="PN_8192"/>
+						<Assign Content="33171" TextId="PN_8193"/>
+						<Assign Content="33172" TextId="PN_8194"/>
+						<Assign Content="33178" TextId="PN_819A"/>
+						<Assign Content="33179" TextId="PN_819B"/>
+						<Assign Content="33184" TextId="PN_81A0"/>
+						<Assign Content="33185" TextId="PN_81A1"/>
+						<Assign Content="33186" TextId="PN_81A2"/>
+						<Assign Content="33200" TextId="PN_81B0"/>
+						<Assign Content="33408" TextId="PN_8280"/>
+						<Assign Content="33409" TextId="PN_8281"/>
+						<Assign Content="33410" TextId="PN_8282"/>
+						<Assign Content="33411" TextId="PN_8283"/>
+						<Assign Content="33412" TextId="PN_8284"/>
+						<Assign Content="33413" TextId="PN_8285"/>
+						<Assign Content="33414" TextId="PN_8286"/>
+						<Assign Content="33425" TextId="PN_8291"/>
+						<Assign Content="33426" TextId="PN_8292"/>
+						<Assign Content="33427" TextId="PN_8293"/>
+						<Assign Content="34560" TextId="PN_8700"/>
+						<Assign Content="34561" TextId="PN_8701"/>
+						<Assign Content="33553" TextId="PN_8311"/>
+						<Assign Content="65280" TextId="PN_FF00"/>
+						<Assign Content="65281" TextId="PN_FF01"/>
+						<Assign Content="65282" TextId="PN_FF02"/>
+						<Assign Content="65283" TextId="PN_FF03"/>
+						<Assign Content="65284" TextId="PN_FF04"/>
+						<Assign Content="65285" TextId="PN_FF05"/>
+						<Assign Content="65286" TextId="PN_FF06"/>
+						<Assign Content="65287" TextId="PN_FF07"/>
+						<Assign Content="65289" TextId="PN_FF09"/>
+						<Assign Content="65290" TextId="PN_FF0A"/>
+						<Assign Content="65291" TextId="PN_FF0B"/>
+						<Assign Content="65292" TextId="PN_FF0C"/>
+						<Assign Content="65293" TextId="PN_FF0D"/>
+						<Assign Content="65294" TextId="PN_FF0E"/>
+						<Assign Content="65295" TextId="PN_FF0F"/>
+						<Assign Content="65296" TextId="PN_FF10"/>
+						<Assign Content="65297" TextId="PN_FF11"/>
+						<Assign Content="65298" TextId="PN_FF12"/>
+						<Assign Content="65299" TextId="PN_FF13"/>
+						<Assign Content="65300" TextId="PN_FF14"/>
+						<Assign Content="65301" TextId="PN_FF15"/>
+						<Assign Content="65302" TextId="PN_FF16"/>
+						<Assign Content="65303" TextId="PN_FF17"/>
+						<Assign Content="65304" TextId="PN_FF18"/>
+						<Assign Content="65305" TextId="PN_FF19"/>
+						<Assign Content="65306" TextId="PN_FF1A"/>
+						<Assign Content="65307" TextId="PN_FF1B"/>
+						<Assign Content="65308" TextId="PN_FF1C"/>
+						<Assign Content="65309" TextId="PN_FF1D"/>
+						<Assign Content="65310" TextId="PN_FF1E"/>
+						<Assign Content="65312" TextId="PN_FF20"/>
+						<Assign Content="65313" TextId="PN_FF21"/>
+						<Assign Content="65314" TextId="PN_FF22"/>
+						<Assign Content="65315" TextId="PN_FF23"/>
+						<Assign Content="65316" TextId="PN_FF24"/>
+						<Assign Content="65328" TextId="PN_FF30"/>
+						<Assign Content="65329" TextId="PN_FF31"/>
+						<Assign Content="65330" TextId="PN_FF32"/>
+						<Assign Content="65331" TextId="PN_FF33"/>
+						<Assign Content="65332" TextId="PN_FF34"/>
+						<Assign Content="65333" TextId="PN_FF35"/>
+						<Assign Content="65334" TextId="PN_FF36"/>
+						<Assign Content="65335" TextId="PN_FF37"/>
+						<Assign Content="65344" TextId="PN_FF40"/>
+						<Assign Content="65345" TextId="PN_FF41"/>
+						<Assign Content="65346" TextId="PN_FF42"/>
+						<Assign Content="65366" TextId="PN_FF56"/>
+						<Assign Content="65413" TextId="PN_FF85"/>
+						<Assign Content="24960" TextId="SM_Err_24960"/>
+						<Assign Content="24965" TextId="SM_Err_24965"/>
+						<Assign Content="24966" TextId="SM_Err_24966"/>
+						<Assign Content="33160" TextId="SM_Err_33160"/>
+						<Assign Content="33161" TextId="SM_Err_33161"/>
+						<Assign Content="33162" TextId="SM_Err_33162"/>
+						<Assign Content="33163" TextId="SM_Err_33163"/>
+						<Assign Content="33164" TextId="SM_Err_33164"/>
+						<Assign Content="33165" TextId="SM_Err_33165"/>
+						<Assign Content="36992" TextId="SM_Err_36992"/>
+						<Assign Content="36993" TextId="SM_Err_36993"/>
+						<Assign Content="36994" TextId="SM_Err_36994"/>
+						<Assign Content="36995" TextId="SM_Err_36995"/>
+						<Assign Content="20608" TextId="SM_Err_20608"/>
+						<Assign Content="20609" TextId="SM_Err_20609"/>
+						<Assign Content="20610" TextId="SM_Err_20610"/>
+						<Assign Content="20611" TextId="SM_Err_20611"/>
+						<Assign Content="20612" TextId="SM_Err_20612"/>
+						<Assign Content="36996" TextId="SM_Err_36996"/>
+						<Assign Content="36997" TextId="SM_Err_36997"/>
+						<Assign Content="36998" TextId="SM_Err_36998"/>
+						<Assign Content="36999" TextId="SM_Err_36999"/>
+						<Assign Content="64" TextId="SM_Err_64"/>
+						<Assign Content="65" TextId="SM_Err_65"/>
+						<Assign Content="66" TextId="SM_Err_66"/>
+						<Assign Content="67" TextId="SM_Err_67"/>
+						<Assign Content="68" TextId="SM_Err_68"/>
+						<Assign Content="69" TextId="SM_Err_69"/>
+						<Assign Content="70" TextId="SM_Err_70"/>
+						<Assign Content="71" TextId="SM_Err_71"/>
+						<Assign Content="72" TextId="SM_Err_72"/>
+						<Assign Content="73" TextId="SM_Err_73"/>
+						<Assign Content="74" TextId="SM_Err_74"/>
+						<Assign Content="75" TextId="SM_Err_75"/>
+						<Assign Content="76" TextId="SM_Err_76"/>
+						<Assign Content="77" TextId="SM_Err_77"/>
+						<Assign Content="78" TextId="SM_Err_78"/>
+						<Assign Content="79" TextId="SM_Err_79"/>
+						<Assign Content="20619" TextId="SM_Err_20619"/>
+						<Assign Content="20620" TextId="SM_Err_20620"/>
+						<Assign Content="20621" TextId="SM_Err_20621"/>
+						<Assign Content="65416" TextId="SM_Err_65416"/>
+						<Assign Content="65417" TextId="SM_Err_65417"/>
+						<Assign Content="65418" TextId="SM_Err_65418"/>
+						<Assign Content="65419" TextId="SM_Err_65419"/>
+						<Assign Content="65420" TextId="SM_Err_65420"/>
+						<Assign Content="65421" TextId="SM_Err_65421"/>
+						<Assign Content="65422" TextId="SM_Err_65422"/>
+						<Assign Content="65423" TextId="SM_Err_65423"/>
+						<Assign Content="65424" TextId="SM_Err_65424"/>
+						<Assign Content="65425" TextId="SM_Err_65425"/>
+						<Assign Content="65426" TextId="SM_Err_65426"/>
+						<Assign Content="65427" TextId="SM_Err_65427"/>
+						<Assign Content="65428" TextId="SM_Err_65428"/>
+						<Assign Content="65429" TextId="SM_Err_65429"/>
+						<Assign Content="65430" TextId="SM_Err_65430"/>
+						<Assign Content="65431" TextId="SM_Err_65431"/>
+						<Assign Content="65432" TextId="SM_Err_65432"/>
+						<Assign Content="65433" TextId="SM_Err_65433"/>
+						<Assign Content="65434" TextId="SM_Err_65434"/>
+						<Assign Content="65435" TextId="SM_Err_65435"/>
+						<Assign Content="65436" TextId="SM_Err_65436"/>
+						<Assign Content="65437" TextId="SM_Err_65437"/>
+						<Assign Content="65438" TextId="SM_Err_65438"/>
+						<Assign Content="65439" TextId="SM_Err_65439"/>
+						<Assign Content="65440" TextId="SM_Err_65440"/>
+						<Assign Content="37000" TextId="SM_Err_37000"/>
+						<Assign Content="37001" TextId="SM_Err_37001"/>
+						<Assign Content="37002" TextId="SM_Err_37002"/>
+						<Assign Content="37003" TextId="SM_Err_37003"/>
+						<Assign Content="37004" TextId="SM_Err_37004"/>
+						<Assign Content="37005" TextId="SM_Err_37005"/>
+						<Assign Content="37006" TextId="SM_Err_37006"/>
+						<Assign Content="37007" TextId="SM_Err_37007"/>
+						<Assign Content="37008" TextId="SM_Err_37008"/>
+						<Assign Content="37009" TextId="SM_Err_37009"/>
+						<Assign Content="37010" TextId="SM_Err_37010"/>
+						<Assign Content="37011" TextId="SM_Err_37011"/>
+						<Assign Content="37012" TextId="SM_Err_37012"/>
+						<Assign Content="25481" TextId="SM_Err_25481"/>
+						<Assign Content="25482" TextId="SM_Err_25482"/>
+						<Assign Content="25483" TextId="SM_Err_25483"/>
+						<Assign Content="25484" TextId="SM_Err_25484"/>
+						<Assign Content="25485" TextId="SM_Err_25485"/>
+						<Assign Content="25486" TextId="SM_Err_25486"/>
+						<Assign Content="25487" TextId="SM_Err_25487"/>
+						<Assign Content="25488" TextId="SM_Err_25488"/>
+						<Assign Content="25489" TextId="SM_Err_25489"/>
+						<Assign Content="25490" TextId="SM_Err_25490"/>
+						<Assign Content="20756" TextId="SM_Err_20756"/>
+						<Assign Content="20757" TextId="SM_Err_20757"/>
+						<Assign Content="20758" TextId="SM_Err_20758"/>
+						<Assign Content="20759" TextId="SM_Err_20759"/>
+						<Assign Content="65451" TextId="SM_Err_65451"/>
+						<Assign Content="65452" TextId="SM_Err_65452"/>
+						<Assign Content="65453" TextId="SM_Err_65453"/>
+						<Assign Content="65454" TextId="SM_Err_65454"/>
+						<Assign Content="65455" TextId="SM_Err_65455"/>
+						<Assign Content="65456" TextId="SM_Err_65456"/>
+						<Assign Content="25491" TextId="SM_Err_25491"/>
+					</Assignments>
+				</ValueItem>
+				<ValueItem ID="IDT_PART_SEVERITY_ID_CODES">
+					<Assignments>
+						<Assign Content="0" TextId="SEV_NO_RESP_0"/>
+						<Assign Content="1" TextId="SEV_FAULT_CIA402_1"/>
+						<Assign Content="2" TextId="SEV_WARNING_2"/>
+						<Assign Content="11" TextId="SEV_INFO_11"/>
+						<Assign Content="13" TextId="SEV_WARN_LOCKED_13"/>
+						<Assign Content="16" TextId="SEV_TROUBLE_CINH_16"/>
+						<Assign Content="19" TextId="SEV_FAULT_FSP_19"/>
+						<Assign Content="20" TextId="SEV_FAULT_QSP_20"/>
+						<Assign Content="21" TextId="SEV_FAULT_CINH_21"/>
+						<Assign Content="23" TextId="SEV_FATAL_ERROR_23"/>
+					</Assignments>
+				</ValueItem>
+			</ValueList>
+			<!-- Ab hier beginnen die Diagnose-Texte -->
+			<UnitDiagTypeList>
+				<!-- Selektion des Fehlerwertes fuer Struktur 1-->
+				<UnitDiagTypeItem UserStructureIdentifier="1">
+					<Name TextId="PN_DIAG_NAME"/>
+					<Ref TextId="PN_ERROR_ID" ValueItemTarget="IDT_PART_ERROR_ID_CODES" DataType="Unsigned16" ByteOffset="2" DefaultValue="0"/>
+					<Ref TextId="PN_SEVERITY_ID" ValueItemTarget="IDT_PART_SEVERITY_ID_CODES" DataType="Unsigned8" ByteOffset="1" DefaultValue="0"/>
+				</UnitDiagTypeItem>
+			</UnitDiagTypeList>
+			<GraphicsList>
+				<GraphicItem ID="1" GraphicFile="GSDML-0106-0950-LENZE0900"/>
+				<GraphicItem ID="2" GraphicFile="GSDML-0106-0950-LENZE0900"/>
+			</GraphicsList>
+			<CategoryList>
+				<CategoryItem ID="IEC" TextId="GROUP IEC"/>
+				<CategoryItem ID="Safety Module" TextId="SAFE Module"/>
+			</CategoryList>
+			<ExternalTextList>
+				<PrimaryLanguage>
+					<!-- Diagnosetexte PN -->
+					<Text TextId="SEV_NO_RESP_0" Value="No response"/>
+					<Text TextId="SEV_FAULT_CIA402_1" Value="Fault CIA402:"/>
+					<Text TextId="SEV_WARNING_2" Value="Warning"/>
+					<Text TextId="SEV_INFO_11" Value="Information"/>
+					<Text TextId="SEV_WARN_LOCKED_13" Value="Warning locked"/>
+					<Text TextId="SEV_TROUBLE_CINH_16" Value="Trouble CINH"/>
+					<Text TextId="SEV_FAULT_FSP_19" Value="Fault Fast Stop"/>
+					<Text TextId="SEV_FAULT_QSP_20" Value="Fault QSP"/>
+					<Text TextId="SEV_FAULT_CINH_21" Value="Fault CINH"/>
+					<Text TextId="SEV_FATAL_ERROR_23" Value="Fatal error"/>
+					<Text TextId="PN_DIAG_NAME" Value="Diagnostics:"/>
+					<Text TextId="PN_NO_ERR_0" Value="0 (No Error)"/>
+					<Text TextId="PN_ERROR_ID" Value="Error ID: "/>
+					<Text TextId="PN_SEVERITY_ID" Value="Severity ID: "/>
+					<Text TextId="PN_2320" Value="CiA: Short circuit/earth leakage (internal)"/>
+					<Text TextId="PN_2340" Value="CiA: Short circuit (device internal)"/>
+					<Text TextId="PN_2350" Value="CiA: i²*t overload (thermal state)"/>
+					<Text TextId="PN_2351" Value="Load level i2xt thermal state motor"/>
+					<Text TextId="PN_2380" Value="Load level fault ixt thrmal state powerstage"/>
+					<Text TextId="PN_2381" Value="Load level warning ixt thrmal state powerstage"/>
+					<Text TextId="PN_2382" Value="I*t error"/>
+					<Text TextId="PN_2383" Value="I*t warning"/>
+					<Text TextId="PN_2384" Value="Ultimate current reached"/>
+					<Text TextId="PN_2385" Value="Max Current higher than possible"/>
+					<Text TextId="PN_2386" Value="Clamp level reached"/>
+					<Text TextId="PN_2387" Value="Imax: Clamp responded too often"/>
+					<Text TextId="PN_2388" Value="SLPSM stall detection active"/>
+					<Text TextId="PN_2389" Value="Load level warning ixt thermal state"/>
+					<Text TextId="PN_3120" Value="Mains phase fault"/>
+					<Text TextId="PN_3180" Value="UPS operation active"/>
+					<Text TextId="PN_3210" Value="DC bus overvoltage"/>
+					<Text TextId="PN_3211" Value="DC bus overvoltage warning"/>
+					<Text TextId="PN_3220" Value="DC bus undervoltage"/>
+					<Text TextId="PN_3221" Value="DC bus undervoltage warning"/>
+					<Text TextId="PN_3222" Value="DC-bus voltage to low for power up"/>
+					<Text TextId="PN_4210" Value="PU: overtemperature fault"/>
+					<Text TextId="PN_4280" Value="Heat sink temperature sensor fault"/>
+					<Text TextId="PN_4281" Value="Heat sink fan warning"/>
+					<Text TextId="PN_4282" Value="Controlunit temperature has reached errorlevel "/>
+					<Text TextId="PN_4285" Value="PU overtemperature warning"/>
+					<Text TextId="PN_4310" Value="Motor temperature error"/>
+					<Text TextId="PN_4380" Value="Motor temperature sensor error"/>
+					<Text TextId="PN_4381" Value="Motor temperature PTC error"/>
+					<Text TextId="PN_5112" Value="24 V supply critical"/>
+					<Text TextId="PN_5180" Value="Overload 24 V supply"/>
+					<Text TextId="PN_5380" Value="OEM hardware incompatible"/>
+					<Text TextId="PN_6010" Value="Internal error"/>
+					<Text TextId="PN_6181" Value="Internal error"/>
+					<Text TextId="PN_6182" Value="Internal error"/>
+					<Text TextId="PN_6183" Value="Internal error"/>
+					<Text TextId="PN_6184" Value="Internal error"/>
+					<Text TextId="PN_6188" Value="Internal error"/>
+					<Text TextId="PN_6189" Value="Internal error"/>
+					<Text TextId="PN_618A" Value="Internal fan warning"/>
+					<Text TextId="PN_6190" Value="Internal error"/>
+					<Text TextId="PN_6191" Value="Internal error"/>
+					<Text TextId="PN_6192" Value="Internal error"/>
+					<Text TextId="PN_6193" Value="Internal error"/>
+					<Text TextId="PN_6194" Value="Internal error"/>
+					<Text TextId="PN_6195" Value="Internal error"/>
+					<Text TextId="PN_6196" Value="Internal error"/>
+					<Text TextId="PN_61B0" Value="Internal error"/>
+					<Text TextId="PN_61B1" Value="Internal error"/>
+					<Text TextId="PN_6280" Value="Trigger/functions connected incorrectly"/>
+					<Text TextId="PN_6281" Value="User-defined fault 1"/>
+					<Text TextId="PN_6282" Value="User-defined fault 2"/>
+					<Text TextId="PN_6290" Value="Warning invert rotation"/>
+					<Text TextId="PN_6291" Value="Maximuml allowed troubles exceeded"/>
+					<Text TextId="PN_62A0" Value="AC Drive: user fault"/>
+					<Text TextId="PN_62A1" Value="Network: user fault 1"/>
+					<Text TextId="PN_62A2" Value="Network: user fault 2"/>
+					<Text TextId="PN_62B1" Value="NetWordIN1 configuration incorrect"/>
+					<Text TextId="PN_6310" Value="Loss of parameters"/>
+					<Text TextId="PN_6320" Value="Parameter error in parameter set"/>
+					<Text TextId="PN_6391" Value="Motor temperature PTC error"/>
+					<Text TextId="PN_63A0" Value="Internal error"/>
+					<Text TextId="PN_63A1" Value="CU: load error ID tag"/>
+					<Text TextId="PN_63A2" Value="PU: load error ID tag"/>
+					<Text TextId="PN_63A3" Value="Power unit unknown"/>
+					<Text TextId="PN_63A4" Value="Internal error"/>
+					<Text TextId="PN_7080" Value="Assertion level monitoring (Low/High)"/>
+					<Text TextId="PN_7081" Value="Analog input 1 fault"/>
+					<Text TextId="PN_7082" Value="Analog input 2 fault"/>
+					<Text TextId="PN_7083" Value="HTL input fault"/>
+					<Text TextId="PN_70A1" Value="Analog output 1 fault"/>
+					<Text TextId="PN_70A2" Value="Analog output 2 fault"/>
+					<Text TextId="PN_7121" Value="Pole position identification fault"/>
+					<Text TextId="PN_7180" Value="Motor overcurrent"/>
+					<Text TextId="PN_7303" Value="Feedback fault slot A"/>
+					<Text TextId="PN_7304" Value="Feedback fault slot B"/>
+					<Text TextId="PN_7305" Value="Encoder open circuit"/>
+					<Text TextId="PN_7380" Value="Hiperface communication fault slot A"/>
+					<Text TextId="PN_7381" Value="Hiperface absolute value not valid"/>
+					<Text TextId="PN_7382" Value="Hiperface comunication fault slot B"/>
+					<Text TextId="PN_7383" Value="Hiperface absolute value not valid"/>
+					<Text TextId="PN_7385" Value="Feedback system: speed limit"/>
+					<Text TextId="PN_7580" Value="Internal error"/>
+					<Text TextId="PN_7581" Value="Internal error"/>
+					<Text TextId="PN_7680" Value="Memory module is full"/>
+					<Text TextId="PN_7681" Value="Memory module not present"/>
+					<Text TextId="PN_7682" Value="Memory module: Invalid user data"/>
+					<Text TextId="PN_7684" Value="Data not compl. saved before powerdown"/>
+					<Text TextId="PN_7686" Value="Network: configuration error"/>
+					<Text TextId="PN_7687" Value="Internal error"/>
+					<Text TextId="PN_7689" Value="Memory module: invalid OEM data"/>
+					<Text TextId="PN_768A" Value="Memory module: wrong type"/>
+					<Text TextId="PN_7690" Value="EPM firmware version incompatible"/>
+					<Text TextId="PN_7691" Value="EPM data: firmware type incompatible"/>
+					<Text TextId="PN_7692" Value="EPM data: new firmware type detected"/>
+					<Text TextId="PN_7693" Value="EPM data: PU size incompatible"/>
+					<Text TextId="PN_7694" Value="EPM data: new PU size detected"/>
+					<Text TextId="PN_7695" Value="Invalid parameter changeover configuration"/>
+					<Text TextId="PN_7696" Value="EPM data: unknown parameter found"/>
+					<Text TextId="PN_7697" Value="Parameter changes lost"/>
+					<Text TextId="PN_8112" Value="Network: timeout explicit message"/>
+					<Text TextId="PN_8114" Value="Network: overall communication timeout"/>
+					<Text TextId="PN_8115" Value="Time-out (PAM)"/>
+					<Text TextId="PN_8116" Value="Modbus TCP master time-out"/>
+					<Text TextId="PN_8117" Value="Modbus TCP Keep Alive time-out"/>
+					<Text TextId="PN_8180" Value="DC syncronization required"/>
+					<Text TextId="PN_8181" Value="EtherCAT communication"/>
+					<Text TextId="PN_8182" Value="CAN: bus off"/>
+					<Text TextId="PN_8183" Value="CAN: warning"/>
+					<Text TextId="PN_8184" Value="CAN: heartbeat time-out consumer 1"/>
+					<Text TextId="PN_8185" Value="CAN: heartbeat time-out consumer 2"/>
+					<Text TextId="PN_8186" Value="CAN: heartbeat time-out consumer 3"/>
+					<Text TextId="PN_8187" Value="CAN: heartbeat time-out consumer 4"/>
+					<Text TextId="PN_8190" Value="Network: watchdog elapsed"/>
+					<Text TextId="PN_8191" Value="Network: disruption of cyclic data exchange"/>
+					<Text TextId="PN_8192" Value="PROFINET: initialisation error"/>
+					<Text TextId="PN_8193" Value="PROFINET: invalid cyclic process data"/>
+					<Text TextId="PN_8194" Value="PROFINET: PROFIenergy pause active"/>
+					<Text TextId="PN_819A" Value="PROFINET: communication error to safety option "/>
+					<Text TextId="PN_819B" Value="PROFINET: initalization error to safety option"/>
+					<Text TextId="PN_81A0" Value="Internal error"/>
+					<Text TextId="PN_81A1" Value="Modbus: network time-out"/>
+					<Text TextId="PN_81A2" Value="Modbus: incorrect request by master"/>
+					<Text TextId="PN_81B0" Value="iCIF connection lost"/>
+					<Text TextId="PN_8280" Value="Sync manager address"/>
+					<Text TextId="PN_8281" Value="Sync manager size"/>
+					<Text TextId="PN_8282" Value="Sync manager settings"/>
+					<Text TextId="PN_8283" Value="PDO mapping object unknown"/>
+					<Text TextId="PN_8284" Value="Index is not a PDO mapping object"/>
+					<Text TextId="PN_8285" Value="Limit of mappable objects exceeded"/>
+					<Text TextId="PN_8286" Value="Network: PDO mapping error"/>
+					<Text TextId="PN_8291" Value="CAN: RPDO1 time-out"/>
+					<Text TextId="PN_8292" Value="CAN: RPDO2 time-out"/>
+					<Text TextId="PN_8293" Value="CAN: RPDO3 time-out"/>
+					<Text TextId="PN_8311" Value="Torque limit reached"/>
+					<Text TextId="PN_8700" Value="Sync controller"/>
+					<Text TextId="PN_8701" Value="Sync PLL timeout"/>
+					<Text TextId="PN_FF00" Value="Fatal internal error"/>
+					<Text TextId="PN_FF01" Value="Fatal internal communication error"/>
+					<Text TextId="PN_FF02" Value="Brake resistor: overload fault"/>
+					<Text TextId="PN_FF03" Value="Fatal internal error task overrun"/>
+					<Text TextId="PN_FF04" Value="Motor moved too much"/>
+					<Text TextId="PN_FF05" Value="Safe Torque Off error"/>
+					<Text TextId="PN_FF06" Value="Motor overspeed"/>
+					<Text TextId="PN_FF07" Value="Setting of Parameter not allowed"/>
+					<Text TextId="PN_FF09" Value="Motor phase missing"/>
+					<Text TextId="PN_FF0A" Value="Motor phase failure phase U"/>
+					<Text TextId="PN_FF0B" Value="Motor phase failure phase V"/>
+					<Text TextId="PN_FF0C" Value="Motor phase failure phase W"/>
+					<Text TextId="PN_FF0D" Value="Error no resolver active"/>
+					<Text TextId="PN_FF0E" Value="Actual speed too low"/>
+					<Text TextId="PN_FF0F" Value="Wrong feedback system"/>
+					<Text TextId="PN_FF10" Value="Time out"/>
+					<Text TextId="PN_FF11" Value="Numeric problem"/>
+					<Text TextId="PN_FF12" Value="Inverter error too high"/>
+					<Text TextId="PN_FF13" Value="Early abort of identification"/>
+					<Text TextId="PN_FF14" Value="Not allowed in this state"/>
+					<Text TextId="PN_FF15" Value="Execution of command not possible"/>
+					<Text TextId="PN_FF16" Value="Unsupported Hiperface type in slot A"/>
+					<Text TextId="PN_FF17" Value="Execution of command not possible"/>
+					<Text TextId="PN_FF18" Value="Communication timeout"/>
+					<Text TextId="PN_FF19" Value="Motor parameter identification fault"/>
+					<Text TextId="PN_FF1A" Value="Unsupported Hiperface type at slot B"/>
+					<Text TextId="PN_FF1B" Value="Execution of command not possible"/>
+					<Text TextId="PN_FF1C" Value="Execution of command not possible"/>
+					<Text TextId="PN_FF1D" Value="Execution of command not possible"/>
+					<Text TextId="PN_FF1E" Value="FIQ runtime error"/>
+					<Text TextId="PN_FF20" Value="Replacement protection check failed"/>
+					<Text TextId="PN_FF21" Value="Brake timeout precontrol"/>
+					<Text TextId="PN_FF22" Value="Speed error occurs"/>
+					<Text TextId="PN_FF23" Value="Position error occurs"/>
+					<Text TextId="PN_FF24" Value="Sync0 cycle time is invalid"/>
+					<Text TextId="PN_FF30" Value="Internal error"/>
+					<Text TextId="PN_FF31" Value="Internal error"/>
+					<Text TextId="PN_FF32" Value="Internal error"/>
+					<Text TextId="PN_FF33" Value="Internal error"/>
+					<Text TextId="PN_FF34" Value="Internal error"/>
+					<Text TextId="PN_FF35" Value="Internal error"/>
+					<Text TextId="PN_FF36" Value="Brake resistor: overload warning"/>
+					<Text TextId="PN_FF37" Value="Automatic start disabled"/>
+					<Text TextId="PN_FF40" Value="Brake transistor error"/>
+					<Text TextId="PN_FF41" Value="Charge relay error"/>
+					<Text TextId="PN_FF42" Value="Line phase failure"/>
+					<Text TextId="PN_FF56" Value="Maximum motor frequency reached"/>
+					<Text TextId="PN_FF85" Value="Keypad full control active"/>
+					<Text TextId="SM_Err_24960" Value="Internal error, STO activated"/>
+					<Text TextId="SM_Err_24965" Value="Communication error - basic device"/>
+					<Text TextId="SM_Err_24966" Value="Synchronization fault - basic device"/>
+					<Text TextId="SM_Err_33160" Value="PROFIsafe - Communication error"/>
+					<Text TextId="SM_Err_33161" Value="F_WD_Time exceeded"/>
+					<Text TextId="SM_Err_33162" Value="PROFIsafe passivated"/>
+					<Text TextId="SM_Err_33163" Value="PROFIsafe has left data exchange"/>
+					<Text TextId="SM_Err_33164" Value="PROFIsafe - invalid data"/>
+					<Text TextId="SM_Err_33165" Value="F-parameter error"/>
+					<Text TextId="SM_Err_36992" Value="Error discrepancy / function check - SD-In1"/>
+					<Text TextId="SM_Err_36993" Value="Error discrepancy / function check - SD-In2"/>
+					<Text TextId="SM_Err_36994" Value="Error discrepancy / function check - SD-In3"/>
+					<Text TextId="SM_Err_36995" Value="Error discrepancy / function check - SD-In4"/>
+					<Text TextId="SM_Err_20608" Value="Internal error - AIS"/>
+					<Text TextId="SM_Err_20609" Value="Internal error - AIE"/>
+					<Text TextId="SM_Err_20610" Value="Internal error - module button"/>
+					<Text TextId="SM_Err_20611" Value="internal error - IRS"/>
+					<Text TextId="SM_Err_20612" Value="internal error - IRL"/>
+					<Text TextId="SM_Err_36996" Value="Deactivated SD-In1 = high"/>
+					<Text TextId="SM_Err_36997" Value="Deactivated SD-In2 = high"/>
+					<Text TextId="SM_Err_36998" Value="Deactivated SD-In3 = high"/>
+					<Text TextId="SM_Err_36999" Value="Deactivated SD-In4 = high"/>
+					<Text TextId="SM_Err_64" Value="F_Dest_Add unequal F-address"/>
+					<Text TextId="SM_Err_65" Value="F_Dest_Add = 0 or FFFFhex"/>
+					<Text TextId="SM_Err_66" Value="F_Source_Add = 0 or FFFFhex"/>
+					<Text TextId="SM_Err_67" Value="F_WD_Time = 0msec"/>
+					<Text TextId="SM_Err_68" Value="F_SIL exceeds technical SIL"/>
+					<Text TextId="SM_Err_69" Value="F_CRC_Length error"/>
+					<Text TextId="SM_Err_70" Value="Incorrect F-parameter version"/>
+					<Text TextId="SM_Err_71" Value="PROFIsafe CRC1 error"/>
+					<Text TextId="SM_Err_72" Value="PROFIsafe device specific error"/>
+					<Text TextId="SM_Err_73" Value="PROFIsafe iPar save WD timeout"/>
+					<Text TextId="SM_Err_74" Value="PROFIsafe iPar restore WD timeout"/>
+					<Text TextId="SM_Err_75" Value="PROFIsafe iParCRC error"/>
+					<Text TextId="SM_Err_76" Value="F_Block_ID not supported"/>
+					<Text TextId="SM_Err_77" Value="PROFIsafe CRC2 error"/>
+					<Text TextId="SM_Err_78" Value="F_WD_Time or F_WD_Time_2 timeout "/>
+					<Text TextId="SM_Err_79" Value="Reserved (PROFIsafe standard)"/>
+					<Text TextId="SM_Err_20619" Value="Error - SD-Inx / CLx"/>
+					<Text TextId="SM_Err_20620" Value="Error - internal switch-off path"/>
+					<Text TextId="SM_Err_20621" Value="Test pulse error - internal switch-off path"/>
+					<Text TextId="SM_Err_65416" Value="SS1/SS2: Stop time exceeded"/>
+					<Text TextId="SM_Err_65417" Value="SLS1: Nlim1 exceeded"/>
+					<Text TextId="SM_Err_65418" Value="SLS2: Nlim2 exceeded"/>
+					<Text TextId="SM_Err_65419" Value="SLS3: Nlim3 exceeded"/>
+					<Text TextId="SM_Err_65420" Value="SLS4: Nlim4 exceeded"/>
+					<Text TextId="SM_Err_65421" Value="SLS/SMS: Error stop not executed"/>
+					<Text TextId="SM_Err_65422" Value="SDIpos: Wrong direction"/>
+					<Text TextId="SM_Err_65423" Value="SDIneg: Wrong direction"/>
+					<Text TextId="SM_Err_65424" Value="SMS: Nmax exceeded"/>
+					<Text TextId="SM_Err_65425" Value="SOS: Tolerance limit exceeded"/>
+					<Text TextId="SM_Err_65426" Value="No feedback system configured"/>
+					<Text TextId="SM_Err_65427" Value="CAS: round trip time exceeded"/>
+					<Text TextId="SM_Err_65428" Value="CAS: Hardware or discrepancy error"/>
+					<Text TextId="SM_Err_65429" Value="SS1/SS2: Speed ramp exceeded"/>
+					<Text TextId="SM_Err_65430" Value="SLI: Safely limited increment exceeded"/>
+					<Text TextId="SM_Err_65431" Value="SLP1: Position limits exceeded"/>
+					<Text TextId="SM_Err_65432" Value="SLP2: Position limits exceeded"/>
+					<Text TextId="SM_Err_65433" Value="SLP3: Position limits exceeded"/>
+					<Text TextId="SM_Err_65434" Value="SLP4: Position limits exceeded"/>
+					<Text TextId="SM_Err_65435" Value="SLP: No home position"/>
+					<Text TextId="SM_Err_65436" Value="PDSS: No home position"/>
+					<Text TextId="SM_Err_65437" Value="PDSS: Speed exceeded"/>
+					<Text TextId="SM_Err_65438" Value="PDSS: Safe crawling speed exceeded"/>
+					<Text TextId="SM_Err_65439" Value="PDSS: No diagnostic position detected"/>
+					<Text TextId="SM_Err_65440" Value="PDSS: Invalid diagnostic position detected"/>
+					<Text TextId="SM_Err_37000" Value="Stuck at High SD-Out1, channel A"/>
+					<Text TextId="SM_Err_37001" Value="Stuck at Low SD-Out1, channel A"/>
+					<Text TextId="SM_Err_37002" Value="Stuck at High SD-Out1, channel B"/>
+					<Text TextId="SM_Err_37003" Value="Stuck at Low SD-Out1, channel B"/>
+					<Text TextId="SM_Err_37004" Value="Stuck at High at SD-In1, channel A"/>
+					<Text TextId="SM_Err_37005" Value="Stuck at High at SD-In1, channel B"/>
+					<Text TextId="SM_Err_37006" Value="Stuck at High at SD-In2, channel A"/>
+					<Text TextId="SM_Err_37007" Value="Stuck at High at SD-In2, channel B"/>
+					<Text TextId="SM_Err_37008" Value="Stuck at High at SD-In3, channel A"/>
+					<Text TextId="SM_Err_37009" Value="Stuck at High at SD-In3, channel B"/>
+					<Text TextId="SM_Err_37010" Value="Stuck at High at SD-In4, channel A"/>
+					<Text TextId="SM_Err_37011" Value="Stuck at High at SD-In4, channel B"/>
+					<Text TextId="SM_Err_37012" Value="Short circuit - CLA/CLB"/>
+					<Text TextId="SM_Err_25481" Value="New safety parameter set deleted"/>
+					<Text TextId="SM_Err_25482" Value="New safety parameter set loaded"/>
+					<Text TextId="SM_Err_25483" Value="Memory module access error"/>
+					<Text TextId="SM_Err_25484" Value="Different safety parameter sets"/>
+					<Text TextId="SM_Err_25485" Value="No safety parameter set"/>
+					<Text TextId="SM_Err_25486" Value="Safety parameter set defect"/>
+					<Text TextId="SM_Err_25487" Value="Memory module safety parameter set format error"/>
+					<Text TextId="SM_Err_25488" Value="Safety parameter set plausibility error"/>
+					<Text TextId="SM_Err_25489" Value="Safety parameter set communicaton error"/>
+					<Text TextId="SM_Err_25490" Value="Module-ID unequal effective safety address"/>
+					<Text TextId="SM_Err_20756" Value="Error reference voltage"/>
+					<Text TextId="SM_Err_20757" Value="Error 6V  voltage"/>
+					<Text TextId="SM_Err_20758" Value="Error 5V voltage"/>
+					<Text TextId="SM_Err_20759" Value="Error 3.3V voltage"/>
+					<Text TextId="SM_Err_65451" Value="Safe speed invalid"/>
+					<Text TextId="SM_Err_65452" Value="SSM: encoder fault"/>
+					<Text TextId="SM_Err_65453" Value="SSM: resolver fault"/>
+					<Text TextId="SM_Err_65454" Value="SSM: error data from basic device"/>
+					<Text TextId="SM_Err_65455" Value="SSM: error speed comparison"/>
+					<Text TextId="SM_Err_65456" Value="SSM: error synchronization"/>
+					<Text TextId="SM_Err_25491" Value="SSM: Incorrect PDO version"/>
+					<!--  -->
+					<Text TextId="IDT_FAMILY_DESCRIPTION" Value="Lenze PROFINET Servo i950"/>
+					<!--Textstrings fuer DAP  -->
+					<Text TextId="IDT_DAP_NAME" Value="i950"/>
+					<Text TextId="IDT_DAP_INFO" Value="i950 PROFINET IO Interface"/>
+					<Text TextId="IDT_DAP_Interface" Value="X1"/>
+					<Text TextId="IDT_DAP_Port1" Value="P1"/>
+					<Text TextId="IDT_DAP_Port2" Value="P2"/>
+					<Text TextId="IDT_ETHERNETINTERFACE_Port1" Value="Port 1"/>
+					<Text TextId="IDT_ETHERNETINTERFACE_Port2" Value="Port 2"/>
+					<!--  -->
+					<Text TextId="IDT_MODULE_0_NAME" Value="DAP"/>
+					<Text TextId="IDT_MODULE_0_INFO" Value="DAP"/>
+					<!--module categories-->
+					<Text TextId="GROUP IEC" Value="IEC"/>
+					<Text TextId="SAFE Module" Value="Functional Safety"/>
+					<!--process modules-->
+					<!--Safety Module-->
+					<!--restliche Bezeichner-->
+					<Text TextId="IDT_MODULE_50_NAME" Value="IEC  1 DWord I/O"/>
+					<Text TextId="IDT_MODULE_50_INFO" Value="IEC Variable / 4 Bytes"/>
+					<Text TextId="IDT_DATAITEM_50I" Value=""/>
+					<Text TextId="IDT_DATAITEM_50O" Value=""/>
+					<Text TextId="IDT_MODULE_51_NAME" Value="IEC  2 DWords I/O"/>
+					<Text TextId="IDT_MODULE_51_INFO" Value="IEC Variable / 8 Bytes"/>
+					<Text TextId="IDT_DATAITEM_51I" Value=""/>
+					<Text TextId="IDT_DATAITEM_51O" Value=""/>
+					<Text TextId="IDT_MODULE_52_NAME" Value="IEC  4 DWords I/O"/>
+					<Text TextId="IDT_MODULE_52_INFO" Value="IEC Variable / 16 Bytes"/>
+					<Text TextId="IDT_DATAITEM_52I" Value=""/>
+					<Text TextId="IDT_DATAITEM_52O" Value=""/>
+					<Text TextId="IDT_MODULE_53_NAME" Value="IEC  8 DWords I/O"/>
+					<Text TextId="IDT_MODULE_53_INFO" Value="IEC Variable / 32 Bytes"/>
+					<Text TextId="IDT_DATAITEM_53I" Value=""/>
+					<Text TextId="IDT_DATAITEM_53O" Value=""/>
+					<Text TextId="IDT_MODULE_54_NAME" Value="IEC 12 DWords I/O"/>
+					<Text TextId="IDT_MODULE_54_INFO" Value="IEC Variable / 48 Bytes"/>
+					<Text TextId="IDT_DATAITEM_54I" Value=""/>
+					<Text TextId="IDT_DATAITEM_54O" Value=""/>
+					<Text TextId="IDT_MODULE_55_NAME" Value="IEC 16 DWords I/O"/>
+					<Text TextId="IDT_MODULE_55_INFO" Value="IEC Variable / 64 Bytes"/>
+					<Text TextId="IDT_DATAITEM_55I" Value=""/>
+					<Text TextId="IDT_DATAITEM_55O" Value=""/>
+					<Text TextId="IDT_MODULE_56_NAME" Value="IEC  3 DWords I/O"/>
+					<Text TextId="IDT_MODULE_56_INFO" Value="IEC Variable / 6 Bytes"/>
+					<Text TextId="IDT_DATAITEM_56I" Value=""/>
+					<Text TextId="IDT_DATAITEM_56O" Value=""/>
+					<Text TextId="IDT_MODULE_57_NAME" Value="IEC  5 DWords I/O"/>
+					<Text TextId="IDT_MODULE_57_INFO" Value="IEC Variable / 20 Bytes"/>
+					<Text TextId="IDT_DATAITEM_57I" Value=""/>
+					<Text TextId="IDT_DATAITEM_57O" Value=""/>
+					<Text TextId="IDT_MODULE_58_NAME" Value="IEC  6 DWords I/O"/>
+					<Text TextId="IDT_MODULE_58_INFO" Value="IEC Variable / 24 Bytes"/>
+					<Text TextId="IDT_DATAITEM_58I" Value=""/>
+					<Text TextId="IDT_DATAITEM_58O" Value=""/>
+					<Text TextId="IDT_MODULE_59_NAME" Value="IEC  7 DWords I/O"/>
+					<Text TextId="IDT_MODULE_59_INFO" Value="IEC Variable / 28 Bytes"/>
+					<Text TextId="IDT_DATAITEM_59I" Value=""/>
+					<Text TextId="IDT_DATAITEM_59O" Value=""/>
+					<Text TextId="IDT_MODULE_60_NAME" Value="IEC  9 DWords I/O"/>
+					<Text TextId="IDT_MODULE_60_INFO" Value="IEC Variable / 36 Bytes"/>
+					<Text TextId="IDT_DATAITEM_60I" Value=""/>
+					<Text TextId="IDT_DATAITEM_60O" Value=""/>
+					<Text TextId="IDT_MODULE_61_NAME" Value="IEC 10 DWords I/O"/>
+					<Text TextId="IDT_MODULE_61_INFO" Value="IEC Variable / 40 Bytes"/>
+					<Text TextId="IDT_DATAITEM_61I" Value=""/>
+					<Text TextId="IDT_DATAITEM_61O" Value=""/>
+					<Text TextId="IDT_MODULE_62_NAME" Value="IEC 11 DWords I/O"/>
+					<Text TextId="IDT_MODULE_62_INFO" Value="IEC Variable / 44 Bytes"/>
+					<Text TextId="IDT_DATAITEM_62I" Value=""/>
+					<Text TextId="IDT_DATAITEM_62O" Value=""/>
+					<Text TextId="IDT_MODULE_63_NAME" Value="IEC 13 DWords I/O"/>
+					<Text TextId="IDT_MODULE_63_INFO" Value="IEC Variable / 52 Bytes"/>
+					<Text TextId="IDT_DATAITEM_63I" Value=""/>
+					<Text TextId="IDT_DATAITEM_63O" Value=""/>
+					<Text TextId="IDT_MODULE_64_NAME" Value="IEC 14 DWords I/O"/>
+					<Text TextId="IDT_MODULE_64_INFO" Value="IEC Variable / 56 Bytes"/>
+					<Text TextId="IDT_DATAITEM_64I" Value=""/>
+					<Text TextId="IDT_DATAITEM_64O" Value=""/>
+					<Text TextId="IDT_MODULE_65_NAME" Value="IEC 15 DWords I/O"/>
+					<Text TextId="IDT_MODULE_65_INFO" Value="IEC Variable / 60 Bytes"/>
+					<Text TextId="IDT_DATAITEM_65I" Value=""/>
+					<Text TextId="IDT_DATAITEM_65O" Value=""/>
+					<Text TextId="IDT_MODULE84_NAME" Value="Safety 4 DWords"/>
+					<Text TextId="IDT_MODULE84_INFO" Value="Safety Data Module / 12 Bytes + CRC"/>
+					<Text TextId="IDT_DATAITEM_Safety" Value="Safety"/>
+					<Text TextId="safety_U16_output1" Value="Out_00"/>
+					<Text TextId="safety_U16_output2" Value="Out_01"/>
+					<Text TextId="safety_U16_output3" Value="Out_02"/>
+					<Text TextId="safety_U16_output4" Value="Out_03"/>
+					<Text TextId="safety_U16_output5" Value="Out_04"/>
+					<Text TextId="safety_U16_output6" Value="Out_05"/>
+					<Text TextId="safety_U16_input1" Value="In_00"/>
+					<Text TextId="safety_U16_input2" Value="In_01"/>
+					<Text TextId="safety_U16_input3" Value="In_02"/>
+					<Text TextId="safety_U16_input4" Value="In_03"/>
+					<Text TextId="safety_U16_input5" Value="In_04"/>
+					<Text TextId="safety_U16_input6" Value="In_05"/>
+					<Text TextId="IDT_DataItem_PS_Trailer" Value="Safety_Trailer"/>
+					<Text TextId="IDT_DataItem_PS_Digital_Output0" Value="DOut_00"/>
+					<Text TextId="IDT_DataItem_PS_Digital_Output0_Bit00" Value="STO"/>
+					<Text TextId="IDT_DataItem_PS_Digital_Output0_Bit01" Value="SS1"/>
+					<Text TextId="IDT_DataItem_PS_Digital_Output0_Bit02" Value="SS2"/>
+					<Text TextId="IDT_DataItem_PS_Digital_Output0_Bit03" Value="SLS1"/>
+					<Text TextId="IDT_DataItem_PS_Digital_Output0_Bit04" Value="SLS2"/>
+					<Text TextId="IDT_DataItem_PS_Digital_Output0_Bit05" Value="SLS3"/>
+					<Text TextId="IDT_DataItem_PS_Digital_Output0_Bit06" Value="SLS4"/>
+					<Text TextId="IDT_DataItem_PS_Digital_Output0_Bit07" Value="SDIpos"/>
+					<Text TextId="IDT_DataItem_PS_Digital_Output0_Bit08" Value="SDIneg"/>
+					<Text TextId="IDT_DataItem_PS_Digital_Output0_Bit09" Value="ES"/>
+					<Text TextId="IDT_DataItem_PS_Digital_Output0_Bit10" Value="SLI"/>
+					<Text TextId="IDT_DataItem_PS_Digital_Output0_Bit11" Value="OMS"/>
+					<Text TextId="IDT_DataItem_PS_Digital_Output0_Bit12" Value="SLP1"/>
+					<Text TextId="IDT_DataItem_PS_Digital_Output0_Bit13" Value="SLP2"/>
+					<Text TextId="IDT_DataItem_PS_Digital_Output0_Bit14" Value="SLP3"/>
+					<Text TextId="IDT_DataItem_PS_Digital_Output0_Bit15" Value="SLP4"/>
+					<Text TextId="IDT_DataItem_PS_Digital_Output1" Value="DOut_01"/>
+					<Text TextId="IDT_DataItem_PS_Digital_Output1_Bit00" Value="AIS"/>
+					<Text TextId="IDT_DataItem_PS_Digital_Output1_Bit01" Value="AIE"/>
+					<Text TextId="IDT_DataItem_PS_Digital_Output1_Bit02" Value="SOS"/>
+					<Text TextId="IDT_DataItem_PS_Digital_Output1_Bit03" Value="RMS"/>
+					<Text TextId="IDT_DataItem_PS_Digital_Output1_Bit04" Value="SHom_start"/>
+					<Text TextId="IDT_DataItem_PS_Digital_Output1_Bit05" Value="SHom_load"/>
+					<Text TextId="IDT_DataItem_PS_Digital_Output1_Bit06" Value="PDSS"/>
+					<Text TextId="IDT_DataItem_PS_Digital_Output1_Bit07" Value="SSE"/>
+					<Text TextId="IDT_DataItem_PS_Digital_Output1_Bit08" Value="SD_Out1"/>
+					<Text TextId="IDT_DataItem_PS_Digital_Output1_Bit09" Value="SBC"/>
+					<Text TextId="IDT_DataItem_PS_Digital_Output1_Bit10" Value="DOut_01_Bit_10"/>
+					<Text TextId="IDT_DataItem_PS_Digital_Output1_Bit11" Value="DOut_01_Bit_11"/>
+					<Text TextId="IDT_DataItem_PS_Digital_Output1_Bit12" Value="DOut_01_Bit_12"/>
+					<Text TextId="IDT_DataItem_PS_Digital_Output1_Bit13" Value="DOut_01_Bit_13"/>
+					<Text TextId="IDT_DataItem_PS_Digital_Output1_Bit14" Value="DOut_01_Bit_14"/>
+					<Text TextId="IDT_DataItem_PS_Digital_Output1_Bit15" Value="DOut_01_Bit_15"/>
+					<Text TextId="IDT_DataItem_PS_Output2" Value="Out_02"/>
+					<Text TextId="IDT_DataItem_PS_Output3" Value="Out_03"/>
+					<Text TextId="IDT_DataItem_PS_Output4" Value="Out_04"/>
+					<Text TextId="IDT_DataItem_PS_Output5" Value="Out_05"/>
+					<Text TextId="IDT_DataItem_PS_Digital_Input0" Value="DIn_00"/>
+					<Text TextId="IDT_DataItem_PS_Digital_Input0_Bit00" Value="STO_active"/>
+					<Text TextId="IDT_DataItem_PS_Digital_Input0_Bit01" Value="SS1_active"/>
+					<Text TextId="IDT_DataItem_PS_Digital_Input0_Bit02" Value="SS2_active"/>
+					<Text TextId="IDT_DataItem_PS_Digital_Input0_Bit03" Value="SLS1_active"/>
+					<Text TextId="IDT_DataItem_PS_Digital_Input0_Bit04" Value="SLS2_active"/>
+					<Text TextId="IDT_DataItem_PS_Digital_Input0_Bit05" Value="SLS3_active"/>
+					<Text TextId="IDT_DataItem_PS_Digital_Input0_Bit06" Value="SLS4_active"/>
+					<Text TextId="IDT_DataItem_PS_Digital_Input0_Bit07" Value="SDIpos_active"/>
+					<Text TextId="IDT_DataItem_PS_Digital_Input0_Bit08" Value="SDIneg_active"/>
+					<Text TextId="IDT_DataItem_PS_Digital_Input0_Bit09" Value="ES_active"/>
+					<Text TextId="IDT_DataItem_PS_Digital_Input0_Bit10" Value="SLI_active"/>
+					<Text TextId="IDT_DataItem_PS_Digital_Input0_Bit11" Value="SOS_active"/>
+					<Text TextId="IDT_DataItem_PS_Digital_Input0_Bit12" Value="SLP1_observed"/>
+					<Text TextId="IDT_DataItem_PS_Digital_Input0_Bit13" Value="SLP2_observed"/>
+					<Text TextId="IDT_DataItem_PS_Digital_Input0_Bit14" Value="SLP3_observed"/>
+					<Text TextId="IDT_DataItem_PS_Digital_Input0_Bit15" Value="SLP4_observed"/>
+					<Text TextId="IDT_DataItem_PS_Digital_Input1" Value="DIn_01"/>
+					<Text TextId="IDT_DataItem_PS_Digital_Input1_Bit00" Value="SOS_observed"/>
+					<Text TextId="IDT_DataItem_PS_Digital_Input1_Bit01" Value="SLS1_observed"/>
+					<Text TextId="IDT_DataItem_PS_Digital_Input1_Bit02" Value="SLS2_observed"/>
+					<Text TextId="IDT_DataItem_PS_Digital_Input1_Bit03" Value="SLS3_observed"/>
+					<Text TextId="IDT_DataItem_PS_Digital_Input1_Bit04" Value="SLS4_observed"/>
+					<Text TextId="IDT_DataItem_PS_Digital_Input1_Bit05" Value="SDIpos_observed"/>
+					<Text TextId="IDT_DataItem_PS_Digital_Input1_Bit06" Value="SDIneg_observed"/>
+					<Text TextId="IDT_DataItem_PS_Digital_Input1_Bit07" Value="SSE_active"/>
+					<Text TextId="IDT_DataItem_PS_Digital_Input1_Bit08" Value="SD-In1"/>
+					<Text TextId="IDT_DataItem_PS_Digital_Input1_Bit09" Value="SD-In2"/>
+					<Text TextId="IDT_DataItem_PS_Digital_Input1_Bit10" Value="SD-In3"/>
+					<Text TextId="IDT_DataItem_PS_Digital_Input1_Bit11" Value="SD-In4"/>
+					<Text TextId="IDT_DataItem_PS_Digital_Input1_Bit12" Value="RMS_active"/>
+					<Text TextId="IDT_DataItem_PS_Digital_Input1_Bit13" Value="OMS_active"/>
+					<Text TextId="IDT_DataItem_PS_Digital_Input1_Bit14" Value="SMS_observed"/>
+					<Text TextId="IDT_DataItem_PS_Digital_Input1_Bit15" Value="Error_active"/>
+					<Text TextId="IDT_DataItem_PS_Digital_Input2" Value="DIn_02"/>
+					<Text TextId="IDT_DataItem_PS_Digital_Input2_Bit00" Value="SHom_active"/>
+					<Text TextId="IDT_DataItem_PS_Digital_Input2_Bit01" Value="SHom_available"/>
+					<Text TextId="IDT_DataItem_PS_Digital_Input2_Bit02" Value="PDSSpos_observed"/>
+					<Text TextId="IDT_DataItem_PS_Digital_Input2_Bit03" Value="PDSSneg_observed"/>
+					<Text TextId="IDT_DataItem_PS_Digital_Input2_Bit04" Value="SCA1_within_limits"/>
+					<Text TextId="IDT_DataItem_PS_Digital_Input2_Bit05" Value="SCA2_within_limits"/>
+					<Text TextId="IDT_DataItem_PS_Digital_Input2_Bit06" Value="SCA3_within_limits"/>
+					<Text TextId="IDT_DataItem_PS_Digital_Input2_Bit07" Value="SCA4_within_limits"/>
+					<Text TextId="IDT_DataItem_PS_Digital_Input2_Bit08" Value="SSM_within_limits"/>
+					<Text TextId="IDT_DataItem_PS_Digital_Input2_Bit09" Value="Safe_speed_ok"/>
+					<Text TextId="IDT_DataItem_PS_Digital_Input2_Bit10" Value="n=0"/>
+					<Text TextId="IDT_DataItem_PS_Digital_Input2_Bit11" Value="Positive_direction"/>
+					<Text TextId="IDT_DataItem_PS_Digital_Input2_Bit12" Value="SD-Out1"/>
+					<Text TextId="IDT_DataItem_PS_Digital_Input2_Bit13" Value="SBC_active"/>
+					<Text TextId="IDT_DataItem_PS_Digital_Input2_Bit14" Value="SBC_activated"/>
+					<Text TextId="IDT_DataItem_PS_Digital_Input2_Bit15" Value="DIn_02_Bit_15"/>
+					<Text TextId="IDT_DataItem_PS_Analog_Input0" Value="Safe_speed"/>
+					<Text TextId="IDT_DataItem_PS_Analog_Input1" Value="Safe_position_w1"/>
+					<Text TextId="IDT_DataItem_PS_Analog_Input2" Value="Safe_position_w0"/>
+					<Text TextId="IDT_DataItem_PS_Digital_Reserved" Value="reserved"/>
+					<Text TextId="IDT_DataItem_PS_Analog_Reserved" Value="reserved"/>
+				</PrimaryLanguage>
+				<Language xml:lang="de">
+					<!-- Diagnosetexte PN -->
+					<Text TextId="SEV_NO_RESP_0" Value="Keine Reaktion"/>
+					<Text TextId="SEV_FAULT_CIA402_1" Value="Fehler CIA402:"/>
+					<Text TextId="SEV_WARNING_2" Value="Warnung"/>
+					<Text TextId="SEV_INFO_11" Value="Information"/>
+					<Text TextId="SEV_WARN_LOCKED_13" Value="Arretierte Warnung"/>
+					<Text TextId="SEV_TROUBLE_CINH_16" Value="Störung CINH"/>
+					<Text TextId="SEV_FAULT_FSP_19" Value="Fehler Fast Stop"/>
+					<Text TextId="SEV_FAULT_QSP_20" Value="Fehler QSP"/>
+					<Text TextId="SEV_FAULT_CINH_21" Value="Fehler CINH"/>
+					<Text TextId="SEV_FATAL_ERROR_23" Value="Fehler"/>
+					<Text TextId="PN_DIAG_NAME" Value="Diagnose:"/>
+					<Text TextId="PN_NO_ERR_0" Value="0 (No Error)"/>
+					<Text TextId="PN_ERROR_ID" Value="Error ID: "/>
+					<Text TextId="PN_SEVERITY_ID" Value="Schweregrad ID: "/>
+					<Text TextId="PN_2320" Value="CiA: Kurzschluss/Erdschluss (intern)"/>
+					<Text TextId="PN_2340" Value="CiA: Kurzschluss (geräteintern)"/>
+					<Text TextId="PN_2350" Value="CiA: i²*t-Überlast (thermischer Zustand)"/>
+					<Text TextId="PN_2351" Value="Motor thermisch überlastet"/>
+					<Text TextId="PN_2380" Value="Motor thermisch überlastet"/>
+					<Text TextId="PN_2381" Value="Motor thermisch überlastet"/>
+					<Text TextId="PN_2382" Value="I*t-Fehler"/>
+					<Text TextId="PN_2383" Value="I*t-Warnung"/>
+					<Text TextId="PN_2384" Value="Ultimativen Motorstrom überschritten."/>
+					<Text TextId="PN_2385" Value="Maximalstrom höher als Gerätemaximalstrom"/>
+					<Text TextId="PN_2386" Value="Imax: Clamp erreicht"/>
+					<Text TextId="PN_2387" Value="Imax: Clamp zu lange aktiv"/>
+					<Text TextId="PN_2388" Value="SLPSM-Kippschutz aktiv"/>
+					<Text TextId="PN_2389" Value="SLPSM-Kippschutz aktiv"/>
+					<Text TextId="PN_3120" Value="Phasenausfall Einspeisung"/>
+					<Text TextId="PN_3180" Value="Betrieb an USV aktiv"/>
+					<Text TextId="PN_3210" Value="Überspannung Zwischenkreis"/>
+					<Text TextId="PN_3211" Value="Warnung Überspannung Zwischenkreis"/>
+					<Text TextId="PN_3220" Value="Unterspannung Zwischenkreis"/>
+					<Text TextId="PN_3221" Value="Warnung Unterspannung Zwischenkreis"/>
+					<Text TextId="PN_3222" Value="DC-Zwischenkreisspannung zu niedrig für Einschalten"/>
+					<Text TextId="PN_4210" Value="PU: Übertemperaturfehler"/>
+					<Text TextId="PN_4280" Value="Fehler Kühlkörper-Temperatursensor"/>
+					<Text TextId="PN_4281" Value="Warnung Kühlkörperlüfter"/>
+					<Text TextId="PN_4282" Value="Steuerkarte thermisch überlastet"/>
+					<Text TextId="PN_4285" Value="Warnung Übertemperatur Leistungsteil"/>
+					<Text TextId="PN_4310" Value="Motorübertemperatur-Fehler"/>
+					<Text TextId="PN_4380" Value="Motortemperatursensor Fehler"/>
+					<Text TextId="PN_4381" Value="Motorübertemperatur PTC-Fehler"/>
+					<Text TextId="PN_5112" Value="24-V-Versorgung kritisch"/>
+					<Text TextId="PN_5180" Value="Überlast 24-V-Versorgung"/>
+					<Text TextId="PN_5380" Value="Inkompatible OEM-Hardware"/>
+					<Text TextId="PN_6010" Value="Interner Fehler"/>
+					<Text TextId="PN_6181" Value="Interner Fehler"/>
+					<Text TextId="PN_6182" Value="Interner Fehler"/>
+					<Text TextId="PN_6183" Value="Interner Fehler"/>
+					<Text TextId="PN_6184" Value="Interner Fehler"/>
+					<Text TextId="PN_6188" Value="Interner Fehler"/>
+					<Text TextId="PN_6189" Value="Interner Fehler"/>
+					<Text TextId="PN_618A" Value="Warnung interner Lüfter"/>
+					<Text TextId="PN_6190" Value="Interner Fehler"/>
+					<Text TextId="PN_6191" Value="Interner Fehler"/>
+					<Text TextId="PN_6192" Value="Interner Fehler"/>
+					<Text TextId="PN_6193" Value="Interner Fehler"/>
+					<Text TextId="PN_6194" Value="Interner Fehler"/>
+					<Text TextId="PN_6195" Value="Interner Fehler"/>
+					<Text TextId="PN_6196" Value="Interner Fehler"/>
+					<Text TextId="PN_61B0" Value="Interner Fehler"/>
+					<Text TextId="PN_61B1" Value="Interner Fehler"/>
+					<Text TextId="PN_6280" Value="Trigger/Funktionen falsch verbunden"/>
+					<Text TextId="PN_6281" Value="Benutzerdefinierter Fehler 1"/>
+					<Text TextId="PN_6282" Value="Benutzerdefinierter Fehler 2"/>
+					<Text TextId="PN_6290" Value="Warnung Drehrichtungsumkehr"/>
+					<Text TextId="PN_6291" Value="Maximal erlaubte Störungen überschritten"/>
+					<Text TextId="PN_62A0" Value="AC-Drive: Benutzer-Fehler"/>
+					<Text TextId="PN_62A1" Value="Netzwerk: Benutzer-Fehler 1"/>
+					<Text TextId="PN_62A2" Value="Netzwerk: Benutzer-Fehler 2"/>
+					<Text TextId="PN_62B1" Value="Konfiguration NetWordIN1 fehlerhaft"/>
+					<Text TextId="PN_6310" Value="Parameterverlust"/>
+					<Text TextId="PN_6320" Value="Unbekannter Index im Parametersatz"/>
+					<Text TextId="PN_6391" Value="Motorübertemperatur PTC-Fehler"/>
+					<Text TextId="PN_63A0" Value="Interner Fehler"/>
+					<Text TextId="PN_63A1" Value="CU: Laden von ID-Tag fehlgeschlagen"/>
+					<Text TextId="PN_63A2" Value="PU: Laden von ID-Tag fehlgeschlagen"/>
+					<Text TextId="PN_63A3" Value="Leistungsteil unbekannt"/>
+					<Text TextId="PN_63A4" Value="Interner Fehler"/>
+					<Text TextId="PN_7080" Value="Überwachung Anschlusslevel (Low/High)"/>
+					<Text TextId="PN_7081" Value="Fehler Analogeingang 1"/>
+					<Text TextId="PN_7082" Value="Fehler Analogeingang 2"/>
+					<Text TextId="PN_7083" Value="Fehler HTL-Eingang"/>
+					<Text TextId="PN_70A1" Value="Fehler Analogausgang 1"/>
+					<Text TextId="PN_70A2" Value="Fehler Analogausgang 2"/>
+					<Text TextId="PN_7121" Value="Fehler Pollageidentifikation"/>
+					<Text TextId="PN_7180" Value="Motorüberstrom"/>
+					<Text TextId="PN_7303" Value="Rückführsystemfehler im Slot A"/>
+					<Text TextId="PN_7304" Value="Rückführsystemfehler im Slot B"/>
+					<Text TextId="PN_7305" Value="Drahtbruch Encoder"/>
+					<Text TextId="PN_7380" Value="Hiperface Kommunikationsfehler Slot A"/>
+					<Text TextId="PN_7381" Value="Hiperface absoluter Wert ungültig"/>
+					<Text TextId="PN_7382" Value="Hiperface Kommunikationsfehler Slot A"/>
+					<Text TextId="PN_7383" Value="Hiperface absoluter Wert ungültig"/>
+					<Text TextId="PN_7385" Value="Rückführsystem: Drehzahlbegrenzung"/>
+					<Text TextId="PN_7580" Value="Interner Fehler"/>
+					<Text TextId="PN_7581" Value="Interner Fehler"/>
+					<Text TextId="PN_7680" Value="Speichermodul ist voll"/>
+					<Text TextId="PN_7681" Value="Speichermodul nicht vorhanden"/>
+					<Text TextId="PN_7682" Value="Speichermodul: Ungültige Anwenderdaten"/>
+					<Text TextId="PN_7684" Value="Daten vor Abschaltung nicht vollständig gespeichert"/>
+					<Text TextId="PN_7686" Value="Netzwerk: Konfigurationsfehler"/>
+					<Text TextId="PN_7687" Value="Interner Fehler"/>
+					<Text TextId="PN_7689" Value="Speichermodul: Ungültige OEM-Daten"/>
+					<Text TextId="PN_768A" Value="Speichermodul: Falscher Typ"/>
+					<Text TextId="PN_7690" Value="EPM-Firmwareversion inkompatibel"/>
+					<Text TextId="PN_7691" Value="EPM-Daten: Firmwaretyp inkompatibel"/>
+					<Text TextId="PN_7692" Value="EPM-Daten: Neuer Firmwaretyp erkannt"/>
+					<Text TextId="PN_7693" Value="EPM-Daten: PU-Größe inkompatibel"/>
+					<Text TextId="PN_7694" Value="EPM-Daten: Neue PU-Größe erkannt"/>
+					<Text TextId="PN_7695" Value="Ungültige Konfiguration Parameterumschaltung"/>
+					<Text TextId="PN_7696" Value="EPM-Daten: Unbekannter Parameter gefunden"/>
+					<Text TextId="PN_7697" Value="Geänderte Parameter verloren"/>
+					<Text TextId="PN_8112" Value="Netzwerk: Explizite Meldung Timeout"/>
+					<Text TextId="PN_8114" Value="Netzwerk: Kommunikations-Timeout insgesamt"/>
+					<Text TextId="PN_8115" Value="Zeitüberschreitung (PZÜ)"/>
+					<Text TextId="PN_8116" Value="Modbus TCP-Master Timeout"/>
+					<Text TextId="PN_8117" Value="Modbus TCP-Keep Alive Timeout"/>
+					<Text TextId="PN_8180" Value="DC syncronization notwendig"/>
+					<Text TextId="PN_8181" Value="EtherCAT Kommunikaton"/>
+					<Text TextId="PN_8182" Value="CAN: Bus aus"/>
+					<Text TextId="PN_8183" Value="CAN: Warnung"/>
+					<Text TextId="PN_8184" Value="CAN: Heartbeat-Timeout Consumer 1"/>
+					<Text TextId="PN_8185" Value="CAN: Heartbeat-Timeout Consumer 2"/>
+					<Text TextId="PN_8186" Value="CAN: Heartbeat-Timeout Consumer 3"/>
+					<Text TextId="PN_8187" Value="CAN: Heartbeat-Timeout Consumer 4"/>
+					<Text TextId="PN_8190" Value="Netzwerk: Watchdog-Timeout"/>
+					<Text TextId="PN_8191" Value="Netzwerk: Zyklischer Datenaustausch unterbrochen"/>
+					<Text TextId="PN_8192" Value="Netzwerk: Initialisierungsfehler"/>
+					<Text TextId="PN_8193" Value="Netzwerk: Ungültige zyklische Prozessdaten"/>
+					<Text TextId="PN_8194" Value="PROFINET: PROFIenergy Pause aktiv"/>
+					<Text TextId="PN_819A" Value="PROFINET: Kommunikatonsfehler zur Sicherheitsoption "/>
+					<Text TextId="PN_819B" Value="PROFINET: Initialisierungsfehler zur Sicherheitsoption"/>
+					<Text TextId="PN_81A0" Value="Interner Fehler"/>
+					<Text TextId="PN_81A1" Value="Modbus: Netzwerk-Timeout"/>
+					<Text TextId="PN_81A2" Value="Modbus: Falsche Anforderung vom Master"/>
+					<Text TextId="PN_81B0" Value="iCIF-Verbindung verloren"/>
+					<Text TextId="PN_8280" Value="Sync manager Addresse"/>
+					<Text TextId="PN_8281" Value="Sync manager Größe"/>
+					<Text TextId="PN_8282" Value="Sync manager Einstellungen"/>
+					<Text TextId="PN_8283" Value="Unbekanntes Objekt im PDO mapping "/>
+					<Text TextId="PN_8284" Value="Index ist kein PDO Mapping Objekt"/>
+					<Text TextId="PN_8285" Value="Anzahl der mapbaren Objekte überschritten"/>
+					<Text TextId="PN_8286" Value="Netzwerk: PDO-Mappingfehler"/>
+					<Text TextId="PN_8291" Value="CAN: Timeout RPDO1"/>
+					<Text TextId="PN_8292" Value="CAN: Timeout RPDO2"/>
+					<Text TextId="PN_8293" Value="CAN: Timeout RPDO3"/>
+					<Text TextId="PN_8311" Value="Drehmomentgrenze erreicht"/>
+					<Text TextId="PN_8700" Value="Sync controller"/>
+					<Text TextId="PN_8701" Value="Sync PLL Timeout"/>
+					<Text TextId="PN_FF00" Value="Fataler interner Fehler"/>
+					<Text TextId="PN_FF01" Value="Fataler interner Kommunikationsfehler"/>
+					<Text TextId="PN_FF02" Value="Bremswiderstand: Überlastfehler"/>
+					<Text TextId="PN_FF03" Value="Fataler interner Fehler Tasküberlauf"/>
+					<Text TextId="PN_FF04" Value="Motorfehler"/>
+					<Text TextId="PN_FF05" Value="Fehler Safe Torque Off"/>
+					<Text TextId="PN_FF06" Value="Motorüberdrehzahl"/>
+					<Text TextId="PN_FF07" Value="Parameteränderung nicht erlaubt"/>
+					<Text TextId="PN_FF09" Value="Motorphase fehlt"/>
+					<Text TextId="PN_FF0A" Value="Motorphasenausfall Phase U"/>
+					<Text TextId="PN_FF0B" Value="Motorphasenausfall Phase V"/>
+					<Text TextId="PN_FF0C" Value="Motorphasenausfall Phase W"/>
+					<Text TextId="PN_FF0D" Value="Fehler kein Resolver aktiv"/>
+					<Text TextId="PN_FF0E" Value="drehzahl zu gerin"/>
+					<Text TextId="PN_FF0F" Value="Falsche Rückführsystem"/>
+					<Text TextId="PN_FF10" Value="Time out"/>
+					<Text TextId="PN_FF11" Value="Numerisches Problem"/>
+					<Text TextId="PN_FF12" Value="Umrichterfehler zu hoch"/>
+					<Text TextId="PN_FF13" Value="Identifikation unterbrochen"/>
+					<Text TextId="PN_FF14" Value="Nicht in diesem Zustand erlaubt"/>
+					<Text TextId="PN_FF15" Value="Kommandoausführung nicht möglich"/>
+					<Text TextId="PN_FF16" Value="Hiperface nicht unterstützt in slot A"/>
+					<Text TextId="PN_FF17" Value="Kommandoausführung nicht möglich"/>
+					<Text TextId="PN_FF18" Value="Kommunikationstimeout"/>
+					<Text TextId="PN_FF19" Value="Motorparameter-Identifizierungsfehler"/>
+					<Text TextId="PN_FF1A" Value="Hiperface nicht unterstützt in slot B"/>
+					<Text TextId="PN_FF1B" Value="Kommandoausführung nicht möglich"/>
+					<Text TextId="PN_FF1C" Value="Kommandoausführung nicht möglich"/>
+					<Text TextId="PN_FF1D" Value="Kommandoausführung nicht möglich"/>
+					<Text TextId="PN_FF1E" Value="FIQ runtime Fehler"/>
+					<Text TextId="PN_FF20" Value="Überprüfung Replacement Protection gescheitert.  "/>
+					<Text TextId="PN_FF21" Value="Vorsteuermoment konnte nicht aufgebaut werden"/>
+					<Text TextId="PN_FF22" Value="Drehzahlfehler"/>
+					<Text TextId="PN_FF23" Value="Positionsfehler"/>
+					<Text TextId="PN_FF24" Value="Sync0 Zykluszeit ungültig"/>
+					<Text TextId="PN_FF30" Value="Interner Fehler"/>
+					<Text TextId="PN_FF31" Value="Interner Fehler"/>
+					<Text TextId="PN_FF32" Value="Interner Fehler"/>
+					<Text TextId="PN_FF33" Value="Interner Fehler"/>
+					<Text TextId="PN_FF34" Value="Interner Fehler"/>
+					<Text TextId="PN_FF35" Value="Interner Fehler"/>
+					<Text TextId="PN_FF36" Value="Bremswiderstand: Überlastwarnung "/>
+					<Text TextId="PN_FF37" Value="Automatischer Start gesperrt"/>
+					<Text TextId="PN_FF40" Value="Kurzschlussüberwachung Bremstransistor.aktiv"/>
+					<Text TextId="PN_FF41" Value="Fehler Laderelais"/>
+					<Text TextId="PN_FF42" Value="Fehler Netzphasen"/>
+					<Text TextId="PN_FF56" Value="Maximale Motorfrequenz erreicht"/>
+					<Text TextId="PN_FF85" Value="Komplettsteuerung über Keypad aktiv"/>
+					<Text TextId="SM_Err_24960" Value="Interner Fehler, STO ausgelöst"/>
+					<Text TextId="SM_Err_24965" Value="Kommunikationsfehler Grundgerät"/>
+					<Text TextId="SM_Err_24966" Value="Synchronisierungsfehler Grundgerät"/>
+					<Text TextId="SM_Err_33160" Value="PROFIsafe Kommunikationsfehler"/>
+					<Text TextId="SM_Err_33161" Value="F_WD_Time überschritten"/>
+					<Text TextId="SM_Err_33162" Value="PROFIsafe passiviert"/>
+					<Text TextId="SM_Err_33163" Value="PROFIsafe hat Data Exchange verlassen"/>
+					<Text TextId="SM_Err_33164" Value="PROFIsafe ungültige Daten"/>
+					<Text TextId="SM_Err_33165" Value="Fehler F-Parameter"/>
+					<Text TextId="SM_Err_36992" Value="Fehler Diskrepanz- oder Funktionstest SD-In1"/>
+					<Text TextId="SM_Err_36993" Value="Fehler Diskrepanz- oder Funktionstest SD-In2"/>
+					<Text TextId="SM_Err_36994" Value="Fehler Diskrepanz- oder Funktionstest SD-In3"/>
+					<Text TextId="SM_Err_36995" Value="Fehler Diskrepanz- oder Funktionstest SD-In4"/>
+					<Text TextId="SM_Err_20608" Value="Interner Fehler AIS"/>
+					<Text TextId="SM_Err_20609" Value="Interner Fehler AIE"/>
+					<Text TextId="SM_Err_20610" Value="Interner Fehler Modultaster"/>
+					<Text TextId="SM_Err_20611" Value="Interer Fehler - IRS"/>
+					<Text TextId="SM_Err_20612" Value="Interer Fehler - IRL"/>
+					<Text TextId="SM_Err_36996" Value="Deaktivierter SD-In1 = high"/>
+					<Text TextId="SM_Err_36997" Value="Deaktivierter SD-In2 = high"/>
+					<Text TextId="SM_Err_36998" Value="Deaktivierter SD-In3 = high"/>
+					<Text TextId="SM_Err_36999" Value="Deaktivierter SD-In4 = high"/>
+					<Text TextId="SM_Err_64" Value="F_Dest_Add ungleich F-Adresse"/>
+					<Text TextId="SM_Err_65" Value="F_Dest_Add = 0 oder FFFFhex"/>
+					<Text TextId="SM_Err_66" Value="F_Source_Add = 0 oder FFFFhex"/>
+					<Text TextId="SM_Err_67" Value="F_WD_Time ist 0msec"/>
+					<Text TextId="SM_Err_68" Value="F_SIL übersteigt technischen SIL"/>
+					<Text TextId="SM_Err_69" Value="F_CRC_Length Fehler"/>
+					<Text TextId="SM_Err_70" Value="F-Parameter-Version inkorrekt"/>
+					<Text TextId="SM_Err_71" Value="PROFIsafe CRC1-Fehler"/>
+					<Text TextId="SM_Err_72" Value="PROFIsafe gerätespez. Fehler"/>
+					<Text TextId="SM_Err_73" Value="PROFIsafe iPar speichern WD Timeout"/>
+					<Text TextId="SM_Err_74" Value="PROFIsafe iPar wiederherstellen WD Timeout"/>
+					<Text TextId="SM_Err_75" Value="PROFIsafe iParCRC-Fehler"/>
+					<Text TextId="SM_Err_76" Value="F_Block_ID nicht unterstützt"/>
+					<Text TextId="SM_Err_77" Value="PROFIsafe CRC2-Fehler"/>
+					<Text TextId="SM_Err_78" Value="F_WD_Time oder F_WD_Time_2 Timeout"/>
+					<Text TextId="SM_Err_79" Value="Reserviert (PROFIsafe-Standard)"/>
+					<Text TextId="SM_Err_20619" Value="Fehler SD-Inx / CLx"/>
+					<Text TextId="SM_Err_20620" Value="Fehler interner Abschaltpfad"/>
+					<Text TextId="SM_Err_20621" Value="Testpulsfehler interner Abschaltpfad"/>
+					<Text TextId="SM_Err_65416" Value="SS1/SS2: Stoppzeit überschritten"/>
+					<Text TextId="SM_Err_65417" Value="SLS1: Nlim1 überschritten"/>
+					<Text TextId="SM_Err_65418" Value="SLS2: Nlim2 überschritten"/>
+					<Text TextId="SM_Err_65419" Value="SLS3: Nlim3 überschritten"/>
+					<Text TextId="SM_Err_65420" Value="SLS4: Nlim4 überschritten"/>
+					<Text TextId="SM_Err_65421" Value="SLS/SMS: Fehlerstopp nicht ausgeführt"/>
+					<Text TextId="SM_Err_65422" Value="SDIpos: Falsche Bewegungsrichtung"/>
+					<Text TextId="SM_Err_65423" Value="SDIneg: Falsche Bewegungsrichtung"/>
+					<Text TextId="SM_Err_65424" Value="SMS: Nmax überschritten"/>
+					<Text TextId="SM_Err_65425" Value="SOS: Toleranzgrenze überschritten"/>
+					<Text TextId="SM_Err_65426" Value="Kein Gebersystem parametriert"/>
+					<Text TextId="SM_Err_65427" Value="CAS: Umlaufzeit überschritten"/>
+					<Text TextId="SM_Err_65428" Value="CAS: Hardware- oder Diskrepanzfehler"/>
+					<Text TextId="SM_Err_65429" Value="SS1/SS2: Geschwindigkeitsrampe überschritten"/>
+					<Text TextId="SM_Err_65430" Value="SLI: Sicher begrenztes Schrittmaß überschritten"/>
+					<Text TextId="SM_Err_65431" Value="SLP1: Positionsbereich verlassen"/>
+					<Text TextId="SM_Err_65432" Value="SLP2: Positionsbereich verlassen"/>
+					<Text TextId="SM_Err_65433" Value="SLP3: Positionsbereich verlassen"/>
+					<Text TextId="SM_Err_65434" Value="SLP4: Positionsbereich verlassen"/>
+					<Text TextId="SM_Err_65435" Value="SLP: Keine gültige Referenz"/>
+					<Text TextId="SM_Err_65436" Value="PDSS: Keine gültige Referenz"/>
+					<Text TextId="SM_Err_65437" Value="PDSS: Geschwindigkeit überschritten"/>
+					<Text TextId="SM_Err_65438" Value="PDSS: Schleichgeschwindigkeit SCS überschritten"/>
+					<Text TextId="SM_Err_65439" Value="PDSS: Keine Diagnosemarke an erwarteter Position erkannt"/>
+					<Text TextId="SM_Err_65440" Value="PDSS: Diagnosemarke an ungültiger Position erkannt"/>
+					<Text TextId="SM_Err_37000" Value="Stuck at High SD-Out1, Kanal A"/>
+					<Text TextId="SM_Err_37001" Value="Stuck at Low SD-Out1, Kanal A"/>
+					<Text TextId="SM_Err_37002" Value="Stuck at High SD-Out1, Kanal B"/>
+					<Text TextId="SM_Err_37003" Value="Stuck at Low SD-Out1, Kanal B"/>
+					<Text TextId="SM_Err_37004" Value="Stuck at High an SD-In1, Kanal A"/>
+					<Text TextId="SM_Err_37005" Value="Stuck at High an SD-In1, Kanal B"/>
+					<Text TextId="SM_Err_37006" Value="Stuck at High an SD-In2, Kanal A"/>
+					<Text TextId="SM_Err_37007" Value="Stuck at High an SD-In2, Kanal B"/>
+					<Text TextId="SM_Err_37008" Value="Stuck at High an SD-In3, Kanal A"/>
+					<Text TextId="SM_Err_37009" Value="Stuck at High an SD-In3, Kanal B"/>
+					<Text TextId="SM_Err_37010" Value="Stuck at High an SD-In4, Kanal A"/>
+					<Text TextId="SM_Err_37011" Value="Stuck at High an SD-In4, Kanal B"/>
+					<Text TextId="SM_Err_37012" Value="Querschluss CLA/CLB"/>
+					<Text TextId="SM_Err_25481" Value="Neuer Parametersatz gelöscht"/>
+					<Text TextId="SM_Err_25482" Value="Neuer sicherer Parametersatz geladen"/>
+					<Text TextId="SM_Err_25483" Value="Speichermodul Parametersatz Zugriffsfehler"/>
+					<Text TextId="SM_Err_25484" Value="Verschiedene Parmetersätze"/>
+					<Text TextId="SM_Err_25485" Value="Kein sicherer Parametersatz Sicherheitsmodul"/>
+					<Text TextId="SM_Err_25486" Value="Defekter Parametersatz Sicherheitsmodul"/>
+					<Text TextId="SM_Err_25487" Value="Parametersatz Speichermodul Formatfehler"/>
+					<Text TextId="SM_Err_25488" Value="Parametersatz Plausibilitätsfehler"/>
+					<Text TextId="SM_Err_25489" Value="Parametersatz Kommunikationsfehler"/>
+					<Text TextId="SM_Err_25490" Value="Modul-ID ungleich effektive Safety-Adresse"/>
+					<Text TextId="SM_Err_20756" Value="Referenzspannungsfehler"/>
+					<Text TextId="SM_Err_20757" Value="6V Spannungsfehler"/>
+					<Text TextId="SM_Err_20758" Value="5V Spannungsfehler"/>
+					<Text TextId="SM_Err_20759" Value="3.3V Spannungsfehler"/>
+					<Text TextId="SM_Err_65451" Value="Sichere Drehzahl ungültig"/>
+					<Text TextId="SM_Err_65452" Value="SSM: Fehler Encoder"/>
+					<Text TextId="SM_Err_65453" Value="SSM: Fehler Resolver"/>
+					<Text TextId="SM_Err_65454" Value="SSM: Fehler Grundgerätedaten"/>
+					<Text TextId="SM_Err_65455" Value="SSM: Fehler Geschwindigkeitsvergleich"/>
+					<Text TextId="SM_Err_65456" Value="SSM: Fehler Synchronisierung"/>
+					<Text TextId="SM_Err_25491" Value="SSM: Falsche PDO-Version"/>
+					<!--  -->
+					<Text TextId="IDT_MODULE_0_NAME" Value="DAP"/>
+					<Text TextId="IDT_MODULE_0_INFO" Value="DAP"/>
+					<Text TextId="IDT_FAMILY_DESCRIPTION" Value="Lenze PROFINET Servo i950"/>
+					<!--Textstrings fuer DAP  -->
+					<Text TextId="IDT_DAP_NAME" Value="i950"/>
+					<Text TextId="IDT_DAP_INFO" Value="i950 PROFINET IO Interface"/>
+					<Text TextId="IDT_DAP_Interface" Value="X1"/>
+					<Text TextId="IDT_DAP_Port1" Value="P1"/>
+					<Text TextId="IDT_DAP_Port2" Value="P2"/>
+					<Text TextId="IDT_ETHERNETINTERFACE_Port1" Value="Port 1"/>
+					<Text TextId="IDT_ETHERNETINTERFACE_Port2" Value="Port 2"/>
+					<!--module categories-->
+					<Text TextId="GROUP IEC" Value="IEC"/>
+					<Text TextId="SAFE Module" Value="Funktionale Sicherheit"/>
+					<!--process modules-->
+					<!--Safety Module-->
+					<!--restliche Bezeichner-->
+					<Text TextId="IDT_MODULE_50_NAME" Value="IEC  1 DWord I/O"/>
+					<Text TextId="IDT_MODULE_50_INFO" Value="IEC Variable / 4 Bytes"/>
+					<Text TextId="IDT_DATAITEM_50I" Value=""/>
+					<Text TextId="IDT_DATAITEM_50O" Value=""/>
+					<Text TextId="IDT_MODULE_51_NAME" Value="IEC  2 DWords I/O"/>
+					<Text TextId="IDT_MODULE_51_INFO" Value="IEC Variable / 8 Bytes"/>
+					<Text TextId="IDT_DATAITEM_51I" Value=""/>
+					<Text TextId="IDT_DATAITEM_51O" Value=""/>
+					<Text TextId="IDT_MODULE_52_NAME" Value="IEC  4 DWords I/O"/>
+					<Text TextId="IDT_MODULE_52_INFO" Value="IEC Variable / 16 Bytes"/>
+					<Text TextId="IDT_DATAITEM_52I" Value=""/>
+					<Text TextId="IDT_DATAITEM_52O" Value=""/>
+					<Text TextId="IDT_MODULE_53_NAME" Value="IEC  8 DWords I/O"/>
+					<Text TextId="IDT_MODULE_53_INFO" Value="IEC Variable / 32 Bytes"/>
+					<Text TextId="IDT_DATAITEM_53I" Value=""/>
+					<Text TextId="IDT_DATAITEM_53O" Value=""/>
+					<Text TextId="IDT_MODULE_54_NAME" Value="IEC 12 DWords I/O"/>
+					<Text TextId="IDT_MODULE_54_INFO" Value="IEC Variable / 48 Bytes"/>
+					<Text TextId="IDT_DATAITEM_54I" Value=""/>
+					<Text TextId="IDT_DATAITEM_54O" Value=""/>
+					<Text TextId="IDT_MODULE_55_NAME" Value="IEC 16 DWords I/O"/>
+					<Text TextId="IDT_MODULE_55_INFO" Value="IEC Variable / 64 Bytes"/>
+					<Text TextId="IDT_DATAITEM_55I" Value=""/>
+					<Text TextId="IDT_DATAITEM_55O" Value=""/>
+					<Text TextId="IDT_MODULE_56_NAME" Value="IEC  3 DWords I/O"/>
+					<Text TextId="IDT_MODULE_56_INFO" Value="IEC Variable / 6 Bytes"/>
+					<Text TextId="IDT_DATAITEM_56I" Value=""/>
+					<Text TextId="IDT_DATAITEM_56O" Value=""/>
+					<Text TextId="IDT_MODULE_57_NAME" Value="IEC  5 DWords I/O"/>
+					<Text TextId="IDT_MODULE_57_INFO" Value="IEC Variable / 20 Bytes"/>
+					<Text TextId="IDT_DATAITEM_57I" Value=""/>
+					<Text TextId="IDT_DATAITEM_57O" Value=""/>
+					<Text TextId="IDT_MODULE_58_NAME" Value="IEC  6 DWords I/O"/>
+					<Text TextId="IDT_MODULE_58_INFO" Value="IEC Variable / 24 Bytes"/>
+					<Text TextId="IDT_DATAITEM_58I" Value=""/>
+					<Text TextId="IDT_DATAITEM_58O" Value=""/>
+					<Text TextId="IDT_MODULE_59_NAME" Value="IEC  7 DWords I/O"/>
+					<Text TextId="IDT_MODULE_59_INFO" Value="IEC Variable / 28 Bytes"/>
+					<Text TextId="IDT_DATAITEM_59I" Value=""/>
+					<Text TextId="IDT_DATAITEM_59O" Value=""/>
+					<Text TextId="IDT_MODULE_60_NAME" Value="IEC  9 DWords I/O"/>
+					<Text TextId="IDT_MODULE_60_INFO" Value="IEC Variable / 36 Bytes"/>
+					<Text TextId="IDT_DATAITEM_60I" Value=""/>
+					<Text TextId="IDT_DATAITEM_60O" Value=""/>
+					<Text TextId="IDT_MODULE_61_NAME" Value="IEC 10 DWords I/O"/>
+					<Text TextId="IDT_MODULE_61_INFO" Value="IEC Variable / 40 Bytes"/>
+					<Text TextId="IDT_DATAITEM_61I" Value=""/>
+					<Text TextId="IDT_DATAITEM_61O" Value=""/>
+					<Text TextId="IDT_MODULE_62_NAME" Value="IEC 11 DWords I/O"/>
+					<Text TextId="IDT_MODULE_62_INFO" Value="IEC Variable / 44 Bytes"/>
+					<Text TextId="IDT_DATAITEM_62I" Value=""/>
+					<Text TextId="IDT_DATAITEM_62O" Value=""/>
+					<Text TextId="IDT_MODULE_63_NAME" Value="IEC 13 DWords I/O"/>
+					<Text TextId="IDT_MODULE_63_INFO" Value="IEC Variable / 52 Bytes"/>
+					<Text TextId="IDT_DATAITEM_63I" Value=""/>
+					<Text TextId="IDT_DATAITEM_63O" Value=""/>
+					<Text TextId="IDT_MODULE_64_NAME" Value="IEC 14 DWords I/O"/>
+					<Text TextId="IDT_MODULE_64_INFO" Value="IEC Variable / 56 Bytes"/>
+					<Text TextId="IDT_DATAITEM_64I" Value=""/>
+					<Text TextId="IDT_DATAITEM_64O" Value=""/>
+					<Text TextId="IDT_MODULE_65_NAME" Value="IEC 15 DWords I/O"/>
+					<Text TextId="IDT_MODULE_65_INFO" Value="IEC Variable / 60 Bytes"/>
+					<Text TextId="IDT_DATAITEM_65I" Value=""/>
+					<Text TextId="IDT_DATAITEM_65O" Value=""/>
+					<Text TextId="IDT_MODULE84_NAME" Value="Sicherheitsmodul 4 DWords"/>
+					<Text TextId="IDT_MODULE84_INFO" Value="Sicherheitsmodul / 12 Bytes + CRC"/>
+					<Text TextId="IDT_DATAITEM_Safety" Value="Safety"/>
+					<Text TextId="safety_U16_output1" Value="Out_00"/>
+					<Text TextId="safety_U16_output2" Value="Out_01"/>
+					<Text TextId="safety_U16_output3" Value="Out_02"/>
+					<Text TextId="safety_U16_output4" Value="Out_03"/>
+					<Text TextId="safety_U16_output5" Value="Out_04"/>
+					<Text TextId="safety_U16_output6" Value="Out_05"/>
+					<Text TextId="safety_U16_input1" Value="In_00"/>
+					<Text TextId="safety_U16_input2" Value="In_01"/>
+					<Text TextId="safety_U16_input3" Value="In_02"/>
+					<Text TextId="safety_U16_input4" Value="In_03"/>
+					<Text TextId="safety_U16_input5" Value="In_04"/>
+					<Text TextId="safety_U16_input6" Value="In_05"/>
+					<Text TextId="IDT_DataItem_PS_Trailer" Value="Safety_Trailer"/>
+					<Text TextId="IDT_DataItem_PS_Digital_Output0" Value="DOut_00"/>
+					<Text TextId="IDT_DataItem_PS_Digital_Output0_Bit00" Value="STO"/>
+					<Text TextId="IDT_DataItem_PS_Digital_Output0_Bit01" Value="SS1"/>
+					<Text TextId="IDT_DataItem_PS_Digital_Output0_Bit02" Value="SS2"/>
+					<Text TextId="IDT_DataItem_PS_Digital_Output0_Bit03" Value="SLS1"/>
+					<Text TextId="IDT_DataItem_PS_Digital_Output0_Bit04" Value="SLS2"/>
+					<Text TextId="IDT_DataItem_PS_Digital_Output0_Bit05" Value="SLS3"/>
+					<Text TextId="IDT_DataItem_PS_Digital_Output0_Bit06" Value="SLS4"/>
+					<Text TextId="IDT_DataItem_PS_Digital_Output0_Bit07" Value="SDIpos"/>
+					<Text TextId="IDT_DataItem_PS_Digital_Output0_Bit08" Value="SDIneg"/>
+					<Text TextId="IDT_DataItem_PS_Digital_Output0_Bit09" Value="ES"/>
+					<Text TextId="IDT_DataItem_PS_Digital_Output0_Bit10" Value="SLI"/>
+					<Text TextId="IDT_DataItem_PS_Digital_Output0_Bit11" Value="OMS"/>
+					<Text TextId="IDT_DataItem_PS_Digital_Output0_Bit12" Value="SLP1"/>
+					<Text TextId="IDT_DataItem_PS_Digital_Output0_Bit13" Value="SLP2"/>
+					<Text TextId="IDT_DataItem_PS_Digital_Output0_Bit14" Value="SLP3"/>
+					<Text TextId="IDT_DataItem_PS_Digital_Output0_Bit15" Value="SLP4"/>
+					<Text TextId="IDT_DataItem_PS_Digital_Output1" Value="DOut_01"/>
+					<Text TextId="IDT_DataItem_PS_Digital_Output1_Bit00" Value="AIS"/>
+					<Text TextId="IDT_DataItem_PS_Digital_Output1_Bit01" Value="AIE"/>
+					<Text TextId="IDT_DataItem_PS_Digital_Output1_Bit02" Value="SOS"/>
+					<Text TextId="IDT_DataItem_PS_Digital_Output1_Bit03" Value="RMS"/>
+					<Text TextId="IDT_DataItem_PS_Digital_Output1_Bit04" Value="SHom_start"/>
+					<Text TextId="IDT_DataItem_PS_Digital_Output1_Bit05" Value="SHom_load"/>
+					<Text TextId="IDT_DataItem_PS_Digital_Output1_Bit06" Value="PDSS"/>
+					<Text TextId="IDT_DataItem_PS_Digital_Output1_Bit07" Value="SSE"/>
+					<Text TextId="IDT_DataItem_PS_Digital_Output1_Bit08" Value="SD_Out1"/>
+					<Text TextId="IDT_DataItem_PS_Digital_Output1_Bit09" Value="SBC"/>
+					<Text TextId="IDT_DataItem_PS_Digital_Output1_Bit10" Value="DOut_01_Bit_10"/>
+					<Text TextId="IDT_DataItem_PS_Digital_Output1_Bit11" Value="DOut_01_Bit_11"/>
+					<Text TextId="IDT_DataItem_PS_Digital_Output1_Bit12" Value="DOut_01_Bit_12"/>
+					<Text TextId="IDT_DataItem_PS_Digital_Output1_Bit13" Value="DOut_01_Bit_13"/>
+					<Text TextId="IDT_DataItem_PS_Digital_Output1_Bit14" Value="DOut_01_Bit_14"/>
+					<Text TextId="IDT_DataItem_PS_Digital_Output1_Bit15" Value="DOut_01_Bit_15"/>
+					<Text TextId="IDT_DataItem_PS_Output2" Value="Out_02"/>
+					<Text TextId="IDT_DataItem_PS_Output3" Value="Out_03"/>
+					<Text TextId="IDT_DataItem_PS_Output4" Value="Out_04"/>
+					<Text TextId="IDT_DataItem_PS_Output5" Value="Out_05"/>
+					<Text TextId="IDT_DataItem_PS_Digital_Input0" Value="DIn_00"/>
+					<Text TextId="IDT_DataItem_PS_Digital_Input0_Bit00" Value="STO_aktiv"/>
+					<Text TextId="IDT_DataItem_PS_Digital_Input0_Bit01" Value="SS1_aktiv"/>
+					<Text TextId="IDT_DataItem_PS_Digital_Input0_Bit02" Value="SS2_aktiv"/>
+					<Text TextId="IDT_DataItem_PS_Digital_Input0_Bit03" Value="SLS1_aktiv"/>
+					<Text TextId="IDT_DataItem_PS_Digital_Input0_Bit04" Value="SLS2_aktiv"/>
+					<Text TextId="IDT_DataItem_PS_Digital_Input0_Bit05" Value="SLS3_aktiv"/>
+					<Text TextId="IDT_DataItem_PS_Digital_Input0_Bit06" Value="SLS4_aktiv"/>
+					<Text TextId="IDT_DataItem_PS_Digital_Input0_Bit07" Value="SDIpos_aktiv"/>
+					<Text TextId="IDT_DataItem_PS_Digital_Input0_Bit08" Value="SDIneg_aktiv"/>
+					<Text TextId="IDT_DataItem_PS_Digital_Input0_Bit09" Value="ES_aktiv"/>
+					<Text TextId="IDT_DataItem_PS_Digital_Input0_Bit10" Value="SLI_aktiv"/>
+					<Text TextId="IDT_DataItem_PS_Digital_Input0_Bit11" Value="SOS_aktiv"/>
+					<Text TextId="IDT_DataItem_PS_Digital_Input0_Bit12" Value="SLP1_überwacht"/>
+					<Text TextId="IDT_DataItem_PS_Digital_Input0_Bit13" Value="SLP2_überwacht"/>
+					<Text TextId="IDT_DataItem_PS_Digital_Input0_Bit14" Value="SLP3_überwacht"/>
+					<Text TextId="IDT_DataItem_PS_Digital_Input0_Bit15" Value="SLP4_überwacht"/>
+					<Text TextId="IDT_DataItem_PS_Digital_Input1" Value="DIn_01"/>
+					<Text TextId="IDT_DataItem_PS_Digital_Input1_Bit00" Value="SOS_überwacht"/>
+					<Text TextId="IDT_DataItem_PS_Digital_Input1_Bit01" Value="SLS1_überwacht"/>
+					<Text TextId="IDT_DataItem_PS_Digital_Input1_Bit02" Value="SLS2_überwacht"/>
+					<Text TextId="IDT_DataItem_PS_Digital_Input1_Bit03" Value="SLS3_überwacht"/>
+					<Text TextId="IDT_DataItem_PS_Digital_Input1_Bit04" Value="SLS4_überwacht"/>
+					<Text TextId="IDT_DataItem_PS_Digital_Input1_Bit05" Value="SDIpos_überwacht"/>
+					<Text TextId="IDT_DataItem_PS_Digital_Input1_Bit06" Value="SDIneg_überwacht"/>
+					<Text TextId="IDT_DataItem_PS_Digital_Input1_Bit07" Value="SSE_aktiv"/>
+					<Text TextId="IDT_DataItem_PS_Digital_Input1_Bit08" Value="SD-In1"/>
+					<Text TextId="IDT_DataItem_PS_Digital_Input1_Bit09" Value="SD-In2"/>
+					<Text TextId="IDT_DataItem_PS_Digital_Input1_Bit10" Value="SD-In3"/>
+					<Text TextId="IDT_DataItem_PS_Digital_Input1_Bit11" Value="SD-In4"/>
+					<Text TextId="IDT_DataItem_PS_Digital_Input1_Bit12" Value="RMS_aktiv"/>
+					<Text TextId="IDT_DataItem_PS_Digital_Input1_Bit13" Value="OMS_aktiv"/>
+					<Text TextId="IDT_DataItem_PS_Digital_Input1_Bit14" Value="SMS_überwacht"/>
+					<Text TextId="IDT_DataItem_PS_Digital_Input1_Bit15" Value="Fehler_aktiv"/>
+					<Text TextId="IDT_DataItem_PS_Digital_Input2" Value="DIn_02"/>
+					<Text TextId="IDT_DataItem_PS_Digital_Input2_Bit00" Value="SHom_aktiv"/>
+					<Text TextId="IDT_DataItem_PS_Digital_Input2_Bit01" Value="SHom_vorhanden"/>
+					<Text TextId="IDT_DataItem_PS_Digital_Input2_Bit02" Value="PDSSpos_überwacht"/>
+					<Text TextId="IDT_DataItem_PS_Digital_Input2_Bit03" Value="PDSSneg_überwacht"/>
+					<Text TextId="IDT_DataItem_PS_Digital_Input2_Bit04" Value="SCA1_in_Grenzen"/>
+					<Text TextId="IDT_DataItem_PS_Digital_Input2_Bit05" Value="SCA2_in_Grenzen"/>
+					<Text TextId="IDT_DataItem_PS_Digital_Input2_Bit06" Value="SCA3_in_Grenzen"/>
+					<Text TextId="IDT_DataItem_PS_Digital_Input2_Bit07" Value="SCA4_in_Grenzen"/>
+					<Text TextId="IDT_DataItem_PS_Digital_Input2_Bit08" Value="SSM_in_Grenzen"/>
+					<Text TextId="IDT_DataItem_PS_Digital_Input2_Bit09" Value="Sichere_Geschw._OK"/>
+					<Text TextId="IDT_DataItem_PS_Digital_Input2_Bit10" Value="n=0"/>
+					<Text TextId="IDT_DataItem_PS_Digital_Input2_Bit11" Value="Positive_Richtung"/>
+					<Text TextId="IDT_DataItem_PS_Digital_Input2_Bit12" Value="SD-Out1"/>
+					<Text TextId="IDT_DataItem_PS_Digital_Input2_Bit13" Value="SBC_aktiv"/>
+					<Text TextId="IDT_DataItem_PS_Digital_Input2_Bit14" Value="SBC_aktiviert"/>
+					<Text TextId="IDT_DataItem_PS_Digital_Input2_Bit15" Value="DIn_02_Bit_15"/>
+					<Text TextId="IDT_DataItem_PS_Analog_Input0" Value="Si._Geschw."/>
+					<Text TextId="IDT_DataItem_PS_Analog_Input1" Value="Si._Position_w1"/>
+					<Text TextId="IDT_DataItem_PS_Analog_Input2" Value="Si._Position_w0"/>
+					<Text TextId="IDT_DataItem_PS_Digital_Reserved" Value="reserviert"/>
+					<Text TextId="IDT_DataItem_PS_Analog_Reserved" Value="reserviert"/>
+				</Language>
+			</ExternalTextList>
+		</ApplicationProcess>
+	</ProfileBody>
+</ISO15745Profile>

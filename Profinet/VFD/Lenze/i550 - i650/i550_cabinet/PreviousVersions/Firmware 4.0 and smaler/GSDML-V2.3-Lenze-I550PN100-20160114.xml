@@ -1,0 +1,1683 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<ISO15745Profile xmlns="http://www.profibus.com/GSDML/2003/11/DeviceProfile" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.profibus.com/GSDML/2003/11/DeviceProfile ..\xsd\GSDML-DeviceProfile-V2.3.xsd">
+<!-- GSDML fuer i550, Firmware IOEF51AR ab V01.00.00.00 -->
+  <ProfileHeader>
+    <ProfileIdentification>PROFINET Device Profile</ProfileIdentification>
+    <ProfileRevision>1.00</ProfileRevision>
+    <ProfileName>Device Profile for PROFINET Devices</ProfileName>
+    <ProfileSource>PROFIBUS Nutzerorganisation e. V. (PNO)</ProfileSource>
+    <ProfileClassID>Device</ProfileClassID>
+    <ISO15745Reference>
+      <ISO15745Part>4</ISO15745Part>
+      <ISO15745Edition>1</ISO15745Edition>
+      <ProfileTechnology>GSDML</ProfileTechnology>
+    </ISO15745Reference>
+  </ProfileHeader>
+  <ProfileBody>
+    <DeviceIdentity VendorID="0x0106" DeviceID="0x0550">
+      <InfoText TextId="IDT_FAMILY_DESCRIPTION"/>
+      <VendorName Value="Lenze"/>
+    </DeviceIdentity>
+    <DeviceFunction>
+      <Family MainFamily="Drives" ProductFamily="Lenze Lforce Drives i550"/>
+    </DeviceFunction>
+    <ApplicationProcess>
+      <DeviceAccessPointList>
+        <DeviceAccessPointItem ID="ID_DAP" PhysicalSlots="0..27" ModuleIdentNumber="0x00000500" MinDeviceInterval="64" ImplementationType="3C25/NIOS" DNS_CompatibleName="LENZE-I550-DRIVE" NameOfStationNotTransferable="true" ExtendedAddressAssignmentSupported="false" FixedInSlots="0" ObjectUUID_LocalIndex="1" RequiredSchemaVersion="V2.2" MultipleWriteSupported="false" IOXS_Required="true" RemoteApplicationTimeout="300" AddressAssignment="DCP" DeviceAccessSupported="true" PNIO_Version="V2.2">
+          <ModuleInfo>
+            <Name TextId="IDT_DAP_NAME"/>
+            <InfoText TextId="IDT_DAP_INFO"/>
+            <VendorName Value="Lenze"/>
+            <OrderNumber Value="IOFW51ARXX"/>
+            <SoftwareRelease Value="V 2.8"/>
+          </ModuleInfo>
+          <SubslotList>
+            <SubslotItem SubslotNumber="32768" TextId="IDT_DAP_Interface"/>
+            <SubslotItem SubslotNumber="32769" TextId="IDT_DAP_Port1"/>
+            <SubslotItem SubslotNumber="32770" TextId="IDT_DAP_Port2"/>
+          </SubslotList>
+          <IOConfigData MaxInputLength="1440" MaxOutputLength="1440"/>
+          <UseableModules>
+            <!--Die Referenzen zeigen auf die Module der ModuleList -->
+            <ModuleItemRef ModuleItemTarget="IDM_MODULE_1" AllowedInSlots="1..27" UsedInSlots="6"/>
+            <ModuleItemRef ModuleItemTarget="IDM_MODULE_2" AllowedInSlots="1..27" UsedInSlots="1"/>
+            <ModuleItemRef ModuleItemTarget="IDM_MODULE_3" AllowedInSlots="1..27"/>
+            <ModuleItemRef ModuleItemTarget="IDM_MODULE_4" AllowedInSlots="1..27"/>
+            <ModuleItemRef ModuleItemTarget="IDM_MODULE_5" AllowedInSlots="1..27"/>
+            <ModuleItemRef ModuleItemTarget="IDM_MODULE_6" AllowedInSlots="1..27" UsedInSlots="4"/>
+            <ModuleItemRef ModuleItemTarget="IDM_MODULE_7" AllowedInSlots="1..27"/>
+            <ModuleItemRef ModuleItemTarget="IDM_MODULE_8" AllowedInSlots="1..27" UsedInSlots="2"/>
+            <ModuleItemRef ModuleItemTarget="IDM_MODULE_9" AllowedInSlots="1..27" UsedInSlots="5"/>
+            <ModuleItemRef ModuleItemTarget="IDM_MODULE_10" AllowedInSlots="1..27"/>
+            <ModuleItemRef ModuleItemTarget="IDM_MODULE_11" AllowedInSlots="1..27"/>
+            <ModuleItemRef ModuleItemTarget="IDM_MODULE_12" AllowedInSlots="1..27"/>
+            <ModuleItemRef ModuleItemTarget="IDM_MODULE_13" AllowedInSlots="1..27"/>
+            <ModuleItemRef ModuleItemTarget="IDM_MODULE_14" AllowedInSlots="1..27" UsedInSlots="3"/>
+            <ModuleItemRef ModuleItemTarget="IDM_MODULE_15" AllowedInSlots="1..27"/>
+            <ModuleItemRef ModuleItemTarget="IDM_MODULE_16" AllowedInSlots="1..27"/>
+            <ModuleItemRef ModuleItemTarget="IDM_MODULE_17" AllowedInSlots="1..27"/>
+            <ModuleItemRef ModuleItemTarget="IDM_MODULE_18" AllowedInSlots="1..27"/>
+          </UseableModules>
+          <VirtualSubmoduleList>
+            <VirtualSubmoduleItem ID="IDS_SUBMODULE_PARAMDAP" SubmoduleIdentNumber="0xA0000001" API="0" FixedInSubslots="1" PROFIsafeSupported="false" Writeable_IM_Records="1 2 3 4">
+              <IOData IOPS_Length="1" IOCS_Length="1"/>
+              <ModuleInfo>
+                <Name TextId="IDT_MODULE_0_NAME"/>
+                <InfoText TextId="IDT_MODULE_0_INFO"/>
+              </ModuleInfo>
+            </VirtualSubmoduleItem>
+          </VirtualSubmoduleList>
+          <SystemDefinedSubmoduleList>
+            <InterfaceSubmoduleItem ID="IDS_DAPI" SupportedRT_Classes="RT_CLASS_1" SupportedProtocols="SNMP;LLDP" SupportedMibs="MIB2" NetworkComponentDiagnosisSupported="false" DCP_HelloSupported="false" SubslotNumber="32768" TextId="IDT_DAP_NAME" SubmoduleIdentNumber="0x00000001">
+              <ApplicationRelations>
+                <TimingProperties SendClock="32 64 128"/>
+              </ApplicationRelations>
+              <MediaRedundancy SupportedRole="Client"/>
+            </InterfaceSubmoduleItem>
+            <PortSubmoduleItem ID="IDS_DAPP1" SubslotNumber="32769" LinkStateDiagnosisCapability="Up+Down" TextId="IDT_ETHERNETINTERFACE_Port1" SubmoduleIdentNumber="0x00000002" SupportsRingportConfig="true" IsDefaultRingport="true"/>
+            <PortSubmoduleItem ID="IDS_DAPP2" SubslotNumber="32770" LinkStateDiagnosisCapability="Up+Down" TextId="IDT_ETHERNETINTERFACE_Port2" SubmoduleIdentNumber="0x00000003" SupportsRingportConfig="true" IsDefaultRingport="true"/>
+          </SystemDefinedSubmoduleList>
+          <Graphics>
+            <GraphicItemRef Type="DeviceSymbol" GraphicItemTarget="1"/>
+            <!--<GraphicItemRef State="SF" GraphicItemTarget="2"/>-->
+          </Graphics>
+        </DeviceAccessPointItem>
+      </DeviceAccessPointList>
+      <ModuleList>
+        <!-- process modules -->
+          <ModuleItem ID="IDM_MODULE_0" ModuleIdentNumber="0x14000000">
+            <ModuleInfo>
+              <Name TextId="IDT_MODULE_0_NAME"/>
+              <InfoText TextId="IDT_MODULE_0_INFO"/>
+            </ModuleInfo>
+            <VirtualSubmoduleList>
+              <VirtualSubmoduleItem ID="IDS_SUBMODULE_0" SubmoduleIdentNumber="0x14000000">
+                <IOData IOPS_Length="1" IOCS_Length="1">
+                </IOData>                
+                <ModuleInfo>
+                  <Name TextId="IDT_MODULE_0_NAME"/>
+                  <InfoText TextId="IDT_MODULE_0_INFO"/>
+                </ModuleInfo>
+              </VirtualSubmoduleItem>
+            </VirtualSubmoduleList>
+          </ModuleItem>
+          <ModuleItem ID="IDM_MODULE_1" ModuleIdentNumber="0x14002D88">
+            <ModuleInfo>
+              <Name TextId="IDT_MODULE_1_NAME"/>
+              <InfoText TextId="IDT_MODULE_1_INFO"/>
+            </ModuleInfo>
+            <VirtualSubmoduleList>
+              <VirtualSubmoduleItem ID="IDS_SUBMODULE_1" SubmoduleIdentNumber="0x14002D88">
+                <IOData IOPS_Length="1" IOCS_Length="1">
+                  <Input Consistency="All items consistency">
+                    <DataItem DataType="OctetString" UseAsBits="true" TextId="IDT_DATAITEM_1I" Length="2"/>
+                  </Input>
+                </IOData>                
+                <ModuleInfo>
+                  <Name TextId="IDT_MODULE_1_NAME"/>
+                  <InfoText TextId="IDT_MODULE_1_INFO"/>
+                </ModuleInfo>
+              </VirtualSubmoduleItem>
+            </VirtualSubmoduleList>
+          </ModuleItem>
+          <ModuleItem ID="IDM_MODULE_2" ModuleIdentNumber="0x14014008">
+            <ModuleInfo CategoryRef="NetWord">
+              <Name TextId="IDT_MODULE_2_NAME"/>
+              <InfoText TextId="IDT_MODULE_2_INFO"/>
+            </ModuleInfo>
+            <VirtualSubmoduleList>
+              <VirtualSubmoduleItem ID="IDS_SUBMODULE_2" SubmoduleIdentNumber="0x14014008">
+                <IOData IOPS_Length="1" IOCS_Length="1">
+                  <Output Consistency="All items consistency">
+                    <DataItem DataType="OctetString" UseAsBits="true" TextId="IDT_DATAITEM_2O" Length="2"/>
+                  </Output>
+                </IOData>                
+                <RecordDataList>                
+                  <ParameterRecordDataItem Index="1" Length="20">                  
+                    <Name TextId="IDT_MODULE_2_NAME"/>
+                    <Const ByteOffset="0" Data="0x01,0x40,0x0E,0x01,0x7F,0x7F,0x03,0x7F,0x08,0x12,0x13,0x04,0x7F,0x05,0x7F,0x7F,0x0D,0x7F,0x7F,0x7F"/>        
+                    <Ref ValueItemTarget="PRM_TEXT_1" DataType="Unsigned8" ByteOffset="4" DefaultValue="127" AllowedValues="0 1 2 3 4 5 8 9 13 14 15 17 18 19 20 21 39 40 41 42 43 44 45 46 47 48 127" TextId="IDT_m2_prm_0_name"/>
+                    <Ref ValueItemTarget="PRM_TEXT_1" DataType="Unsigned8" ByteOffset="5" DefaultValue="127" AllowedValues="0 1 2 3 4 5 8 9 13 14 15 17 18 19 20 21 39 40 41 42 43 44 45 46 47 48 127" TextId="IDT_m2_prm_1_name"/>
+                    <Ref ValueItemTarget="PRM_TEXT_1" DataType="Unsigned8" ByteOffset="6" DefaultValue="3" AllowedValues="0 1 2 3 4 5 8 9 13 14 15 17 18 19 20 21 39 40 41 42 43 44 45 46 47 48 127" TextId="IDT_m2_prm_2_name"/>
+                    <Ref ValueItemTarget="PRM_TEXT_1" DataType="Unsigned8" ByteOffset="7" DefaultValue="127" AllowedValues="0 1 2 3 4 5 8 9 13 14 15 17 18 19 20 21 39 40 41 42 43 44 45 46 47 48 127" TextId="IDT_m2_prm_3_name"/>
+                    <Ref ValueItemTarget="PRM_TEXT_1" DataType="Unsigned8" ByteOffset="8" DefaultValue="8" AllowedValues="0 1 2 3 4 5 8 9 13 14 15 17 18 19 20 21 39 40 41 42 43 44 45 46 47 48 127" TextId="IDT_m2_prm_4_name"/>
+                    <Ref ValueItemTarget="PRM_TEXT_1" DataType="Unsigned8" ByteOffset="9" DefaultValue="18" AllowedValues="0 1 2 3 4 5 8 9 13 14 15 17 18 19 20 21 39 40 41 42 43 44 45 46 47 48 127" TextId="IDT_m2_prm_5_name"/>
+                    <Ref ValueItemTarget="PRM_TEXT_1" DataType="Unsigned8" ByteOffset="10" DefaultValue="19" AllowedValues="0 1 2 3 4 5 8 9 13 14 15 17 18 19 20 21 39 40 41 42 43 44 45 46 47 48 127" TextId="IDT_m2_prm_6_name"/>
+                    <Ref ValueItemTarget="PRM_TEXT_1" DataType="Unsigned8" ByteOffset="11" DefaultValue="4" AllowedValues="0 1 2 3 4 5 8 9 13 14 15 17 18 19 20 21 39 40 41 42 43 44 45 46 47 48 127" TextId="IDT_m2_prm_7_name"/>
+                    <Ref ValueItemTarget="PRM_TEXT_1" DataType="Unsigned8" ByteOffset="12" DefaultValue="127" AllowedValues="0 1 2 3 4 5 8 9 13 14 15 17 18 19 20 21 39 40 41 42 43 44 45 46 47 48 127" TextId="IDT_m2_prm_8_name"/>
+                    <Ref ValueItemTarget="PRM_TEXT_1" DataType="Unsigned8" ByteOffset="13" DefaultValue="5" AllowedValues="0 1 2 3 4 5 8 9 13 14 15 17 18 19 20 21 39 40 41 42 43 44 45 46 47 48 127" TextId="IDT_m2_prm_9_name"/>
+                    <Ref ValueItemTarget="PRM_TEXT_1" DataType="Unsigned8" ByteOffset="14" DefaultValue="127" AllowedValues="0 1 2 3 4 5 8 9 13 14 15 17 18 19 20 21 39 40 41 42 43 44 45 46 47 48 127" TextId="IDT_m2_prm_10_name"/>
+                    <Ref ValueItemTarget="PRM_TEXT_1" DataType="Unsigned8" ByteOffset="15" DefaultValue="127" AllowedValues="0 1 2 3 4 5 8 9 13 14 15 17 18 19 20 21 39 40 41 42 43 44 45 46 47 48 127" TextId="IDT_m2_prm_11_name"/>
+                    <Ref ValueItemTarget="PRM_TEXT_1" DataType="Unsigned8" ByteOffset="16" DefaultValue="13" AllowedValues="0 1 2 3 4 5 8 9 13 14 15 17 18 19 20 21 39 40 41 42 43 44 45 46 47 48 127" TextId="IDT_m2_prm_12_name"/>
+                    <Ref ValueItemTarget="PRM_TEXT_1" DataType="Unsigned8" ByteOffset="17" DefaultValue="127" AllowedValues="0 1 2 3 4 5 8 9 13 14 15 17 18 19 20 21 39 40 41 42 43 44 45 46 47 48 127" TextId="IDT_m2_prm_13_name"/>
+                    <Ref ValueItemTarget="PRM_TEXT_1" DataType="Unsigned8" ByteOffset="18" DefaultValue="127" AllowedValues="0 1 2 3 4 5 8 9 13 14 15 17 18 19 20 21 39 40 41 42 43 44 45 46 47 48 127" TextId="IDT_m2_prm_14_name"/>
+                    <Ref ValueItemTarget="PRM_TEXT_1" DataType="Unsigned8" ByteOffset="19" DefaultValue="127" AllowedValues="0 1 2 3 4 5 8 9 13 14 15 17 18 19 20 21 39 40 41 42 43 44 45 46 47 48 127" TextId="IDT_m2_prm_15_name"/>
+                  </ParameterRecordDataItem>
+                </RecordDataList>
+                <ModuleInfo CategoryRef="NetWord">
+                  <Name TextId="IDT_MODULE_2_NAME"/>
+                  <InfoText TextId="IDT_MODULE_2_INFO"/>
+                </ModuleInfo>
+              </VirtualSubmoduleItem>
+            </VirtualSubmoduleList>
+          </ModuleItem>
+          <ModuleItem ID="IDM_MODULE_3" ModuleIdentNumber="0x14024008">
+            <ModuleInfo CategoryRef="NetWord">
+              <Name TextId="IDT_MODULE_3_NAME"/>
+              <InfoText TextId="IDT_MODULE_3_INFO"/>
+            </ModuleInfo>
+            <VirtualSubmoduleList>
+              <VirtualSubmoduleItem ID="IDS_SUBMODULE_3" SubmoduleIdentNumber="0x14024008">
+                <IOData IOPS_Length="1" IOCS_Length="1">
+                  <Output Consistency="All items consistency">
+                    <DataItem DataType="OctetString" UseAsBits="true" TextId="IDT_DATAITEM_3O" Length="2"/>
+                  </Output>
+                </IOData>                
+                <RecordDataList>                
+                  <ParameterRecordDataItem Index="1" Length="7">                  
+                    <Name TextId="IDT_MODULE_3_NAME"/>
+                    <Const ByteOffset="0" Data="0x01,0x26,0x34,0x01,0x7F,0x7F,0x7F"/>        
+                    <Ref ValueItemTarget="PRM_TEXT_2" DataType="Unsigned8" ByteOffset="4" DefaultValue="127" AllowedValues="0 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 127" TextId="IDT_m3_prm_0_name"/>
+                    <Ref ValueItemTarget="PRM_TEXT_2" DataType="Unsigned8" ByteOffset="5" DefaultValue="127" AllowedValues="0 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 127" TextId="IDT_m3_prm_1_name"/>
+                  </ParameterRecordDataItem>
+                </RecordDataList>
+                <ModuleInfo CategoryRef="NetWord">
+                  <Name TextId="IDT_MODULE_3_NAME"/>
+                  <InfoText TextId="IDT_MODULE_3_INFO"/>
+                </ModuleInfo>
+              </VirtualSubmoduleItem>
+            </VirtualSubmoduleList>
+          </ModuleItem>
+          <ModuleItem ID="IDM_MODULE_4" ModuleIdentNumber="0x14034008">
+            <ModuleInfo CategoryRef="NetWord">
+              <Name TextId="IDT_MODULE_4_NAME"/>
+              <InfoText TextId="IDT_MODULE_4_INFO"/>
+            </ModuleInfo>
+            <VirtualSubmoduleList>
+              <VirtualSubmoduleItem ID="IDS_SUBMODULE_4" SubmoduleIdentNumber="0x14034008">
+                <IOData IOPS_Length="1" IOCS_Length="1">
+                  <Output Consistency="All items consistency">
+                    <DataItem DataType="OctetString" UseAsBits="true" TextId="IDT_DATAITEM_4O" Length="2"/>
+                  </Output>
+                </IOData>                
+                <RecordDataList>                
+                  <ParameterRecordDataItem Index="1" Length="6">                  
+                    <Name TextId="IDT_MODULE_4_NAME"/>
+                    <Const ByteOffset="0" Data="0x03,0x26,0x39,0x00,0x00,0x14"/>        
+                    <Ref ValueItemTarget="PRM_TEXT_3" DataType="Unsigned8" ByteOffset="3" DefaultValue="0" AllowedValues="0 1" TextId="IDT_m4_prm_0_name"/>
+                    <Ref ValueItemTarget="PRM_TEXT_6" DataType="Unsigned8" ByteOffset="4" DefaultValue="0" AllowedValues="0 1 2 3 4 5" TextId="IDT_m4_prm_1_name"/>
+                  </ParameterRecordDataItem>
+                </RecordDataList>
+                <ModuleInfo CategoryRef="NetWord">
+                  <Name TextId="IDT_MODULE_4_NAME"/>
+                  <InfoText TextId="IDT_MODULE_4_INFO"/>
+                </ModuleInfo>
+              </VirtualSubmoduleItem>
+            </VirtualSubmoduleList>
+          </ModuleItem>
+          <ModuleItem ID="IDM_MODULE_5" ModuleIdentNumber="0x14044008">
+            <ModuleInfo CategoryRef="NetWord">
+              <Name TextId="IDT_MODULE_5_NAME"/>
+              <InfoText TextId="IDT_MODULE_5_INFO"/>
+            </ModuleInfo>
+            <VirtualSubmoduleList>
+              <VirtualSubmoduleItem ID="IDS_SUBMODULE_5" SubmoduleIdentNumber="0x14044008">
+                <IOData IOPS_Length="1" IOCS_Length="1">
+                  <Output Consistency="All items consistency">
+                    <DataItem DataType="OctetString" UseAsBits="true" TextId="IDT_DATAITEM_5O" Length="2"/>
+                  </Output>
+                </IOData>                
+                <RecordDataList>                
+                  <ParameterRecordDataItem Index="1" Length="6">                  
+                    <Name TextId="IDT_MODULE_5_NAME"/>
+                    <Const ByteOffset="0" Data="0x03,0x26,0x39,0x00,0x00,0x15"/>        
+                    <Ref ValueItemTarget="PRM_TEXT_3" DataType="Unsigned8" ByteOffset="3" DefaultValue="0" AllowedValues="0 1" TextId="IDT_m5_prm_0_name"/>
+                    <Ref ValueItemTarget="PRM_TEXT_6" DataType="Unsigned8" ByteOffset="4" DefaultValue="0" AllowedValues="0 1 2 3 4 5" TextId="IDT_m5_prm_1_name"/>
+                  </ParameterRecordDataItem>
+                </RecordDataList>
+                <ModuleInfo CategoryRef="NetWord">
+                  <Name TextId="IDT_MODULE_5_NAME"/>
+                  <InfoText TextId="IDT_MODULE_5_INFO"/>
+                </ModuleInfo>
+              </VirtualSubmoduleItem>
+            </VirtualSubmoduleList>
+          </ModuleItem>
+          <ModuleItem ID="IDM_MODULE_6" ModuleIdentNumber="0x1401400A">
+            <ModuleInfo CategoryRef="NetWord">
+              <Name TextId="IDT_MODULE_6_NAME"/>
+              <InfoText TextId="IDT_MODULE_6_INFO"/>
+            </ModuleInfo>
+            <VirtualSubmoduleList>
+              <VirtualSubmoduleItem ID="IDS_SUBMODULE_6" SubmoduleIdentNumber="0x1401400A">
+                <IOData IOPS_Length="1" IOCS_Length="1">
+                  <Input Consistency="All items consistency">
+                    <DataItem DataType="OctetString" UseAsBits="true" TextId="IDT_DATAITEM_6I" Length="2"/>
+                  </Input>
+                </IOData>                
+                <RecordDataList>                
+                  <ParameterRecordDataItem Index="1" Length="20">                  
+                    <Name TextId="IDT_MODULE_6_NAME"/>
+                    <Const ByteOffset="0" Data="0x02,0x26,0x34,0x0A,0x33,0x7F,0x34,0x38,0x7F,0x36,0x32,0x3A,0x7F,0x7F,0x48,0x4E,0x47,0x45,0x73,0x37"/>        
+                    <Ref ValueItemTarget="PRM_TEXT_4" DataType="BitArea" ByteOffset="4" BitOffset="0" BitLength="7" DefaultValue="51" TextId="IDT_m6_prm_0_name"/>
+                    <Ref ValueItemTarget="PRM_TEXT_5" DataType="Bit" ByteOffset="4" BitOffset="7" DefaultValue="0" AllowedValues="0 1" TextId="IDT_m6_prm_1_name"/>
+                    <Ref ValueItemTarget="PRM_TEXT_4" DataType="BitArea" ByteOffset="5" BitOffset="0" BitLength="7" DefaultValue="127" TextId="IDT_m6_prm_2_name"/>
+                    <Ref ValueItemTarget="PRM_TEXT_5" DataType="Bit" ByteOffset="5" BitOffset="7" DefaultValue="0" AllowedValues="0 1" TextId="IDT_m6_prm_3_name"/>
+                    <Ref ValueItemTarget="PRM_TEXT_4" DataType="BitArea" ByteOffset="6" BitOffset="0" BitLength="7" DefaultValue="52" TextId="IDT_m6_prm_4_name"/>
+                    <Ref ValueItemTarget="PRM_TEXT_5" DataType="Bit" ByteOffset="6" BitOffset="7" DefaultValue="0" AllowedValues="0 1" TextId="IDT_m6_prm_5_name"/>
+                    <Ref ValueItemTarget="PRM_TEXT_4" DataType="BitArea" ByteOffset="7" BitOffset="0" BitLength="7" DefaultValue="56" TextId="IDT_m6_prm_6_name"/>
+                    <Ref ValueItemTarget="PRM_TEXT_5" DataType="Bit" ByteOffset="7" BitOffset="7" DefaultValue="0" AllowedValues="0 1" TextId="IDT_m6_prm_7_name"/>
+                    <Ref ValueItemTarget="PRM_TEXT_4" DataType="BitArea" ByteOffset="8" BitOffset="0" BitLength="7" DefaultValue="127" TextId="IDT_m6_prm_8_name"/>
+                    <Ref ValueItemTarget="PRM_TEXT_5" DataType="Bit" ByteOffset="8" BitOffset="7" DefaultValue="0" AllowedValues="0 1" TextId="IDT_m6_prm_9_name"/>
+                    <Ref ValueItemTarget="PRM_TEXT_4" DataType="BitArea" ByteOffset="9" BitOffset="0" BitLength="7" DefaultValue="54" TextId="IDT_m6_prm_10_name"/>
+                    <Ref ValueItemTarget="PRM_TEXT_5" DataType="Bit" ByteOffset="9" BitOffset="7" DefaultValue="0" AllowedValues="0 1" TextId="IDT_m6_prm_11_name"/>
+                    <Ref ValueItemTarget="PRM_TEXT_4" DataType="BitArea" ByteOffset="10" BitOffset="0" BitLength="7" DefaultValue="50" TextId="IDT_m6_prm_12_name"/>
+                    <Ref ValueItemTarget="PRM_TEXT_5" DataType="Bit" ByteOffset="10" BitOffset="7" DefaultValue="0" AllowedValues="0 1" TextId="IDT_m6_prm_13_name"/>
+                    <Ref ValueItemTarget="PRM_TEXT_4" DataType="BitArea" ByteOffset="11" BitOffset="0" BitLength="7" DefaultValue="58" TextId="IDT_m6_prm_14_name"/>
+                    <Ref ValueItemTarget="PRM_TEXT_5" DataType="Bit" ByteOffset="11" BitOffset="7" DefaultValue="0" AllowedValues="0 1" TextId="IDT_m6_prm_15_name"/>
+                    <Ref ValueItemTarget="PRM_TEXT_4" DataType="BitArea" ByteOffset="12" BitOffset="0" BitLength="7" DefaultValue="127" TextId="IDT_m6_prm_16_name"/>
+                    <Ref ValueItemTarget="PRM_TEXT_5" DataType="Bit" ByteOffset="12" BitOffset="7" DefaultValue="0" AllowedValues="0 1" TextId="IDT_m6_prm_17_name"/>
+                    <Ref ValueItemTarget="PRM_TEXT_4" DataType="BitArea" ByteOffset="13" BitOffset="0" BitLength="7" DefaultValue="127" TextId="IDT_m6_prm_18_name"/>
+                    <Ref ValueItemTarget="PRM_TEXT_5" DataType="Bit" ByteOffset="13" BitOffset="7" DefaultValue="0" AllowedValues="0 1" TextId="IDT_m6_prm_19_name"/>
+                    <Ref ValueItemTarget="PRM_TEXT_4" DataType="BitArea" ByteOffset="14" BitOffset="0" BitLength="7" DefaultValue="72" TextId="IDT_m6_prm_20_name"/>
+                    <Ref ValueItemTarget="PRM_TEXT_5" DataType="Bit" ByteOffset="14" BitOffset="7" DefaultValue="0" AllowedValues="0 1" TextId="IDT_m6_prm_21_name"/>
+                    <Ref ValueItemTarget="PRM_TEXT_4" DataType="BitArea" ByteOffset="15" BitOffset="0" BitLength="7" DefaultValue="78" TextId="IDT_m6_prm_22_name"/>
+                    <Ref ValueItemTarget="PRM_TEXT_5" DataType="Bit" ByteOffset="15" BitOffset="7" DefaultValue="0" AllowedValues="0 1" TextId="IDT_m6_prm_23_name"/>
+                    <Ref ValueItemTarget="PRM_TEXT_4" DataType="BitArea" ByteOffset="16" BitOffset="0" BitLength="7" DefaultValue="71" TextId="IDT_m6_prm_24_name"/>
+                    <Ref ValueItemTarget="PRM_TEXT_5" DataType="Bit" ByteOffset="16" BitOffset="7" DefaultValue="0" AllowedValues="0 1" TextId="IDT_m6_prm_25_name"/>
+                    <Ref ValueItemTarget="PRM_TEXT_4" DataType="BitArea" ByteOffset="17" BitOffset="0" BitLength="7" DefaultValue="69" TextId="IDT_m6_prm_26_name"/>
+                    <Ref ValueItemTarget="PRM_TEXT_5" DataType="Bit" ByteOffset="17" BitOffset="7" DefaultValue="0" AllowedValues="0 1" TextId="IDT_m6_prm_27_name"/>
+                    <Ref ValueItemTarget="PRM_TEXT_4" DataType="BitArea" ByteOffset="18" BitOffset="0" BitLength="7" DefaultValue="115" TextId="IDT_m6_prm_28_name"/>
+                    <Ref ValueItemTarget="PRM_TEXT_5" DataType="Bit" ByteOffset="18" BitOffset="7" DefaultValue="0" AllowedValues="0 1" TextId="IDT_m6_prm_29_name"/>
+                    <Ref ValueItemTarget="PRM_TEXT_4" DataType="BitArea" ByteOffset="19" BitOffset="0" BitLength="7" DefaultValue="55" TextId="IDT_m6_prm_30_name"/>
+                    <Ref ValueItemTarget="PRM_TEXT_5" DataType="Bit" ByteOffset="19" BitOffset="7" DefaultValue="0" AllowedValues="0 1" TextId="IDT_m6_prm_31_name"/>
+                  </ParameterRecordDataItem>
+                </RecordDataList>
+                <ModuleInfo CategoryRef="NetWord">
+                  <Name TextId="IDT_MODULE_6_NAME"/>
+                  <InfoText TextId="IDT_MODULE_6_INFO"/>
+                </ModuleInfo>
+              </VirtualSubmoduleItem>
+            </VirtualSubmoduleList>
+          </ModuleItem>
+          <ModuleItem ID="IDM_MODULE_7" ModuleIdentNumber="0x1402400A">
+            <ModuleInfo CategoryRef="NetWord">
+              <Name TextId="IDT_MODULE_7_NAME"/>
+              <InfoText TextId="IDT_MODULE_7_INFO"/>
+            </ModuleInfo>
+            <VirtualSubmoduleList>
+              <VirtualSubmoduleItem ID="IDS_SUBMODULE_7" SubmoduleIdentNumber="0x1402400A">
+                <IOData IOPS_Length="1" IOCS_Length="1">
+                  <Input Consistency="All items consistency">
+                    <DataItem DataType="OctetString" UseAsBits="true" TextId="IDT_DATAITEM_7I" Length="2"/>
+                  </Input>
+                </IOData>                
+                <ModuleInfo CategoryRef="NetWord">
+                  <Name TextId="IDT_MODULE_7_NAME"/>
+                  <InfoText TextId="IDT_MODULE_7_INFO"/>
+                </ModuleInfo>
+              </VirtualSubmoduleItem>
+            </VirtualSubmoduleList>
+          </ModuleItem>
+          <ModuleItem ID="IDM_MODULE_8" ModuleIdentNumber="0x1405400B">
+            <ModuleInfo>
+              <Name TextId="IDT_MODULE_8_NAME"/>
+              <InfoText TextId="IDT_MODULE_8_INFO"/>
+            </ModuleInfo>
+            <VirtualSubmoduleList>
+              <VirtualSubmoduleItem ID="IDS_SUBMODULE_8" SubmoduleIdentNumber="0x1405400B">
+                <IOData IOPS_Length="1" IOCS_Length="1">
+                  <Output Consistency="All items consistency">
+                    <DataItem DataType="OctetString" UseAsBits="true" TextId="IDT_DATAITEM_8O" Length="2"/>
+                  </Output>
+                </IOData>                
+                <ModuleInfo>
+                  <Name TextId="IDT_MODULE_8_NAME"/>
+                  <InfoText TextId="IDT_MODULE_8_INFO"/>
+                </ModuleInfo>
+              </VirtualSubmoduleItem>
+            </VirtualSubmoduleList>
+          </ModuleItem>
+          <ModuleItem ID="IDM_MODULE_9" ModuleIdentNumber="0x1406400C">
+            <ModuleInfo>
+              <Name TextId="IDT_MODULE_9_NAME"/>
+              <InfoText TextId="IDT_MODULE_9_INFO"/>
+            </ModuleInfo>
+            <VirtualSubmoduleList>
+              <VirtualSubmoduleItem ID="IDS_SUBMODULE_9" SubmoduleIdentNumber="0x1406400C">
+                <IOData IOPS_Length="1" IOCS_Length="1">
+                  <Input Consistency="All items consistency">
+                    <DataItem DataType="OctetString" UseAsBits="true" TextId="IDT_DATAITEM_9I" Length="2"/>
+                  </Input>
+                </IOData>                
+                <ModuleInfo>
+                  <Name TextId="IDT_MODULE_9_NAME"/>
+                  <InfoText TextId="IDT_MODULE_9_INFO"/>
+                </ModuleInfo>
+              </VirtualSubmoduleItem>
+            </VirtualSubmoduleList>
+          </ModuleItem>
+          <ModuleItem ID="IDM_MODULE_10" ModuleIdentNumber="0x1400603F">
+            <ModuleInfo CategoryRef="CiA 402">
+              <Name TextId="IDT_MODULE_10_NAME"/>
+              <InfoText TextId="IDT_MODULE_10_INFO"/>
+            </ModuleInfo>
+            <VirtualSubmoduleList>
+              <VirtualSubmoduleItem ID="IDS_SUBMODULE_10" SubmoduleIdentNumber="0x1400603F">
+                <IOData IOPS_Length="1" IOCS_Length="1">
+                  <Input Consistency="All items consistency">
+                    <DataItem DataType="OctetString" UseAsBits="true" TextId="IDT_DATAITEM_10I" Length="2"/>
+                  </Input>
+                </IOData>                
+                <ModuleInfo CategoryRef="CiA 402">
+                  <Name TextId="IDT_MODULE_10_NAME"/>
+                  <InfoText TextId="IDT_MODULE_10_INFO"/>
+                </ModuleInfo>
+              </VirtualSubmoduleItem>
+            </VirtualSubmoduleList>
+          </ModuleItem>
+          <ModuleItem ID="IDM_MODULE_11" ModuleIdentNumber="0x140060E0">
+            <ModuleInfo CategoryRef="CiA 402">
+              <Name TextId="IDT_MODULE_11_NAME"/>
+              <InfoText TextId="IDT_MODULE_11_INFO"/>
+            </ModuleInfo>
+            <VirtualSubmoduleList>
+              <VirtualSubmoduleItem ID="IDS_SUBMODULE_11" SubmoduleIdentNumber="0x140060E0">
+                <IOData IOPS_Length="1" IOCS_Length="1">
+                  <Output Consistency="All items consistency">
+                    <DataItem DataType="OctetString" UseAsBits="true" TextId="IDT_DATAITEM_11O" Length="2"/>
+                  </Output>
+                </IOData>                
+                <ModuleInfo CategoryRef="CiA 402">
+                  <Name TextId="IDT_MODULE_11_NAME"/>
+                  <InfoText TextId="IDT_MODULE_11_INFO"/>
+                </ModuleInfo>
+              </VirtualSubmoduleItem>
+            </VirtualSubmoduleList>
+          </ModuleItem>
+          <ModuleItem ID="IDM_MODULE_12" ModuleIdentNumber="0x140060E1">
+            <ModuleInfo CategoryRef="CiA 402">
+              <Name TextId="IDT_MODULE_12_NAME"/>
+              <InfoText TextId="IDT_MODULE_12_INFO"/>
+            </ModuleInfo>
+            <VirtualSubmoduleList>
+              <VirtualSubmoduleItem ID="IDS_SUBMODULE_12" SubmoduleIdentNumber="0x140060E1">
+                <IOData IOPS_Length="1" IOCS_Length="1">
+                  <Output Consistency="All items consistency">
+                    <DataItem DataType="OctetString" UseAsBits="true" TextId="IDT_DATAITEM_12O" Length="2"/>
+                  </Output>
+                </IOData>                
+                <ModuleInfo CategoryRef="CiA 402">
+                  <Name TextId="IDT_MODULE_12_NAME"/>
+                  <InfoText TextId="IDT_MODULE_12_INFO"/>
+                </ModuleInfo>
+              </VirtualSubmoduleItem>
+            </VirtualSubmoduleList>
+          </ModuleItem>
+          <ModuleItem ID="IDM_MODULE_13" ModuleIdentNumber="0x14010000">
+            <ModuleInfo CategoryRef="Joker">
+              <Name TextId="IDT_MODULE_13_NAME"/>
+              <InfoText TextId="IDT_MODULE_13_INFO"/>
+            </ModuleInfo>
+            <VirtualSubmoduleList>
+              <VirtualSubmoduleItem ID="IDS_SUBMODULE_13" SubmoduleIdentNumber="0x14010000">
+                <IOData IOPS_Length="1" IOCS_Length="1">
+                  <Output Consistency="All items consistency">
+                    <DataItem DataType="OctetString" UseAsBits="true" TextId="IDT_DATAITEM_13O" Length="1"/>
+                  </Output>
+                </IOData>                
+                <RecordDataList>                
+                  <ParameterRecordDataItem Index="1" Length="4">                  
+                    <Name TextId="IDT_MODULE_13_NAME"/>
+                    <Const ByteOffset="0" Data="0x00,0x60,0x60,0x00"/>        
+                    <Ref DataType="Unsigned16" ByteOffset="1" DefaultValue="24672" AllowedValues="8192..28671" Changeable="true" Visible="true" TextId="IDT_m13_prm_0_name"/>
+                    <Ref DataType="Unsigned8" ByteOffset="3" DefaultValue="0" AllowedValues="0..255" Changeable="true" Visible="true" TextId="IDT_m13_prm_1_name"/>
+                  </ParameterRecordDataItem>
+                </RecordDataList>
+                <ModuleInfo CategoryRef="Joker">
+                  <Name TextId="IDT_MODULE_13_NAME"/>
+                  <InfoText TextId="IDT_MODULE_13_INFO"/>
+                </ModuleInfo>
+              </VirtualSubmoduleItem>
+            </VirtualSubmoduleList>
+          </ModuleItem>
+          <ModuleItem ID="IDM_MODULE_14" ModuleIdentNumber="0x14020000">
+            <ModuleInfo CategoryRef="Joker">
+              <Name TextId="IDT_MODULE_14_NAME"/>
+              <InfoText TextId="IDT_MODULE_14_INFO"/>
+            </ModuleInfo>
+            <VirtualSubmoduleList>
+              <VirtualSubmoduleItem ID="IDS_SUBMODULE_14" SubmoduleIdentNumber="0x14020000">
+                <IOData IOPS_Length="1" IOCS_Length="1">
+                  <Output Consistency="All items consistency">
+                    <DataItem DataType="OctetString" UseAsBits="true" TextId="IDT_DATAITEM_14O" Length="2"/>
+                  </Output>
+                </IOData>                
+                <RecordDataList>                
+                  <ParameterRecordDataItem Index="1" Length="4">                  
+                    <Name TextId="IDT_MODULE_14_NAME"/>
+                    <Const ByteOffset="0" Data="0x00,0x26,0x01,0x02"/>        
+                    <Ref DataType="Unsigned16" ByteOffset="1" DefaultValue="9729" AllowedValues="8192..28671" Changeable="true" Visible="true" TextId="IDT_m14_prm_0_name"/>
+                    <Ref DataType="Unsigned8" ByteOffset="3" DefaultValue="2" AllowedValues="0..255" Changeable="true" Visible="true" TextId="IDT_m14_prm_1_name"/>
+                  </ParameterRecordDataItem>
+                </RecordDataList>
+                <ModuleInfo CategoryRef="Joker">
+                  <Name TextId="IDT_MODULE_14_NAME"/>
+                  <InfoText TextId="IDT_MODULE_14_INFO"/>
+                </ModuleInfo>
+              </VirtualSubmoduleItem>
+            </VirtualSubmoduleList>
+          </ModuleItem>
+          <ModuleItem ID="IDM_MODULE_15" ModuleIdentNumber="0x14030000">
+            <ModuleInfo CategoryRef="Joker">
+              <Name TextId="IDT_MODULE_15_NAME"/>
+              <InfoText TextId="IDT_MODULE_15_INFO"/>
+            </ModuleInfo>
+            <VirtualSubmoduleList>
+              <VirtualSubmoduleItem ID="IDS_SUBMODULE_15" SubmoduleIdentNumber="0x14030000">
+                <IOData IOPS_Length="1" IOCS_Length="1">
+                  <Output Consistency="All items consistency">
+                    <DataItem DataType="OctetString" UseAsBits="true" TextId="IDT_DATAITEM_15O" Length="4"/>
+                  </Output>
+                </IOData>                
+                <RecordDataList>                
+                  <ParameterRecordDataItem Index="1" Length="4">                  
+                    <Name TextId="IDT_MODULE_15_NAME"/>
+                    <Const ByteOffset="0" Data="0x00,0x60,0x80,0x00"/>        
+                    <Ref DataType="Unsigned16" ByteOffset="1" DefaultValue="24704" AllowedValues="8192..28671" Changeable="true" Visible="true" TextId="IDT_m15_prm_0_name"/>
+                    <Ref DataType="Unsigned8" ByteOffset="3" DefaultValue="0" AllowedValues="0..255" Changeable="true" Visible="true" TextId="IDT_m15_prm_1_name"/>
+                  </ParameterRecordDataItem>
+                </RecordDataList>
+                <ModuleInfo CategoryRef="Joker">
+                  <Name TextId="IDT_MODULE_15_NAME"/>
+                  <InfoText TextId="IDT_MODULE_15_INFO"/>
+                </ModuleInfo>
+              </VirtualSubmoduleItem>
+            </VirtualSubmoduleList>
+          </ModuleItem>
+          <ModuleItem ID="IDM_MODULE_16" ModuleIdentNumber="0x14040000">
+            <ModuleInfo CategoryRef="Joker">
+              <Name TextId="IDT_MODULE_16_NAME"/>
+              <InfoText TextId="IDT_MODULE_16_INFO"/>
+            </ModuleInfo>
+            <VirtualSubmoduleList>
+              <VirtualSubmoduleItem ID="IDS_SUBMODULE_16" SubmoduleIdentNumber="0x14040000">
+                <IOData IOPS_Length="1" IOCS_Length="1">
+                  <Input Consistency="All items consistency">
+                    <DataItem DataType="OctetString" UseAsBits="true" TextId="IDT_DATAITEM_16I" Length="1"/>
+                  </Input>
+                </IOData>                
+                <RecordDataList>                
+                  <ParameterRecordDataItem Index="1" Length="4">                  
+                    <Name TextId="IDT_MODULE_16_NAME"/>
+                    <Const ByteOffset="0" Data="0x00,0x60,0x61,0x00"/>        
+                    <Ref DataType="Unsigned16" ByteOffset="1" DefaultValue="24673" AllowedValues="8192..28671" Changeable="true" Visible="true" TextId="IDT_m16_prm_0_name"/>
+                    <Ref DataType="Unsigned8" ByteOffset="3" DefaultValue="0" AllowedValues="0..255" Changeable="true" Visible="true" TextId="IDT_m16_prm_1_name"/>
+                  </ParameterRecordDataItem>
+                </RecordDataList>
+                <ModuleInfo CategoryRef="Joker">
+                  <Name TextId="IDT_MODULE_16_NAME"/>
+                  <InfoText TextId="IDT_MODULE_16_INFO"/>
+                </ModuleInfo>
+              </VirtualSubmoduleItem>
+            </VirtualSubmoduleList>
+          </ModuleItem>
+          <ModuleItem ID="IDM_MODULE_17" ModuleIdentNumber="0x14050000">
+            <ModuleInfo CategoryRef="Joker">
+              <Name TextId="IDT_MODULE_17_NAME"/>
+              <InfoText TextId="IDT_MODULE_17_INFO"/>
+            </ModuleInfo>
+            <VirtualSubmoduleList>
+              <VirtualSubmoduleItem ID="IDS_SUBMODULE_17" SubmoduleIdentNumber="0x14050000">
+                <IOData IOPS_Length="1" IOCS_Length="1">
+                  <Input Consistency="All items consistency">
+                    <DataItem DataType="OctetString" UseAsBits="true" TextId="IDT_DATAITEM_17I" Length="2"/>
+                  </Input>
+                </IOData>                
+                <RecordDataList>                
+                  <ParameterRecordDataItem Index="1" Length="4">                  
+                    <Name TextId="IDT_MODULE_17_NAME"/>
+                    <Const ByteOffset="0" Data="0x00,0x60,0x44,0x00"/>        
+                    <Ref DataType="Unsigned16" ByteOffset="1" DefaultValue="24644" AllowedValues="8192..28671" Changeable="true" Visible="true" TextId="IDT_m17_prm_0_name"/>
+                    <Ref DataType="Unsigned8" ByteOffset="3" DefaultValue="0" AllowedValues="0..255" Changeable="true" Visible="true" TextId="IDT_m17_prm_1_name"/>
+                  </ParameterRecordDataItem>
+                </RecordDataList>
+                <ModuleInfo CategoryRef="Joker">
+                  <Name TextId="IDT_MODULE_17_NAME"/>
+                  <InfoText TextId="IDT_MODULE_17_INFO"/>
+                </ModuleInfo>
+              </VirtualSubmoduleItem>
+            </VirtualSubmoduleList>
+          </ModuleItem>
+          <ModuleItem ID="IDM_MODULE_18" ModuleIdentNumber="0x14060000">
+            <ModuleInfo CategoryRef="Joker">
+              <Name TextId="IDT_MODULE_18_NAME"/>
+              <InfoText TextId="IDT_MODULE_18_INFO"/>
+            </ModuleInfo>
+            <VirtualSubmoduleList>
+              <VirtualSubmoduleItem ID="IDS_SUBMODULE_18" SubmoduleIdentNumber="0x14060000">
+                <IOData IOPS_Length="1" IOCS_Length="1">
+                  <Input Consistency="All items consistency">
+                    <DataItem DataType="OctetString" UseAsBits="true" TextId="IDT_DATAITEM_18I" Length="4"/>
+                  </Input>
+                </IOData>                
+                <RecordDataList>                
+                  <ParameterRecordDataItem Index="1" Length="4">                  
+                    <Name TextId="IDT_MODULE_18_NAME"/>
+                    <Const ByteOffset="0" Data="0x00,0x60,0x79,0x00"/>        
+                    <Ref DataType="Unsigned16" ByteOffset="1" DefaultValue="24697" AllowedValues="8192..28671" Changeable="true" Visible="true" TextId="IDT_m18_prm_0_name"/>
+                    <Ref DataType="Unsigned8" ByteOffset="3" DefaultValue="0" AllowedValues="0..255" Changeable="true" Visible="true" TextId="IDT_m18_prm_1_name"/>
+                  </ParameterRecordDataItem>
+                </RecordDataList>
+                <ModuleInfo CategoryRef="Joker">
+                  <Name TextId="IDT_MODULE_18_NAME"/>
+                  <InfoText TextId="IDT_MODULE_18_INFO"/>
+                </ModuleInfo>
+              </VirtualSubmoduleItem>
+            </VirtualSubmoduleList>
+          </ModuleItem>
+        <!--< Safety Daten >-->
+        <!--<ModuleInfo>-->
+      </ModuleList>
+      <ValueList>
+        <ValueItem ID="PRM_TEXT_1">
+          <Assignments>
+            <Assign Content="0" TextId="PRM_TEXT_1_0_STR"/>
+            <Assign Content="1" TextId="PRM_TEXT_1_1_STR"/>
+            <Assign Content="2" TextId="PRM_TEXT_1_2_STR"/>
+            <Assign Content="3" TextId="PRM_TEXT_1_3_STR"/>
+            <Assign Content="4" TextId="PRM_TEXT_1_4_STR"/>
+            <Assign Content="5" TextId="PRM_TEXT_1_5_STR"/>
+            <Assign Content="8" TextId="PRM_TEXT_1_6_STR"/>
+            <Assign Content="9" TextId="PRM_TEXT_1_7_STR"/>
+            <Assign Content="13" TextId="PRM_TEXT_1_8_STR"/>
+            <Assign Content="14" TextId="PRM_TEXT_1_9_STR"/>
+            <Assign Content="15" TextId="PRM_TEXT_1_10_STR"/>
+            <Assign Content="17" TextId="PRM_TEXT_1_11_STR"/>
+            <Assign Content="18" TextId="PRM_TEXT_1_12_STR"/>
+            <Assign Content="19" TextId="PRM_TEXT_1_13_STR"/>
+            <Assign Content="20" TextId="PRM_TEXT_1_14_STR"/>
+            <Assign Content="21" TextId="PRM_TEXT_1_15_STR"/>
+            <Assign Content="39" TextId="PRM_TEXT_1_16_STR"/>
+            <Assign Content="40" TextId="PRM_TEXT_1_17_STR"/>
+            <Assign Content="41" TextId="PRM_TEXT_1_18_STR"/>
+            <Assign Content="42" TextId="PRM_TEXT_1_19_STR"/>
+            <Assign Content="43" TextId="PRM_TEXT_1_20_STR"/>
+            <Assign Content="44" TextId="PRM_TEXT_1_21_STR"/>
+            <Assign Content="45" TextId="PRM_TEXT_1_22_STR"/>
+            <Assign Content="46" TextId="PRM_TEXT_1_23_STR"/>
+            <Assign Content="47" TextId="PRM_TEXT_1_24_STR"/>
+            <Assign Content="48" TextId="PRM_TEXT_1_25_STR"/>
+            <Assign Content="127" TextId="PRM_TEXT_1_26_STR"/>
+          </Assignments>
+        </ValueItem>
+        <ValueItem ID="PRM_TEXT_2">
+          <Assignments>
+            <Assign Content="0" TextId="PRM_TEXT_2_0_STR"/>
+            <Assign Content="34" TextId="PRM_TEXT_2_1_STR"/>
+            <Assign Content="35" TextId="PRM_TEXT_2_2_STR"/>
+            <Assign Content="36" TextId="PRM_TEXT_2_3_STR"/>
+            <Assign Content="37" TextId="PRM_TEXT_2_4_STR"/>
+            <Assign Content="38" TextId="PRM_TEXT_2_5_STR"/>
+            <Assign Content="39" TextId="PRM_TEXT_2_6_STR"/>
+            <Assign Content="40" TextId="PRM_TEXT_2_7_STR"/>
+            <Assign Content="41" TextId="PRM_TEXT_2_8_STR"/>
+            <Assign Content="42" TextId="PRM_TEXT_2_9_STR"/>
+            <Assign Content="43" TextId="PRM_TEXT_2_10_STR"/>
+            <Assign Content="44" TextId="PRM_TEXT_2_11_STR"/>
+            <Assign Content="45" TextId="PRM_TEXT_2_12_STR"/>
+            <Assign Content="46" TextId="PRM_TEXT_2_13_STR"/>
+            <Assign Content="47" TextId="PRM_TEXT_2_14_STR"/>
+            <Assign Content="48" TextId="PRM_TEXT_2_15_STR"/>
+            <Assign Content="49" TextId="PRM_TEXT_2_16_STR"/>
+            <Assign Content="127" TextId="PRM_TEXT_2_17_STR"/>
+          </Assignments>
+        </ValueItem>
+        <ValueItem ID="PRM_TEXT_3">
+          <Assignments>
+            <Assign Content="0" TextId="PRM_TEXT_3_0_STR"/>
+            <Assign Content="1" TextId="PRM_TEXT_3_1_STR"/>
+          </Assignments>
+        </ValueItem>
+        <ValueItem ID="PRM_TEXT_4">
+          <Assignments>
+            <Assign Content="0" TextId="PRM_TEXT_4_0_STR"/>
+            <Assign Content="1" TextId="PRM_TEXT_4_1_STR"/>
+            <Assign Content="11" TextId="PRM_TEXT_4_2_STR"/>
+            <Assign Content="12" TextId="PRM_TEXT_4_3_STR"/>
+            <Assign Content="13" TextId="PRM_TEXT_4_4_STR"/>
+            <Assign Content="14" TextId="PRM_TEXT_4_5_STR"/>
+            <Assign Content="15" TextId="PRM_TEXT_4_6_STR"/>
+            <Assign Content="34" TextId="PRM_TEXT_4_7_STR"/>
+            <Assign Content="35" TextId="PRM_TEXT_4_8_STR"/>
+            <Assign Content="36" TextId="PRM_TEXT_4_9_STR"/>
+            <Assign Content="37" TextId="PRM_TEXT_4_10_STR"/>
+            <Assign Content="38" TextId="PRM_TEXT_4_11_STR"/>
+            <Assign Content="39" TextId="PRM_TEXT_4_12_STR"/>
+            <Assign Content="40" TextId="PRM_TEXT_4_13_STR"/>
+            <Assign Content="41" TextId="PRM_TEXT_4_14_STR"/>
+            <Assign Content="42" TextId="PRM_TEXT_4_15_STR"/>
+            <Assign Content="43" TextId="PRM_TEXT_4_16_STR"/>
+            <Assign Content="44" TextId="PRM_TEXT_4_17_STR"/>
+            <Assign Content="45" TextId="PRM_TEXT_4_18_STR"/>
+            <Assign Content="46" TextId="PRM_TEXT_4_19_STR"/>
+            <Assign Content="47" TextId="PRM_TEXT_4_20_STR"/>
+            <Assign Content="48" TextId="PRM_TEXT_4_21_STR"/>
+            <Assign Content="49" TextId="PRM_TEXT_4_22_STR"/>
+            <Assign Content="50" TextId="PRM_TEXT_4_23_STR"/>
+            <Assign Content="51" TextId="PRM_TEXT_4_24_STR"/>
+            <Assign Content="52" TextId="PRM_TEXT_4_25_STR"/>
+            <Assign Content="53" TextId="PRM_TEXT_4_26_STR"/>
+            <Assign Content="54" TextId="PRM_TEXT_4_27_STR"/>
+            <Assign Content="55" TextId="PRM_TEXT_4_28_STR"/>
+            <Assign Content="56" TextId="PRM_TEXT_4_29_STR"/>
+            <Assign Content="57" TextId="PRM_TEXT_4_30_STR"/>
+            <Assign Content="58" TextId="PRM_TEXT_4_31_STR"/>
+            <Assign Content="59" TextId="PRM_TEXT_4_32_STR"/>
+            <Assign Content="60" TextId="PRM_TEXT_4_33_STR"/>
+            <Assign Content="65" TextId="PRM_TEXT_4_34_STR"/>
+            <Assign Content="66" TextId="PRM_TEXT_4_35_STR"/>
+            <Assign Content="67" TextId="PRM_TEXT_4_36_STR"/>
+            <Assign Content="69" TextId="PRM_TEXT_4_37_STR"/>
+            <Assign Content="70" TextId="PRM_TEXT_4_38_STR"/>
+            <Assign Content="71" TextId="PRM_TEXT_4_39_STR"/>
+            <Assign Content="72" TextId="PRM_TEXT_4_40_STR"/>
+            <Assign Content="73" TextId="PRM_TEXT_4_41_STR"/>
+            <Assign Content="74" TextId="PRM_TEXT_4_42_STR"/>
+            <Assign Content="75" TextId="PRM_TEXT_4_43_STR"/>
+            <Assign Content="76" TextId="PRM_TEXT_4_44_STR"/>
+            <Assign Content="77" TextId="PRM_TEXT_4_45_STR"/>
+            <Assign Content="78" TextId="PRM_TEXT_4_46_STR"/>
+            <Assign Content="79" TextId="PRM_TEXT_4_47_STR"/>
+            <Assign Content="80" TextId="PRM_TEXT_4_48_STR"/>
+            <Assign Content="81" TextId="PRM_TEXT_4_49_STR"/>
+            <Assign Content="82" TextId="PRM_TEXT_4_50_STR"/>
+            <Assign Content="83" TextId="PRM_TEXT_4_51_STR"/>
+            <Assign Content="104" TextId="PRM_TEXT_4_52_STR"/>
+            <Assign Content="105" TextId="PRM_TEXT_4_53_STR"/>
+            <Assign Content="106" TextId="PRM_TEXT_4_54_STR"/>
+            <Assign Content="107" TextId="PRM_TEXT_4_55_STR"/>
+            <Assign Content="108" TextId="PRM_TEXT_4_56_STR"/>
+            <Assign Content="109" TextId="PRM_TEXT_4_57_STR"/>
+            <Assign Content="110" TextId="PRM_TEXT_4_58_STR"/>
+            <Assign Content="111" TextId="PRM_TEXT_4_59_STR"/>
+            <Assign Content="112" TextId="PRM_TEXT_4_60_STR"/>
+            <Assign Content="113" TextId="PRM_TEXT_4_61_STR"/>
+            <Assign Content="114" TextId="PRM_TEXT_4_62_STR"/>
+            <Assign Content="115" TextId="PRM_TEXT_4_63_STR"/>
+            <Assign Content="127" TextId="PRM_TEXT_4_64_STR"/>
+          </Assignments>
+        </ValueItem>
+        <ValueItem ID="PRM_TEXT_5">
+          <Assignments>
+            <Assign Content="0" TextId="PRM_TEXT_5_0_STR"/>
+            <Assign Content="1" TextId="PRM_TEXT_5_1_STR"/>
+          </Assignments>
+        </ValueItem>
+        <ValueItem ID="PRM_TEXT_6">
+          <Assignments>
+            <Assign Content="0" TextId="PRM_TEXT_6_0_STR"/>
+            <Assign Content="1" TextId="PRM_TEXT_6_1_STR"/>
+            <Assign Content="2" TextId="PRM_TEXT_6_2_STR"/>
+            <Assign Content="3" TextId="PRM_TEXT_6_3_STR"/>
+            <Assign Content="4" TextId="PRM_TEXT_6_4_STR"/>
+            <Assign Content="5" TextId="PRM_TEXT_6_5_STR"/>
+          </Assignments>
+        </ValueItem>
+        <ValueItem ID="IDT_PART_ERROR_ID_CODES">
+          <Assignments>
+            <Assign Content="0" TextId="PN_NO_ERR_0"/>
+            <Assign Content="8784" TextId="PN_2250"/>
+            <Assign Content="8992" TextId="PN_2320"/>
+            <Assign Content="9024" TextId="PN_2340"/>
+            <Assign Content="9040" TextId="PN_2350"/>
+            <Assign Content="9090" TextId="PN_2382"/>
+            <Assign Content="9091" TextId="PN_2383"/>
+            <Assign Content="9095" TextId="PN_2387"/>
+            <Assign Content="12576" TextId="PN_3120"/>
+            <Assign Content="12816" TextId="PN_3210"/>
+            <Assign Content="12817" TextId="PN_3211"/>
+            <Assign Content="12832" TextId="PN_3220"/>
+            <Assign Content="12833" TextId="PN_3221"/>
+            <Assign Content="12834" TextId="PN_3222"/>
+            <Assign Content="16912" TextId="PN_4210"/>
+            <Assign Content="17024" TextId="PN_4280"/>
+            <Assign Content="17025" TextId="PN_4281"/>
+            <Assign Content="17029" TextId="PN_4285"/>
+            <Assign Content="17168" TextId="PN_4310"/>
+            <Assign Content="20754" TextId="PN_5112"/>
+            <Assign Content="21376" TextId="PN_5380"/>
+            <Assign Content="24592" TextId="PN_6010"/>
+            <Assign Content="24961" TextId="PN_6181"/>
+            <Assign Content="24962" TextId="PN_6182"/>
+            <Assign Content="24963" TextId="PN_6183"/>
+            <Assign Content="24964" TextId="PN_6184"/>
+            <Assign Content="24968" TextId="PN_6188"/>
+            <Assign Content="24969" TextId="PN_6189"/>
+            <Assign Content="24970" TextId="PN_618A"/>
+            <Assign Content="24976" TextId="PN_6190"/>
+            <Assign Content="24977" TextId="PN_6191"/>
+            <Assign Content="24978" TextId="PN_6192"/>
+            <Assign Content="24979" TextId="PN_6193"/>
+            <Assign Content="24980" TextId="PN_6194"/>
+            <Assign Content="24981" TextId="PN_6195"/>
+            <Assign Content="24982" TextId="PN_6196"/>
+            <Assign Content="25008" TextId="PN_61B0"/>
+            <Assign Content="25009" TextId="PN_61B1"/>
+            <Assign Content="25216" TextId="PN_6280"/>
+            <Assign Content="25217" TextId="PN_6281"/>
+            <Assign Content="25218" TextId="PN_6282"/>
+            <Assign Content="25232" TextId="PN_6290"/>
+            <Assign Content="25233" TextId="PN_6291"/>
+            <Assign Content="25248" TextId="PN_62A0"/>
+            <Assign Content="25249" TextId="PN_62A1"/>
+            <Assign Content="25250" TextId="PN_62A2"/>
+            <Assign Content="25265" TextId="PN_62B1"/>
+            <Assign Content="25504" TextId="PN_63A0"/>
+            <Assign Content="25505" TextId="PN_63A1"/>
+            <Assign Content="25506" TextId="PN_63A2"/>
+            <Assign Content="25507" TextId="PN_63A3"/>
+            <Assign Content="25508" TextId="PN_63A4"/>
+            <Assign Content="28800" TextId="PN_7080"/>
+            <Assign Content="28801" TextId="PN_7081"/>
+            <Assign Content="28802" TextId="PN_7082"/>
+            <Assign Content="28833" TextId="PN_70A1"/>
+            <Assign Content="28834" TextId="PN_70A2"/>
+            <Assign Content="28961" TextId="PN_7121"/>
+            <Assign Content="29056" TextId="PN_7180"/>
+            <Assign Content="29573" TextId="PN_7385"/>
+            <Assign Content="30080" TextId="PN_7580"/>
+            <Assign Content="30081" TextId="PN_7581"/>
+            <Assign Content="30336" TextId="PN_7680"/>
+            <Assign Content="30337" TextId="PN_7681"/>
+            <Assign Content="30338" TextId="PN_7682"/>
+            <Assign Content="30340" TextId="PN_7684"/>
+            <Assign Content="30342" TextId="PN_7686"/>
+            <Assign Content="30343" TextId="PN_7687"/>
+            <Assign Content="30345" TextId="PN_7689"/>
+            <Assign Content="30346" TextId="PN_768A"/>
+            <Assign Content="30352" TextId="PN_7690"/>
+            <Assign Content="30353" TextId="PN_7691"/>
+            <Assign Content="30354" TextId="PN_7692"/>
+            <Assign Content="30355" TextId="PN_7693"/>
+            <Assign Content="30356" TextId="PN_7694"/>
+            <Assign Content="30357" TextId="PN_7695"/>
+            <Assign Content="30358" TextId="PN_7696"/>
+            <Assign Content="30359" TextId="PN_7697"/>
+            <Assign Content="33042" TextId="PN_8112"/>
+            <Assign Content="33044" TextId="PN_8114"/>
+            <Assign Content="33154" TextId="PN_8182"/>
+            <Assign Content="33155" TextId="PN_8183"/>
+            <Assign Content="33156" TextId="PN_8184"/>
+            <Assign Content="33157" TextId="PN_8185"/>
+            <Assign Content="33158" TextId="PN_8186"/>
+            <Assign Content="33159" TextId="PN_8187"/>
+            <Assign Content="33168" TextId="PN_8190"/>
+            <Assign Content="33169" TextId="PN_8191"/>
+            <Assign Content="33170" TextId="PN_8192"/>
+            <Assign Content="33171" TextId="PN_8193"/>
+            <Assign Content="33184" TextId="PN_81A0"/>
+            <Assign Content="33185" TextId="PN_81A1"/>
+            <Assign Content="33186" TextId="PN_81A2"/>
+            <Assign Content="33200" TextId="PN_81B0"/>
+            <Assign Content="33414" TextId="PN_8286"/>
+            <Assign Content="33425" TextId="PN_8291"/>
+            <Assign Content="33426" TextId="PN_8292"/>
+            <Assign Content="33427" TextId="PN_8293"/>
+            <Assign Content="33553" TextId="PN_8311"/>
+            <Assign Content="36992" TextId="PN_9080"/>
+            <Assign Content="65282" TextId="PN_FF02"/>
+            <Assign Content="65285" TextId="PN_FF05"/>
+            <Assign Content="65286" TextId="PN_FF06"/>
+            <Assign Content="65289" TextId="PN_FF09"/>
+            <Assign Content="65290" TextId="PN_FF0A"/>
+            <Assign Content="65291" TextId="PN_FF0B"/>
+            <Assign Content="65292" TextId="PN_FF0C"/>
+            <Assign Content="65305" TextId="PN_FF19"/>
+            <Assign Content="65328" TextId="PN_FF30"/>
+            <Assign Content="65329" TextId="PN_FF31"/>
+            <Assign Content="65330" TextId="PN_FF32"/>
+            <Assign Content="65331" TextId="PN_FF33"/>
+            <Assign Content="65332" TextId="PN_FF34"/>
+            <Assign Content="65333" TextId="PN_FF35"/>
+            <Assign Content="65334" TextId="PN_FF36"/>
+            <Assign Content="65335" TextId="PN_FF37"/>
+            <Assign Content="65366" TextId="PN_FF56"/>
+          </Assignments>
+        </ValueItem>
+      </ValueList>
+      <!-- Ab hier beginnen die Diagnose-Texte -->
+      <UnitDiagTypeList>
+        <!-- Selektion des Fehlerwertes fuer Struktur 1-->
+        <UnitDiagTypeItem UserStructureIdentifier="1">
+          <Ref TextId="PN_ERROR_ID" ValueItemTarget="IDT_PART_ERROR_ID_CODES" DataType="Unsigned16" ByteOffset="2" BitOffset="0" DefaultValue="0"/>
+        </UnitDiagTypeItem>
+      </UnitDiagTypeList>
+      <GraphicsList>
+        <GraphicItem ID="1" GraphicFile="GSDML-0106-0550-LENZE0550"/>
+        <GraphicItem ID="2" GraphicFile="GSDML-0106-0550-LENZE0550"/>
+      </GraphicsList>
+      <CategoryList>
+        <CategoryItem ID="CiA 402" TextId="GROUP CiA 402"/>
+        <CategoryItem ID="Joker" TextId="GROUP Joker"/>
+        <CategoryItem ID="NetWord" TextId="GROUP NetWord"/>
+      </CategoryList>
+      <ExternalTextList>
+        <PrimaryLanguage>
+          <!-- Diagnosetexte PN -->
+          <Text TextId="PN_NO_ERR_0" Value="0 (No Error)"/>
+          <Text TextId="PN_ZERO_INSTANCE_0" Value="0"/>
+          <Text TextId="PN_2250" Value="CiA: continuous overcurrent (inside the device)"/>
+          <Text TextId="PN_2320" Value="CiA: short circuit/earth fault (inside the device)"/>
+          <Text TextId="PN_2340" Value="CiA: short circuit (inside the device)"/>
+          <Text TextId="PN_2350" Value="CiA: i²*t overload (thermal state)"/>
+          <Text TextId="PN_2382" Value="I*t error"/>
+          <Text TextId="PN_2383" Value="I*t warning"/>
+          <Text TextId="PN_2387" Value="Clamp responds too often"/>
+          <Text TextId="PN_3120" Value="Single phase failure"/>
+          <Text TextId="PN_3210" Value="DC bus overvoltage"/>
+          <Text TextId="PN_3211" Value="DC bus overvoltage warning"/>
+          <Text TextId="PN_3220" Value="DC bus undervoltage"/>
+          <Text TextId="PN_3221" Value="DC bus undervoltage warning"/>
+          <Text TextId="PN_3222" Value="DC-bus voltage too low for switch-on"/>
+          <Text TextId="PN_4210" Value="Overtemp. error power mod."/>
+          <Text TextId="PN_4280" Value="Thermal sensor heatsink error"/>
+          <Text TextId="PN_4281" Value="Heatsink fan error"/>
+          <Text TextId="PN_4285" Value="Power module overtemperature warning"/>
+          <Text TextId="PN_4310" Value="Motor temperature has reached error threshold"/>
+          <Text TextId="PN_5112" Value="24 V supply critical"/>
+          <Text TextId="PN_5380" Value="Incomp. OEM HW"/>
+          <Text TextId="PN_6010" Value="Watchdog time-out"/>
+          <Text TextId="PN_6181" Value="Time-out in 125 us task"/>
+          <Text TextId="PN_6182" Value="Time-out in 250 us task"/>
+          <Text TextId="PN_6183" Value="Time-out in 1 ms task"/>
+          <Text TextId="PN_6184" Value="Time-out in 8 ms task"/>
+          <Text TextId="PN_6188" Value="Internal error"/>
+          <Text TextId="PN_6189" Value="Power section programming error"/>
+          <Text TextId="PN_618A" Value="Internal fan error"/>
+          <Text TextId="PN_6190" Value="Communication protocol version in the power section inapplicable"/>
+          <Text TextId="PN_6191" Value="Communication in the power section not synchronous"/>
+          <Text TextId="PN_6192" Value="Communication reception error in the power section at control unit"/>
+          <Text TextId="PN_6193" Value="Power section comm. reception error"/>
+          <Text TextId="PN_6194" Value="PDO communication with power section aborted"/>
+          <Text TextId="PN_6195" Value="I2C connection lost"/>
+          <Text TextId="PN_6196" Value="I2C bus error"/>
+          <Text TextId="PN_61B0" Value="uC supply voltage drop in the power section"/>
+          <Text TextId="PN_61B1" Value="General error in the power section"/>
+          <Text TextId="PN_6280" Value="Trigger/functions connected incorrectly"/>
+          <Text TextId="PN_6281" Value="User-defined fault 1 initiated via trigger/function"/>
+          <Text TextId="PN_6282" Value="User-defined fault 2 initiated via trigger/function"/>
+          <Text TextId="PN_6290" Value="Reversal warning"/>
+          <Text TextId="PN_6291" Value="Number of maximum permissible faults exceeded"/>
+          <Text TextId="PN_62A0" Value="AC control user error"/>
+          <Text TextId="PN_62A1" Value="User-defined fault 1 triggered via network"/>
+          <Text TextId="PN_62A2" Value="User-defined fault 2 triggered via network"/>
+          <Text TextId="PN_62B1" Value="NetwordIN1 function assignment incorrect"/>
+          <Text TextId="PN_63A0" Value="On-board EEPROM access error"/>
+          <Text TextId="PN_63A1" Value="Loading the ID tag calibration data in the control unit failed"/>
+          <Text TextId="PN_63A2" Value="Loading the ID tag calibration data in the power section failed"/>
+          <Text TextId="PN_63A3" Value="Power section unknown"/>
+          <Text TextId="PN_63A4" Value="Timerüberlauf internes EEPROM"/>
+          <Text TextId="PN_7080" Value="Assertion level monitoring"/>
+          <Text TextId="PN_7081" Value="Monitoring of analog input 1"/>
+          <Text TextId="PN_7082" Value="Monitoring of analog input 2"/>
+          <Text TextId="PN_70A1" Value="Monitoring of analog output 1"/>
+          <Text TextId="PN_70A2" Value="Monitoring of analog output 2"/>
+          <Text TextId="PN_7121" Value="Pole position identification error"/>
+          <Text TextId="PN_7180" Value="Motor overcurrent"/>
+          <Text TextId="PN_7385" Value="F.fdb spd limit"/>
+          <Text TextId="PN_7580" Value="Error when sending diagnostic messages"/>
+          <Text TextId="PN_7581" Value="Error when receiving diagnostic messages"/>
+          <Text TextId="PN_7680" Value="Memory module is full"/>
+          <Text TextId="PN_7681" Value="No memory module"/>
+          <Text TextId="PN_7682" Value="Memory module contains invalid user data"/>
+          <Text TextId="PN_7684" Value="Data not completely saved in the memory module before switch-off"/>
+          <Text TextId="PN_7686" Value="Network: configuration error"/>
+          <Text TextId="PN_7687" Value="Memory module timer overflow"/>
+          <Text TextId="PN_7689" Value="OEM data invalid"/>
+          <Text TextId="PN_768A" Value="Wrong EPM"/>
+          <Text TextId="PN_7690" Value="OEM CU not match"/>
+          <Text TextId="PN_7691" Value="PU Data not match"/>
+          <Text TextId="PN_7692" Value="User CU not match"/>
+          <Text TextId="PN_7693" Value="EPM PU size inco"/>
+          <Text TextId="PN_7694" Value="EPM new PU size"/>
+          <Text TextId="PN_7695" Value="InvalidChgovrCfg"/>
+          <Text TextId="PN_7696" Value="Unkn. Par in EPM"/>
+          <Text TextId="PN_7697" Value="EPM data: Lost modified parameters because of 24V power-cycling"/>
+          <Text TextId="PN_8112" Value="TO expl. msg"/>
+          <Text TextId="PN_8114" Value="TO overall comm"/>
+          <Text TextId="PN_8182" Value="CAN bus off"/>
+          <Text TextId="PN_8183" Value="CAN warning"/>
+          <Text TextId="PN_8184" Value="CAN heartbeat time-out consumer 1"/>
+          <Text TextId="PN_8185" Value="CAN heartbeat time-out consumer 2"/>
+          <Text TextId="PN_8186" Value="CAN heartbeat time-out consumer 3"/>
+          <Text TextId="PN_8187" Value="CAN heartbeat time-out consumer 4"/>
+          <Text TextId="PN_8190" Value="Network: watchdog elapsed"/>
+          <Text TextId="PN_8191" Value="Network: interruption of cyclic data exchange"/>
+          <Text TextId="PN_8192" Value="Network: communication error"/>
+          <Text TextId="PN_8193" Value="Network: invalid cyclic process data"/>
+          <Text TextId="PN_81A0" Value="Modbus: error when sending messages"/>
+          <Text TextId="PN_81A1" Value="Modbus time-out"/>
+          <Text TextId="PN_81A2" Value="Modbus: incorrect request by master"/>
+          <Text TextId="PN_81B0" Value="Ethernet - Interface iCIF FPGA &lt;-&gt; XMC disconnected"/>
+          <Text TextId="PN_8286" Value="Network: PDO mapping error"/>
+          <Text TextId="PN_8291" Value="CAN RPDO1 time-out"/>
+          <Text TextId="PN_8292" Value="CAN RPDO2 time-out"/>
+          <Text TextId="PN_8293" Value="CAN RPDO3 time-out"/>
+          <Text TextId="PN_8311" Value="F.TrqExc"/>
+          <Text TextId="PN_9080" Value="Error - keypad removed"/>
+          <Text TextId="PN_FF02" Value="Brake resistor overload error"/>
+          <Text TextId="PN_FF05" Value="Safety monitoring error"/>
+          <Text TextId="PN_FF06" Value="Motor overspeed"/>
+          <Text TextId="PN_FF09" Value="Motor phase failure"/>
+          <Text TextId="PN_FF0A" Value="Phase U motor phase failure"/>
+          <Text TextId="PN_FF0B" Value="Motor phase failure phase V"/>
+          <Text TextId="PN_FF0C" Value="Motor phase failure phase W"/>
+          <Text TextId="PN_FF19" Value="Motor parameter identification error"/>
+          <Text TextId="PN_FF30" Value="Test monitoring does not generate any response"/>
+          <Text TextId="PN_FF31" Value="Tmonit. generates warning"/>
+          <Text TextId="PN_FF32" Value="Test monitoring generates fault"/>
+          <Text TextId="PN_FF33" Value="Test monitoring generates error"/>
+          <Text TextId="PN_FF34" Value="Test monitoring generates error with a delayed error reset"/>
+          <Text TextId="PN_FF35" Value="Test monitoring generates error with blocked error reset"/>
+          <Text TextId="PN_FF36" Value="Brake resistor overload warning"/>
+          <Text TextId="PN_FF37" Value="Automatic start at switch-on inhibited"/>
+          <Text TextId="PN_FF56" Value="Max. output frequency reached"/>
+          <Text TextId="PN_ERROR_TYPE" Value="Error Type: "/>
+          <Text TextId="PNREACT_0" Value="Error reaction: No reaction"/>
+          <Text TextId="PNREACT_1" Value="Error reaction: Warning"/>
+          <Text TextId="PNREACT_2" Value="Error reaction: Trouble"/>
+          <Text TextId="PNREACT_3" Value="Error reaction: Fault"/>
+          <Text TextId="PN_ERROR_ID" Value="Error ID: "/>
+          <!--  -->
+          <Text TextId="IDT_FAMILY_DESCRIPTION" Value="Lenze PROFINET Frequency Inverter i550"/>
+          <!--Textstrings fuer DAP  -->
+          <Text TextId="IDT_DAP_NAME" Value="IOFW51ARXX"/>
+          <Text TextId="IDT_DAP_INFO" Value="i550 PROFINET IO Interface"/>
+          <Text TextId="IDT_DAP_Interface" Value="X1"/>
+          <Text TextId="IDT_DAP_Port1" Value="P1"/>
+          <Text TextId="IDT_DAP_Port2" Value="P2"/>
+          <Text TextId="IDT_ETHERNETINTERFACE_Port1" Value="Port 1"/>
+          <Text TextId="IDT_ETHERNETINTERFACE_Port2" Value="Port 2"/>
+          <!--  -->
+          <!--module categories-->
+          <!--process modules-->
+          <Text TextId="GROUP CiA 402" Value="CiA 402"/>
+          <Text TextId="GROUP Joker" Value="Joker"/>
+          <Text TextId="GROUP NetWord" Value="NetWord"/>
+          <Text TextId="PRM_TEXT_1_0_STR" Value="Not active"/>
+          <Text TextId="PRM_TEXT_1_1_STR" Value="Inverter disab."/>
+          <Text TextId="PRM_TEXT_1_2_STR" Value="Stop"/>
+          <Text TextId="PRM_TEXT_1_3_STR" Value="Quick Stop"/>
+          <Text TextId="PRM_TEXT_1_4_STR" Value="Reset fault"/>
+          <Text TextId="PRM_TEXT_1_5_STR" Value="DC brake"/>
+          <Text TextId="PRM_TEXT_1_6_STR" Value="Run forward"/>
+          <Text TextId="PRM_TEXT_1_7_STR" Value="Run reverse"/>
+          <Text TextId="PRM_TEXT_1_8_STR" Value="Invert rotation"/>
+          <Text TextId="PRM_TEXT_1_9_STR" Value="AI1 stpnt. sel."/>
+          <Text TextId="PRM_TEXT_1_10_STR" Value="AI2 stpnt. sel."/>
+          <Text TextId="PRM_TEXT_1_11_STR" Value="NET Setpnt.Sel."/>
+          <Text TextId="PRM_TEXT_1_12_STR" Value="Preset b0 sel."/>
+          <Text TextId="PRM_TEXT_1_13_STR" Value="Preset b1 sel."/>
+          <Text TextId="PRM_TEXT_1_14_STR" Value="Preset b2 sel."/>
+          <Text TextId="PRM_TEXT_1_15_STR" Value="Preset b3 sel."/>
+          <Text TextId="PRM_TEXT_1_16_STR" Value="Selection ramp 2"/>
+          <Text TextId="PRM_TEXT_1_17_STR" Value="Load param.set"/>
+          <Text TextId="PRM_TEXT_1_18_STR" Value="Para set 1 sel"/>
+          <Text TextId="PRM_TEXT_1_19_STR" Value="Para set 2 sel"/>
+          <Text TextId="PRM_TEXT_1_20_STR" Value="User-Net.fault 1"/>
+          <Text TextId="PRM_TEXT_1_21_STR" Value="User-Net.fault 2"/>
+          <Text TextId="PRM_TEXT_1_22_STR" Value="PID off"/>
+          <Text TextId="PRM_TEXT_1_23_STR" Value="PID output=0"/>
+          <Text TextId="PRM_TEXT_1_24_STR" Value="PID I  disabled"/>
+          <Text TextId="PRM_TEXT_1_25_STR" Value="PID-Inf ramp on"/>
+          <Text TextId="PRM_TEXT_1_26_STR" Value="Not modified"/>
+          <Text TextId="PRM_TEXT_2_0_STR" Value="Not connected"/>
+          <Text TextId="PRM_TEXT_2_1_STR" Value="NETWordIN2.00"/>
+          <Text TextId="PRM_TEXT_2_2_STR" Value="NETWordIN2.01"/>
+          <Text TextId="PRM_TEXT_2_3_STR" Value="NETWordIN2.02"/>
+          <Text TextId="PRM_TEXT_2_4_STR" Value="NETWordIN2.03"/>
+          <Text TextId="PRM_TEXT_2_5_STR" Value="NETWordIN2.04"/>
+          <Text TextId="PRM_TEXT_2_6_STR" Value="NETWordIN2.05"/>
+          <Text TextId="PRM_TEXT_2_7_STR" Value="NETWordIN2.06"/>
+          <Text TextId="PRM_TEXT_2_8_STR" Value="NETWordIN2.07"/>
+          <Text TextId="PRM_TEXT_2_9_STR" Value="NETWordIN2.08"/>
+          <Text TextId="PRM_TEXT_2_10_STR" Value="NETWordIN2.09"/>
+          <Text TextId="PRM_TEXT_2_11_STR" Value="NETWordIN2.10"/>
+          <Text TextId="PRM_TEXT_2_12_STR" Value="NETWordIN2.11"/>
+          <Text TextId="PRM_TEXT_2_13_STR" Value="NETWordIN2.12"/>
+          <Text TextId="PRM_TEXT_2_14_STR" Value="NETWordIN2.13"/>
+          <Text TextId="PRM_TEXT_2_15_STR" Value="NETWordIN2.14"/>
+          <Text TextId="PRM_TEXT_2_16_STR" Value="NETWordIN2.15"/>
+          <Text TextId="PRM_TEXT_2_17_STR" Value="Not modified"/>
+          <Text TextId="PRM_TEXT_3_0_STR" Value="Not modified"/>
+          <Text TextId="PRM_TEXT_3_1_STR" Value="Analog output 1"/>
+          <Text TextId="PRM_TEXT_4_0_STR" Value="Not connected"/>
+          <Text TextId="PRM_TEXT_4_1_STR" Value="TRUE"/>
+          <Text TextId="PRM_TEXT_4_2_STR" Value="Digital input 1"/>
+          <Text TextId="PRM_TEXT_4_3_STR" Value="Digital input 2"/>
+          <Text TextId="PRM_TEXT_4_4_STR" Value="Digital input 3"/>
+          <Text TextId="PRM_TEXT_4_5_STR" Value="Digital input 4"/>
+          <Text TextId="PRM_TEXT_4_6_STR" Value="Digital input 5"/>
+          <Text TextId="PRM_TEXT_4_7_STR" Value="NETWordIN2.00"/>
+          <Text TextId="PRM_TEXT_4_8_STR" Value="NETWordIN2.01"/>
+          <Text TextId="PRM_TEXT_4_9_STR" Value="NETWordIN2.02"/>
+          <Text TextId="PRM_TEXT_4_10_STR" Value="NETWordIN2.03"/>
+          <Text TextId="PRM_TEXT_4_11_STR" Value="NETWordIN2.04"/>
+          <Text TextId="PRM_TEXT_4_12_STR" Value="NETWordIN2.05"/>
+          <Text TextId="PRM_TEXT_4_13_STR" Value="NETWordIN2.06"/>
+          <Text TextId="PRM_TEXT_4_14_STR" Value="NETWordIN2.07"/>
+          <Text TextId="PRM_TEXT_4_15_STR" Value="NETWordIN2.08"/>
+          <Text TextId="PRM_TEXT_4_16_STR" Value="NETWordIN2.09"/>
+          <Text TextId="PRM_TEXT_4_17_STR" Value="NETWordIN2.10"/>
+          <Text TextId="PRM_TEXT_4_18_STR" Value="NETWordIN2.11"/>
+          <Text TextId="PRM_TEXT_4_19_STR" Value="NETWordIN2.12"/>
+          <Text TextId="PRM_TEXT_4_20_STR" Value="NETWordIN2.13"/>
+          <Text TextId="PRM_TEXT_4_21_STR" Value="NETWordIN2.14"/>
+          <Text TextId="PRM_TEXT_4_22_STR" Value="NETWordIN2.15"/>
+          <Text TextId="PRM_TEXT_4_23_STR" Value="Running"/>
+          <Text TextId="PRM_TEXT_4_24_STR" Value="Ready to run"/>
+          <Text TextId="PRM_TEXT_4_25_STR" Value="Enable"/>
+          <Text TextId="PRM_TEXT_4_26_STR" Value="Stop active"/>
+          <Text TextId="PRM_TEXT_4_27_STR" Value="Quick stop"/>
+          <Text TextId="PRM_TEXT_4_28_STR" Value="Safe Torque Off"/>
+          <Text TextId="PRM_TEXT_4_29_STR" Value="Fault"/>
+          <Text TextId="PRM_TEXT_4_30_STR" Value="Fault Interlock"/>
+          <Text TextId="PRM_TEXT_4_31_STR" Value="Device warning"/>
+          <Text TextId="PRM_TEXT_4_32_STR" Value="Device fault"/>
+          <Text TextId="PRM_TEXT_4_33_STR" Value="Heats.warning"/>
+          <Text TextId="PRM_TEXT_4_34_STR" Value="PTC fault"/>
+          <Text TextId="PRM_TEXT_4_35_STR" Value="Flying restart"/>
+          <Text TextId="PRM_TEXT_4_36_STR" Value="DC brake active"/>
+          <Text TextId="PRM_TEXT_4_37_STR" Value="Invers Rotation"/>
+          <Text TextId="PRM_TEXT_4_38_STR" Value="F-THLD exeeded"/>
+          <Text TextId="PRM_TEXT_4_39_STR" Value="Actual speed = 0"/>
+          <Text TextId="PRM_TEXT_4_40_STR" Value="At Speed setpnt"/>
+          <Text TextId="PRM_TEXT_4_41_STR" Value="PID at setpoint"/>
+          <Text TextId="PRM_TEXT_4_42_STR" Value="Sleep mode on"/>
+          <Text TextId="PRM_TEXT_4_43_STR" Value="Min-alarm"/>
+          <Text TextId="PRM_TEXT_4_44_STR" Value="Max-alarm"/>
+          <Text TextId="PRM_TEXT_4_45_STR" Value="MIN/MAX alarm"/>
+          <Text TextId="PRM_TEXT_4_46_STR" Value="At current limit"/>
+          <Text TextId="PRM_TEXT_4_47_STR" Value="At torque limit"/>
+          <Text TextId="PRM_TEXT_4_48_STR" Value="Follower loss"/>
+          <Text TextId="PRM_TEXT_4_49_STR" Value="Error AIN 1"/>
+          <Text TextId="PRM_TEXT_4_50_STR" Value="Error AIN 2"/>
+          <Text TextId="PRM_TEXT_4_51_STR" Value="Loss of load"/>
+          <Text TextId="PRM_TEXT_4_52_STR" Value="Loc Ctrl active"/>
+          <Text TextId="PRM_TEXT_4_53_STR" Value="Rem Ctrl active"/>
+          <Text TextId="PRM_TEXT_4_54_STR" Value="Man Stpnt active"/>
+          <Text TextId="PRM_TEXT_4_55_STR" Value="Aut. Stpnt activ"/>
+          <Text TextId="PRM_TEXT_4_56_STR" Value="Par. set 1 activ"/>
+          <Text TextId="PRM_TEXT_4_57_STR" Value="Par. set 2 activ"/>
+          <Text TextId="PRM_TEXT_4_58_STR" Value="Par. set 3 activ"/>
+          <Text TextId="PRM_TEXT_4_59_STR" Value="Par. set 4 activ"/>
+          <Text TextId="PRM_TEXT_4_60_STR" Value="Param load OK"/>
+          <Text TextId="PRM_TEXT_4_61_STR" Value="Param load fail"/>
+          <Text TextId="PRM_TEXT_4_62_STR" Value="Netw.Ctrl activ"/>
+          <Text TextId="PRM_TEXT_4_63_STR" Value="Release brake"/>
+          <Text TextId="PRM_TEXT_4_64_STR" Value="Not modified"/>
+          <Text TextId="PRM_TEXT_5_0_STR" Value="Not inverted"/>
+          <Text TextId="PRM_TEXT_5_1_STR" Value="Inverted"/>
+          <Text TextId="PRM_TEXT_6_0_STR" Value="Disabled"/>
+          <Text TextId="PRM_TEXT_6_1_STR" Value="0...10VDC"/>
+          <Text TextId="PRM_TEXT_6_2_STR" Value="0...5VDC"/>
+          <Text TextId="PRM_TEXT_6_3_STR" Value="2...10VDC"/>
+          <Text TextId="PRM_TEXT_6_4_STR" Value="4...20mA"/>
+          <Text TextId="PRM_TEXT_6_5_STR" Value="0...20mA"/>
+          <Text TextId="IDT_MODULE_0_NAME" Value="DAP"/>
+          <Text TextId="IDT_MODULE_0_INFO" Value="DAP"/>
+          <Text TextId="IDT_DATAITEM_0I" Value=""/>
+          <Text TextId="IDT_DATAITEM_0O" Value=""/>
+          <Text TextId="IDT_MODULE_1_NAME" Value="Act.mot.current 0x2D88:00"/>
+          <Text TextId="IDT_MODULE_1_INFO" Value="Actual motor current"/>
+          <Text TextId="IDT_DATAITEM_1I" Value=""/>
+          <Text TextId="IDT_DATAITEM_1O" Value=""/>
+          <Text TextId="IDT_MODULE_2_NAME" Value="L-Controlword 0x4008:01 "/>
+          <Text TextId="IDT_MODULE_2_INFO" Value="Default control bit configuration, further bits to be defined"/>
+          <Text TextId="IDT_DATAITEM_2I" Value=""/>
+          <Text TextId="IDT_DATAITEM_2O" Value=""/>
+          <Text TextId="IDT_m2_prm_0_name" Value="NETWordIN1.00"/>
+          <Text TextId="IDT_m2_prm_1_name" Value="NETWordIN1.01"/>
+          <Text TextId="IDT_m2_prm_2_name" Value="NETWordIN1.02"/>
+          <Text TextId="IDT_m2_prm_3_name" Value="NETWordIN1.03"/>
+          <Text TextId="IDT_m2_prm_4_name" Value="NETWordIN1.04"/>
+          <Text TextId="IDT_m2_prm_5_name" Value="NETWordIN1.05"/>
+          <Text TextId="IDT_m2_prm_6_name" Value="NETWordIN1.06"/>
+          <Text TextId="IDT_m2_prm_7_name" Value="NETWordIN1.07"/>
+          <Text TextId="IDT_m2_prm_8_name" Value="NETWordIN1.08"/>
+          <Text TextId="IDT_m2_prm_9_name" Value="NETWordIN1.09"/>
+          <Text TextId="IDT_m2_prm_10_name" Value="NETWordIN1.10"/>
+          <Text TextId="IDT_m2_prm_11_name" Value="NETWordIN1.11"/>
+          <Text TextId="IDT_m2_prm_12_name" Value="NETWordIN1.12"/>
+          <Text TextId="IDT_m2_prm_13_name" Value="NETWordIN1.13"/>
+          <Text TextId="IDT_m2_prm_14_name" Value="NETWordIN1.14"/>
+          <Text TextId="IDT_m2_prm_15_name" Value="NETWordIN1.15"/>
+          <Text TextId="IDT_MODULE_3_NAME" Value="NETWordIN2 0x4008:02"/>
+          <Text TextId="IDT_MODULE_3_INFO" Value="NETWordIN2"/>
+          <Text TextId="IDT_DATAITEM_3I" Value=""/>
+          <Text TextId="IDT_DATAITEM_3O" Value=""/>
+          <Text TextId="IDT_m3_prm_0_name" Value="Relay function"/>
+          <Text TextId="IDT_m3_prm_1_name" Value="DO1 function"/>
+          <Text TextId="IDT_MODULE_4_NAME" Value="NETWordIN3 0x4008:03"/>
+          <Text TextId="IDT_MODULE_4_INFO" Value="NETWordIN3"/>
+          <Text TextId="IDT_DATAITEM_4I" Value=""/>
+          <Text TextId="IDT_DATAITEM_4O" Value=""/>
+          <Text TextId="IDT_m4_prm_0_name" Value="NETWordIN3"/>
+          <Text TextId="IDT_m4_prm_1_name" Value="Analog output configuration"/>
+          <Text TextId="IDT_MODULE_5_NAME" Value="NETWordIN4 0x4008:04"/>
+          <Text TextId="IDT_MODULE_5_INFO" Value="NETWordIN4"/>
+          <Text TextId="IDT_DATAITEM_5I" Value=""/>
+          <Text TextId="IDT_DATAITEM_5O" Value=""/>
+          <Text TextId="IDT_m5_prm_0_name" Value="NETWordIN4"/>
+          <Text TextId="IDT_m5_prm_1_name" Value="Analog output configuration"/>
+          <Text TextId="IDT_MODULE_6_NAME" Value="L-Statusword 0x400A:01"/>
+          <Text TextId="IDT_MODULE_6_INFO" Value="Default status bit configuration, further bits to be defined"/>
+          <Text TextId="IDT_DATAITEM_6I" Value=""/>
+          <Text TextId="IDT_DATAITEM_6O" Value=""/>
+          <Text TextId="IDT_m6_prm_0_name" Value="NETWordOUT1.00"/>
+          <Text TextId="IDT_m6_prm_1_name" Value="Bit Inversion"/>
+          <Text TextId="IDT_m6_prm_2_name" Value="NETWordOUT1.01"/>
+          <Text TextId="IDT_m6_prm_3_name" Value="Bit Inversion"/>
+          <Text TextId="IDT_m6_prm_4_name" Value="NETWordOUT1.02"/>
+          <Text TextId="IDT_m6_prm_5_name" Value="Bit Inversion"/>
+          <Text TextId="IDT_m6_prm_6_name" Value="NETWordOUT1.03"/>
+          <Text TextId="IDT_m6_prm_7_name" Value="Bit Inversion"/>
+          <Text TextId="IDT_m6_prm_8_name" Value="NETWordOUT1.04"/>
+          <Text TextId="IDT_m6_prm_9_name" Value="Bit Inversion"/>
+          <Text TextId="IDT_m6_prm_10_name" Value="NETWordOUT1.05"/>
+          <Text TextId="IDT_m6_prm_11_name" Value="Bit Inversion"/>
+          <Text TextId="IDT_m6_prm_12_name" Value="NETWordOUT1.06"/>
+          <Text TextId="IDT_m6_prm_13_name" Value="Bit Inversion"/>
+          <Text TextId="IDT_m6_prm_14_name" Value="NETWordOUT1.07"/>
+          <Text TextId="IDT_m6_prm_15_name" Value="Bit Inversion"/>
+          <Text TextId="IDT_m6_prm_16_name" Value="NETWordOUT1.08"/>
+          <Text TextId="IDT_m6_prm_17_name" Value="Bit Inversion"/>
+          <Text TextId="IDT_m6_prm_18_name" Value="NETWordOUT1.09"/>
+          <Text TextId="IDT_m6_prm_19_name" Value="Bit Inversion"/>
+          <Text TextId="IDT_m6_prm_20_name" Value="NETWordOUT1.10"/>
+          <Text TextId="IDT_m6_prm_21_name" Value="Bit Inversion"/>
+          <Text TextId="IDT_m6_prm_22_name" Value="NETWordOUT1.11"/>
+          <Text TextId="IDT_m6_prm_23_name" Value="Bit Inversion"/>
+          <Text TextId="IDT_m6_prm_24_name" Value="NETWordOUT1.12"/>
+          <Text TextId="IDT_m6_prm_25_name" Value="Bit Inversion"/>
+          <Text TextId="IDT_m6_prm_26_name" Value="NETWordOUT1.13"/>
+          <Text TextId="IDT_m6_prm_27_name" Value="Bit Inversion"/>
+          <Text TextId="IDT_m6_prm_28_name" Value="NETWordOUT1.14"/>
+          <Text TextId="IDT_m6_prm_29_name" Value="Bit Inversion"/>
+          <Text TextId="IDT_m6_prm_30_name" Value="NETWordOUT1.15"/>
+          <Text TextId="IDT_m6_prm_31_name" Value="Bit Inversion"/>
+          <Text TextId="IDT_MODULE_7_NAME" Value="NetWordOUT2 0x400A:02"/>
+          <Text TextId="IDT_MODULE_7_INFO" Value="NetWordOUT2"/>
+          <Text TextId="IDT_DATAITEM_7I" Value=""/>
+          <Text TextId="IDT_DATAITEM_7O" Value=""/>
+          <Text TextId="IDT_MODULE_8_NAME" Value="Netwfreq. 0.01Hz 0x400B:05"/>
+          <Text TextId="IDT_MODULE_8_INFO" Value="Network setpoint frequency [0.01 Hz]"/>
+          <Text TextId="IDT_DATAITEM_8I" Value=""/>
+          <Text TextId="IDT_DATAITEM_8O" Value=""/>
+          <Text TextId="IDT_MODULE_9_NAME" Value="Act.freq. 0.01Hz 0x400C:06"/>
+          <Text TextId="IDT_MODULE_9_INFO" Value="Actual frequency [0.01 Hz]"/>
+          <Text TextId="IDT_DATAITEM_9I" Value=""/>
+          <Text TextId="IDT_DATAITEM_9O" Value=""/>
+          <Text TextId="IDT_MODULE_10_NAME" Value="Error code 0x603F:00"/>
+          <Text TextId="IDT_MODULE_10_INFO" Value="Error code"/>
+          <Text TextId="IDT_DATAITEM_10I" Value=""/>
+          <Text TextId="IDT_DATAITEM_10O" Value=""/>
+          <Text TextId="IDT_MODULE_11_NAME" Value="Positive torque  0x60E0:00"/>
+          <Text TextId="IDT_MODULE_11_INFO" Value="Negative torque limit"/>
+          <Text TextId="IDT_DATAITEM_11I" Value=""/>
+          <Text TextId="IDT_DATAITEM_11O" Value=""/>
+          <Text TextId="IDT_MODULE_12_NAME" Value="Negative torque  0x60E1:00"/>
+          <Text TextId="IDT_MODULE_12_INFO" Value="Negative torque limit"/>
+          <Text TextId="IDT_DATAITEM_12I" Value=""/>
+          <Text TextId="IDT_DATAITEM_12O" Value=""/>
+          <Text TextId="IDT_MODULE_13_NAME" Value="8Bit selectable OUT-Data"/>
+          <Text TextId="IDT_MODULE_13_INFO" Value="Selectable OUT object of 8Bit data length"/>
+          <Text TextId="IDT_DATAITEM_13I" Value=""/>
+          <Text TextId="IDT_DATAITEM_13O" Value=""/>
+          <Text TextId="IDT_m13_prm_0_name" Value="Index"/>
+          <Text TextId="IDT_m13_prm_1_name" Value="Subindex"/>
+          <Text TextId="IDT_MODULE_14_NAME" Value="16Bit selectable OUT-Data"/>
+          <Text TextId="IDT_MODULE_14_INFO" Value="Selectable OUT object of 16Bit data length"/>
+          <Text TextId="IDT_DATAITEM_14I" Value=""/>
+          <Text TextId="IDT_DATAITEM_14O" Value=""/>
+          <Text TextId="IDT_m14_prm_0_name" Value="Index"/>
+          <Text TextId="IDT_m14_prm_1_name" Value="Subindex"/>
+          <Text TextId="IDT_MODULE_15_NAME" Value="32Bit selectable OUT-Data"/>
+          <Text TextId="IDT_MODULE_15_INFO" Value="Selectable OUT object of 32Bit data length"/>
+          <Text TextId="IDT_DATAITEM_15I" Value=""/>
+          <Text TextId="IDT_DATAITEM_15O" Value=""/>
+          <Text TextId="IDT_m15_prm_0_name" Value="Index"/>
+          <Text TextId="IDT_m15_prm_1_name" Value="Subindex"/>
+          <Text TextId="IDT_MODULE_16_NAME" Value="8Bit selectable IN-Data"/>
+          <Text TextId="IDT_MODULE_16_INFO" Value="Selectable IN object of 8Bit data length"/>
+          <Text TextId="IDT_DATAITEM_16I" Value=""/>
+          <Text TextId="IDT_DATAITEM_16O" Value=""/>
+          <Text TextId="IDT_m16_prm_0_name" Value="Index"/>
+          <Text TextId="IDT_m16_prm_1_name" Value="Subindex"/>
+          <Text TextId="IDT_MODULE_17_NAME" Value="16Bit selectable IN-Data"/>
+          <Text TextId="IDT_MODULE_17_INFO" Value="Selectable IN object of 16Bit data length"/>
+          <Text TextId="IDT_DATAITEM_17I" Value=""/>
+          <Text TextId="IDT_DATAITEM_17O" Value=""/>
+          <Text TextId="IDT_m17_prm_0_name" Value="Index"/>
+          <Text TextId="IDT_m17_prm_1_name" Value="Subindex"/>
+          <Text TextId="IDT_MODULE_18_NAME" Value="32Bit selectable IN-Data"/>
+          <Text TextId="IDT_MODULE_18_INFO" Value="Selectable IN object of 32Bit data length"/>
+          <Text TextId="IDT_DATAITEM_18I" Value=""/>
+          <Text TextId="IDT_DATAITEM_18O" Value=""/>
+          <Text TextId="IDT_m18_prm_0_name" Value="Index"/>
+          <Text TextId="IDT_m18_prm_1_name" Value="Subindex"/>
+          <!--Safety Module-->
+          <!--restliche Bezeichner-->
+        </PrimaryLanguage>
+        <Language xml:lang="de">
+          <!-- Diagnosetexte PN -->
+          <Text TextId="PN_ERROR_VAL32" Value="Error: "/>
+          <Text TextId="PN_NO_ERR_0" Value="0 (No Error)"/>
+          <Text TextId="PN_ZERO_INSTANCE_0" Value="0"/>
+          <Text TextId="PN_2250" Value="CiA: Dauerüberstrom (geräteintern)"/>
+          <Text TextId="PN_2320" Value="CiA: Kurzschluss/Erdschluss (geräteintern)"/>
+          <Text TextId="PN_2340" Value="CiA: Kurzschluss (geräteintern)"/>
+          <Text TextId="PN_2350" Value="CiA: i²*t-Überlast (thermischer Zustand)"/>
+          <Text TextId="PN_2382" Value="I*t-Fehler"/>
+          <Text TextId="PN_2383" Value="I*t-Warnung"/>
+          <Text TextId="PN_2387" Value="I max. Ausgang überschritten"/>
+          <Text TextId="PN_3120" Value="Einzelphasenausfall"/>
+          <Text TextId="PN_3210" Value="Überspannung Zwischenkreis"/>
+          <Text TextId="PN_3211" Value="Überspannungswarnung Zwischenkreis"/>
+          <Text TextId="PN_3220" Value="Unterspannung Zwischenkreis"/>
+          <Text TextId="PN_3221" Value="Unterspannungswarnung Zwischenkreis"/>
+          <Text TextId="PN_3222" Value="Zwischenkreisspannung zu niedrig für Einschalten"/>
+          <Text TextId="PN_4210" Value="Übertemperaturfehler Leistungsmodul"/>
+          <Text TextId="PN_4280" Value="Fehler Kühlkörper-Temperatursensor"/>
+          <Text TextId="PN_4281" Value="Fehler Kühlkörperlüfter"/>
+          <Text TextId="PN_4285" Value="Übertemperaturwarnung Leistungsmodul"/>
+          <Text TextId="PN_4310" Value="Motortemperatur hat Fehlerschwelle erreicht"/>
+          <Text TextId="PN_5112" Value="24 V Versorgung kritisch"/>
+          <Text TextId="PN_5380" Value="Incomp. OEM HW"/>
+          <Text TextId="PN_6010" Value="Watchdog-Timeout"/>
+          <Text TextId="PN_6181" Value="Zeitüberschreitung in 125-us-Task"/>
+          <Text TextId="PN_6182" Value="Zeitüberschreitung in 250-us-Task"/>
+          <Text TextId="PN_6183" Value="Zeitüberschreitung in 1-ms-Task"/>
+          <Text TextId="PN_6184" Value="Zeitüberschreitung in 8-ms-Task"/>
+          <Text TextId="PN_6188" Value="Interner Fehler"/>
+          <Text TextId="PN_6189" Value="Programmierfehler Leistungsteil"/>
+          <Text TextId="PN_618A" Value="Fehler Innenraumlüfter"/>
+          <Text TextId="PN_6190" Value="Kommunikationsprotokollversion im Leistungsteil unpassend"/>
+          <Text TextId="PN_6191" Value="Kommunikation im Leistungsteil nicht synchron"/>
+          <Text TextId="PN_6192" Value="Kommunikationsempfangsfehler im Leistungsteil an Steuerteil"/>
+          <Text TextId="PN_6193" Value="Fehler Kommunikationsempfang Leistungsteil"/>
+          <Text TextId="PN_6194" Value="PDO-Kommunikation mit Leistungsteil abgebrochen"/>
+          <Text TextId="PN_6195" Value="I2C-Verbindung verloren"/>
+          <Text TextId="PN_6196" Value="I2C-Busfehler"/>
+          <Text TextId="PN_61B0" Value="uC-Versorgungsspannungsabfall im Leistungsteil"/>
+          <Text TextId="PN_61B1" Value="Allgemeiner Fehler im Leistungsteil"/>
+          <Text TextId="PN_6280" Value="Trigger/Funktionen falsch verbunden"/>
+          <Text TextId="PN_6281" Value="Benutzerdefinierte Störung 1 über Trigger/Funktion ausgelöst"/>
+          <Text TextId="PN_6282" Value="Benutzerdefinierte Störung 2 über Trigger/Funktion ausgelöst"/>
+          <Text TextId="PN_6290" Value="Warnung Drehrichtungsumkehr"/>
+          <Text TextId="PN_6291" Value="Maximal erlaubte Störungen überschritten"/>
+          <Text TextId="PN_62A0" Value="AC-Regelung Benutzerfehler"/>
+          <Text TextId="PN_62A1" Value="Benutzerdefinierte Störung 1 über Netzwerk ausgelöst"/>
+          <Text TextId="PN_62A2" Value="Benutzerdefinierte Störung 2 über Netzwerk ausgelöst"/>
+          <Text TextId="PN_62B1" Value="Funktionsbelegung NetwordIN1 fehlerhaft"/>
+          <Text TextId="PN_63A0" Value="Onboard-EEPROM-Zugriffsfehler"/>
+          <Text TextId="PN_63A1" Value="Laden der ID-Tag-Kalibrierungsdaten im Steuerteil fehlgeschlagen"/>
+          <Text TextId="PN_63A2" Value="Laden der ID-Tag-Kalibrierungsdaten im Leistungsteil fehlgeschlagen"/>
+          <Text TextId="PN_63A3" Value="Leistungsteil unbekannt"/>
+          <Text TextId="PN_63A4" Value="Timerüberlauf internes EEPROM"/>
+          <Text TextId="PN_7080" Value="Überwachung Behauptungslevel"/>
+          <Text TextId="PN_7081" Value="Überwachung Analogeingang 1"/>
+          <Text TextId="PN_7082" Value="Überwachung Analogeingang 2"/>
+          <Text TextId="PN_70A1" Value="Überwachung Analogausgang 1"/>
+          <Text TextId="PN_70A2" Value="Überwachung Analogausgang 2"/>
+          <Text TextId="PN_7121" Value="Fehler Pol-Lage-Identifikation"/>
+          <Text TextId="PN_7180" Value="Motorüberstrom"/>
+          <Text TextId="PN_7385" Value="F.fdb spd limit"/>
+          <Text TextId="PN_7580" Value="Fehler beim Senden von Diagnosemeldungen"/>
+          <Text TextId="PN_7581" Value="Fehler beim Empfangen von Diagnosemeldungen"/>
+          <Text TextId="PN_7680" Value="Speichermodul ist voll"/>
+          <Text TextId="PN_7681" Value="Speichermodul nicht vorhanden"/>
+          <Text TextId="PN_7682" Value="Speichermodul enthält ungültige Nutzerdaten"/>
+          <Text TextId="PN_7684" Value="Daten vor Abschaltung nicht vollständig im Speichermodul gespeichert"/>
+          <Text TextId="PN_7686" Value="Netzwerk: Konfigurationsfehler"/>
+          <Text TextId="PN_7687" Value="Speichermodul-Timerüberlauf"/>
+          <Text TextId="PN_7689" Value="OEM data invalid"/>
+          <Text TextId="PN_768A" Value="Wrong EPM"/>
+          <Text TextId="PN_7690" Value="OEM CU not match"/>
+          <Text TextId="PN_7691" Value="PU Data not match"/>
+          <Text TextId="PN_7692" Value="User CU not match"/>
+          <Text TextId="PN_7693" Value="EPM PU size inco"/>
+          <Text TextId="PN_7694" Value="EPM new PU size"/>
+          <Text TextId="PN_7695" Value="InvalidChgovrCfg"/>
+          <Text TextId="PN_7696" Value="Unkn. Par in EPM"/>
+          <Text TextId="PN_7697" Value="EPM data: Lost modified parameters because of 24V power-cycling"/>
+          <Text TextId="PN_8112" Value="TO expl. msg"/>
+          <Text TextId="PN_8114" Value="TO overall comm"/>
+          <Text TextId="PN_8182" Value="CAN-Bus aus"/>
+          <Text TextId="PN_8183" Value="CAN-Warnung"/>
+          <Text TextId="PN_8184" Value="CAN-Heartbeat-Timeout Consumer 1"/>
+          <Text TextId="PN_8185" Value="CAN-Heartbeat-Timeout Consumer 2"/>
+          <Text TextId="PN_8186" Value="CAN-Heartbeat-Timeout Consumer 3"/>
+          <Text TextId="PN_8187" Value="CAN-Heartbeat-Timeout Consumer 4"/>
+          <Text TextId="PN_8190" Value="Netzwerk: Watchdog abgelaufen"/>
+          <Text TextId="PN_8191" Value="Netzwerk: Unterbrechung des zyklischen Datenaustausches"/>
+          <Text TextId="PN_8192" Value="Netzwerk: Kommunikationsfehler"/>
+          <Text TextId="PN_8193" Value="Netzwerk: Ungültige zyklische Prozessdaten"/>
+          <Text TextId="PN_81A0" Value="Modbus: Fehler beim Senden von Meldungen"/>
+          <Text TextId="PN_81A1" Value="Modbus-Timeout"/>
+          <Text TextId="PN_81A2" Value="Modbus: Falsche Anforderung vom Master"/>
+          <Text TextId="PN_81B0" Value="Ethernet - Interface iCIF FPGA &lt;-&gt; XMC disconnected"/>
+          <Text TextId="PN_8286" Value="Netzwerk: PDO-Mappingfehler"/>
+          <Text TextId="PN_8291" Value="CAN-Timeout RPDO1"/>
+          <Text TextId="PN_8292" Value="CAN-Timeout RPDO2"/>
+          <Text TextId="PN_8293" Value="CAN-Timeout RPDO3"/>
+          <Text TextId="PN_8311" Value="F.TrqExc"/>
+          <Text TextId="PN_9080" Value="Fehler Keypad entfernt"/>
+          <Text TextId="PN_FF02" Value="Bremswiderstand Überlastfehler"/>
+          <Text TextId="PN_FF05" Value="Fehler Sicherheitsüberwachung"/>
+          <Text TextId="PN_FF06" Value="Motorüberdrehzahl"/>
+          <Text TextId="PN_FF09" Value="Motorphasenausfall"/>
+          <Text TextId="PN_FF0A" Value="Motorphasenausfall Phase U"/>
+          <Text TextId="PN_FF0B" Value="Motorphasenausfall Phase V"/>
+          <Text TextId="PN_FF0C" Value="Motorphasenausfall Phase W"/>
+          <Text TextId="PN_FF19" Value="Motorparameter-Identifizierungsfehler"/>
+          <Text TextId="PN_FF30" Value="Testüberwachung führt zu keiner Reaktion"/>
+          <Text TextId="PN_FF31" Value="Testüberwachung erzeugt Warnung"/>
+          <Text TextId="PN_FF32" Value="Testüberwachung erzeugt Störung"/>
+          <Text TextId="PN_FF33" Value="Testüberwachung erzeugt Fehler"/>
+          <Text TextId="PN_FF34" Value="Testüberwachung erzeugt Fehler mit verzögerter Fehlerrücksetzung"/>
+          <Text TextId="PN_FF35" Value="Testüberwachung erzeugt Fehler mit blockierter Fehlerrücksetzung"/>
+          <Text TextId="PN_FF36" Value="Überlastwarnung Bremswiderstand"/>
+          <Text TextId="PN_FF37" Value="Automatischer Start beim Einschalten gesperrt"/>
+          <Text TextId="PN_FF56" Value="Maximale Ausgangsfrequenz erreicht"/>
+          <Text TextId="PN_ERROR_TYPE" Value="Error Type: "/>
+          <Text TextId="PNREACT_0" Value="Fehler Reaktion: Keine Reaktion"/>
+          <Text TextId="PNREACT_1" Value="Fehler Reaktion: Warnung"/>
+          <Text TextId="PNREACT_2" Value="Fehler Reaktion: Störung"/>
+          <Text TextId="PNREACT_3" Value="Fehler Reaktion: Fehler"/>
+          <Text TextId="PN_ERROR_ID" Value="Error ID: "/>
+          <!--  -->
+          <Text TextId="IDT_FAMILY_DESCRIPTION" Value="Lenze PROFINET Frequency Inverter i550"/>
+          <!--Textstrings fuer DAP  -->
+          <Text TextId="IDT_DAP_NAME" Value="IOFW51ARXX"/>
+          <Text TextId="IDT_DAP_INFO" Value="i550 PROFINET IO Interface"/>
+          <Text TextId="IDT_DAP_Interface" Value="X1"/>
+          <Text TextId="IDT_DAP_Port1" Value="P1"/>
+          <Text TextId="IDT_DAP_Port2" Value="P2"/>
+          <Text TextId="IDT_ETHERNETINTERFACE_Port1" Value="Port 1"/>
+          <Text TextId="IDT_ETHERNETINTERFACE_Port2" Value="Port 2"/>
+          <!--  -->
+          <!--module categories-->
+          <!--process modules-->
+          <Text TextId="GROUP CiA 402" Value="CiA 402"/>
+          <Text TextId="GROUP Joker" Value="Joker"/>
+          <Text TextId="GROUP NetWord" Value="NetWord"/>
+          <Text TextId="PRM_TEXT_1_0_STR" Value="Nicht aktiv"/>
+          <Text TextId="PRM_TEXT_1_1_STR" Value="Reglersperre"/>
+          <Text TextId="PRM_TEXT_1_2_STR" Value="Stopp"/>
+          <Text TextId="PRM_TEXT_1_3_STR" Value="Quickstop"/>
+          <Text TextId="PRM_TEXT_1_4_STR" Value="Fehler-Reset"/>
+          <Text TextId="PRM_TEXT_1_5_STR" Value="DC-Bremse"/>
+          <Text TextId="PRM_TEXT_1_6_STR" Value="Run-Vorwärts"/>
+          <Text TextId="PRM_TEXT_1_7_STR" Value="Run-Rückwärts"/>
+          <Text TextId="PRM_TEXT_1_8_STR" Value="Drehricht.Umkehr"/>
+          <Text TextId="PRM_TEXT_1_9_STR" Value="AI1 Sollwertwahl"/>
+          <Text TextId="PRM_TEXT_1_10_STR" Value="AI2 Sollwertwahl"/>
+          <Text TextId="PRM_TEXT_1_11_STR" Value="NET Sollwrt.Sel."/>
+          <Text TextId="PRM_TEXT_1_12_STR" Value="Preset-Ausw. b0"/>
+          <Text TextId="PRM_TEXT_1_13_STR" Value="Preset-Ausw. b1"/>
+          <Text TextId="PRM_TEXT_1_14_STR" Value="Preset-Ausw. b2 "/>
+          <Text TextId="PRM_TEXT_1_15_STR" Value="Preset-Ausw. b3"/>
+          <Text TextId="PRM_TEXT_1_16_STR" Value="Auswahl Rampe 2"/>
+          <Text TextId="PRM_TEXT_1_17_STR" Value="Param.satz laden"/>
+          <Text TextId="PRM_TEXT_1_18_STR" Value="Para.satz 1"/>
+          <Text TextId="PRM_TEXT_1_19_STR" Value="Para.satz 2"/>
+          <Text TextId="PRM_TEXT_1_20_STR" Value="Ben.Netw.Strng1 "/>
+          <Text TextId="PRM_TEXT_1_21_STR" Value="Ben.Netw.Strng2"/>
+          <Text TextId="PRM_TEXT_1_22_STR" Value="PID aus"/>
+          <Text TextId="PRM_TEXT_1_23_STR" Value="PID-Ausgang=0"/>
+          <Text TextId="PRM_TEXT_1_24_STR" Value="PID-I gesperrt"/>
+          <Text TextId="PRM_TEXT_1_25_STR" Value="PID-InfRampe ein"/>
+          <Text TextId="PRM_TEXT_1_26_STR" Value="Keine Änderung"/>
+          <Text TextId="PRM_TEXT_2_0_STR" Value="Nicht aktiv"/>
+          <Text TextId="PRM_TEXT_2_1_STR" Value="NETWordIN2.00"/>
+          <Text TextId="PRM_TEXT_2_2_STR" Value="NETWordIN2.01"/>
+          <Text TextId="PRM_TEXT_2_3_STR" Value="NETWordIN2.02"/>
+          <Text TextId="PRM_TEXT_2_4_STR" Value="NETWordIN2.03"/>
+          <Text TextId="PRM_TEXT_2_5_STR" Value="NETWordIN2.04"/>
+          <Text TextId="PRM_TEXT_2_6_STR" Value="NETWordIN2.05"/>
+          <Text TextId="PRM_TEXT_2_7_STR" Value="NETWordIN2.06"/>
+          <Text TextId="PRM_TEXT_2_8_STR" Value="NETWordIN2.07"/>
+          <Text TextId="PRM_TEXT_2_9_STR" Value="NETWordIN2.08"/>
+          <Text TextId="PRM_TEXT_2_10_STR" Value="NETWordIN2.09"/>
+          <Text TextId="PRM_TEXT_2_11_STR" Value="NETWordIN2.10"/>
+          <Text TextId="PRM_TEXT_2_12_STR" Value="NETWordIN2.11"/>
+          <Text TextId="PRM_TEXT_2_13_STR" Value="NETWordIN2.12"/>
+          <Text TextId="PRM_TEXT_2_14_STR" Value="NETWordIN2.13"/>
+          <Text TextId="PRM_TEXT_2_15_STR" Value="NETWordIN2.14"/>
+          <Text TextId="PRM_TEXT_2_16_STR" Value="NETWordIN2.15"/>
+          <Text TextId="PRM_TEXT_2_17_STR" Value="Keine Änderung"/>
+          <Text TextId="PRM_TEXT_3_0_STR" Value="Keine Änderung"/>
+          <Text TextId="PRM_TEXT_3_1_STR" Value="Analogausgang 1"/>
+          <Text TextId="PRM_TEXT_4_0_STR" Value="Nicht aktiv"/>
+          <Text TextId="PRM_TEXT_4_1_STR" Value="WAHR"/>
+          <Text TextId="PRM_TEXT_4_2_STR" Value="Digitaleingang 1"/>
+          <Text TextId="PRM_TEXT_4_3_STR" Value="Digitaleingang 2"/>
+          <Text TextId="PRM_TEXT_4_4_STR" Value="Digitaleingang 3"/>
+          <Text TextId="PRM_TEXT_4_5_STR" Value="Digitaleingang 4"/>
+          <Text TextId="PRM_TEXT_4_6_STR" Value="Digitaleingang 5"/>
+          <Text TextId="PRM_TEXT_4_7_STR" Value="NETWordIN2.00"/>
+          <Text TextId="PRM_TEXT_4_8_STR" Value="NETWordIN2.01"/>
+          <Text TextId="PRM_TEXT_4_9_STR" Value="NETWordIN2.02"/>
+          <Text TextId="PRM_TEXT_4_10_STR" Value="NETWordIN2.03"/>
+          <Text TextId="PRM_TEXT_4_11_STR" Value="NETWordIN2.04"/>
+          <Text TextId="PRM_TEXT_4_12_STR" Value="NETWordIN2.05"/>
+          <Text TextId="PRM_TEXT_4_13_STR" Value="NETWordIN2.06"/>
+          <Text TextId="PRM_TEXT_4_14_STR" Value="NETWordIN2.07"/>
+          <Text TextId="PRM_TEXT_4_15_STR" Value="NETWordIN2.08"/>
+          <Text TextId="PRM_TEXT_4_16_STR" Value="NETWordIN2.09"/>
+          <Text TextId="PRM_TEXT_4_17_STR" Value="NETWordIN2.10"/>
+          <Text TextId="PRM_TEXT_4_18_STR" Value="NETWordIN2.11"/>
+          <Text TextId="PRM_TEXT_4_19_STR" Value="NETWordIN2.12"/>
+          <Text TextId="PRM_TEXT_4_20_STR" Value="NETWordIN2.13"/>
+          <Text TextId="PRM_TEXT_4_21_STR" Value="NETWordIN2.14"/>
+          <Text TextId="PRM_TEXT_4_22_STR" Value="NETWordIN2.15"/>
+          <Text TextId="PRM_TEXT_4_23_STR" Value="In Betrieb"/>
+          <Text TextId="PRM_TEXT_4_24_STR" Value="Betriebsbereit"/>
+          <Text TextId="PRM_TEXT_4_25_STR" Value="Freigabe"/>
+          <Text TextId="PRM_TEXT_4_26_STR" Value="Stop aktiv"/>
+          <Text TextId="PRM_TEXT_4_27_STR" Value="Quickstop"/>
+          <Text TextId="PRM_TEXT_4_28_STR" Value="Safe Torque Off"/>
+          <Text TextId="PRM_TEXT_4_29_STR" Value="Fehler"/>
+          <Text TextId="PRM_TEXT_4_30_STR" Value="FehlerVerriegel."/>
+          <Text TextId="PRM_TEXT_4_31_STR" Value="Gerätewarnung"/>
+          <Text TextId="PRM_TEXT_4_32_STR" Value="Gerätestörung"/>
+          <Text TextId="PRM_TEXT_4_33_STR" Value="Kühlkörp.warnung"/>
+          <Text TextId="PRM_TEXT_4_34_STR" Value="PTC Fehler"/>
+          <Text TextId="PRM_TEXT_4_35_STR" Value="Fangen"/>
+          <Text TextId="PRM_TEXT_4_36_STR" Value="DC-Bremse aktiv"/>
+          <Text TextId="PRM_TEXT_4_37_STR" Value="Drehr. umkehr"/>
+          <Text TextId="PRM_TEXT_4_38_STR" Value="über F-Schwelle"/>
+          <Text TextId="PRM_TEXT_4_39_STR" Value="Ist-Geschw.=0"/>
+          <Text TextId="PRM_TEXT_4_40_STR" Value="Geschw. Soll=Ist"/>
+          <Text TextId="PRM_TEXT_4_41_STR" Value="PID auf Sollwert"/>
+          <Text TextId="PRM_TEXT_4_42_STR" Value="Sleep Mode an"/>
+          <Text TextId="PRM_TEXT_4_43_STR" Value="Min-Alarm"/>
+          <Text TextId="PRM_TEXT_4_44_STR" Value="Max-Alarm"/>
+          <Text TextId="PRM_TEXT_4_45_STR" Value="MIN/MAX Alarm"/>
+          <Text TextId="PRM_TEXT_4_46_STR" Value="Stromlimit err."/>
+          <Text TextId="PRM_TEXT_4_47_STR" Value="Drehm.limit err."/>
+          <Text TextId="PRM_TEXT_4_48_STR" Value="Follower loss"/>
+          <Text TextId="PRM_TEXT_4_49_STR" Value="Fehler AIN 1"/>
+          <Text TextId="PRM_TEXT_4_50_STR" Value="Fehler AIN 2"/>
+          <Text TextId="PRM_TEXT_4_51_STR" Value="Lastverlust"/>
+          <Text TextId="PRM_TEXT_4_52_STR" Value="LokSteuerq.aktiv"/>
+          <Text TextId="PRM_TEXT_4_53_STR" Value="RemSteuerq.aktiv"/>
+          <Text TextId="PRM_TEXT_4_54_STR" Value="ManSollwrt aktiv"/>
+          <Text TextId="PRM_TEXT_4_55_STR" Value="AutSollwrt.aktiv"/>
+          <Text TextId="PRM_TEXT_4_56_STR" Value="Para-Satz1 aktiv"/>
+          <Text TextId="PRM_TEXT_4_57_STR" Value="Para-Satz2 aktiv"/>
+          <Text TextId="PRM_TEXT_4_58_STR" Value="Para-Satz3 aktiv"/>
+          <Text TextId="PRM_TEXT_4_59_STR" Value="Para-Satz4 aktiv"/>
+          <Text TextId="PRM_TEXT_4_60_STR" Value="Para laden ok"/>
+          <Text TextId="PRM_TEXT_4_61_STR" Value="Para laden Nok"/>
+          <Text TextId="PRM_TEXT_4_62_STR" Value="SteuerNtzw.aktiv"/>
+          <Text TextId="PRM_TEXT_4_63_STR" Value="Bremse lösen"/>
+          <Text TextId="PRM_TEXT_4_64_STR" Value="Keine Änderung"/>
+          <Text TextId="PRM_TEXT_5_0_STR" Value="Nicht invertiert"/>
+          <Text TextId="PRM_TEXT_5_1_STR" Value="Invertiert"/>
+          <Text TextId="PRM_TEXT_6_0_STR" Value="Gesperrt"/>
+          <Text TextId="PRM_TEXT_6_1_STR" Value="0...10VDC"/>
+          <Text TextId="PRM_TEXT_6_2_STR" Value="0...5VDC"/>
+          <Text TextId="PRM_TEXT_6_3_STR" Value="2...10VDC"/>
+          <Text TextId="PRM_TEXT_6_4_STR" Value="4...20mA"/>
+          <Text TextId="PRM_TEXT_6_5_STR" Value="0...20mA"/>
+          <Text TextId="IDT_MODULE_0_NAME" Value="DAP"/>
+          <Text TextId="IDT_MODULE_0_INFO" Value="DAP"/>
+          <Text TextId="IDT_DATAITEM_0I" Value=""/>
+          <Text TextId="IDT_DATAITEM_0O" Value=""/>
+          <Text TextId="IDT_MODULE_1_NAME" Value="Ist-Motorstrom 0x2D88:00"/>
+          <Text TextId="IDT_MODULE_1_INFO" Value="Tatsächlicher Motorstrom"/>
+          <Text TextId="IDT_DATAITEM_1I" Value=""/>
+          <Text TextId="IDT_DATAITEM_1O" Value=""/>
+          <Text TextId="IDT_MODULE_2_NAME" Value="L-Steuerwort 0x4008:01"/>
+          <Text TextId="IDT_MODULE_2_INFO" Value="NETwortIn1 mit default Bit Konfiguration als Lenze Steuerwort, weitere Bits können definiert werden"/>
+          <Text TextId="IDT_DATAITEM_2I" Value=""/>
+          <Text TextId="IDT_DATAITEM_2O" Value=""/>
+          <Text TextId="IDT_m2_prm_0_name" Value="NETWordIN1.00"/>
+          <Text TextId="IDT_m2_prm_1_name" Value="NETWordIN1.01"/>
+          <Text TextId="IDT_m2_prm_2_name" Value="NETWordIN1.02"/>
+          <Text TextId="IDT_m2_prm_3_name" Value="NETWordIN1.03"/>
+          <Text TextId="IDT_m2_prm_4_name" Value="NETWordIN1.04"/>
+          <Text TextId="IDT_m2_prm_5_name" Value="NETWordIN1.05"/>
+          <Text TextId="IDT_m2_prm_6_name" Value="NETWordIN1.06"/>
+          <Text TextId="IDT_m2_prm_7_name" Value="NETWordIN1.07"/>
+          <Text TextId="IDT_m2_prm_8_name" Value="NETWordIN1.08"/>
+          <Text TextId="IDT_m2_prm_9_name" Value="NETWordIN1.09"/>
+          <Text TextId="IDT_m2_prm_10_name" Value="NETWordIN1.10"/>
+          <Text TextId="IDT_m2_prm_11_name" Value="NETWordIN1.11"/>
+          <Text TextId="IDT_m2_prm_12_name" Value="NETWordIN1.12"/>
+          <Text TextId="IDT_m2_prm_13_name" Value="NETWordIN1.13"/>
+          <Text TextId="IDT_m2_prm_14_name" Value="NETWordIN1.14"/>
+          <Text TextId="IDT_m2_prm_15_name" Value="NETWordIN1.15"/>
+          <Text TextId="IDT_MODULE_3_NAME" Value="NETWordIN2 0x4008:02"/>
+          <Text TextId="IDT_MODULE_3_INFO" Value="NETWordIN2"/>
+          <Text TextId="IDT_DATAITEM_3I" Value=""/>
+          <Text TextId="IDT_DATAITEM_3O" Value=""/>
+          <Text TextId="IDT_m3_prm_0_name" Value="Relais Funktion"/>
+          <Text TextId="IDT_m3_prm_1_name" Value="DO1 Funktion"/>
+          <Text TextId="IDT_MODULE_4_NAME" Value="NETWordIN3 0x4008:03"/>
+          <Text TextId="IDT_MODULE_4_INFO" Value="NETWordIN3"/>
+          <Text TextId="IDT_DATAITEM_4I" Value=""/>
+          <Text TextId="IDT_DATAITEM_4O" Value=""/>
+          <Text TextId="IDT_m4_prm_0_name" Value="NETWordIN3"/>
+          <Text TextId="IDT_m4_prm_1_name" Value="Analog Output Konfiguration"/>
+          <Text TextId="IDT_MODULE_5_NAME" Value="NETWordIN4 0x4008:04"/>
+          <Text TextId="IDT_MODULE_5_INFO" Value="NETWordIN4"/>
+          <Text TextId="IDT_DATAITEM_5I" Value=""/>
+          <Text TextId="IDT_DATAITEM_5O" Value=""/>
+          <Text TextId="IDT_m5_prm_0_name" Value="NETWordIN4"/>
+          <Text TextId="IDT_m5_prm_1_name" Value="Analog Output Konfiguration"/>
+          <Text TextId="IDT_MODULE_6_NAME" Value="L-Statuswort 0x400A:01"/>
+          <Text TextId="IDT_MODULE_6_INFO" Value="NETwortOut1 mit default Bit-Konfiguration als Lenze Statuswort, weitere Bits können definiert werden"/>
+          <Text TextId="IDT_DATAITEM_6I" Value=""/>
+          <Text TextId="IDT_DATAITEM_6O" Value=""/>
+          <Text TextId="IDT_m6_prm_0_name" Value="NETWordOUT1.00"/>
+          <Text TextId="IDT_m6_prm_1_name" Value="Bit Invertierung"/>
+          <Text TextId="IDT_m6_prm_2_name" Value="NETWordOUT1.01"/>
+          <Text TextId="IDT_m6_prm_3_name" Value="Bit Invertierung"/>
+          <Text TextId="IDT_m6_prm_4_name" Value="NETWordOUT1.02"/>
+          <Text TextId="IDT_m6_prm_5_name" Value="Bit Invertierung"/>
+          <Text TextId="IDT_m6_prm_6_name" Value="NETWordOUT1.03"/>
+          <Text TextId="IDT_m6_prm_7_name" Value="Bit Invertierung"/>
+          <Text TextId="IDT_m6_prm_8_name" Value="NETWordOUT1.04"/>
+          <Text TextId="IDT_m6_prm_9_name" Value="Bit Invertierung"/>
+          <Text TextId="IDT_m6_prm_10_name" Value="NETWordOUT1.05"/>
+          <Text TextId="IDT_m6_prm_11_name" Value="Bit Invertierung"/>
+          <Text TextId="IDT_m6_prm_12_name" Value="NETWordOUT1.06"/>
+          <Text TextId="IDT_m6_prm_13_name" Value="Bit Invertierung"/>
+          <Text TextId="IDT_m6_prm_14_name" Value="NETWordOUT1.07"/>
+          <Text TextId="IDT_m6_prm_15_name" Value="Bit Invertierung"/>
+          <Text TextId="IDT_m6_prm_16_name" Value="NETWordOUT1.08"/>
+          <Text TextId="IDT_m6_prm_17_name" Value="Bit Invertierung"/>
+          <Text TextId="IDT_m6_prm_18_name" Value="NETWordOUT1.09"/>
+          <Text TextId="IDT_m6_prm_19_name" Value="Bit Invertierung"/>
+          <Text TextId="IDT_m6_prm_20_name" Value="NETWordOUT1.10"/>
+          <Text TextId="IDT_m6_prm_21_name" Value="Bit Invertierung"/>
+          <Text TextId="IDT_m6_prm_22_name" Value="NETWordOUT1.11"/>
+          <Text TextId="IDT_m6_prm_23_name" Value="Bit Invertierung"/>
+          <Text TextId="IDT_m6_prm_24_name" Value="NETWordOUT1.12"/>
+          <Text TextId="IDT_m6_prm_25_name" Value="Bit Invertierung"/>
+          <Text TextId="IDT_m6_prm_26_name" Value="NETWordOUT1.13"/>
+          <Text TextId="IDT_m6_prm_27_name" Value="Bit Invertierung"/>
+          <Text TextId="IDT_m6_prm_28_name" Value="NETWordOUT1.14"/>
+          <Text TextId="IDT_m6_prm_29_name" Value="Bit Invertierung"/>
+          <Text TextId="IDT_m6_prm_30_name" Value="NETWordOUT1.15"/>
+          <Text TextId="IDT_m6_prm_31_name" Value="Bit Invertierung"/>
+          <Text TextId="IDT_MODULE_7_NAME" Value="NetWordOUT2 0x400A:02"/>
+          <Text TextId="IDT_MODULE_7_INFO" Value="NetWordOUT2"/>
+          <Text TextId="IDT_DATAITEM_7I" Value=""/>
+          <Text TextId="IDT_DATAITEM_7O" Value=""/>
+          <Text TextId="IDT_MODULE_8_NAME" Value="Netzwfreq.0.01Hz 0x400B:05"/>
+          <Text TextId="IDT_MODULE_8_INFO" Value="Netzwerk-Sollfrequenz [0.01 Hz]"/>
+          <Text TextId="IDT_DATAITEM_8I" Value=""/>
+          <Text TextId="IDT_DATAITEM_8O" Value=""/>
+          <Text TextId="IDT_MODULE_9_NAME" Value="Ist-Freq. 0.01Hz 0x400C:06"/>
+          <Text TextId="IDT_MODULE_9_INFO" Value="Ist-Frequenz [0.01 Hz]"/>
+          <Text TextId="IDT_DATAITEM_9I" Value=""/>
+          <Text TextId="IDT_DATAITEM_9O" Value=""/>
+          <Text TextId="IDT_MODULE_10_NAME" Value="Error code 0x603F:00"/>
+          <Text TextId="IDT_MODULE_10_INFO" Value="Error code"/>
+          <Text TextId="IDT_DATAITEM_10I" Value=""/>
+          <Text TextId="IDT_DATAITEM_10O" Value=""/>
+          <Text TextId="IDT_MODULE_11_NAME" Value="Positive torque  0x60E0:00"/>
+          <Text TextId="IDT_MODULE_11_INFO" Value="Negative Drehmomentgrenze"/>
+          <Text TextId="IDT_DATAITEM_11I" Value=""/>
+          <Text TextId="IDT_DATAITEM_11O" Value=""/>
+          <Text TextId="IDT_MODULE_12_NAME" Value="Negative torque  0x60E1:00"/>
+          <Text TextId="IDT_MODULE_12_INFO" Value="Negative Drehmomentgrenze"/>
+          <Text TextId="IDT_DATAITEM_12I" Value=""/>
+          <Text TextId="IDT_DATAITEM_12O" Value=""/>
+          <Text TextId="IDT_MODULE_13_NAME" Value="8Bit selektierbare OUT-Daten"/>
+          <Text TextId="IDT_MODULE_13_INFO" Value="Wählbares OUT Object mit 8Bit Datenlänge"/>
+          <Text TextId="IDT_DATAITEM_13I" Value=""/>
+          <Text TextId="IDT_DATAITEM_13O" Value=""/>
+          <Text TextId="IDT_m13_prm_0_name" Value="Index"/>
+          <Text TextId="IDT_m13_prm_1_name" Value="Subindex"/>
+          <Text TextId="IDT_MODULE_14_NAME" Value="16Bit selektierbare OUT-Daten"/>
+          <Text TextId="IDT_MODULE_14_INFO" Value="Wählbares OUT Object mit 16Bit Datenlänge"/>
+          <Text TextId="IDT_DATAITEM_14I" Value=""/>
+          <Text TextId="IDT_DATAITEM_14O" Value=""/>
+          <Text TextId="IDT_m14_prm_0_name" Value="Index"/>
+          <Text TextId="IDT_m14_prm_1_name" Value="Subindex"/>
+          <Text TextId="IDT_MODULE_15_NAME" Value="32Bit selektierbare OUT-Daten"/>
+          <Text TextId="IDT_MODULE_15_INFO" Value="Wählbares OUT Object mit 32Bit Datenlänge"/>
+          <Text TextId="IDT_DATAITEM_15I" Value=""/>
+          <Text TextId="IDT_DATAITEM_15O" Value=""/>
+          <Text TextId="IDT_m15_prm_0_name" Value="Index"/>
+          <Text TextId="IDT_m15_prm_1_name" Value="Subindex"/>
+          <Text TextId="IDT_MODULE_16_NAME" Value="8Bit selektierbare IN-Daten"/>
+          <Text TextId="IDT_MODULE_16_INFO" Value="Wählbares IN Object mit 8Bit Datenlänge"/>
+          <Text TextId="IDT_DATAITEM_16I" Value=""/>
+          <Text TextId="IDT_DATAITEM_16O" Value=""/>
+          <Text TextId="IDT_m16_prm_0_name" Value="Index"/>
+          <Text TextId="IDT_m16_prm_1_name" Value="Subindex"/>
+          <Text TextId="IDT_MODULE_17_NAME" Value="16Bit selektierbare IN-Daten"/>
+          <Text TextId="IDT_MODULE_17_INFO" Value="Wählbares IN Object mit 16Bit Datenlänge"/>
+          <Text TextId="IDT_DATAITEM_17I" Value=""/>
+          <Text TextId="IDT_DATAITEM_17O" Value=""/>
+          <Text TextId="IDT_m17_prm_0_name" Value="Index"/>
+          <Text TextId="IDT_m17_prm_1_name" Value="Subindex"/>
+          <Text TextId="IDT_MODULE_18_NAME" Value="32Bit selektierbare IN-Daten"/>
+          <Text TextId="IDT_MODULE_18_INFO" Value="Wählbares IN Object mit 32Bit Datenlänge"/>
+          <Text TextId="IDT_DATAITEM_18I" Value=""/>
+          <Text TextId="IDT_DATAITEM_18O" Value=""/>
+          <Text TextId="IDT_m18_prm_0_name" Value="Index"/>
+          <Text TextId="IDT_m18_prm_1_name" Value="Subindex"/>
+          <!--Safety Module-->
+          <!--restliche Bezeichner-->
+        </Language>
+        </ExternalTextList>
+    </ApplicationProcess>
+  </ProfileBody>
+</ISO15745Profile>
